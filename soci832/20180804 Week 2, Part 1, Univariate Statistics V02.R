@@ -25,14 +25,6 @@
 # because one of the tools creates cross-tabulations
 # of two variables (i.e. a bivariate cross tabulation)
 
-# Structure part 3
-# * regression
-# * part 1: running basic models, including R-square
-# * and exporting your data
-# * part 2: running multiple parallel models - heirarchical
-# * part 3: running diagnostics
-# * part 4: what to do if you fail diagnostics - robust etc
-
 # STUFF YOU NEED TO DO BEFORE STARTING
 # 1. Change this to your working directory
 setwd("C:/G/2018, SOCI832/Datasets/AES 2013/")
