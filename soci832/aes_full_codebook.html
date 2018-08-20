@@ -1,0 +1,2461 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<style>
+html, body { background-color: white; }
+table { border-collapse:collapse; border:none; }
+.thead { border-bottom:double; font-style:italic; font-weight:normal; padding:0.2cm; text-align:left; vertical-align:top; }
+.tdata { padding:0.2cm; text-align:left; vertical-align:top; }
+.arc { background-color:#eeeeee }
+caption { font-weight: bold; text-align:left; }
+.omit { color:#999999; }
+</style>
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/CB093BBF-50E4-C94B-852F-E48867E055FA/main.js" charset="UTF-8"></script></head>
+<body>
+<table>
+<caption>Data frame: aes_full</caption>
+<tr>
+<th class="thead">ID</th><th class="thead">Name</th><th class="thead">Label</th><th class="thead">Values</th><th class="thead">Value Labels</th>
+</tr>
+<tr>
+<td class="tdata">1</td>
+<td class="tdata">divisnum</td>
+<td class="tdata">Electoral Division - AES numeric code</td>
+<td class="tdata">101<br>102<br>103<br>104<br>105<br>106<br>107<br>108<br>109<br>110<br>111<br>112<br>113<br>114<br>115<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Canberra<br>Fraser<br>Banks<br>Barton<br>Bennelong<br>Berowra<br>Blaxland<br>Bradfield<br>Calare<br>Charlton<br>Chifley<br>Cook<br>Cowper<br>Cunningham<br>Dobell<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">2</td>
+<td class="tdata arc">uniqueid</td>
+<td class="tdata arc">Unique Identifier</td>
+<td class="tdata arc" colspan="2"><em>range: 1000794-9872391</em></td>
+</tr>
+<tr>
+<td class="tdata">3</td>
+<td class="tdata">mode</td>
+<td class="tdata">Mode of completion</td>
+<td class="tdata">1<br>2</td>
+<td class="tdata">Hardcopy<br>Online</td>
+</tr>
+<tr>
+<td class="tdata arc">4</td>
+<td class="tdata arc">datecomp</td>
+<td class="tdata arc">Date of return (Responses received)</td>
+<td class="tdata arc"></td>
+<td class="tdata arc"></td>
+</tr>
+<tr>
+<td class="tdata">5</td>
+<td class="tdata">lodggrp</td>
+<td class="tdata">Lodgement Group</td>
+<td class="tdata">1<br>2<br>3<br>4</td>
+<td class="tdata">Mail 01 - Initial Questionnaire/Reminder Card<br>Mail 02 - Reminder Questionnaire<br>Mail 03 - Reminder Letter<br>Mail 04 - Reminder Letter</td>
+</tr>
+<tr>
+<td class="tdata arc">6</td>
+<td class="tdata arc">state</td>
+<td class="tdata arc">State (from sample)</td>
+<td class="tdata arc">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</td>
+<td class="tdata arc">NSW<br>VIC<br>QLD<br>SA<br>WA<br>TAS<br>NT<br>ACT<br>Other Territories</td>
+</tr>
+<tr>
+<td class="tdata">7</td>
+<td class="tdata">postcode</td>
+<td class="tdata">Postcode (from sample)</td>
+<td class="tdata" colspan="2"><em>range: 9999-9999</em></td>
+</tr>
+<tr>
+<td class="tdata arc">8</td>
+<td class="tdata arc">division</td>
+<td class="tdata arc">Division (from sample)</td>
+<td class="tdata arc"></td>
+<td class="tdata arc"><span class="omit" title ="'show.string.values = TRUE' to show values.">&lt;output omitted&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">9</td>
+<td class="tdata">part_onl</td>
+<td class="tdata">Flag -Survey has partial completion only - Online<br>respondent</td>
+<td class="tdata">1</td>
+<td class="tdata">Partial Complete</td>
+</tr>
+<tr>
+<td class="tdata arc">10</td>
+<td class="tdata arc">a1</td>
+<td class="tdata arc">A1. Interest in politics</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A good deal<br>Some<br>Not much<br>None</td>
+</tr>
+<tr>
+<td class="tdata">11</td>
+<td class="tdata">a2</td>
+<td class="tdata">A2. Followed election news in the newspapers</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A good deal<br>Some<br>Not much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">12</td>
+<td class="tdata arc">a3p1</td>
+<td class="tdata arc">A3. Followed election news on TV</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A good deal<br>Some<br>Not much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata">13</td>
+<td class="tdata">a3p2</td>
+<td class="tdata">A3. Followed election news on the radio</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A good deal<br>Some<br>Not much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">14</td>
+<td class="tdata arc">a3p3</td>
+<td class="tdata arc">A3. Followed election news on the internet</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A good deal<br>Some<br>Not much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata">15</td>
+<td class="tdata">a4</td>
+<td class="tdata">A4. Interest in election campaign</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A good deal<br>Some<br>Not much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">16</td>
+<td class="tdata arc">a5p1</td>
+<td class="tdata arc">A5. During election: discussed politics with<br>others</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata">17</td>
+<td class="tdata">a5p6</td>
+<td class="tdata">A5. During election: discussed politics with<br>others online</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata arc">18</td>
+<td class="tdata arc">a5p2</td>
+<td class="tdata arc">A5. During election: talk to people about vote</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata">19</td>
+<td class="tdata">a5p3</td>
+<td class="tdata">A5. During election: work for party/candidate</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata arc">20</td>
+<td class="tdata arc">a5p4</td>
+<td class="tdata arc">A5. During election: go to meetings or rallies</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata">21</td>
+<td class="tdata">a5p5</td>
+<td class="tdata">A5. During campaign: contribute money</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Frequently<br>Occasionally<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata arc">22</td>
+<td class="tdata arc">a6</td>
+<td class="tdata arc">A6. Watched televised debate 11 August</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">23</td>
+<td class="tdata">a7</td>
+<td class="tdata">A7. Who performed better in televised debate</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Rudd did much better<br>Rudd did somewhat better<br>About equal<br>Abbott did somewhat better<br>Abbott did much better</td>
+</tr>
+<tr>
+<td class="tdata arc">24</td>
+<td class="tdata arc">a8p1</td>
+<td class="tdata arc">A8. Candidate persuade you to vote for them - No</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">25</td>
+<td class="tdata">a8p2</td>
+<td class="tdata">A8. Candidate persuade you to vote for them - By<br>telephone</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">26</td>
+<td class="tdata arc">a8p3</td>
+<td class="tdata arc">A8. Candidate persuade you to vote for them - By<br>mail</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">27</td>
+<td class="tdata">a8p4</td>
+<td class="tdata">A8. Candidate persuade you to vote for them - By<br>face-to-face</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">28</td>
+<td class="tdata arc">a8p5</td>
+<td class="tdata arc">A8. Candidate persuade you to vote for them - By<br>text message or SMS</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">29</td>
+<td class="tdata">a8p6</td>
+<td class="tdata">A8. Candidate persuade you to vote for them - By<br>email</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">30</td>
+<td class="tdata arc">a8p7</td>
+<td class="tdata arc">A8. Candidate persuade you to vote for them - By<br>social network site or other web-based method</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">31</td>
+<td class="tdata">a9p1</td>
+<td class="tdata">A9. Which parties or candidates contacted you by<br>any of these means - None</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">32</td>
+<td class="tdata arc">a9p2</td>
+<td class="tdata arc">A9. Which parties or candidates contacted you by<br>any of these means - Liberal</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">33</td>
+<td class="tdata">a9p3</td>
+<td class="tdata">A9. Which parties or candidates contacted you by<br>any of these means - Labor</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">34</td>
+<td class="tdata arc">a9p4</td>
+<td class="tdata arc">A9. Which parties or candidates contacted you by<br>any of these means - National</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">35</td>
+<td class="tdata">a9p5</td>
+<td class="tdata">A9. Which parties or candidates contacted you by<br>any of these means - Greens</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">36</td>
+<td class="tdata arc">a9p6</td>
+<td class="tdata arc">A9. Which parties or candidates contacted you by<br>any of these means - Other party or candidate</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">37</td>
+<td class="tdata">a10p1</td>
+<td class="tdata">A10.  Try to persuade you to vote for particular<br>party or candidate - No</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">38</td>
+<td class="tdata arc">a10p2</td>
+<td class="tdata arc">A10.  Try to persuade you to vote for particular<br>party or candidate - By telephone</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">39</td>
+<td class="tdata">a10p3</td>
+<td class="tdata">A10.  Try to persuade you to vote for particular<br>party or candidate - By mail</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">40</td>
+<td class="tdata arc">a10p4</td>
+<td class="tdata arc">A10.  Try to persuade you to vote for particular<br>party or candidate - By face-to-face</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">41</td>
+<td class="tdata">a10p5</td>
+<td class="tdata">A10.  Try to persuade you to vote for particular<br>party or candidate - By text message or SMS</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">42</td>
+<td class="tdata arc">a10p6</td>
+<td class="tdata arc">A10.  Try to persuade you to vote for particular<br>party or candidate - By email</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">43</td>
+<td class="tdata">a10p7</td>
+<td class="tdata">A10.  Try to persuade you to vote for particular<br>party or candidate - By social network site or<br>other web-based method</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">44</td>
+<td class="tdata arc">a11</td>
+<td class="tdata arc">A11. Should voting be compulsory</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Strongly favour compulsory voting<br>Favour compulsory voting<br>Favour people voting only if they want to<br>Strongly favour people voting only if they want to</td>
+</tr>
+<tr>
+<td class="tdata">45</td>
+<td class="tdata">a12</td>
+<td class="tdata">A12. Would you vote if voting not compulsory</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Definitely would have voted<br>Probably would have voted<br>Might, might not<br>Probably not<br>Definitely not</td>
+</tr>
+<tr>
+<td class="tdata arc">46</td>
+<td class="tdata arc">a13p1</td>
+<td class="tdata arc">A13. How much confidence vote accurately recorded<br>and counted - A paper ballot in a polling booth on<br>election day</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata">47</td>
+<td class="tdata">a13p2</td>
+<td class="tdata">A13. How much confidence vote accurately recorded<br>and counted - A paper ballot at a pre-poll centre<br>before election day</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">48</td>
+<td class="tdata arc">a13p3</td>
+<td class="tdata arc">A13. How much confidence vote accurately recorded<br>and counted - A postal ballot before election day</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata">49</td>
+<td class="tdata">a13p4</td>
+<td class="tdata">A13. How much confidence vote accurately recorded<br>and counted - An electronic voting machine in a<br>polling booth on election day</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">50</td>
+<td class="tdata arc">a13p5</td>
+<td class="tdata arc">A13. How much confidence vote accurately recorded<br>and counted - Online via the internet before<br>election day</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata">51</td>
+<td class="tdata">a13p6</td>
+<td class="tdata">A13. How much confidence vote accurately recorded<br>and counted - Via a smart phone or SMS text before<br>election day</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A great deal of confidence<br>Quite a lot of confidence<br>Not very much confidence<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">52</td>
+<td class="tdata arc">a14</td>
+<td class="tdata arc">A14. Use internet to get news on 2013 election</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Yes, many times<br>Yes, on several occasions<br>Yes, once or twice<br>?<br>Do not use/have access to internet</td>
+</tr>
+<tr>
+<td class="tdata">53</td>
+<td class="tdata">a15p1</td>
+<td class="tdata">A15. Website: Party or candidate campaign sites</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">54</td>
+<td class="tdata arc">a15p2</td>
+<td class="tdata arc">A15. Website: Mainstream news media</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">55</td>
+<td class="tdata">a15p3</td>
+<td class="tdata">A15. Website: Unofficial online videos</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">56</td>
+<td class="tdata arc">a15p4</td>
+<td class="tdata arc">A15. Website: Federal parliament</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">57</td>
+<td class="tdata">a15p5</td>
+<td class="tdata">A15. Website: Australian Electoral Commission</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">58</td>
+<td class="tdata arc">a16p1</td>
+<td class="tdata arc">A16. Activities online - Signed up to receive<br>information from a party or candidate and/or<br>registered as a follower/friend/supporter on<br>Twitter or Facebook</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">59</td>
+<td class="tdata">a16p2</td>
+<td class="tdata">A16. Activities online - Used online tools to<br>promote parties and candidates</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">60</td>
+<td class="tdata arc">a16p3</td>
+<td class="tdata arc">A16. Activities online - Shared, posted or<br>reposted any non-official content</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">61</td>
+<td class="tdata">a16p4</td>
+<td class="tdata">A16. Activities online - Joined or started a<br>political or election related group on a social<br>networking site</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">62</td>
+<td class="tdata arc">b1</td>
+<td class="tdata arc">B1. Party identification</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>No party</td>
+</tr>
+<tr>
+<td class="tdata">63</td>
+<td class="tdata">xb1</td>
+<td class="tdata">B1. Extended-Party identification</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>No party<br>Australian Democrats<br>Christian Democratic Party<br>Citizens Electoral Council<br>Family First Party<br>One Nation<br>Republican Party<br>Shooters Party<br>Fishing Party<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">64</td>
+<td class="tdata arc">b2</td>
+<td class="tdata arc">B2. Strength of party identification</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Very strong supporter<br>Fairly strong supporter<br>Not very strong supporter</td>
+</tr>
+<tr>
+<td class="tdata">65</td>
+<td class="tdata">b3</td>
+<td class="tdata">B3. Care which party wins election</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Cared a good deal<br>Did not care very much<br>Did not care at all</td>
+</tr>
+<tr>
+<td class="tdata arc">66</td>
+<td class="tdata arc">b4</td>
+<td class="tdata arc">B4. When decided which way to vote</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>A long time ago<br>A few months ago, before election day was announced<br>About the time the election was announced, on 4 August<br>In the first few weeks of the campaign<br>A few days before election day<br>On election day</td>
+</tr>
+<tr>
+<td class="tdata">67</td>
+<td class="tdata">b5</td>
+<td class="tdata">B5. Most important in vote decision</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>The party leaders<br>The policy issues<br>The candidates in your electorate<br>The parties taken as a whole</td>
+</tr>
+<tr>
+<td class="tdata arc">68</td>
+<td class="tdata arc">b6</td>
+<td class="tdata arc">B6. Prefer when Govt controls both houses</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Much better when Government controls both<br>Better when Government controls both<br>?<br>Better when Government does not control the Senate<br>Much better when Government does not control the Senate</td>
+</tr>
+<tr>
+<td class="tdata">69</td>
+<td class="tdata">b7</td>
+<td class="tdata">B7. Difference between Labor and Liberal</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A good deal of difference between the parties<br>Some difference between the parties<br>Not much difference between the parties<br>No difference between the parties</td>
+</tr>
+<tr>
+<td class="tdata arc">70</td>
+<td class="tdata arc">b8own</td>
+<td class="tdata arc">B8. Own left-right position</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Left - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Right - 10</td>
+</tr>
+<tr>
+<td class="tdata">71</td>
+<td class="tdata">b8lib</td>
+<td class="tdata">B8. Liberal left-right position</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Left - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Right - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">72</td>
+<td class="tdata arc">b8alp</td>
+<td class="tdata arc">B8. Labor left-right position</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Left - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Right - 10</td>
+</tr>
+<tr>
+<td class="tdata">73</td>
+<td class="tdata">b8nat</td>
+<td class="tdata">B8. Nationals left-right position</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Left - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Right - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">74</td>
+<td class="tdata arc">b8grn</td>
+<td class="tdata arc">B8. Greens left-right position</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Left - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Right - 10</td>
+</tr>
+<tr>
+<td class="tdata">75</td>
+<td class="tdata">b9reps</td>
+<td class="tdata">B9. Vote in House of Representatives</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata">Missing<br>Liberal Party<br>Labor Party (ALP)<br>National (Country) Party<br>Greens<br>Other (please specify party)<br>Voted informal/Did not vote</td>
+</tr>
+<tr>
+<td class="tdata arc">76</td>
+<td class="tdata arc">xb9reps</td>
+<td class="tdata arc">B9. Extended - Vote in House of Representatives</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>Voted informal/did not vote<br>Australian Democrats<br>Christian Democratic Party<br>Citizens Electoral Council<br>Family First Party<br>One Nation<br>Republican Party<br>Shooters Party<br>Fishing Party<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">77</td>
+<td class="tdata">b9senat</td>
+<td class="tdata">B9. Vote in Senate</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata">Missing<br>Liberal Party<br>Labor Party (ALP)<br>National (Country) Party<br>Greens<br>Other (please specify party)<br>Voted informal/Did not vote</td>
+</tr>
+<tr>
+<td class="tdata arc">78</td>
+<td class="tdata arc">xb9senat</td>
+<td class="tdata arc">B9. Extended - Vote in Senate</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>Voted informal/did not vote<br>Australian Democrats<br>Christian Democratic Party<br>Citizens Electoral Council<br>Family First Party<br>One Nation<br>Republican Party<br>Shooters Party<br>Fishing Party<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">79</td>
+<td class="tdata">b10reps</td>
+<td class="tdata">B10. Preferences to in House of Reps</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Liberal-National Coalition<br>Labor Party (ALP)<br>Not sure/Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">80</td>
+<td class="tdata arc">b10senat</td>
+<td class="tdata arc">B10. Preferences to in Senate</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Liberal-National Coalition<br>Labor Party (ALP)<br>Not sure/Don't know</td>
+</tr>
+<tr>
+<td class="tdata">81</td>
+<td class="tdata">b11</td>
+<td class="tdata">B11. Followed How to Vote card for H of R</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>?<br>Decided my own preferences</td>
+</tr>
+<tr>
+<td class="tdata arc">82</td>
+<td class="tdata arc">b12</td>
+<td class="tdata arc">B12. Thought of changing vote during campaign</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>No<br>Yes, Liberal Party<br>Yes, Labor Party (ALP)<br>Yes, National (Country) Party<br>Yes, Greens<br>Yes, another party/independent</td>
+</tr>
+<tr>
+<td class="tdata">83</td>
+<td class="tdata">b13</td>
+<td class="tdata">B13. Vote in House of Representatives in 2010</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata">Missing<br>Liberal Party<br>Labor Party (ALP)<br>National (Country) Party<br>Greens<br>Another party/independent<br>Did not vote</td>
+</tr>
+<tr>
+<td class="tdata arc">84</td>
+<td class="tdata arc">b14p1</td>
+<td class="tdata arc">B14. Previous vote - always same</td>
+<td class="tdata arc">-1<br>1</td>
+<td class="tdata arc">Missing<br>Always voted for the same party</td>
+</tr>
+<tr>
+<td class="tdata">85</td>
+<td class="tdata">b14p2</td>
+<td class="tdata">B14. Previous vote - sometimes Liberal</td>
+<td class="tdata">-1<br>2</td>
+<td class="tdata">Missing<br>Sometimes voted Liberal</td>
+</tr>
+<tr>
+<td class="tdata arc">86</td>
+<td class="tdata arc">b14p3</td>
+<td class="tdata arc">B14. Previous vote - sometimes Labor</td>
+<td class="tdata arc">-1<br>3</td>
+<td class="tdata arc">Missing<br>Sometimes voted Labor (ALP)</td>
+</tr>
+<tr>
+<td class="tdata">87</td>
+<td class="tdata">b14p4</td>
+<td class="tdata">B14. Previous vote - sometimes National (Country)</td>
+<td class="tdata">-1<br>4</td>
+<td class="tdata">Missing<br>Sometimes voted National (Country)</td>
+</tr>
+<tr>
+<td class="tdata arc">88</td>
+<td class="tdata arc">b14p6</td>
+<td class="tdata arc">B14. Previous vote - sometimes Greens</td>
+<td class="tdata arc">-1<br>6</td>
+<td class="tdata arc">Missing<br>Sometimes voted Greens</td>
+</tr>
+<tr>
+<td class="tdata">89</td>
+<td class="tdata">b14p7</td>
+<td class="tdata">B14. Previous vote - sometimes other<br>party/independent</td>
+<td class="tdata">-1<br>7</td>
+<td class="tdata">Missing<br>Sometimes voted for other party/independent</td>
+</tr>
+<tr>
+<td class="tdata arc">90</td>
+<td class="tdata arc">b14p8</td>
+<td class="tdata arc">B14. Previous vote - not before this election</td>
+<td class="tdata arc">-1<br>8</td>
+<td class="tdata arc">Missing<br>Did not vote before this election</td>
+</tr>
+<tr>
+<td class="tdata">91</td>
+<td class="tdata">b15</td>
+<td class="tdata">B15. Political parties care what people think</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Political parties in Australia care what ordinary people thi<br>2<br>3<br>4<br>?</td>
+</tr>
+<tr>
+<td class="tdata arc">92</td>
+<td class="tdata arc">b16</td>
+<td class="tdata arc">B16. Political parties make system work</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Political parties are necessary to make our political system<br>2<br>3<br>4<br>Political parties are not needed in Australia - 5</td>
+</tr>
+<tr>
+<td class="tdata">93</td>
+<td class="tdata">b17lib</td>
+<td class="tdata">B17. Feelings about Liberal Party</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">94</td>
+<td class="tdata arc">b17alp</td>
+<td class="tdata arc">B17. Feelings about Labor Party</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata">95</td>
+<td class="tdata">b17nat</td>
+<td class="tdata">B17. Feelings about National Party</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">96</td>
+<td class="tdata arc">b17grn</td>
+<td class="tdata arc">B17. Feelings about Greens</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata">97</td>
+<td class="tdata">c1rudd</td>
+<td class="tdata">C1. Feelings about Kevin Rudd</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">98</td>
+<td class="tdata arc">c1abbott</td>
+<td class="tdata arc">C1. Feelings about Tony Abbott</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata">99</td>
+<td class="tdata">c1truss</td>
+<td class="tdata">C1. Feelings about Warren Truss</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">100</td>
+<td class="tdata arc">c1julia</td>
+<td class="tdata arc">C1. Feelings about Julia Gillard</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata">101</td>
+<td class="tdata">c1milne</td>
+<td class="tdata">C1. Feelings about Christine Milne</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Strongly dislike - 0<br>1<br>2<br>3<br>4<br>Neutral - 5<br>6<br>7<br>8<br>9<br>Strongly like - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">102</td>
+<td class="tdata arc">c2krint</td>
+<td class="tdata arc">C2. Kevin Rudd - Intelligent</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">103</td>
+<td class="tdata">c2krcmp</td>
+<td class="tdata">C2. Kevin Rudd - Compassionate</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">104</td>
+<td class="tdata arc">c2krcmpt</td>
+<td class="tdata arc">C2. Kevin Rudd - Competent</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">105</td>
+<td class="tdata">c2krsen</td>
+<td class="tdata">C2. Kevin Rudd - Sensible</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">106</td>
+<td class="tdata arc">c2krlea</td>
+<td class="tdata arc">C2. Kevin Rudd - Provides strong leadership</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">107</td>
+<td class="tdata">c2krhon</td>
+<td class="tdata">C2. Kevin Rudd - Honest</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">108</td>
+<td class="tdata arc">c2krkno</td>
+<td class="tdata arc">C2. Kevin Rudd - Knowledgeable</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">109</td>
+<td class="tdata">c2krins</td>
+<td class="tdata">C2. Kevin Rudd - Inspiring</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">110</td>
+<td class="tdata arc">c2krtru</td>
+<td class="tdata arc">C2. Kevin Rudd - Trustworthy</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">111</td>
+<td class="tdata">c3taint</td>
+<td class="tdata">C3. Tony Abbott - Intelligent</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">112</td>
+<td class="tdata arc">c3tacmp</td>
+<td class="tdata arc">C3. Tony Abbott - Compassionate</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">113</td>
+<td class="tdata">c3tacmpt</td>
+<td class="tdata">C3. Tony Abbott - Competent</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">114</td>
+<td class="tdata arc">c3tasen</td>
+<td class="tdata arc">C3. Tony Abbott - Sensible</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">115</td>
+<td class="tdata">c3talea</td>
+<td class="tdata">C3. Tony Abbott - Provides strong leadership</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">116</td>
+<td class="tdata arc">c3tahon</td>
+<td class="tdata arc">C3. Tony Abbott - Honest</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">117</td>
+<td class="tdata">c3takno</td>
+<td class="tdata">C3. Tony Abbott - Knowledgeable</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">118</td>
+<td class="tdata arc">c3tains</td>
+<td class="tdata arc">C3. Tony Abbott - Inspiring</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata">119</td>
+<td class="tdata">c3tatru</td>
+<td class="tdata">C3. Tony Abbott - Trustworthy</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Extremely well<br>Quite well<br>Not too well<br>Not well at all</td>
+</tr>
+<tr>
+<td class="tdata arc">120</td>
+<td class="tdata arc">c4</td>
+<td class="tdata arc">C4. Satisfied with Aust democracy</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Very satisfied<br>Fairly satisfied<br>Not very satisfied<br>Not at all satisfied</td>
+</tr>
+<tr>
+<td class="tdata">121</td>
+<td class="tdata">c5</td>
+<td class="tdata">C5. Government looks after themselves</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Usually look after themselves<br>Sometimes look after themselves<br>Sometimes can be trusted to do the right thing<br>Usually can be trusted to do the right thing</td>
+</tr>
+<tr>
+<td class="tdata arc">122</td>
+<td class="tdata arc">c6</td>
+<td class="tdata arc">C6. Government run by big interests</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Entirely run for the big interests<br>Mostly run for the big interests<br>About half and half<br>Mostly run for the benefit of all<br>Entirely run for the benefit of all</td>
+</tr>
+<tr>
+<td class="tdata">123</td>
+<td class="tdata">c7p6</td>
+<td class="tdata">C7. 5 yrs done to express views-contact official<br>via email</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">124</td>
+<td class="tdata arc">c7p1</td>
+<td class="tdata arc">C7. 5 yrs done to express views-contact official<br>in person or in writing</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">125</td>
+<td class="tdata">c7p2</td>
+<td class="tdata">C7. 5 yrs done to express views-protest/march</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">126</td>
+<td class="tdata arc">c7p3</td>
+<td class="tdata arc">C7. 5 yrs done to express views-work with like<br>others</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">127</td>
+<td class="tdata">c7p4</td>
+<td class="tdata">C7. 5 yrs done to express views-signed written<br>petition</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">128</td>
+<td class="tdata arc">c7p5</td>
+<td class="tdata arc">C7. 5 yrs done to express views-signed e-petition</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">129</td>
+<td class="tdata">c8</td>
+<td class="tdata">C8. Fed Politicians know what people think</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Federal politicians know what ordinary people think - 1<br>2<br>3<br>4<br>?</td>
+</tr>
+<tr>
+<td class="tdata arc">130</td>
+<td class="tdata arc">c9</td>
+<td class="tdata arc">C9. Doesn't make a difference who in power</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>It makes a big difference who is in power - 1<br>2<br>3<br>4<br>?</td>
+</tr>
+<tr>
+<td class="tdata">131</td>
+<td class="tdata">c10</td>
+<td class="tdata">C10. Doesn't make a difference who vote for</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Who people vote for can make a big difference - 1<br>2<br>3<br>4<br>?</td>
+</tr>
+<tr>
+<td class="tdata arc">132</td>
+<td class="tdata arc">d1tax</td>
+<td class="tdata arc">D1. Importance of Taxation</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">133</td>
+<td class="tdata">d1immig</td>
+<td class="tdata">D1. Importance of Immigration</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata arc">134</td>
+<td class="tdata arc">d1educ</td>
+<td class="tdata arc">D1. Importance of Education</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">135</td>
+<td class="tdata">d1envir</td>
+<td class="tdata">D1. Importance of The environment</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata arc">136</td>
+<td class="tdata arc">d1indrel</td>
+<td class="tdata arc">D1. Importance of Industrial relations</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">137</td>
+<td class="tdata">d1health</td>
+<td class="tdata">D1. Importance of Health and Medicare</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata arc">138</td>
+<td class="tdata arc">d1reas</td>
+<td class="tdata arc">D1. Importance of Refugees and asylum seekers</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">139</td>
+<td class="tdata">d1global</td>
+<td class="tdata">D1. Importance of Global warming</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata arc">140</td>
+<td class="tdata arc">d1carbon</td>
+<td class="tdata arc">D1. Importance of The carbon tax</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">141</td>
+<td class="tdata">d1econo</td>
+<td class="tdata">D1. Importance of Management of the economy</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Extremely important<br>Quite important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata arc">142</td>
+<td class="tdata arc">d2tax</td>
+<td class="tdata arc">D2. Party closest to own view Taxation</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">143</td>
+<td class="tdata">d2immig</td>
+<td class="tdata">D2. Party closest to own view Immigration</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">144</td>
+<td class="tdata arc">d2educ</td>
+<td class="tdata arc">D2. Party closest to own view Education</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">145</td>
+<td class="tdata">d2envir</td>
+<td class="tdata">D2. Party closest to own view The environment</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">146</td>
+<td class="tdata arc">d2indrel</td>
+<td class="tdata arc">D2. Party closest to own view Industrial relations</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">147</td>
+<td class="tdata">d2health</td>
+<td class="tdata">D2. Party closest to own view Health and Medicare</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">148</td>
+<td class="tdata arc">d2reas</td>
+<td class="tdata arc">D2. Party closest to own view Refugees and asylum<br>seekers</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">149</td>
+<td class="tdata">d2global</td>
+<td class="tdata">D2. Party closest to own view Global warming</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">150</td>
+<td class="tdata arc">d2carbon</td>
+<td class="tdata arc">D2. Party closest to own view The carbon tax</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">151</td>
+<td class="tdata">d2econo</td>
+<td class="tdata">D2. Party closest to own view Management of the<br>economy</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Labor (ALP)<br>Liberal - National Coalition<br>No difference<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">152</td>
+<td class="tdata arc">d3p1</td>
+<td class="tdata arc">D3. Most important issue during election campaign</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata arc">Missing<br>Taxation<br>Immigration<br>Education<br>The environment<br>Industrial relations<br>Health and Medicare<br>Refugees and asylum seekers<br>Global warming<br>The carbon tax<br>Management of the economy</td>
+</tr>
+<tr>
+<td class="tdata">153</td>
+<td class="tdata">d3p2</td>
+<td class="tdata">D3. Second important issue during election<br>campaign</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Taxation<br>Immigration<br>Education<br>The environment<br>Industrial relations<br>Health and Medicare<br>Refugees and asylum seekers<br>Global warming<br>The carbon tax<br>Management of the economy</td>
+</tr>
+<tr>
+<td class="tdata arc">154</td>
+<td class="tdata arc">d4hhold</td>
+<td class="tdata arc">D4. Financial situation of hhold now to 1 yr ago</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>A lot better<br>A little better<br>About the same<br>A little worse<br>A lot worse</td>
+</tr>
+<tr>
+<td class="tdata">155</td>
+<td class="tdata">d4cntry</td>
+<td class="tdata">D4. Economic situation country now to 1 yr ago</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>A lot better<br>A little better<br>About the same<br>A little worse<br>A lot worse</td>
+</tr>
+<tr>
+<td class="tdata arc">156</td>
+<td class="tdata arc">d5hhold</td>
+<td class="tdata arc">D5. Effect of govt policies on hhold situation</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>A good effect<br>Not much difference<br>A bad effect</td>
+</tr>
+<tr>
+<td class="tdata">157</td>
+<td class="tdata">d5cntry</td>
+<td class="tdata">D5. Effect of govt policies on country situation</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>A good effect<br>Not much difference<br>A bad effect</td>
+</tr>
+<tr>
+<td class="tdata arc">158</td>
+<td class="tdata arc">d6hhold</td>
+<td class="tdata arc">D6. Financial situation of hhold in 1 yr</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>A lot better<br>A little better<br>About the same<br>A little worse<br>A lot worse</td>
+</tr>
+<tr>
+<td class="tdata">159</td>
+<td class="tdata">d6cntry</td>
+<td class="tdata">D6. Economic situation country in 1 yr</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>A lot better<br>A little better<br>About the same<br>A little worse<br>A lot worse</td>
+</tr>
+<tr>
+<td class="tdata arc">160</td>
+<td class="tdata arc">d7hhold</td>
+<td class="tdata arc">D7. Effect of govt policies on hhold situation in<br>1 yr</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>A good effect<br>Not much difference<br>A bad effect</td>
+</tr>
+<tr>
+<td class="tdata">161</td>
+<td class="tdata">d7cntry</td>
+<td class="tdata">D7. Effect of govt policies on country situation<br>in 1 yr</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>A good effect<br>Not much difference<br>A bad effect</td>
+</tr>
+<tr>
+<td class="tdata arc">162</td>
+<td class="tdata arc">d8p1</td>
+<td class="tdata arc">D8. More or less expenditure - Health</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata">163</td>
+<td class="tdata">d8p2</td>
+<td class="tdata">D8. More or less expenditure - Education</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata arc">164</td>
+<td class="tdata arc">d8p3</td>
+<td class="tdata arc">D8. More or less expenditure - Unemployment<br>benefits</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata">165</td>
+<td class="tdata">d8p4</td>
+<td class="tdata">D8. More or less expenditure - Defence</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata arc">166</td>
+<td class="tdata arc">d8p5</td>
+<td class="tdata arc">D8. More or less expenditure - Old-age pensions</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata">167</td>
+<td class="tdata">d8p6</td>
+<td class="tdata">D8. More or less expenditure - Business and<br>industry</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata arc">168</td>
+<td class="tdata arc">d8p7</td>
+<td class="tdata arc">D8. More or less expenditure - Police and law<br>enforcement</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata">169</td>
+<td class="tdata">d8p8</td>
+<td class="tdata">D8. More or less expenditure - Welfare benefits</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Much more than now<br>Somewhat more than now<br>The same as now<br>Somewhat less than now<br>Much less than now</td>
+</tr>
+<tr>
+<td class="tdata arc">170</td>
+<td class="tdata arc">d9</td>
+<td class="tdata arc">D9. Improve standard of living next 10 years</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Very likely<br>Somewhat likely<br>Somewhat unlikely<br>Very unlikely</td>
+</tr>
+<tr>
+<td class="tdata">171</td>
+<td class="tdata">d10</td>
+<td class="tdata">D10. Satisfaction with present state of Australian<br>economy</td>
+<td class="tdata">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</td>
+<td class="tdata">Missing<br>Extremely dissatisfied - 0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>Extremely satisfied - 10</td>
+</tr>
+<tr>
+<td class="tdata arc">172</td>
+<td class="tdata arc">d11</td>
+<td class="tdata arc">D11. Likelihood household income severely reduced<br>next 12 months</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Very likely<br>Somewhat likely<br>Somewhat unlikely<br>Very unlikely</td>
+</tr>
+<tr>
+<td class="tdata">173</td>
+<td class="tdata">d12p1</td>
+<td class="tdata">D12. Ease of finding another job next 12 months -<br>You</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata">Missing<br>Very easy<br>Somewhat easy<br>Somewhat difficult<br>Very difficult<br>Do not have spouse/partner<br>Do not have job</td>
+</tr>
+<tr>
+<td class="tdata arc">174</td>
+<td class="tdata arc">d12p2</td>
+<td class="tdata arc">D12. Ease of finding another job next 12 months -<br>Spouse/partner</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>Very easy<br>Somewhat easy<br>Somewhat difficult<br>Very difficult<br>Do not have spouse/partner<br>Do not have job</td>
+</tr>
+<tr>
+<td class="tdata">175</td>
+<td class="tdata">d13p1</td>
+<td class="tdata">D13. High tax makes people less willing to work<br>hard</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">176</td>
+<td class="tdata arc">d13p2</td>
+<td class="tdata arc">D13. Trade unions have too much power</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">177</td>
+<td class="tdata">d13p3</td>
+<td class="tdata">D13. Big business has too much power</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">178</td>
+<td class="tdata arc">d13p4</td>
+<td class="tdata arc">D13. Income and wealth should be redistributed</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">179</td>
+<td class="tdata">d13p5</td>
+<td class="tdata">D13. Stricter laws to regulate trade unions</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">180</td>
+<td class="tdata arc">d13p6</td>
+<td class="tdata arc">D13. Government should take measures to reduce<br>difference in income levels</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">181</td>
+<td class="tdata">e1</td>
+<td class="tdata">E1. Choice between taxes and social services</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly favour reducing taxes<br>Mildly favour reducing taxes<br>Depends<br>Mildly favour spending more on social services<br>Strongly favour spending more on social services</td>
+</tr>
+<tr>
+<td class="tdata arc">182</td>
+<td class="tdata arc">e2migeo</td>
+<td class="tdata arc">E2. Equal opportunities for migrants</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata">183</td>
+<td class="tdata">e2nudsex</td>
+<td class="tdata">E2. Nudity & sex in films and magazines</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata arc">184</td>
+<td class="tdata arc">e2abland</td>
+<td class="tdata arc">E2. Aboriginal land rights</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata">185</td>
+<td class="tdata">e2equop</td>
+<td class="tdata">E2. Equal opportunities for women</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata arc">186</td>
+<td class="tdata arc">e2immig</td>
+<td class="tdata arc">E2. No. of migrants allowed into Australia</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata">187</td>
+<td class="tdata">e2abor</td>
+<td class="tdata">E2. Government help for aborigines</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata arc">188</td>
+<td class="tdata arc">e2asia</td>
+<td class="tdata arc">E2. Building closer links with Asia</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Gone much too far<br>Gone too far<br>About right<br>Not gone far enough<br>Not gone nearly far enough</td>
+</tr>
+<tr>
+<td class="tdata">189</td>
+<td class="tdata">e3</td>
+<td class="tdata">E3. Feelings about abortion</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Women should be able to obtain an abortion readily when they<br>Abortion should be allowed only in special circumstances<br>Abortion should not be allowed under any circumstances<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">190</td>
+<td class="tdata arc">e4</td>
+<td class="tdata arc">E4. Best way of handling asylum seekers</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Process and resettle offshore<br>Process offshore but resettle in Australia<br>Process and resettle onshore in Australia<br>None of these options</td>
+</tr>
+<tr>
+<td class="tdata">191</td>
+<td class="tdata">e5p1</td>
+<td class="tdata">E5. Gender difference occurs because - Women are<br>discriminated against in politics and the<br>workplace</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Great deal<br>Some<br>A little<br>None</td>
+</tr>
+<tr>
+<td class="tdata arc">192</td>
+<td class="tdata arc">e5p2</td>
+<td class="tdata arc">E5. Gender difference occurs because - Many men<br>are unwilling to take on greater responsibilities<br>at home to allow women to move into top leadership<br>positions</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Great deal<br>Some<br>A little<br>None</td>
+</tr>
+<tr>
+<td class="tdata">193</td>
+<td class="tdata">e5p3</td>
+<td class="tdata">E5. Gender difference occurs because - Women lack<br>the drive and ambition needed to make it to the<br>top</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Great deal<br>Some<br>A little<br>None</td>
+</tr>
+<tr>
+<td class="tdata arc">194</td>
+<td class="tdata arc">e5p4</td>
+<td class="tdata arc">E5. Gender difference occurs because - Most women<br>are not tough enough to be good leaders</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Great deal<br>Some<br>A little<br>None</td>
+</tr>
+<tr>
+<td class="tdata">195</td>
+<td class="tdata">e6deathp</td>
+<td class="tdata">E6. Death penalty reintroduced for murder</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">196</td>
+<td class="tdata arc">e6marij</td>
+<td class="tdata arc">E6. Decriminalise smoking of marijuana</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">197</td>
+<td class="tdata">e6lawbrk</td>
+<td class="tdata">E6. Stiffer sentences if break law</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">198</td>
+<td class="tdata arc">e6pref</td>
+<td class="tdata arc">E6. Women given preferential treatment</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">199</td>
+<td class="tdata">e6boats</td>
+<td class="tdata">E6. Turn back boats carrying asylum seekers</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">200</td>
+<td class="tdata arc">e6same</td>
+<td class="tdata arc">E6. Same-sex marriages prohibited by law</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">201</td>
+<td class="tdata">e6white</td>
+<td class="tdata">E6. White Australians advantaged applying for jobs</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">202</td>
+<td class="tdata arc">e6ethnic</td>
+<td class="tdata arc">E6. People think of themselves as members of<br>ethnic groups rather than individuals</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">203</td>
+<td class="tdata">e6opp</td>
+<td class="tdata">E6. Increase business opportunities for women</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">204</td>
+<td class="tdata arc">e7p1</td>
+<td class="tdata arc">E7. Aims 10yrs 1-First choice</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Maintain order in the nation<br>Give people more say in important government decisions<br>Fight rising prices<br>Protect freedom of speech</td>
+</tr>
+<tr>
+<td class="tdata">205</td>
+<td class="tdata">e7p2</td>
+<td class="tdata">E7. Aims 10yrs 1-Second choice</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Maintain order in the nation<br>Give people more say in important government decisions<br>Fight rising prices<br>Protect freedom of speech</td>
+</tr>
+<tr>
+<td class="tdata arc">206</td>
+<td class="tdata arc">e8</td>
+<td class="tdata arc">E8. Better or worse for ethnic minority groups<br>past few years</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>A lot better<br>A little better<br>Stayed the same<br>A little worse<br>A lot worse</td>
+</tr>
+<tr>
+<td class="tdata">207</td>
+<td class="tdata">e9</td>
+<td class="tdata">E9. Ethnic prejudice in Australia nowadays</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>A lot<br>A little<br>Hardly any</td>
+</tr>
+<tr>
+<td class="tdata arc">208</td>
+<td class="tdata arc">f1</td>
+<td class="tdata arc">F1. Importance of Queen</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Very important<br>Fairly important<br>Not very important</td>
+</tr>
+<tr>
+<td class="tdata">209</td>
+<td class="tdata">f2</td>
+<td class="tdata">F2. Australia a republic</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Strongly favour becoming republic<br>Favour becoming republic<br>Favour retaining the Queen as head of state<br>Strongly favour retaining the Queen as head of state</td>
+</tr>
+<tr>
+<td class="tdata arc">210</td>
+<td class="tdata arc">f3</td>
+<td class="tdata arc">F3. United States alliance under ANZUS</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Very important<br>Fairly important<br>Not very important<br>Not at all important</td>
+</tr>
+<tr>
+<td class="tdata">211</td>
+<td class="tdata">f4</td>
+<td class="tdata">F4. If Australia threatened trust US come to<br>defence</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>A great deal<br>A fair amount<br>Not very much<br>None at all</td>
+</tr>
+<tr>
+<td class="tdata arc">212</td>
+<td class="tdata arc">f5japan</td>
+<td class="tdata arc">F5. Japan threat to Aust. security</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata">213</td>
+<td class="tdata">f5us</td>
+<td class="tdata">F5. United States threat to Aust. security</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata arc">214</td>
+<td class="tdata arc">f5china</td>
+<td class="tdata arc">F5. China threat to Aust. security</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata">215</td>
+<td class="tdata">f5vietn</td>
+<td class="tdata">F5. Vietnam threat to Aust. security</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata arc">216</td>
+<td class="tdata arc">f5malay</td>
+<td class="tdata arc">F5. Malaysia threat to Aust. security</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata">217</td>
+<td class="tdata">f5indon</td>
+<td class="tdata">F5. Indonesia threat to Aust. security</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Very likely<br>Fairly likely<br>Not very likely</td>
+</tr>
+<tr>
+<td class="tdata arc">218</td>
+<td class="tdata arc">f6p1</td>
+<td class="tdata arc">F6. Aust defence stronger than 10 yrs ago</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">219</td>
+<td class="tdata">f6p4</td>
+<td class="tdata">F6. Aust would be able to defend itself</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">220</td>
+<td class="tdata arc">f6p7</td>
+<td class="tdata arc">F6. Aust trading future lies with Asia</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">221</td>
+<td class="tdata">f6p8</td>
+<td class="tdata">F6. Aust provide military for war on terrorism</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">222</td>
+<td class="tdata arc">f7</td>
+<td class="tdata arc">F7. Number of immigrants increased</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Increased a lot<br>Increased a little<br>Remain about the same as it is<br>Reduced a little<br>Reduced a lot</td>
+</tr>
+<tr>
+<td class="tdata">223</td>
+<td class="tdata">f8p1</td>
+<td class="tdata">F8. Immigrants increase crime</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">224</td>
+<td class="tdata arc">f8p2</td>
+<td class="tdata arc">F8. Immigrants good for economy</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">225</td>
+<td class="tdata">f8p3</td>
+<td class="tdata">F8. Immigrants take jobs from Aust</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata arc">226</td>
+<td class="tdata arc">f8p4</td>
+<td class="tdata arc">F8. Immigrants make Aust more open</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Strongly agree<br>Agree<br>Neither agree nor disagree<br>Disagree<br>Strongly disagree</td>
+</tr>
+<tr>
+<td class="tdata">227</td>
+<td class="tdata">f9</td>
+<td class="tdata">F9. Threat of global warming to way of life</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Very serious<br>Fairly serious<br>Not very serious<br>Not at all serious</td>
+</tr>
+<tr>
+<td class="tdata arc">228</td>
+<td class="tdata arc">f10</td>
+<td class="tdata arc">F10. Federal treasurer before Federal election</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Bob Carr<br>Bill Shorten<br>Chris Bowen<br>Tony Burke<br>?</td>
+</tr>
+<tr>
+<td class="tdata">229</td>
+<td class="tdata">f11</td>
+<td class="tdata">F11. Unemployment rate in Australia June 2013</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>3.7%<br>5.7%<br>7.7%<br>9.7%<br>?</td>
+</tr>
+<tr>
+<td class="tdata arc">230</td>
+<td class="tdata arc">f12</td>
+<td class="tdata arc">F12. Which party came in second H of R</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Greens<br>?<br>Labor Party (ALP)<br>Liberal-National Coalition<br>?</td>
+</tr>
+<tr>
+<td class="tdata">231</td>
+<td class="tdata">f13</td>
+<td class="tdata">F13. Secretary-General of the United Nations</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Kofi Annan<br>Kurt Waldheim<br>Ban Ki-moon<br>Boutros Boutros-Ghali<br>?</td>
+</tr>
+<tr>
+<td class="tdata arc">232</td>
+<td class="tdata arc">f14namer</td>
+<td class="tdata arc">F14. Recall Name of Federal MP</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Correctly named MP<br>Incorrectly named MP<br>Don't recall MP</td>
+</tr>
+<tr>
+<td class="tdata">233</td>
+<td class="tdata">f14partr</td>
+<td class="tdata">F14. Recall Name of Party - accuracy of recall</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Correctly named Party<br>Incorrectly named Party<br>Don't recall Party</td>
+</tr>
+<tr>
+<td class="tdata arc">234</td>
+<td class="tdata arc">f14party</td>
+<td class="tdata arc">F14. Name of Party - response given</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>No party<br>Australian Democrats<br>Christian Democratic Party<br>Citizens Electoral Council<br>Family First Party<br>One Nation<br>Republican Party<br>Shooters Party<br>Fishing Party<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">235</td>
+<td class="tdata">f15</td>
+<td class="tdata">F15. Ever contacted local Federal MP</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">236</td>
+<td class="tdata arc">f16p1</td>
+<td class="tdata arc">F16. Quiz - Australia became federation in 1901</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">237</td>
+<td class="tdata">f16p2</td>
+<td class="tdata">F16. Quiz - 75 members of House of Reps</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">238</td>
+<td class="tdata arc">f16p3</td>
+<td class="tdata arc">F16. Quiz - Constitution changed by High Court</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">239</td>
+<td class="tdata">f16p4</td>
+<td class="tdata">F16. Quiz - Elections to Senate proportional</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">240</td>
+<td class="tdata arc">f16p5</td>
+<td class="tdata arc">F16. Quiz - No-one stands unless pay deposit</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">241</td>
+<td class="tdata">f16p6</td>
+<td class="tdata">F16. Quiz - Longest time between Fed elections 4<br>years</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>True<br>False<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">242</td>
+<td class="tdata arc">g1</td>
+<td class="tdata arc">G1. Age left school</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Age given<br>No formal schooling<br>Went to primary school only<br>Still at school</td>
+</tr>
+<tr>
+<td class="tdata">243</td>
+<td class="tdata">g1age</td>
+<td class="tdata">G1. Age given (Numeric) (BASE: Age given)</td>
+<td class="tdata">-1</td>
+<td class="tdata">Missing</td>
+</tr>
+<tr>
+<td class="tdata arc">244</td>
+<td class="tdata arc">g2</td>
+<td class="tdata arc">G2 - Years of tertiary study completed</td>
+<td class="tdata arc">-1<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9</td>
+<td class="tdata arc">Missing<br>0<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9 or more</td>
+</tr>
+<tr>
+<td class="tdata">245</td>
+<td class="tdata">g3</td>
+<td class="tdata">G3. Highest qualification since leaving school</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7</td>
+<td class="tdata">Missing<br>No qualification since leaving school<br>Postgraduate Degree or Postgraduate Diploma<br>Bachelor Degree (including Honours)<br>Undergraduate Diploma<br>Associate Diploma<br>Trade qualification<br>Non-trade qualification</td>
+</tr>
+<tr>
+<td class="tdata arc">246</td>
+<td class="tdata arc">g4</td>
+<td class="tdata arc">G4 - Work mainly doing last week</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</td>
+<td class="tdata arc">Missing<br>Working full-time for pay<br>Working part-time for pay<br>Unemployed - looking for full-time work<br>Unemployed - looking for part-time work<br>Retired from paid work<br>A full-time school or university student<br>Keeping house<br>Other (please specify)</td>
+</tr>
+<tr>
+<td class="tdata">247</td>
+<td class="tdata">g5</td>
+<td class="tdata">G5. Occupation (ANZSCO 2 digit)</td>
+<td class="tdata">-1</td>
+<td class="tdata">Missing</td>
+</tr>
+<tr>
+<td class="tdata arc">248</td>
+<td class="tdata arc">xg5</td>
+<td class="tdata arc">G5. Extended-Occupation (ANZSCO 4 digit)</td>
+<td class="tdata arc">-1</td>
+<td class="tdata arc">Missing</td>
+</tr>
+<tr>
+<td class="tdata">249</td>
+<td class="tdata">g5pos</td>
+<td class="tdata">G5. Position in organisation</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Upper managerial<br>Middle managerial<br>Lower managerial<br>Supervisory<br>Non-supervisory</td>
+</tr>
+<tr>
+<td class="tdata arc">250</td>
+<td class="tdata arc">g5employ</td>
+<td class="tdata arc">G5. Employer</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Self-employed<br>Employee in private company or business<br>Employee of Federal/State/Local Government<br>Employee in family business or farm</td>
+</tr>
+<tr>
+<td class="tdata">251</td>
+<td class="tdata">g5superv</td>
+<td class="tdata">G5. Supervisory responsibility</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">252</td>
+<td class="tdata arc">g6</td>
+<td class="tdata arc">G6. Belong to a trade union</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">253</td>
+<td class="tdata">h1</td>
+<td class="tdata">H1. Sex</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Male<br>Female</td>
+</tr>
+<tr>
+<td class="tdata arc">254</td>
+<td class="tdata arc">h2</td>
+<td class="tdata arc">H2. Year of birth</td>
+<td class="tdata arc">-1</td>
+<td class="tdata arc">Missing</td>
+</tr>
+<tr>
+<td class="tdata">255</td>
+<td class="tdata">age</td>
+<td class="tdata">Age (derived)</td>
+<td class="tdata">-1</td>
+<td class="tdata">Missing</td>
+</tr>
+<tr>
+<td class="tdata arc">256</td>
+<td class="tdata arc">ageder</td>
+<td class="tdata arc">Age (categorised - derived)</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>18 to 24<br>25 to 34<br>35 to 44<br>45 to 54<br>55 to 64<br>65 plus</td>
+</tr>
+<tr>
+<td class="tdata">257</td>
+<td class="tdata">h3</td>
+<td class="tdata">H3. Aboriginal or Torres Strait Islander</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">258</td>
+<td class="tdata arc">h4p1</td>
+<td class="tdata arc">H4. You or household member own - A residence</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">259</td>
+<td class="tdata">h4p2</td>
+<td class="tdata">H4. You or household member own - A business</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">260</td>
+<td class="tdata arc">h4p3</td>
+<td class="tdata arc">H4. You or household member own - Stocks or bonds</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">261</td>
+<td class="tdata">h4p4</td>
+<td class="tdata">H4. You or household member own - Any savings</td>
+<td class="tdata">-1<br>1<br>2</td>
+<td class="tdata">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">262</td>
+<td class="tdata arc">h5dad</td>
+<td class="tdata arc">H5. Fathers party ID at 14</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7</td>
+<td class="tdata arc">Missing<br>Liberal (includes UAP)<br>Labor<br>National/Country (includes Progressive Party)<br>Democratic Labor (DLP)<br>Australian Democrats<br>Other parties<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata">263</td>
+<td class="tdata">h5mum</td>
+<td class="tdata">H5. Mothers party ID at 14</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7</td>
+<td class="tdata">Missing<br>Liberal (includes UAP)<br>Labor<br>National/Country (includes Progressive Party)<br>Democratic Labor (DLP)<br>Australian Democrats<br>Other parties<br>Don't know</td>
+</tr>
+<tr>
+<td class="tdata arc">264</td>
+<td class="tdata arc">h6</td>
+<td class="tdata arc">H6. Religion</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7</td>
+<td class="tdata arc">Missing<br>Roman Catholic<br>Anglican/Church of England<br>Uniting Church/Methodist<br>Orthodox Church<br>Presbyterian<br>Other (please specify)<br>No religion</td>
+</tr>
+<tr>
+<td class="tdata">265</td>
+<td class="tdata">xh6</td>
+<td class="tdata">H6. Extended-Religion</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Missing<br>Roman Catholic<br>Anglican/Church of England<br>Uniting Church/Methodist<br>Orthodox Church<br>Presbyterian<br>Other (Please specify)<br>No religion<br>Catholic - not Roman<br>Armenian Apostolic<br>Baptist<br>Brethren<br>Churches of Christ<br>Latter Day Saints<br>Lutheran<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">266</td>
+<td class="tdata arc">h7</td>
+<td class="tdata arc">H7. Religious attendance</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata arc">Missing<br>At least once a week<br>At least once a month<br>Several times a year<br>At least once a year<br>Less than once a year<br>Never</td>
+</tr>
+<tr>
+<td class="tdata">267</td>
+<td class="tdata">h8</td>
+<td class="tdata">H8. Marital status</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Never married<br>Now married (including de facto relationships)<br>Widowed<br>Divorced or separated</td>
+</tr>
+<tr>
+<td class="tdata arc">268</td>
+<td class="tdata arc">h9</td>
+<td class="tdata arc">H9. Own, buying or rent home</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Own outright<br>Own, paying off mortgage<br>Rent from private landlord<br>Rent from public housing authority<br>Other (boarding, living at home, etc)</td>
+</tr>
+<tr>
+<td class="tdata">269</td>
+<td class="tdata">h10</td>
+<td class="tdata">H10. How often use internet</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7</td>
+<td class="tdata">Missing<br>Several times a day<br>About once a day<br>Three to five days a week<br>One to two days a week<br>Every few weeks<br>Less often<br>Do not use the internet</td>
+</tr>
+<tr>
+<td class="tdata arc">270</td>
+<td class="tdata arc">h11</td>
+<td class="tdata arc">H11. When start using internet</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>Within the last six months<br>About a year ago<br>About two or three years ago<br>More than three years ago</td>
+</tr>
+<tr>
+<td class="tdata">271</td>
+<td class="tdata">h12attch</td>
+<td class="tdata">H12. Sent an attachment with an email</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">272</td>
+<td class="tdata arc">h12mlmed</td>
+<td class="tdata arc">H12. Posted audio, video or image files</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">273</td>
+<td class="tdata">h12wpblg</td>
+<td class="tdata">H12. Personally designed a webpage or blog</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">274</td>
+<td class="tdata arc">h12dwld</td>
+<td class="tdata arc">H12. Downloaded a software program to your<br>computer</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">275</td>
+<td class="tdata">h13</td>
+<td class="tdata">H13. Social class</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Upper class<br>Middle class<br>Working class<br>None</td>
+</tr>
+<tr>
+<td class="tdata arc">276</td>
+<td class="tdata arc">h14</td>
+<td class="tdata arc">H14. Live rural or urban</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>A rural area or village<br>A small country town (under 10,000 people)<br>A larger country town (over 10,000 people)<br>A large town (over 25,000 people)<br>A major city (over 100,000 people)</td>
+</tr>
+<tr>
+<td class="tdata">277</td>
+<td class="tdata">h15</td>
+<td class="tdata">H15. Gross annual income</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Missing<br>Less than $10,000 per year<br>$10,001 to $15,000 per year<br>$15,001 to $20,000 per year<br>$20,001 to $25,000 per year<br>$25,001 to $30,000 per year<br>$30,001 to $35,000 per year<br>$35,001 to $40,000 per year<br>$40,001 to $45,000 per year<br>$45,001 to $50,000 per year<br>$50,001 to $60,000 per year<br>$60,001 to $70,000 per year<br>$70,001 to $80,000 per year<br>$80,001 to $90,000 per year<br>$90,001 to $100,000 per year<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">278</td>
+<td class="tdata arc">h16</td>
+<td class="tdata arc">H16. Prepared to take part in similar survey next<br>Federal election</td>
+<td class="tdata arc">-1<br>1<br>2<br>99</td>
+<td class="tdata arc">Missing<br>Yes<br>No<br>No response</td>
+</tr>
+<tr>
+<td class="tdata">279</td>
+<td class="tdata">h17</td>
+<td class="tdata">H17. Spouse working now</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</td>
+<td class="tdata">Missing<br>Working full-time for pay<br>Working part-time for pay<br>Unemployed - looking for full-time work<br>Unemployed - looking for part-time work<br>Retired from paid work<br>A full-time school or university student<br>Keeping house<br>Other (please specify)</td>
+</tr>
+<tr>
+<td class="tdata arc">280</td>
+<td class="tdata arc">h18</td>
+<td class="tdata arc">H18. Spouse Occupation (ANZSCO 2 digit)</td>
+<td class="tdata arc">-1</td>
+<td class="tdata arc">Missing</td>
+</tr>
+<tr>
+<td class="tdata">281</td>
+<td class="tdata">xh18</td>
+<td class="tdata">H18. Extended-Spouse Occupation (ANZSCO 4 digit)</td>
+<td class="tdata">-1</td>
+<td class="tdata">Missing</td>
+</tr>
+<tr>
+<td class="tdata arc">282</td>
+<td class="tdata arc">h19</td>
+<td class="tdata arc">H19. Spouse employer</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata arc">Missing<br>Self-employed<br>Employee in private company or business<br>Employee of Federal/State/Local Government<br>Employee in family business or farm<br>Partner never worked for pay</td>
+</tr>
+<tr>
+<td class="tdata">283</td>
+<td class="tdata">h20</td>
+<td class="tdata">H20. Does spouse supervise people at work</td>
+<td class="tdata">-1<br>1<br>2<br>3</td>
+<td class="tdata">Missing<br>Yes<br>No<br>Partner never worked for pay</td>
+</tr>
+<tr>
+<td class="tdata arc">284</td>
+<td class="tdata arc">h21</td>
+<td class="tdata arc">H21. Spouse member of trade union</td>
+<td class="tdata arc">-1<br>1<br>2<br>3</td>
+<td class="tdata arc">Missing<br>Yes<br>No<br>Partner never worked for pay</td>
+</tr>
+<tr>
+<td class="tdata">285</td>
+<td class="tdata">h22</td>
+<td class="tdata">H22. Spouse party identification</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6</td>
+<td class="tdata">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>No party</td>
+</tr>
+<tr>
+<td class="tdata arc">286</td>
+<td class="tdata arc">xh22</td>
+<td class="tdata arc">H22. Extended-Spouse party identification</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>Liberal<br>Labor<br>National (Country) Party<br>Greens<br>Other party (please specify)<br>No party<br>Australian Democrats<br>Christian Democratic Party<br>Citizens Electoral Council<br>Family First Party<br>One Nation<br>Republican Party<br>Shooters Party<br>Fishing Party<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">287</td>
+<td class="tdata">h23own</td>
+<td class="tdata">H23. Country of birth</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</td>
+<td class="tdata">Missing<br>Australia<br>New Zealand<br>United Kingdom<br>Republic of Ireland<br>Italy<br>Germany<br>Greece<br>China<br>Netherlands<br>Vietnam<br>Yugoslavia (former)<br>Other (please specify below)</td>
+</tr>
+<tr>
+<td class="tdata arc">288</td>
+<td class="tdata arc">xh23own</td>
+<td class="tdata arc">H23. Extended-Country of birth</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">289</td>
+<td class="tdata">h23mum</td>
+<td class="tdata">H23. Mothers country of birth</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</td>
+<td class="tdata">Missing<br>Australia<br>New Zealand<br>United Kingdom<br>Republic of Ireland<br>Italy<br>Germany<br>Greece<br>China<br>Netherlands<br>Vietnam<br>Yugoslavia (former)<br>Other (please specify below)</td>
+</tr>
+<tr>
+<td class="tdata arc">290</td>
+<td class="tdata arc">xh23mum</td>
+<td class="tdata arc">H23. Extended-Mothers country of birth</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">291</td>
+<td class="tdata">h23dad</td>
+<td class="tdata">H23. Fathers country of birth</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12</td>
+<td class="tdata">Missing<br>Australia<br>New Zealand<br>United Kingdom<br>Republic of Ireland<br>Italy<br>Germany<br>Greece<br>China<br>Netherlands<br>Vietnam<br>Yugoslavia (former)<br>Other (please specify below)</td>
+</tr>
+<tr>
+<td class="tdata arc">292</td>
+<td class="tdata arc">xh23dad</td>
+<td class="tdata arc">H23. Extended-Fathers country of birth</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">293</td>
+<td class="tdata">h24own</td>
+<td class="tdata">H24. Year came to Australia - You</td>
+<td class="tdata">-1</td>
+<td class="tdata">Missing</td>
+</tr>
+<tr>
+<td class="tdata arc">294</td>
+<td class="tdata arc">h24mum</td>
+<td class="tdata arc">H24. Year came to Australia - Mother</td>
+<td class="tdata arc">-1<br>9999</td>
+<td class="tdata arc">Missing<br>Parent not in Australia</td>
+</tr>
+<tr>
+<td class="tdata">295</td>
+<td class="tdata">h24dad</td>
+<td class="tdata">H24. Year came to Australia - Father</td>
+<td class="tdata">-1<br>9999</td>
+<td class="tdata">Missing<br>Parent not in Australia</td>
+</tr>
+<tr>
+<td class="tdata arc">296</td>
+<td class="tdata arc">h25p1</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia -<br>Accompanying or joining family</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">297</td>
+<td class="tdata">h25p2</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Accompanying or joining husband or wife</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">298</td>
+<td class="tdata arc">h25p3</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia - To<br>be a student</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">299</td>
+<td class="tdata">h25p4</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Better life</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">300</td>
+<td class="tdata arc">h25p5</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia -<br>Freedom</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">301</td>
+<td class="tdata">h25p6</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Earn money</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">302</td>
+<td class="tdata arc">h25p7</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia -<br>Just to live in Australia</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">303</td>
+<td class="tdata">h25p8</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Poverty in country of origin</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">304</td>
+<td class="tdata arc">h25p9</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia -<br>Persecution in country of origin</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">305</td>
+<td class="tdata">h25p10</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Other</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">306</td>
+<td class="tdata arc">h25p11</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia - For<br>the climate (i.e. sunshine)</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">307</td>
+<td class="tdata">h25p12</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Turmoil in country of origin (i.e. war,<br>occupation, displacement)</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">308</td>
+<td class="tdata arc">h25p13</td>
+<td class="tdata arc">H25. Reasons for coming to live in Australia - For<br>the medical benefits</td>
+<td class="tdata arc">-1<br>0<br>1</td>
+<td class="tdata arc">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata">309</td>
+<td class="tdata">h25p14</td>
+<td class="tdata">H25. Reasons for coming to live in Australia -<br>Refugee NFI</td>
+<td class="tdata">-1<br>0<br>1</td>
+<td class="tdata">Missing<br>Unchecked<br>Checked</td>
+</tr>
+<tr>
+<td class="tdata arc">310</td>
+<td class="tdata arc">h26you_1</td>
+<td class="tdata arc">H26. Citizenship - You (1st listed)</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">311</td>
+<td class="tdata">h26you_2</td>
+<td class="tdata">H26. Citizenship - You (2nd listed)</td>
+<td class="tdata">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">312</td>
+<td class="tdata arc">h26mum_1</td>
+<td class="tdata arc">H26. Citizenship - Mother (1st listed)</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">313</td>
+<td class="tdata">h26mum_2</td>
+<td class="tdata">H26. Citizenship - Mother (2nd listed)</td>
+<td class="tdata">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">314</td>
+<td class="tdata arc">h26dad_1</td>
+<td class="tdata arc">H26. Citizenship - Father (1st listed)</td>
+<td class="tdata arc">-1<br>1<br>4<br>5<br>601<br>602<br>603<br>604<br>605<br>606<br>607<br>608<br>611<br>612<br>613<br><span class="omit">&lt;...&gt;</span></td>
+<td class="tdata arc">Missing<br>At Sea<br>Unknown (the destination or origin of the goods is unknown)<br>Unidentified (the country reported on import/export document<br>Asia-Pacific Economic Co-operation (APEC)<br>Association of South East Asian Nations (ASEAN)<br>European Economic Area (EEA)<br>European Union (EU)<br>Organisation for Economic Co-operation and Development (OECD<br>Organisation of Petroleum Exporting Countries (OPEC)<br>South Pacific Regional Trade and Economic Co-operation Agree<br>The Commonwealth<br>Europe<br>Europe and the Former USSR<br>Former USSR<br><span class="omit">&lt;... truncated&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">316</td>
+<td class="tdata">h27</td>
+<td class="tdata">H27. Ever been back to country of birth</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4<br>5</td>
+<td class="tdata">Missing<br>Yes, once only<br>Yes, 2 to 4 times<br>Yes, 5 to 9 times<br>Yes, 10 times or more<br>No</td>
+</tr>
+<tr>
+<td class="tdata arc">317</td>
+<td class="tdata arc">h28</td>
+<td class="tdata arc">H28. Interest in politics in country of birth</td>
+<td class="tdata arc">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata arc">Missing<br>A good deal<br>Some<br>Not much<br>None</td>
+</tr>
+<tr>
+<td class="tdata">318</td>
+<td class="tdata">h29</td>
+<td class="tdata">H29. Experienced discrimination or unfair<br>treatment in Australia past 5 years</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Often<br>Sometimes<br>Rarely<br>Not at all</td>
+</tr>
+<tr>
+<td class="tdata arc">319</td>
+<td class="tdata arc">h30</td>
+<td class="tdata arc">H30. English main language spoken at home</td>
+<td class="tdata arc">-1<br>1<br>2</td>
+<td class="tdata arc">Missing<br>Yes<br>No</td>
+</tr>
+<tr>
+<td class="tdata">320</td>
+<td class="tdata">h31</td>
+<td class="tdata">H31. How good at speaking English day-to-day</td>
+<td class="tdata">-1<br>1<br>2<br>3<br>4</td>
+<td class="tdata">Missing<br>Very good<br>Fairly good<br>Below average<br>Poor</td>
+</tr>
+<tr>
+<td class="tdata arc">321</td>
+<td class="tdata arc">weight</td>
+<td class="tdata arc">Weight</td>
+<td class="tdata arc" colspan="2"><em>range: 0.4-6.7</em></td>
+</tr>
+<tr>
+<td class="tdata">322</td>
+<td class="tdata">statemap</td>
+<td class="tdata">State mapping variable</td>
+<td class="tdata">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8</td>
+<td class="tdata">NSW<br>Vic<br>Qld<br>SA<br>WA<br>Tas<br>NT<br>ACT</td>
+</tr>
+<tr>
+<td class="tdata arc">323</td>
+<td class="tdata arc">alp_1prf</td>
+<td class="tdata arc">ALP First Preference Vote - Percentage</td>
+<td class="tdata arc" colspan="2"><em>range: 11.6-60.8</em></td>
+</tr>
+<tr>
+<td class="tdata">324</td>
+<td class="tdata">lp_1prf</td>
+<td class="tdata">Liberal First Preference Vote - Percentage</td>
+<td class="tdata" colspan="2"><em>range: 0.0-65.5</em></td>
+</tr>
+<tr>
+<td class="tdata arc">325</td>
+<td class="tdata arc">lnp_1prf</td>
+<td class="tdata arc">Liberal-National Party (QLD) First Preference Vote<br>- Percentage</td>
+<td class="tdata arc" colspan="2"><em>range: 0.0-57.4</em></td>
+</tr>
+<tr>
+<td class="tdata">326</td>
+<td class="tdata">np_1prf</td>
+<td class="tdata">National Party First Preference Vote - Percentage</td>
+<td class="tdata" colspan="2"><em>range: 0.0-64.0</em></td>
+</tr>
+<tr>
+<td class="tdata arc">327</td>
+<td class="tdata arc">clp_1prf</td>
+<td class="tdata arc">Country Liberal Party First Preference Vote -<br>Percentage</td>
+<td class="tdata arc" colspan="2"><em>range: 0.0-44.7</em></td>
+</tr>
+<tr>
+<td class="tdata">328</td>
+<td class="tdata">oth_1prf</td>
+<td class="tdata">Other Parties First Preference Vote - Percentage</td>
+<td class="tdata" colspan="2"><em>range: 9.2-52.0</em></td>
+</tr>
+<tr>
+<td class="tdata arc">329</td>
+<td class="tdata arc">alp_2pp</td>
+<td class="tdata arc">ALP Two-Party Preferred Vote - 2 party preferred<br>(vs LNP)</td>
+<td class="tdata arc" colspan="2"><em>range: 26.3-71.0</em></td>
+</tr>
+<tr>
+<td class="tdata">330</td>
+<td class="tdata">lnc_2pp</td>
+<td class="tdata">ALP Two-Party Preferred Vote - 2 party preferred<br>(vs ALP)</td>
+<td class="tdata" colspan="2"><em>range: 29.0-73.7</em></td>
+</tr>
+<tr>
+<td class="tdata arc">331</td>
+<td class="tdata arc">stateab</td>
+<td class="tdata arc">State</td>
+<td class="tdata arc"></td>
+<td class="tdata arc"><span class="omit" title ="'show.string.values = TRUE' to show values.">&lt;output omitted&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata">332</td>
+<td class="tdata">enrolmnt</td>
+<td class="tdata">Enrolment - number of enrolled voters in division</td>
+<td class="tdata" colspan="2"><em>range: 63267-138047</em></td>
+</tr>
+<tr>
+<td class="tdata arc">333</td>
+<td class="tdata arc">turnout</td>
+<td class="tdata arc">Turnout - number of voters that voted in the<br>election</td>
+<td class="tdata arc" colspan="2"><em>range: 49715-130394</em></td>
+</tr>
+<tr>
+<td class="tdata">334</td>
+<td class="tdata">turnpct</td>
+<td class="tdata">Turnout percentage - turnout as a percentage of<br>enrolled voters</td>
+<td class="tdata" colspan="2"><em>range: 75.4-95.7</em></td>
+</tr>
+<tr>
+<td class="tdata arc">335</td>
+<td class="tdata arc">turnswg</td>
+<td class="tdata arc">Turnout swing - change in the turnout percentage<br>compared to 2010</td>
+<td class="tdata arc" colspan="2"><em>range: -1.9-2.2</em></td>
+</tr>
+<tr>
+<td class="tdata">336</td>
+<td class="tdata">ordvotes</td>
+<td class="tdata">Number of ordinary votes in division</td>
+<td class="tdata" colspan="2"><em>range: 45039-116528</em></td>
+</tr>
+<tr>
+<td class="tdata arc">337</td>
+<td class="tdata arc">absvotes</td>
+<td class="tdata arc">Number of absent votes in division</td>
+<td class="tdata arc" colspan="2"><em>range: 989-7988</em></td>
+</tr>
+<tr>
+<td class="tdata">338</td>
+<td class="tdata">prvvotes</td>
+<td class="tdata">Number of provisional votes in division</td>
+<td class="tdata" colspan="2"><em>range: 89-696</em></td>
+</tr>
+<tr>
+<td class="tdata arc">339</td>
+<td class="tdata arc">prevotes</td>
+<td class="tdata arc">Number of prepoll votes in division</td>
+<td class="tdata arc" colspan="2"><em>range: 1810-6322</em></td>
+</tr>
+<tr>
+<td class="tdata">340</td>
+<td class="tdata">posvotes</td>
+<td class="tdata">Number of postal votes in division</td>
+<td class="tdata" colspan="2"><em>range: 1566-13057</em></td>
+</tr>
+<tr>
+<td class="tdata arc">341</td>
+<td class="tdata arc">totvotes</td>
+<td class="tdata arc">Total number of votes in division</td>
+<td class="tdata arc" colspan="2"><em>range: 49715-130394</em></td>
+</tr>
+<tr>
+<td class="tdata">342</td>
+<td class="tdata">totpct</td>
+<td class="tdata">Turnout - total votes as a percentage of enrolled<br>voters</td>
+<td class="tdata" colspan="2"><em>range: 75.4-95.7</em></td>
+</tr>
+<tr>
+<td class="tdata arc">343</td>
+<td class="tdata arc">forvotes</td>
+<td class="tdata arc">Number of Formal votes in division</td>
+<td class="tdata arc" colspan="2"><em>range: 46019-125535</em></td>
+</tr>
+<tr>
+<td class="tdata">344</td>
+<td class="tdata">infvotes</td>
+<td class="tdata">Number of Informal votes in division</td>
+<td class="tdata" colspan="2"><em>range: 2428-12814</em></td>
+</tr>
+<tr>
+<td class="tdata arc">345</td>
+<td class="tdata arc">infpct</td>
+<td class="tdata arc">Informal votes as a percentage of total votes in<br>division</td>
+<td class="tdata arc" colspan="2"><em>range: 3.2-13.9</em></td>
+</tr>
+<tr>
+<td class="tdata">346</td>
+<td class="tdata">infswing</td>
+<td class="tdata">Informal Swing - change in the informal percentage<br>compared to 2007</td>
+<td class="tdata" colspan="2"><em>range: -2.2-2.6</em></td>
+</tr>
+<tr>
+<td class="tdata arc">347</td>
+<td class="tdata arc">candidn</td>
+<td class="tdata arc">AEC 2010 Election Candidate identifier - 2CP<br>non-elected candidate</td>
+<td class="tdata arc" colspan="2"><em>range: 23185-24865</em></td>
+</tr>
+<tr>
+<td class="tdata">348</td>
+<td class="tdata">partyabn</td>
+<td class="tdata">Party of 2CP non-elected candidate</td>
+<td class="tdata"></td>
+<td class="tdata"><span class="omit" title ="'show.string.values = TRUE' to show values.">&lt;output omitted&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">349</td>
+<td class="tdata arc">totvotn</td>
+<td class="tdata arc">Number of votes for 2CP non-elected candidate</td>
+<td class="tdata arc" colspan="2"><em>range: 22355-50474</em></td>
+</tr>
+<tr>
+<td class="tdata">350</td>
+<td class="tdata">swingn</td>
+<td class="tdata">N swing</td>
+<td class="tdata" colspan="2"><em>range: -14.3-50.0</em></td>
+</tr>
+<tr>
+<td class="tdata arc">351</td>
+<td class="tdata arc">candidy</td>
+<td class="tdata arc">AEC 2010 Election Candidate identifier - 2CP<br>elected candidate</td>
+<td class="tdata arc" colspan="2"><em>range: 20881-24739</em></td>
+</tr>
+<tr>
+<td class="tdata">352</td>
+<td class="tdata">partyaby</td>
+<td class="tdata">Party of 2CP elected candidate</td>
+<td class="tdata"></td>
+<td class="tdata"><span class="omit" title ="'show.string.values = TRUE' to show values.">&lt;output omitted&gt;</span></td>
+</tr>
+<tr>
+<td class="tdata arc">353</td>
+<td class="tdata arc">totvoty</td>
+<td class="tdata arc">Number of votes for 2CP elected candidate</td>
+<td class="tdata arc" colspan="2"><em>range: 23413-78614</em></td>
+</tr>
+<tr>
+<td class="tdata">354</td>
+<td class="tdata">swingy</td>
+<td class="tdata">Swing in pct vote for 2CP elected candidate</td>
+<td class="tdata" colspan="2"><em>range: -16.1-65.2</em></td>
+</tr>
+
+</table>
+</body></html>
