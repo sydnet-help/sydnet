@@ -1,108 +1,39 @@
 ---
 layout: default
 ---
-{% assign author = site.data.author[page.author] %}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% if page.cover %}
-  <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-    <amp-img width="404" height="720" alt="{{ page.title }}" layout="responsive" src="{{ site.baseurl }}{{ page.cover }}" media="(max-width: 415px)"></amp-img>
-    <amp-img height="720" alt="{{ page.title }}" layout="fixed-height" src="{{ site.baseurl }}{{ page.cover }}" media="(min-width: 416px)"></amp-img>
-    <figcaption class="absolute top-0 right-0 bottom-0 left-0">
-      <header class="p3">
-        <h1 class="ampstart-fullpage-hero-heading mb0 hanuman">
-          <span class="ampstart-fullpage-hero-heading-text title">
-            {{ page.title }}
-          </span>
-        </h1>
-        <h2 class="ampstart-fullpage-hero-heading mb0">
-          {% if page.author %}
-          <span class="ampstart-fullpage-hero-heading-text description">
-            By <b><a href="#" role="author" class="text-decoration-none author">{{ author.name }}</a></b>
-          </span>
-          {% endif %}
-        </h2>
-      </header>
-      <footer class="absolute left-0 right-0 bottom-0">
-        <a class="ampstart-readmore py3 caps line-height-2 text-decoration-none center block h5" href="#content"><span class="ampstart-readmore-text px1">Read more</span></a>
-      </footer>
-    </figcaption>
-  </figure>
-
-  <main id="content" role="main" class="content">
-    <article class="content">
-      <div class="post-meta mb4 px3">
-       
-
-        {% if page.tags.size > 0 %}
-            in
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+        <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time> {% if page.author %}<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">/ {{ page.author }}</span></span>{% endif %}{% if page.tags != null %}/
+            {% assign projectTags = site.data.tags.allowed-tags %}
             {% for tag in page.tags %}
-                {% if forloop.index == page.tags.size %}
-                   <a href=''>{{ tag | capitalize }}</a>
-                {% else %}
-                   <a href=''>{{ tag | capitalize }}</a>,
-                {% endif %}
+            {% if projectTags contains tag %}
+            <a href="{{ "tag_" | append: tag | append: ".html"}}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
+            {% endif %}
             {% endfor %}
+            {% endif %}
+
+        </p>
+
+
+    </header>
+
+    <div class="post-content" itemprop="articleBody">
+
+        {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
         {% endif %}
 
-      </div>
-
-      <div class="mb4 px3 radhakrishna" align="left">
-        <amp-social-share type="system" width="45" height="33" data-param-text="Check out the blockbuster Ancient History & Studies of Religion Teachers conference."></amp-social-share>
-         <amp-social-share type="facebook" width="45" height="33"></amp-social-share>
-         <amp-social-share type="twitter" width="45" height="33" data-param-text="Check out the blockbuster Ancient History & Studies of Religion Teachers conference. {{site.url}}{{page.url}}" data-param-url={{page.url}}></amp-social-share>
-        <amp-social-share type="gplus" width="45" height="33" data-param-url="{{site.url}}{{page.url}}"></amp-social-share>
-        <amp-social-share width="45" height="33" type="email" data-param-body="Check out the blockbuster Ancient History & Studies of Religion Teachers conference. {{site.url}}{{page.url}}"></amp-social-share>
-      </div>
-
-  {% else %}
-
-    <main id="content" role="main" class="">
-      <article class="recipe-article">
-        <header>
-          {% if page.tags.size > 0 %}
-          <span class="ampstart-subtitle block px3 pt2 mb2">
-                        {% for tag in page.tags %}
-                            {% if forloop.index == page.tags.size %}
-                               {{ tag | upcase }}
-                            {% else %}
-                               {{ tag | upcase }},
-                            {% endif %}
-                        {% endfor %}
-          </span>
-          {% endif %}
-          <h1 class="mb1 px3">{{page.title}}</h1>
-
-         
-        </header>
-
-  {% endif %}
-
-    <div class="px3 mb4">
-      {{content}}
+        {{ content }}
     </div>
 
-<hr>
-
-<div class="author-section mb4">
-    {% if author["assets"] %}
-        <amp-img width="100" height="100" class="author-thumb-post" layout="responsive" src="{{ site.baseurl }}{{author["assets"]}}" alt="Author image"/></amp-img>
-    {% endif %}
-    <a href="{{author.url_full}}"><h4 class="author-name">{{author["name"]}}</h4></a>
-    <p class="mb4 px3">{{author["bio"]}}</p>
-</div>
-
-<!-- Start Socialbox -->
-<!-- <div class="ampstart-social-box mb4">
-  <amp-social-share type="twitter" aria-label="Share this on Twitter"></amp-social-share>
-  <amp-social-share type="facebook" aria-label="Share this on Facebook" data-param-app_id="145393166088568"></amp-social-share>
-  <amp-social-share type="gplus" aria-label="Share this on Google Plus"></amp-social-share>
-  <amp-social-share type="email" aria-label="Share this with E-mail"></amp-social-share>
-</div>
-End Socialbox --> 
-
-{% include analytics.html %}
 
 
-  {% include footer.html %}
+</article>
 
-</main>
+{% include disqus.html %}
+
+{{site.data.alerts.hr_shaded}}
+
+{% include footer.html %}
