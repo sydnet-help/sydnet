@@ -1,5 +1,6 @@
 ---
-title: "Methods101: Social Research Methods & Software"
+title: "Methods101: 
+Social Research Methods & Software"
 keywords: methods101
 tags: [homepage]
 sidebar: mydoc_sidebar

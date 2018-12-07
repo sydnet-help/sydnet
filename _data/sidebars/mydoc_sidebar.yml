@@ -44,6 +44,99 @@ entries:
     #   url: /mydoc_support.html
     #   output: web, pdf
 
+  - title: SOC224
+    output: web, pdf
+    folderitems:
+    - title: SOC224 Introduction
+      url: /SOC224_intro.html
+      output: web, pdf
+
+    - title: SOC224 Lesson 1
+      url: /SOC224_lesson_01.html
+      output: web, pdf
+
+    - title: SOC224 Lesson 2
+      url: /SOC224_lesson_02.html
+      output: web, pdf
+
+    - title: SOC224 Lesson 3
+      url: /SOC224_lesson_03.html
+      output: web, pdf
+
+    - title: SOC224 Lesson 4
+      url: /SOC224_lesson_04.html
+      output: web, pdf
+
+  - title: SSCI202
+    output: web, pdf
+    folderitems:
+    - title: SSCI202 Introduction
+      url: /SSCI202_intro.html
+      output: web, pdf
+
+    - title: SSCI202 Lesson 1
+      url: /SSCI202_lesson_01.html
+      output: web, pdf
+
+    - title: SSCI202 Lesson 2
+      url: /SSCI202_lesson_02.html
+      output: web, pdf
+
+    - title: SSCI202 Lesson 3
+      url: /SSCI202_lesson_03.html
+      output: web, pdf
+
+    - title: SSCI202 Lesson 4
+      url: /SSCI202_lesson_04.html
+      output: web, pdf
+
+  - title: SOCI830
+    output: web, pdf
+    folderitems:
+    - title: SOCI830 Introduction
+      url: /SOCI830_intro.html
+      output: web, pdf
+
+    - title: SOCI830 Lesson 1
+      url: /SOCI830_lesson_01.html
+      output: web, pdf
+
+    - title: SOCI830 Lesson 2
+      url: /SOCI830_lesson_02.html
+      output: web, pdf
+
+    - title: SOCI830 Lesson 3
+      url: /SOCI830_lesson_03.html
+      output: web, pdf
+
+    - title: SOCI830 Lesson 4
+      url: /SOCI830_lesson_04.html
+      output: web, pdf
+
+  - title: SOCI832
+    output: web, pdf
+    folderitems:
+    - title: SOCI832 Introduction
+      url: /SOCI832_intro.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 1
+      url: /SOCI832_lesson_01.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 2
+      url: /SOCI832_lesson_02.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 3
+      url: /SOCI832_lesson_03.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 4
+      url: /SOCI832_lesson_04.html
+      output: web, pdf
+
+
   - title: SPSS
     output: web, pdf
     folderitems:
