@@ -136,6 +136,48 @@ entries:
       url: /SOCI832_lesson_04.html
       output: web, pdf
 
+  - title: How To Analyse Data (SPSS)
+    output: web, pdf
+    folderitems:
+    - title: How to Analyse Data (SPSS) Introduction
+      url: /htad_intro.html
+      output: web, pdf
+
+    - title: "Lesson 1: Qualitative Data"
+      url: /htad_lesson_01.html
+      output: web, pdf
+
+    - title: "Lesson 2: Downloading your data and making a codebook"
+      url: /htad_lesson_02.html
+      output: web, pdf
+
+    - title: "Lesson 3: Getting a quick feel for your data (Correlation)"
+      url: /htad_lesson_03.html
+      output: web, pdf
+
+    - title: "Lesson 4: Experiments and simple tests"
+      url: /htad_lesson_04.html
+      output: web, pdf
+
+    - title: "Lesson 5: Constructing and testing an index (Cronbach Alpha)"
+      url: /htad_lesson_05.html
+      output: web, pdf
+
+    - title: "Lesson 6: Linear Regression"
+      url: /htad_lesson_06.html
+      output: web, pdf
+
+    - title: "Lesson 7: Logistic Regression"
+      url: /htad_lesson_07.html
+      output: web, pdf
+
+    - title: "Lesson 8: Recode and Select Cases"
+      url: /htad_lesson_08.html
+      output: web, pdf
+
+    - title: "Lesson 9: Cleaning up Data with Word and Excel"
+      url: /htad_lesson_09.html
+      output: web, pdf
 
   - title: SPSS
     output: web, pdf
