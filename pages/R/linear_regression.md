@@ -135,7 +135,7 @@ summary(model_1)
 
 {% endhighlight %}
 
-You should replace <filepath> with the file path of wages.csv.
+**You should replace <filepath> with the file path of wages.csv.**
 
 To run the commands in RStudio, highlight all the commands you want to run, go to the top right of the console window, and click “Run”
 
