@@ -221,8 +221,8 @@ entries:
       url: /r_lesson_03.html
       output: web, pdf
 
-    - title: R Lesson 4
-      url: /r_lesson_04.html
+    - title: Linear Regression
+      url: /linear_regression.html
       output: web, pdf
 
   - title: NVivo
