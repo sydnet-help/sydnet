@@ -1,5 +1,5 @@
 ---
-title: "Lesson 3: Getting a quick feel for your data"
+title: "Lesson 3: Getting a quick feel for your data (Correlation)"
 keywords: how_to_analyse_data
 tags: 
 sidebar: mydoc_sidebar
