@@ -16,22 +16,21 @@ summary: Before you analyse a quantitative dataset you need to (Step 1) download
 
 3) Click the Login button
 
-{% include image.html file="htad_lesson_02_image_01.png" %}
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_01.png" style="max-width:60%;" /></div>
 
 4) After logging in, scroll down 
 
 5) Click on the name of the survey you want to work on
 
-{% include image.html file="htad_lesson_02_image_02.png"  %}
-
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_02.png" style="max-width:60%;" /></div>
 
 6)  Click the “Reporting” tab
 
-{% include image.html file="htad_lesson_02_image_03.png" %}
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_03.png" style="max-width:60%;" /></div>
 
 7)  Click the “Download Data” icon
  
-{% include image.html file="htad_lesson_02_image_04.png" %}
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_04.png" style="max-width:60%;" /></div>
 
 8)  We want to download 2 versions of the data
 
@@ -53,7 +52,8 @@ b.  Choice text so we know what the 0 or 1 in the coded values version means. E.
 
 15) Save dataset as DS#2
 
-{% include image.html file="htad_lesson_02_image_05.png" %}
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_05.png" style="max-width:60%;" /></div>
+
 
 ### STEP 2 - Creating a codebook
 A codebook enables other people to understand your data. They will know the descriptive statistics and how each variable is coded.
@@ -61,7 +61,8 @@ There are examples of codebooks that you can use as models in the Dropbox under 
 
 • /Week 11 and 12 – Datasets/
 
-{% include image.html file="htad_lesson_02_image_06.png" %}
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_06.png" style="max-width:60%;" /></div>
+
   
 The sections of a codebook:
 
@@ -71,8 +72,7 @@ This is a description of the data set, how and when it is collected and what the
 
 #### Example 2.1: A Codebook Introduction
  
-{% include image.html file="htad_lesson_02_image_07.png" %}
-
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_07.png" style="max-width:60%;" /></div>
 
 2)  Overview of the dataset
 
@@ -94,7 +94,7 @@ This tells you variable name, variable number, minimum, maximum, mean, standard 
 
 #### Example 2.3: Descriptive statistics
 
-{% include image.html file="htad_lesson_02_image_08.png" %} 
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_08.png" style="max-width:60%;" /></div>
 
 4)  Long descriptions of attribute variables
 
@@ -102,8 +102,8 @@ This section lists each variable in detail. It states the type of variable and t
 
 #### Example 2.4: Long descriptions of attribute values
 
-{% include image.html file="htad_lesson_02_image_09.png" %} 
- 
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_09.png" style="max-width:60%;" /></div>
+
 5)  Sources
 
 This section lists where the data from the codebook is taken from (if any).
@@ -132,11 +132,10 @@ Note:
 
 3)  Go to File > Open > Data 
 
-{% include image.html file="htad_lesson_02_image_10.png" %} 
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_10.png" style="max-width:60%;" /></div>
  
 4)  In the dialogue box that opens, change “Files of type” to “Excel”.
 
 5)  Navigate to select your dataset.
  
-{% include image.html file="htad_lesson_02_image_11.png" %} 
-
+<div style="text-align:center"><img src ="images/htad_lesson_02_image_11.png" style="max-width:60%;" /></div>
