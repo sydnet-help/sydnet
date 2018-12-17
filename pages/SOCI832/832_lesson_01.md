@@ -172,17 +172,17 @@ Operationalisation involves finding measures which are (1) valid; and (2) reliab
 
 Variables can be measured using different **levels of measurement**. Some classic levels of measurement are: **categorical, binary, ordinal, continuous, interval,** and **ratio**.
 
-As a researcher who needs to find a **research topic**, often the hardest thing to do is to find an interesting **research question**. One method of finding good research questions is to look for puzzles. **Puzzles** are comprised of a (1) a fact that is difficult to understand or explain in light of (2) current theory (e.g. if we have a theory – balance theory – which says that everyone sides with their friends and against their foes in conflict, why isn't the world divided into two warring camps).  
+As a researcher who needs to find a **research topic**, often the hardest thing to do is to find an interesting **research question**. One method of finding good research questions is to look for puzzles. **Puzzles** are comprised of a (1) a fact that is difficult to understand or explain in light of (2) current theory (e.g. if we have a theory – balance theory – which says that everyone sides with their friends and against their foes in conflict, why isn't the world divided into two warring camps).<sup>[1](#myfootnote1)</sup>    
 
 When developing a research question, a puzzle, or a theory the researcher needs to think about the causal relationship between variables. To demonstrate causality, at least three conditions need to be met: (1) **time order** (i.e. A happens before B), (2) **correlation** (e.g. A goes up, B goes up), and (3) **ruling out other explanations** (e.g. A and B weren't both caused by C). **The hardest of these three conditions to meet is (3) ruling out other explanations.** Why? Because other explanations have infinite possible pathways. There are two main ways we rule out other explanations in practice: (1) in **experimental studies**, we **randomly assign the cause**, which then rules out other explanations through the **law of large numbers** (random assignment ensures all characteristics of two groups are identical if the groups are large enough); or (2) in **observational studies**, we c**ontrol for the major competing theories** or explanations by including them in our models, measurements, and tests. 
 
 Variables which are outcomes or effects are given the name **dependent variables**. Variables which are causes or controls are given the name **independent variables**. Variables which lie between a cause and an effect are called a **mediating variable**. Variables which interact with an independent variable to change how it effects a dependent variable are called a **moderating variable**. These are illustrated in Figure 1. Figure 2 gives a hypothetical example (which is made up) of depression and anxiety among working people. We can see that there is (1) a direct path from low wages to anxiety and depression – it is stressful to have no money; (2) an indirect path through credit card debt (mediating variable) – it is stressful to have credit card debits mounting; and (3) an interaction between children and low wages (moderating variable) – children can make low wages even more stressful because they require feeding, clothing, housing, etc.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_01.jpg" style="max-width:60%;" /></div>
 
 ##### **Figure 1: Causal diagram with four main types of variables.**
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_02.jpg" style="max-width:60%;" /></div>
 
 ##### **Figure 2: A hypothetical causal diagram for a model of anxiety and depression among working persons.**
 
@@ -209,7 +209,7 @@ Univariate statistics summarise single variables. The main **univariate statisti
 So what I've just summarised is assumed knowledge for this course. You don't need to be an expert in all those concepts, and we will revisit many of them in this course. However, if any of the concepts highlighted in bold in the previous section are completely new to you, I ask that you do some revision on your own in the first couple of weeks. In many cases Wikipedia will give you a good simple introduction. If you are looking for something more rigorous but still introductory, I recommend the following two books, which I've used to teach undergraduate research methods for the last ten years:
 
 * Neuman, W. L. (2014). Social Research Methods: Qualitative and Quantitative Approaches. (7th Edition). Harlow, UK: Pearson.<sup>[2](#myfootnote2)</sup>
-* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications.<sup>[2](#myfootnote2)</sup>  
+* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications.<sup>[3](#myfootnote3)</sup>  
 
 Neuman is comprehensive textbook for research methods from a sociological perspective. Field et al. is one of the most popular introductory statistics textbook in the world. It is written for psychology students, but it (1) is comprehensive and rigorous; (2) includes an introduction to relevant R commands; and (3) is full of lame yet funny jokes. 
 
@@ -217,8 +217,8 @@ Both are available as ebooks (Kindle) on Amazon (see footnotes to the references
 
 A very good alternative to Neuman and Field et al. is the required textbooks for SOC830:
 
-* Vaus, David de (2014) Surveys in Social Research, 6th Edition, Allen&Unwin. 
-* Illowsky, Barbara and Susan Dean (2017) Introductory Statistics, OpenStax. (Available for free at https://openstax.org/details/books/introductory-statistics ) 
+* Vaus, David de (2014) Surveys in Social Research, 6th Edition, Allen&Unwin. <sup>[4](#myfootnote4)</sup> 
+* Illowsky, Barbara and Susan Dean (2017) Introductory Statistics, OpenStax. (Available for free at <https://openstax.org/details/books/introductory-statistics> ) <sup>[5](#myfootnote5)</sup> 
 
 ### 5. Dataset for Weeks 1 & 2
 
@@ -261,9 +261,10 @@ The dataset for the McAllister 2016 paper is actually the AES 2013 data.
 
 If you go to the website for the 2013 data you will see something like Screenshot 1: 
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_03.png" style="max-width:60%;" /></div>
  
-##### **Screenshot 1: The Australian Electoral Study website for downloading the 2013 AEC data**
+<div style="text-align:center"><b>Screenshot 1: The Australian Electoral Study website for downloading the 2013 AEC data</b></div><br>
+
 
 Notice there are three files to download: 
 1.  **Data (SPSS)**: This is the data file in SPSS format
@@ -283,9 +284,9 @@ For these reasons, I've prepared a simplified an easier to use version of the AE
 
 If you click on Link 1 (if it won't click, just cut and paste the URL into a browser), your browser will download a file called "elect_2013.csv". If you then open this file (which should be in your downloads folder if you can't find it), then it should automatically open in Microsoft Excel.  You will see something like Screenshot 2.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_04.png" style="max-width:60%;" /></div>
 
-##### **Screenshot 2: elect_2013.csv opened in Microsoft Excel**
+<div style="text-align:center"><b>Screenshot 2: elect_2013.csv opened in Microsoft Excel</b></div><br>
 
 Screenshot 2 shows what the inside of a classic social science dataset looks like. 
 
@@ -304,9 +305,10 @@ Before we move on, let me provide a few definitions that might help answer some 
 * **What do all the numbers represent?** Great question. These are values which represent different answers to each question. For example, we have a variable called "Female", which captures gender. If a person was male, then they will have a 0 for the value of this variable, and if they are female, they will have a 1 for the value of this variable.
 * **But how do I know what the numbers represent?** Another great question. This is what the codebook is for. If you haven't already, click on [Link 2 (or just click here)](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html), which will take you to a webpage with all the variables listed. You should see something like Screenshot 3
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_05.png" style="max-width:60%;" /></div>
 
-##### **Screenshot 3: The webpage for the codebook for 'elect_2013' dataset.**
+
+<div style="text-align:center"><b>Screenshot 3: The webpage for the codebook for 'elect_2013' dataset.</b></div><br>
 
 Screenshot 3 shows the codebook for the dataset 'elect_2013'. The codebook allows you to understand what the data in 'elect_2013.csv' actually means. 
 
@@ -320,9 +322,9 @@ To talk about datasets and codebooks, it is easier if we define some key terms. 
 * **Variable labels**: Variable labels are a label that is attached to a variable name. These allow for much longer text, with spaces and punctuation, to be attached to a variable name. In the case of this dataset, most of the variable labels are the question text from the AES 2013 study. Variable labels are indicated with a red box in Screenshot 4. 
 * **Value labels**: Value labels are labels that allow you to attach a text label to each value of a variable. For example, for the variable 'female', we can attach the label 'male' to the value '0', and 'female' to the value '1'. Value labels are indicated with a blue box in Screenshot 4.  
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_06.png" style="max-width:60%;" /></div>
  
-##### **Screenshot 4: Five key concepts identified in a dataset and a codebook.**
+<div style="text-align:center"><b>Screenshot 4: Five key concepts identified in a dataset and a codebook.</b></div><br>
  
 ### 6. Installing R and R Studio
 
@@ -340,17 +342,17 @@ However, for this course we are using the statistical package R. Why R? There ar
 
 2) **Advanced models:** Second, there is a plethora of packages, available for free, that extends R's functionality. These include the most advanced techniques available. Screenshot 5 below shows the cost per year of SPSS for different levels of functionality. Note that, for example, to run many of the more advanced models we teach in this class, such as Structural Equation Modelling, the more expensive packages are needed. Other types of models, such as social network analysis, are just not available in SPSS or most other packages. 
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_07.png" style="max-width:60%;" /></div>
  
-##### **Screenshot 5: Cost of SPSS licences per year (26/7/2018). The premium version is required for Structural Equation Modelling, which we teach in this course.**
+<div style="text-align:center"><b>Screenshot 5: Cost of SPSS licences per year (26/7/2018). The premium version is required for Structural Equation Modelling, which we teach in this course.</b></div><br>
 
 3) **Growing popularity:** Third, for the above two reasons, R is enjoying a large and increasing share of the market for statistical programs, so learning R will stand you in good stead for future social research. For example, see this article ( http://r4stats.com/articles/popularity/ ) which documents the growing popularity of R in recent years. The most important figures are 2d and 2e, which show the number of google scholar hits – basically scholarly usage – which shows that SPSS usage peaked in 2009, and R is rapidly increasing in popularity, and will likely become the most widely used statistical package in the next couple of year. 
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_08.png" style="max-width:60%;" /></div>
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_09.png" style="max-width:60%;" /></div>
   
-##### **Screenshots 6 + 7: Scholarly articles using each major statistical package. Source: <http://r4stats.com/articles/popularity/>**
+<div style="text-align:center"><b>Screenshots 6 + 7: Scholarly articles using each major statistical package. Source: <http://r4stats.com/articles/popularity/></b></div><br>
 
 #### 6.2 Installing R and RStudio
 
@@ -366,11 +368,11 @@ I have written a detailed walk through of the steps to install R and RStudio her
 
 When entering RStudio for the first time, you will see a screen like this (without the green box):
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_10.png" style="max-width:60%;" /></div>
  
 The first thing to do is to open the script window (we will go into what the script window is for later). To do so, double left click on the area highlighted by green in the screenshot above. Once that is done, you should see something like this:
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_11.png" style="max-width:60%;" /></div>
  
 Once you see that, you can start entering commands into R
 
@@ -385,7 +387,7 @@ Script file
 
 This is a text file that can be saved to your computer. As such, the commands you have written in the script file can be used across sessions. The contents of your script file are displayed in the script window, highlighted here in the green box. To open an empty script file, click on the icon of a blank sheet with a green circle (highlighted in the red box), and select "New Script".
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_12.png" style="max-width:60%;" /></div>
  
 To run a command, you can either:
 1.  highlight the command and click "Run" at the top right of the script window. The location of "Run" is in the light blue box in the screenshot above.
@@ -478,15 +480,15 @@ is the following:
 
 To import data we are going to use a shortcut in RStudio. In the top right window of RStudio, click the button "Import Dataset", and then on the menu which appears click "From Text (base)". This is highlighted in the image below.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_13.png" style="max-width:60%;" /></div>
 
 A window will appear, where you need to navigate to where you have saved "elect_2013.csv". Click on the file, and then selection "Open".
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_14.png" style="max-width:60%;" /></div>
 
 In the window which appears next, the default settings are fine EXCEPT, you need to select "Yes" next to "Heading". Then press "Import".  
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_15.png" style="max-width:60%;" /></div>
 
 When you press "Import", RStudio will run code to open the dataset. You will notice in RStudio three things happen (which can be seen in the image below):
 
@@ -494,11 +496,11 @@ When you press "Import", RStudio will run code to open the dataset. You will not
 4.  In the top left window the dataset "elect_2013" will open and appear like a spreadsheet.
 5.  In the top right window (Environment) the dataset will appear with the text "elect_2013    3955 obs. of 46 variables"
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_16.png" style="max-width:60%;" /></div>
 
 If you click on the white triangle in the blue circle in the top right "Environment" window, you will be able to see all the variables in the dataset "elect_2013".
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_17.png" style="max-width:60%;" /></div>
 
 **7.3.4 Data frames and variables**
 
@@ -529,7 +531,7 @@ The help file will be displayed in the bottom left of the screen, in the box hig
 
 You can also search for any command in the search box in the top right corner of the help screen.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_18.jpg" style="max-width:60%;" /></div>
  
 #### 7.5 Installing packages
 
@@ -546,7 +548,7 @@ For example, say our dataset was in excel format (and not .csv as it currently i
 
 If you run this command in RStudio, you should get a large amount of output that looks something like this: 
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_19.jpg" style="max-width:60%;" /></div>
 
 You will know when R has finished running your code, because in the console window the ">" character will appear. When I ran the command, the last few lines of output to the console window were: 
 
@@ -617,13 +619,13 @@ To set your working director, you need to find the file path for your file or fo
 
 To find the file path right click on the file or folder in Windows Explorer. You should see the menu displayed below.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_20.png" style="max-width:60%;" /></div>
 
 Click “Properties”
 
 The following dialog will appear:
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_21.png" style="max-width:60%;" /></div>
 
 The location of the file will be reflected in the “Location” row, which is highlighted in red. You can highlight the whole location and right click to copy it.
 
@@ -633,27 +635,27 @@ When you copy this path back into R, remember to either: (1) add a second forwar
 
 Navigate to your file in Finder.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_22.png" style="max-width:60%;" /></div>
 
 Right-click the file. A menu will open up.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_23.png" style="max-width:60%;" /></div>
 
 In the menu, click on "Get Info".
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_24.png" style="max-width:60%;" /></div>
 
 A dialog that looks like this will open up:
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_25.png" style="max-width:60%;" /></div>
  
 Highlight the text after "Where".
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_26.png" style="max-width:60%;" /></div>
  
 Right click in the highlighted area. In the menu that opens up, click on Copy.
 
-<div style="text-align:center"><img src ="images/832_lesson_01_image_01.png" style="max-width:60%;" /></div>
+<div style="text-align:center"><img src ="images/832_lesson_01_image_27.png" style="max-width:60%;" /></div>
 
 When you copy this path back into R, remember to make sure between the folders there is either: (1) two forward slashes; or (2) one back slash. And also remember to include double quotation marks.
 
@@ -724,9 +726,9 @@ Unfortunately there isn't one textbook that covers all the material we want to c
 
 As much as possible, Dr Lee and myself are going to try to recommend readings from these three textbooks:
 
-* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications.
-* Verzani, J. (2014). Using R for introductory statistics. CRC Press. 
-* Gelman, A., & Hill, J. (2006). Data analysis using regression and multilevel/hierarchical models. Cambridge university press. 
+* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications. <sup>[6](#myfootnote6)</sup> 
+* Verzani, J. (2014). Using R for introductory statistics. CRC Press. <sup>[7](#myfootnote7)</sup> 
+* Gelman, A., & Hill, J. (2006). Data analysis using regression and multilevel/hierarchical models. Cambridge university press. <sup>[8](#myfootnote8)</sup> 
 
 All three should be (or will be soon) available at the Macquarie University Library. All three can be bought as ebooks (and as paperbacks) online. If you are short on cash and OK with breaching copyright, then all three can be found online for free as PDFs via a more or less simple Google search.
 
@@ -759,6 +761,23 @@ Note that you are strongly encouraged to focus your research project this semest
 
 Note that the research question you pick for week 2 doesn't have to be the final one you present in weeks 7 or 13. You can change at a later stage. If you can't think of a good question or dataset, then pick something to practice on.
 
-<a name="myfootnote1">1</a>: Available as ebook for US$10 here: http://a.co/daz9a8j
+---
 
-<a name="myfootnote2">2</a>: Available as ebook for US$45 here: http://a.co/2jVI7VH
+### Footnotes
+
+<a name="myfootnote1">1</a>: Gustafsson, K., & Hagström, L. What is the point? Teaching graduate students how to construct political science research puzzles. European Political Science, 1-15.
+
+<a name="myfootnote2">2</a>: Available as ebook for US$10 here: http://a.co/daz9a8j
+
+<a name="myfootnote3">3</a>: Available as ebook for US$45 here: http://a.co/2jVI7VH
+
+<a name="myfootnote4">4</a>: Available as ebook for US$25 here: http://a.co/aSj0o91
+
+<a name="myfootnote5">5</a>: Available for free at https://openstax.org/details/books/introductory-statistics 
+
+<a name="myfootnote6">6</a>: Available as ebook for US$45 here: http://a.co/2jVI7VH
+
+<a name="myfootnote7">7</a>: Available as ebook for US$48 here: http://a.co/eXZ4BVJ 
+
+<a name="myfootnote8">8</a>: Available as ebook for US$50 here: http://a.co/6I25HUG
+
