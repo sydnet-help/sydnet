@@ -124,8 +124,16 @@ entries:
       url: /832_lesson_01.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 2
-      url: /832_lesson_02.html
+    - title: SOCI832 Lesson 2.1
+      url: /832_lesson_02-1.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 2.2
+      url: /832_lesson_02-2.html
+      output: web, pdf
+
+    - title: SOCI832 Lesson 2.3
+      url: /832_lesson_02-3.html
       output: web, pdf
 
     - title: SOCI832 Lesson 3

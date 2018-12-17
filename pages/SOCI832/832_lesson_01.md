@@ -83,7 +83,7 @@ This week's class two main objectives: first we simply want to review the fundam
 
 ### 2. What do I need to do each week?
 
-As you probably know from reading the unit guide (available here: http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide ), this class has only three assessment components:
+As you probably know from reading the unit guide (available here: <http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide>), this class has only three assessment components:
 
 * Attendance and weekly exercises (30%) – Due each week from Week 2 onwards (excluding weeks 1, 7, and 13).
 
@@ -122,7 +122,7 @@ In week five, we move to studying **factor analysis** and **cluster analysis**. 
 
 In week six we study **path analysis** and **structural equation modelling**. These are methods used to study models with many variables and complex causal relationships. We will review how to choose, run, and interpret such models. 
 
-In week seven you will deliver your **first presentation and report**. This will be a 10 minute presentation and 2,000 word report (with attached R code). It is a chance for your to apply some of the methods presented in the first six weeks. If you are thinking of doing a thesis, then this is a good chance to experiment with these methods. If you have an issue or topic you deeply care about (and can find a dataset for) then again this is a good opportunity to explore this. The instructions for this are in the unit guide here: http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide  
+In week seven you will deliver your **first presentation and report**. This will be a 10 minute presentation and 2,000 word report (with attached R code). It is a chance for your to apply some of the methods presented in the first six weeks. If you are thinking of doing a thesis, then this is a good chance to experiment with these methods. If you have an issue or topic you deeply care about (and can find a dataset for) then again this is a good opportunity to explore this. The instructions for this are in the unit guide here: <http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide>  
 
 In week eight we will introduce **social network analysis** (SNA). This is a method for studying relationship data. We will introduce the main packages in R used for SNA, learn how to construct, import, and visualise basic network data, and then learn about some of the main types of analysis, including centrality measures, and basic statistical modelling.
 
