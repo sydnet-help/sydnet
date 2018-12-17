@@ -184,12 +184,6 @@ summary(model_2)
 
 {% endhighlight %}
 
-````
-wage_data <- read.csv("filepath \\wages.csv", header=TRUE)
-model_2<-lm(Wage ~ Gender + Age, data=wage_data)
-summary(model_2)
-````
-
 Running this code produces the following output:
 
 {% include image.html file="R\linear_regression\lr_photo_7.png" alt="Linear Regression Model 7" %}

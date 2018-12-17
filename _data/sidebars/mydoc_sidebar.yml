@@ -117,23 +117,23 @@ entries:
     output: web, pdf
     folderitems:
     - title: SOCI832 Introduction
-      url: /SOCI832_intro.html
+      url: /832_intro.html
       output: web, pdf
 
     - title: SOCI832 Lesson 1
-      url: /SOCI832_lesson_01.html
+      url: /832_lesson_01.html
       output: web, pdf
 
     - title: SOCI832 Lesson 2
-      url: /SOCI832_lesson_02.html
+      url: /832_lesson_02.html
       output: web, pdf
 
     - title: SOCI832 Lesson 3
-      url: /SOCI832_lesson_03.html
+      url: /832_lesson_03.html
       output: web, pdf
 
     - title: SOCI832 Lesson 4
-      url: /SOCI832_lesson_04.html
+      url: /832_lesson_04.html
       output: web, pdf
 
   - title: How To Analyse Data (SPSS)
