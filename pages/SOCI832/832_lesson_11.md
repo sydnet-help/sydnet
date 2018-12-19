@@ -9,6 +9,8 @@ summary: "This week we are going to ..."
 
 *Last updated: 22 Oct 2018*
 
+***Author:** Nicholas Harrigan*
+
 ## Reference
 
 * Chapter 17: Exploratory Factor Analysis in Field, Miles, and Field, 2012. Discovering Statistics Using R.
@@ -16,23 +18,23 @@ summary: "This week we are going to ..."
 
 ## preparation
 
-update.packages(ask = FALSE)
-if (!require("corpcor")) install.packages("corpcor", dependencies = TRUE)
-if (!require("GPArotation")) install.packages("GPArotation", dependencies = TRUE)
-if (!require("psych")) install.packages("psych", dependencies = TRUE)
-if (!require("dplyr")) install.packages("dplyr", dependencies = TRUE)
-if (!require("ggrepel")) install.packages("ggrepel", dependencies = TRUE)
-if (!require("sjlabelled")) install.packages("sjlabelled", dependencies = TRUE)
-if (!require("sjmisc")) install.packages("sjmisc", dependencies = TRUE)
-if (!require("sjPlot")) install.packages("sjPlot", dependencies = TRUE)
-library(corpcor)
-library(GPArotation) 
-library(psych)
-library(dplyr)
-library(ggrepel)
-library(sjlabelled)
-library(sjmisc) 
-library(sjPlot)
+	update.packages(ask = FALSE)
+	if (!require("corpcor")) install.packages("corpcor", dependencies = TRUE)
+	if (!require("GPArotation")) install.packages("GPArotation", dependencies = TRUE)
+	if (!require("psych")) install.packages("psych", dependencies = TRUE)
+	if (!require("dplyr")) install.packages("dplyr", dependencies = TRUE)
+	if (!require("ggrepel")) install.packages("ggrepel", dependencies = TRUE)
+	if (!require("sjlabelled")) install.packages("sjlabelled", dependencies = TRUE)
+	if (!require("sjmisc")) install.packages("sjmisc", dependencies = TRUE)
+	if (!require("sjPlot")) install.packages("sjPlot", dependencies = TRUE)
+	library(corpcor)
+	library(GPArotation) 
+	library(psych)
+	library(dplyr)
+	library(ggrepel)
+	library(sjlabelled)
+	library(sjmisc) 
+	library(sjPlot)
 
 **Turn off scientific notation**
 To turn back on type: options(scipen = 0)

@@ -9,6 +9,9 @@ summary: "This week we are going to ..."
 
 *Last updated: 8 Oct 2018*
 
+***Author:** Nicholas Harrigan*
+
+
                           #
  TITLE: 9. Path Analysis
  SOCI832: Advanced Research Methods

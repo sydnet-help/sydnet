@@ -9,6 +9,9 @@ summary: "This week we are going to ..."
 
 *Last updated: 29 Oct 2018*
 
+***Author:** Nicholas Harrigan*
+
+
 ## References: 
 1. Chapter 19: 'Multilevel linear models' in Field, Miles, and Field, 2012. Discovering Statistics Using R.
 

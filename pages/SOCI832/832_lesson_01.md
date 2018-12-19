@@ -7,6 +7,10 @@ permalink: 832_lesson_01.html
 summary: "This week's class two main objectives: first we simply want to review the fundamentals of quantitative and statistical analysis – the key points that should have been covered in any previous statistics and social science courses you've done before. This will help ensure we are all on the same page, and give us a common language to conduct the rest of the course in. Second, we want to install and start running analysis with the statistical package R. R is one of the most popular and powerful statistical packages available today, and one of the objectives of this course is to help you become proficient user of R."
 ---
 
+Last updated: 19 Dec 2018
+
+***Author:** Nicholas Harrigan*
+
 ### Concepts
  
 #### Research Methods Revision Concepts

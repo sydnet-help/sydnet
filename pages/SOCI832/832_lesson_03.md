@@ -9,6 +9,8 @@ summary: "This week we are going to deal with three main topics: (1) dummy varia
 
 *Last updated: 14 Aug 2018*
 
+***Author:** Nicholas Harrigan*
+
 ## Before you start
 
     setwd("C:/G/2018, SOCI832/Datasets/AES 2013/")
