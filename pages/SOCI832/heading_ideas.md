@@ -19,5 +19,13 @@ summary: "..."
 
 ###### Heading 6
 
+Normal paragraph
+
+*Italicised normal*
+
+**Bold normal**
+
+***Bold & Italicised normal***
+
 
 
