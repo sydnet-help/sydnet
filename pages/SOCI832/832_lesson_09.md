@@ -176,7 +176,7 @@ Question: What are the key phrases you need to use when explaining an odds ratio
 
 ### 3.3 Understanding Odd Ratios
 
-This is a fanastic guide to Odds Ratios. 
+In the link below is a fanastic guide to Odds Ratios. 
 
 I have provided it so that we can read through it in class and talk through the concepts.
 
