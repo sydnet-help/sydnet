@@ -216,19 +216,12 @@ There are more complex version of path analysis such as Structural Equation Mode
 The main 'guidelines' are these:
 
 1. If you are using cross section data, then you need 'logical' (i.e. an argument) and theoretical (i.e. some larger body of assumptions and knowledge which specifies relationships between variables) basis for choosing which variables are independent (i.e. purely causal), which are mediating (i.e. are both causes and effects of other variables), and which are dependent (purely outcomes). 
-
 2. Arrows can only go in one direction (or if they don't go in only one direction, they are an association, not a 'path')
-
 3. Arrows cannot form cycles (they must be acyclic). This is because if you have cycles in your diagram then you can get feedback/forward-feeding loops, which can't be easily modelled with simple linear modelling
-
 4. Any variable which has arrows coming into it is a dependent variable in a regression model
-
 5. You can think of there being two path diagrams:
-
 * the first is of all potentially significant relationships that you are testing (i.e. all variables in your models). In this, an arrow represent a variable in the model (the source of the arrow) of a dependent variable (the target of the arrow).
-
 * the second is the diagram of ONLY significant relationships. This is the diagram of the models after they have been run. In this you generally need distinguish between positive and negative relationships e.g. with dots and lines. You also need to include parameters and significance (e.g. stars \*).
-
 6. We represent interaction effects (moderation) between two variables as an arrow pointing at the middle of the relationship they are modifying.
 
 ### 4.3 The R-code 
