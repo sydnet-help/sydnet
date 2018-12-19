@@ -120,28 +120,52 @@ entries:
       url: /832_intro.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 1
+    - title: "SOCI832 Lesson 1: Review of concepts"
       url: /832_lesson_01.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 2.1
+    - title: "SOCI832 Lesson 2.1: Univariate analysis"
       url: /832_lesson_02-1.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 2.2
+    - title: "SOCI832 Lesson 2.2: Bivariate analysis"
       url: /832_lesson_02-2.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 2.3
+    - title: "SOCI832 Lesson 2.3: Multivariate analysis"
       url: /832_lesson_02-3.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 3
+    - title: "SOCI832 Lesson 3: Linear & Logistic Regression"
       url: /832_lesson_03.html
       output: web, pdf
 
-    - title: SOCI832 Lesson 4
+    - title: "SOCI832 Lesson 4: New variables, indexes, normalisation"
       url: /832_lesson_04.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 5: Presenting Results + Mediation"
+      url: /832_lesson_05.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 6: Writing A Paper"
+      url: /832_lesson_06.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 9: Path Analysis"
+      url: /832_lesson_09.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 10: Visualisation"
+      url: /832_lesson_10.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 11: Factor Analysis"
+      url: /832_lesson_11.html
+      output: web, pdf
+
+    - title: "SOCI832 Lesson 12: Multilevel Modelling"
+      url: /832_lesson_12.html
       output: web, pdf
 
   - title: How To Analyse Data (SPSS)

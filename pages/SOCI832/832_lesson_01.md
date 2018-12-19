@@ -112,7 +112,7 @@ The two criteria I am using for what to include in this course are (1) what woul
 
 This week is a review of **fundamental concepts** and an **introduction to R**. We will cover a lot very superficially, but hopefully it will help ease us into the water.
 
-In week two we will study **linear regression** in greater depth. These are the archetype for multi-variate models, and probably the most widely used model in the social sciences.  Topics we will cover include choosing, running and interpreting models, testing model assumptions, and how to estimate robust standard errors.
+In week two we will study **linear regression** in greater depth. These are the archetype for multi-variate models, and probably the most widely used model in the social sciences. Topics we will cover include choosing, running and interpreting models, testing model assumptions, and how to estimate robust standard errors.
 
 In week three we will study **logistic regression** models – the classic model for binary outcome variables. These are important because many things – like marriage, pregnancy, and death – are binary in nature, and thus violate the basic assumptions of a linear regression. In this week we will also introduce the idea of a link function, generalised linear models, and cover one alternative to the logit model, known as probit. 
 
@@ -122,7 +122,7 @@ In week five, we move to studying **factor analysis** and **cluster analysis**. 
 
 In week six we study **path analysis** and **structural equation modelling**. These are methods used to study models with many variables and complex causal relationships. We will review how to choose, run, and interpret such models. 
 
-In week seven you will deliver your **first presentation and report**. This will be a 10 minute presentation and 2,000 word report (with attached R code). It is a chance for your to apply some of the methods presented in the first six weeks. If you are thinking of doing a thesis, then this is a good chance to experiment with these methods. If you have an issue or topic you deeply care about (and can find a dataset for) then again this is a good opportunity to explore this. The instructions for this are in the unit guide here: <http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide>  
+In week seven you will deliver your **first presentation and report**. This will be a 10 minute presentation and 2,000 word report (with attached R code). It is a chance for your to apply some of the methods presented in the first six weeks. If you are thinking of doing a thesis, then this is a good chance to experiment with these methods. If you have an issue or topic you deeply care about (and can find a dataset for) then again this is a good opportunity to explore this. The instructions for this are in the unit guide here: <http://unitguides.mq.edu.au/unit_offerings/86075/unit_guide> 
 
 In week eight we will introduce **social network analysis** (SNA). This is a method for studying relationship data. We will introduce the main packages in R used for SNA, learn how to construct, import, and visualise basic network data, and then learn about some of the main types of analysis, including centrality measures, and basic statistical modelling.
 
@@ -172,7 +172,7 @@ Operationalisation involves finding measures which are (1) valid; and (2) reliab
 
 Variables can be measured using different **levels of measurement**. Some classic levels of measurement are: **categorical, binary, ordinal, continuous, interval,** and **ratio**.
 
-As a researcher who needs to find a **research topic**, often the hardest thing to do is to find an interesting **research question**. One method of finding good research questions is to look for puzzles. **Puzzles** are comprised of a (1) a fact that is difficult to understand or explain in light of (2) current theory (e.g. if we have a theory – balance theory – which says that everyone sides with their friends and against their foes in conflict, why isn't the world divided into two warring camps).<sup>[1](#myfootnote1)</sup>    
+As a researcher who needs to find a **research topic**, often the hardest thing to do is to find an interesting **research question**. One method of finding good research questions is to look for puzzles. **Puzzles** are comprised of a (1) a fact that is difficult to understand or explain in light of (2) current theory (e.g. if we have a theory – balance theory – which says that everyone sides with their friends and against their foes in conflict, why isn't the world divided into two warring camps).<sup>[1](#myfootnote1)</sup>
 
 When developing a research question, a puzzle, or a theory the researcher needs to think about the causal relationship between variables. To demonstrate causality, at least three conditions need to be met: (1) **time order** (i.e. A happens before B), (2) **correlation** (e.g. A goes up, B goes up), and (3) **ruling out other explanations** (e.g. A and B weren't both caused by C). **The hardest of these three conditions to meet is (3) ruling out other explanations.** Why? Because other explanations have infinite possible pathways. There are two main ways we rule out other explanations in practice: (1) in **experimental studies**, we **randomly assign the cause**, which then rules out other explanations through the **law of large numbers** (random assignment ensures all characteristics of two groups are identical if the groups are large enough); or (2) in **observational studies**, we c**ontrol for the major competing theories** or explanations by including them in our models, measurements, and tests. 
 
@@ -209,11 +209,11 @@ Univariate statistics summarise single variables. The main **univariate statisti
 So what I've just summarised is assumed knowledge for this course. You don't need to be an expert in all those concepts, and we will revisit many of them in this course. However, if any of the concepts highlighted in bold in the previous section are completely new to you, I ask that you do some revision on your own in the first couple of weeks. In many cases Wikipedia will give you a good simple introduction. If you are looking for something more rigorous but still introductory, I recommend the following two books, which I've used to teach undergraduate research methods for the last ten years:
 
 * Neuman, W. L. (2014). Social Research Methods: Qualitative and Quantitative Approaches. (7th Edition). Harlow, UK: Pearson.<sup>[2](#myfootnote2)</sup>
-* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications.<sup>[3](#myfootnote3)</sup>  
+* Field, A., Miles, J., and Field, Z. (2012). Discovering statistics using R. Sage publications.<sup>[3](#myfootnote3)</sup> 
 
 Neuman is comprehensive textbook for research methods from a sociological perspective. Field et al. is one of the most popular introductory statistics textbook in the world. It is written for psychology students, but it (1) is comprehensive and rigorous; (2) includes an introduction to relevant R commands; and (3) is full of lame yet funny jokes. 
 
-Both are available as ebooks (Kindle) on Amazon (see footnotes to the references above). If they aren't in the library yet, they will be soon. And if anyone doesn't want to buy and can't find in the library, I have copies I can lend (email me: nicholas.harrigan@mq.edu.au ). 
+Both are available as ebooks (Kindle) on Amazon (see footnotes to the references above). If they aren't in the library yet, they will be soon. And if anyone doesn't want to buy and can't find in the library, I have copies I can lend (email me: nicholas.harrigan@mq.edu.au). 
 
 A very good alternative to Neuman and Field et al. is the required textbooks for SOC830:
 
@@ -230,7 +230,7 @@ Each week I will focusing the reading guide around the analysis of a dataset, an
 
 This week and next we are focusing on dissecting the following article:
 
-* Ian McAllister (2016) Internet use, political knowledge and youth electoral participation in Australia, Journal of Youth Studies, 19:9, 1220-1236, DOI: 10.1080/13676261.2016.1154936
+* Ian McAllister (2016) Internet use, political knowledge and youth electoral participation in Australia, Journal of Youth Studies, 19:9, 1220-1236, DOI: <10.1080/13676261.2016.1154936>
  
 Ian McAllister is a Profession at the ANU, and one of the leading experts on electoral behaviour in Australia. You can read more about him at these websites. Note that Google Scholar says his articles have been cited over 18,000 times. 
 
@@ -282,7 +282,7 @@ For these reasons, I've prepared a simplified an easier to use version of the AE
 
 #### 5.4 How to read the dataset + codebook
 
-If you click on Link 1 (if it won't click, just cut and paste the URL into a browser), your browser will download a file called "elect_2013.csv". If you then open this file (which should be in your downloads folder if you can't find it), then it should automatically open in Microsoft Excel.  You will see something like Screenshot 2.
+If you click on Link 1 (if it won't click, just cut and paste the URL into a browser), your browser will download a file called "elect_2013.csv". If you then open this file (which should be in your downloads folder if you can't find it), then it should automatically open in Microsoft Excel. You will see something like Screenshot 2.
 
 <div style="text-align:center"><img src ="images/832_lesson_01_image_04.png" style="max-width:60%;" /></div>
 
@@ -299,7 +299,7 @@ If you scroll down, you will see that there are 3956 rows in the dataset, which 
 If you scroll to the right you will see that there are about 46 columns, representing the 46 variables which I have extracted from the larger AEC 2013 dataset. These are the 46 variables that are relevant to the McAllister paper.
 
 Before we move on, let me provide a few definitions that might help answer some questions you have:
-* **What is a .csv file?** CSV stands for 'comma separated values'. CSV files are a very simple version of an Excel spreadsheet file. If you opened one of these files in a text editor, then you would find that the data is the contents of each cell, separated by a comma ','.  CSV is one of the simplest ways to store data like this, hence you will come across it a lot.
+* **What is a .csv file?** CSV stands for 'comma separated values'. CSV files are a very simple version of an Excel spreadsheet file. If you opened one of these files in a text editor, then you would find that the data is the contents of each cell, separated by a comma ','. CSV is one of the simplest ways to store data like this, hence you will come across it a lot.
 * **What are the NA's in the data?** These represent 'missing data',  which means that the respondent did not answer the question. There are lots of different reasons why data might be missing – respondents might feel uncomfortable with the question, they might have accidentally skipped the question, or maybe it isn't relevant (e.g. you ask "Are you married?" and if someone isn't, then they skip the follow up questions about their partner). 
 * **What is the first row without a column heading?** This is just a row index that R adds when it saves CSV data. Most of the time, this row can be ignored. 
 * **What do all the numbers represent?** Great question. These are values which represent different answers to each question. For example, we have a variable called "Female", which captures gender. If a person was male, then they will have a 0 for the value of this variable, and if they are female, they will have a 1 for the value of this variable.
@@ -320,7 +320,7 @@ To talk about datasets and codebooks, it is easier if we define some key terms. 
 * **Variable names**: Variable names are a (generally short) unbroken piece of text that users and the computer use to refer to a variable by. For example, 'female'. Variable names have conventions. In the case of R, they can't start with a number, and they can't include spaces. They can include characters of the alphabet, numbers, and '.' and '\_'. Variable names are case sensitive. So Female and female are different variables, as far as R is concerned. The variable names are indicated in Screenshot 4 with the green boxes.
 * **Labels**: Labels are tags or attributes that can be attached to parts of a dataset, and then used by computer software to make models and diagrams more easy to read and more user friendly. Traditionally R does not support labels, while many other packages – such as SPSS – do support labels. This situation has changed in the last year, with the development of a new package called 'sjlabelled'. For the moment we aren't going to use labels when using R, but they have been included in this example, because I've used labels to provide very useful information in the codebook. I will include an appendix to this document which explains basic information on how to use labels in R (see Appendix 1: An introduction to labels in R).
 * **Variable labels**: Variable labels are a label that is attached to a variable name. These allow for much longer text, with spaces and punctuation, to be attached to a variable name. In the case of this dataset, most of the variable labels are the question text from the AES 2013 study. Variable labels are indicated with a red box in Screenshot 4. 
-* **Value labels**: Value labels are labels that allow you to attach a text label to each value of a variable. For example, for the variable 'female', we can attach the label 'male' to the value '0', and 'female' to the value '1'. Value labels are indicated with a blue box in Screenshot 4.  
+* **Value labels**: Value labels are labels that allow you to attach a text label to each value of a variable. For example, for the variable 'female', we can attach the label 'male' to the value '0', and 'female' to the value '1'. Value labels are indicated with a blue box in Screenshot 4.
 
 <div style="text-align:center"><img src ="images/832_lesson_01_image_06.png" style="max-width:60%;" /></div>
  
@@ -351,7 +351,7 @@ However, for this course we are using the statistical package R. Why R? There ar
 <div style="text-align:center"><img src ="images/832_lesson_01_image_08.png" style="max-width:60%;" /></div>
 
 <div style="text-align:center"><img src ="images/832_lesson_01_image_09.png" style="max-width:60%;" /></div>
-  
+
 <div style="text-align:center"><b>Screenshots 6 + 7: Scholarly articles using each major statistical package. Source: <http://r4stats.com/articles/popularity/></b></div><br>
 
 #### 6.2 Installing R and RStudio
@@ -678,12 +678,12 @@ For example, if you put the elect_2013.csv file in your working directory, and y
 
 | TIP 2: WATCH OUT FOR QUOTATION MARKS |
 |:---------:|
-| If you copy over code that contains quotation marks directly from a website, and the code doesn’t work, delete the copied quotation marks and replace them within RStudio. <br> <br> Microsoft Word's quotation marks are not compatible with R. <br> <br> This is because in R, the quotes need to be straight quotes (such as '  and ") and not curly (or smart) quotes (such as ‘  ’  “ and ”). |
+| If you copy over code that contains quotation marks directly from a website, and the code doesn’t work, delete the copied quotation marks and replace them within RStudio. <br> <br> Microsoft Word's quotation marks are not compatible with R. <br> <br> This is because in R, the quotes need to be straight quotes (such as ' and ") and not curly (or smart) quotes (such as ‘ ’ “ and ”). |
 
 
 | TIP 3: CHEATSHEETS |
 |:---------:|
-| If you are ever looking for how to use RStudio or R, these are a few really helpful 'cheatsheets' <https://www.rstudio.com/resources/cheatsheets/> <br> <br> The two most useful cheatsheets are these: <br>  Base R Cheatsheet:  <http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf> <br> RStudio Cheatsheet: <https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf> |
+| If you are ever looking for how to use RStudio or R, these are a few really helpful 'cheatsheets' <https://www.rstudio.com/resources/cheatsheets/> <br> <br> The two most useful cheatsheets are these: <br> Base R Cheatsheet: <http://github.com/rstudio/cheatsheets/raw/master/base-r.pdf> <br> RStudio Cheatsheet: <https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf> |
 
 #### 7.8 An introduction to functions
 
