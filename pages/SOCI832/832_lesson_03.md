@@ -24,7 +24,7 @@ In the first section of this week we  will learn about how to create, run, and i
 
 ### 1.1 Dummy Variables
 
-#### **Theory**
+**Theory**
 
 Dummy variables are a fancy name for  variables that are binary variable -  with just two values - 0 and 1. Dummy variables are particularly important  when we have to analyse catagorical variables. 
  
@@ -47,7 +47,7 @@ So how do we deal with this instead? Well dummy variables is the most  common so
  
 And we say that we 'dummy out' a  categorical variable when we transform all the values of a categorical variable into their own dummy variables. For  example, we could 'dummy out' the race variable in a Singaporean dataset by creating four variables: Chinese, Indian, Malay, and Other. And for each of these variables, the value would be 1 (one) if the individual had that  characteristics, and zero otherwise. So, for example, an indian student would have zero for the 'chinese' variable, one for the 'indian' variable zero for the 'malay' variable, and  zero for the 'other' variable.  
  
-#### **R Script**
+**R Script**
 
 There are a few different strategies you can use to dummy-out categorical variables. 
  
@@ -101,7 +101,7 @@ Notice that we have created a new dataset. If you take a look at the dataset, it
  
 ### 1.2 Interaction Effects
 
-#### **Theory**
+**Theory**
 
 Sometimes one characteristic of our lives changes how two other aspect of our lives effect each other. For example, if I have just had a fight with my partner, then problems at work effect my stress levels a lot more. Normally problems at work have only a minor effect on my stress levels, but when I have conflict with my partner, small problems at work make me feel very stressed. In this case, we say that the interaction between "partner conflict" and  "problems at work" has a significant effect on "stress levels".  
  
@@ -141,7 +141,7 @@ For interaction effects, we simply centre each variable before multiplying it. T
  
 Why this works is not something I  can definitively explain, but I believe it has to do with the fact that mean centring - by making half the  values of both variable negative, and most cases values quite close to zero -  removes much of the incidental correlation between main effect and interaction effect that comes from having the  same units of measurement.  
  
-#### **R Script**
+**R Script**
 
 To run interaction effects in R, you have at least two options: to let lm() generate them for you,  or to make them yourself.  
 
@@ -211,7 +211,7 @@ For each of the various assumptions, there are three questions to ask (1) ASSUMP
 
 ### 2.1 Outliers
 
-#### **Theory**
+**Theory**
 
 One basic ASSUMPTION of all models is that there are very few 'outliers'. An outlier is a case (a unit of analysis - e.g.  survey respondent) whose value on the outcome variable (dependent variable) is poorly explained by the explanatory variables (independent variables). 
 
@@ -246,7 +246,7 @@ And this test is quite straightforward. We expect
 2. That 99% of cases have standardized residuals of between +/- 2.58; and 
 3. That 95% of cases have standardized residuals of between +/- 3.29. 
 
-#### **R Script**
+**R Script**
 
 Let's look at how we do this in R 
 
@@ -327,7 +327,7 @@ ACTUAL NUMBER OF CASES IN THIS DATASET >
  
 ### 2.2 Influential Cases
 
-#### **Theory**
+**Theory**
 
 While outliers are cases that are not explained by a model, influential cases are those that disproportionately effect the coefficients of the model.  
 
@@ -351,7 +351,7 @@ The forumula is:
     * k = coefficients in model 
     * n = observations
 
-#### **R Script**
+**R Script**
 
 The various measures of influential cases can be calculated and stored with the  following commands:
 
@@ -380,7 +380,7 @@ MAX LEVERAGE IN THIS DATA >
 
 ### 2.3 Multicollinearity
 
-#### **Theory**
+**Theory**
 
 Another problem which a model can have is that the predictor variables (independent variables) are highly collinear.  
  
@@ -394,7 +394,7 @@ The rule of thumb is that the highest VIF for any coefficient in the model shoul
  
 Another rule of thumb is that the average VIF should not be substantially greater than 1. However, from what I can find in a casual search, it's not clear exactly what 'substantially greater than 1' means. My reading is that the average should be below ~ 2 or 3.  
 
-#### **R Script**
+**R Script**
 
 To measure Variance Inflation Factor (VIF) we need to install and load the "car" package
 
@@ -444,13 +444,13 @@ Below I've simply pasted the two linear regression models, and then run the thre
 
 ### 2.4 Homeoscedasticity
 
-#### **Theory**
+**Theory**
 
 The residuals - which are the difference between the predicted value (the value predicted by our model) of the dependent variable, and the actual observed value - should be distributed randomly and distributed with the same variance at all levels of the (predicted) dependent variable. 
 
 Why does this matter? It matters because when there is heteroscedasticity (i.e. not  homoscedasticity) variance - and therefore  standard errors are underestimated, making inference from the model to a population unsound. 
 
-#### **R Script**
+**R Script**
 
 The simplest way to test for homoscedasticity is to use a built in function in R, where you simply call the command 'plot()' and place the regression model data in the function.  
  
@@ -474,7 +474,7 @@ In general I would recommend running this test and then referring to the textboo
 
 ### 2.5 Independent of Errors
 
-#### **Theory**
+**Theory**
 
 Another assumption we can test is independence of errors. This is not normally a problem unless one has samples on the same people (e.g. in  time series data) or some strong sequencing effect caused by sampling (e.g. you sample people who are friends or who are living in close geographic proximity).  
  
@@ -482,7 +482,7 @@ Another assumption we can test is independence of errors. This is not normally a
  
  Note that because this test is a sequential test it is dependent on the sort order of the data.frame. If you change the sort order of the data.frame, or you randomise the order of cases, then the DW test will be different, and probably show independence of errors (even if this is untrue)
 
-#### **R Script**
+**R Script**
 
 This is the command for running the D-W Test. Remember that the D-W Statistic should be  between 1 and 3, and the p-value of the test should be greater than 0.05 >
 
@@ -490,7 +490,7 @@ This is the command for running the D-W Test. Remember that the D-W Statistic sh
  
 ### 2.6 Normal Distribution of Errors
 
-#### **Theory**
+**Theory**
 
 One last assumption that we will test is the assumption that residuals are normally distributed. 
 
@@ -508,7 +508,7 @@ If the answer is yes - more or less - then we are generally satisfied that the a
 
 There are more advanced tests - for measuring skewness,  for example - but these are generally not used unless there is a very specific reason. 
 
-#### **R Script**
+**R Script**
 
 What do we visually inspect the standardised  residuals? The command is simply:
 
@@ -528,7 +528,7 @@ The visual inspection of the histogram shows a serious problem with skewness. On
 
 ### 2.7 What to do when assumptions are violated?
 
-#### **Theory**
+**Theory**
 
 What do we do if our data or model violates one or more of these assumptions?  
 
@@ -547,7 +547,7 @@ Next we are going to look at one type of model that does have few assumptions, a
 
 ### 3.1 Logit
 
-#### **Theory**
+**Theory**
 
 Given how much we have already covered, I am  going to keep this short.  
 
@@ -583,7 +583,7 @@ When we are talking about 'odds' we are more or less talking about something sim
 
 **I strongly recommend reading Chapter 8:  Logistic Regression of Field et al 2012. as it explains many of the more technical aspects of logistic regression models.**
 
-#### **R Script** 
+**R Script** 
 
 We are going to use a couple of new packages - the package 'oddsratio' makes it easy for us to  calculate and display odds ratios for our models; - the package 'rcompanion' makes it easy for us to calculate r-squared for our models.
 
