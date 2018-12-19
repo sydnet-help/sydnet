@@ -4,40 +4,14 @@ keywords: soci832
 tags: 
 sidebar: mydoc_sidebar
 permalink: 832_lesson_09.html
-summary: "This week we are going to ..."
+summary: "This week we are going to learn about path analysis. Before we get into the details of path analysis we are going to revise and extend our understanding of logistic regression and odds ratios. We will then introduce the idea of path analysis - the idea that we can model the multiple causal pathways that link multiple causes and effects."
 ---
 
 *Last updated: 8 Oct 2018*
 
 ***Author:** Nicholas Harrigan*
 
-
-                          #
- TITLE: 9. Path Analysis
- SOCI832: Advanced Research Methods
- Week 9: Path Analysis (1 of 1 file)
- Author: Nicholas Harrigan
- Last updated: 8 Oct 2018
-                          #
-
-                         #
-## OVERVIEW ----
-
-Welcome to Week 9 of SOCI832: Advanced 
- Research Methods. 
- 
- This week we are going to learn about path analysis.
- Before we get into the details of path analysis 
- we are going to revise and extend our understanding
- of logistic regression and odds ratios. After
- linear regression, logit models are the most 
- fundamental regression models in the social and
- natural sciences, and it is crucial to have a 
- rudimentary understanding of this method. After
- that we will introduce the idea of path analysis
- - the idea that estimate and represent the multiple
- causal pathways that link multiple causes, effects, 
- and mediating and moderating variables. 
+## OVERVIEW
 
 The structure of today's class is as follows
      (1) Introduction to today's dataset
@@ -45,9 +19,9 @@ The structure of today's class is as follows
      (3) More on odds ratios
      (4) An introduction to path analysis
 
-## 1. Introduction to today's dataset ----
+## 1. Introduction to today's dataset
  
-### 1.1 Motivation ----
+### 1.1 Motivation
 
  This week's example dataset is one very close to my heart. It is a dataset I have simulated to be almost identical to the dataset used in this paper:
 
@@ -66,7 +40,7 @@ Every night around 300-500 of construction and shipyard workers from South Asia 
 
 An undergraduate student (Ms Koh) and I wanted to use validated psychological measures to be able to study what were the primary causes of distress for these workers - with the idea that this would hopefully give insight to the social structures and problems that were causing the most significant problems. 
 
-### 1.2 The data ----
+### 1.2 The data
 
 The dataset we will be using this week is actually a simulated dataset - meaning that while the dataset we will be using looks like the real dataset, it has actually
 been simulated by R. 
@@ -107,7 +81,7 @@ See if you can answer these questions:
 
 [note, if you are finding it hard to read the table in portrait, you can rotate the pages if you are in Adobe Acrobat by right clicking and choosing 'rotate clockwise']
 
-### 2.2 Summary of Logistic Regression ----
+### 2.2 Summary of Logistic Regression
 
 Some outcome variables are inherently binary: Death, catching a disease, being cured, and pregnancy, are all inherently binary outcomes.
 
@@ -179,14 +153,13 @@ It turns out that when we report 'B' in regression models we report it measured 
 * coefficients are generally output in most statistical packages as 'log-odds'. Generally we just called these 'coefficients'  Note that they vary from minus infinity to plus infinity, and 'no effect' is when the coefficient is zero. This coefficient is often called 'B'.
 * when actually discussing our results and when publishing regression tables in journals, we generally transform our coefficients into 'odds ratios', which is simply the exponential of B. Remember the basic mathematical rule which is that the natural log and exponential are inverse operations, so exp(log(p/(1-p))) = p/(1-p) The exp and log just cancel each other out.
  
-### 2.3 Another good example from UCLA ----
- - - - - - - - - - - - - - - - - - - - - - - - -
+### 2.3 Another good example from UCLA 
 
 <https://stats.idre.ucla.edu/r/dae/logit-regression/>
 
-## 3. Odds Ratios ----
+## 3. Odds Ratios
 
-### 3.1 Example/Provocation ----
+### 3.1 Example/Provocation
 
 Returning to the article Harrigan et al. 2017, look again at Table 2, but this time focus on the coefficients for the independent variables. 
 
