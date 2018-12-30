@@ -1,0 +1,55 @@
++++
+title = "Lesson 3: Getting a quick feel for your data (Correlation)"
+
+date = 2018-12-30T00:00:00
+# lastmod = 2018-12-30T00:00:00
+
+draft = false  # Is this a draft? true/false
+toc = false  # Show table of contents? true/false
+type = "docs"  # Do not modify.
+
+# Add menu entry to sidebar.
+linktitle = "Lesson 3: Getting a quick feel for your data (Correlation)"
+[menu.htad]
+  parent = "How to Analyse Data"
+  weight = 50
++++
+
+Summary: The first thing you generally want to do with a quantitative data set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.
+
+1)  Go to Analyze > Correlate > Bivariate
+
+{{< figure library="1" src="htad_lesson_03_image_01.png" >}}
+
+The left window contains all the variables in your dataset NOT in the correlation. The right window contains all the variables in the correlation.
+
+{{< figure library="1" src="htad_lesson_03_image_02.png" >}}
+ 
+2)  For this analysis, you want everything in the analysis. So click on one of the variables in the left window and then press “Control + A”. This will ‘select all’.
+
+3)  Then click the arrow in the middle of the screen. This will move all the variables to the right.
+
+4)  The default options are fine, so then just click ‘OK’
+
+{{< figure library="1" src="htad_lesson_03_image_03.png" >}}
+
+5)  You should see a huge, almost unreadable, table like the one below. This version can be useful for identifying correlations between your independent variables.
+ 
+{{< figure library="1" src="htad_lesson_03_image_04.png" >}}
+
+6)  Double click anywhere on the table, and “Pivot Table” should appear
+7)  If the “Pivot Trays” are not showing go to Pivot>Pivot Trays
+
+{{< figure library="1" src="htad_lesson_03_image_05.png" >}}
+ 
+8)  The Pivot Trays should appear as below. 
+
+{{< figure library="1" src="htad_lesson_03_image_06.png" >}}
+
+9)  Click and hold the vertically written word “Variables”, and drag it to the top white box on the “LAYER”
+
+{{< figure library="1" src="htad_lesson_03_image_07.png" >}}
+ 
+10) On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.
+
+{{< figure library="1" src="htad_lesson_03_image_08.png" >}}
