@@ -5,7 +5,7 @@ date = 2018-12-30T00:00:00
 # lastmod = 2018-12-30T00:00:00
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,6 +14,8 @@ linktitle = "Lesson 1: Analysing Qualitative Data"
   parent = "How to Analyse Data"
   weight = 30
 +++
+
+{{% toc %}}
 
 Summary: The main method of analysing qualitative data – data like interviews, video footage, letters, etc. – is to code the data into thematic categories. I am going to assume for sake of convenience that in your case you are coding up qualitative interviews, but a similar method would be used for most qualitative data sources.
 
