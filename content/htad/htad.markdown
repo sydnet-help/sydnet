@@ -12,8 +12,14 @@ type = "docs"  # Do not modify.
  linktitle = "How to Analyse Data"
  [menu.htad]
  
-
+ 
+ linktitle = "How to Analyse Data"
   
+  [menu.docs]
+  
+   linktitle = "How to Analyse Data"
+  
+  [menu.SOCI832]
 +++
 
 

@@ -12,6 +12,14 @@ type = "docs"  # Do not modify.
 [menu.docs]
   name = "Overview"
   weight = 1
+  
+ linktitle = "Overview"
+ [menu.htad]
+ weight = 1
+   
+ linktitle = "Overview"
+ [menu.SOCI832]
+ weight = 1
 +++
 
 Methods101.com provides easy to follow lessons on social research methods.

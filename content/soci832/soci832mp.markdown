@@ -12,4 +12,13 @@ type = "docs"  # Do not modify.
 linktitle = "SOCI832"
 [menu.SOCI832]
   weight = 10
+  
+  linktitle = "SOCI832"
+  [menu.docs]
+ 
+
+ linktitle = "SOCI832"
+  [menu.htad]
 +++
+
+Welcome to SOCI832!
