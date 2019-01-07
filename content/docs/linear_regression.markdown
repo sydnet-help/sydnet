@@ -66,6 +66,9 @@ The average wage for women is:
 
 Wages per month ($) = $2,000 - $500*1 = $1500 
 
+Wages per month ($) = \$2,000 - \$500*1 = \$1500 
+
+
 We might later realize that a worker’s age also affects his/her wages, and we can always add that to our model. So we might realize a better model of wages is:
 
 Wages per month ($) = \$2,000 - \$500*Gender + \$100*Age
