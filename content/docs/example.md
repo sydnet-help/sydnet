@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Introduction"
-[menu.SOCI832]
+[menu.docs]
   parent = "SOCI832"
   weight = 1
 +++

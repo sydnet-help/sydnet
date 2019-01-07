@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Lesson5: Constructing and testing an index (Cronbach Alpha)"
-[menu.htad]
+[menu.docs]
   parent = "How to Analyse Data"
   weight = 70
 +++

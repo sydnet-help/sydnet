@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Lesson 2: Downloading your data and making a codebook"
-[menu.htad]
+[menu.docs]
   parent = "How to Analyse Data"
   weight = 40
 +++

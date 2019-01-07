@@ -56,19 +56,19 @@ In summary, a statistical model is an idealised representation of the process th
 
 If we were thinking about wages, and how they are affected by gender (which equals 1 if the person is a woman), we might think that a good model of wages is:
 
-Wages per month \($) = \$2,000 - \$500*Gender 
+Wages per month \($) = $2,000 - $500*Gender 
 
 This says that men earn \$2000 on average and women earn \$500 less than men. Since women are coded as 1 and men as 0, the average wage for men is:
 
-Wages per month \($) = \$2,000 - \$500*0 = \$2000
+Wages per month ($) = $2,000 - $500*0 = $2000
 
 The average wage for women is:
 
-Wages per month \($) = \$2,000 - \$500*1 = \$1500 
+Wages per month ($) = $2,000 - $500*1 = $1500 
 
 We might later realize that a worker’s age also affects his/her wages, and we can always add that to our model. So we might realize a better model of wages is:
 
-Wages per month \($) = \$2,000 - \$500*Gender + \$100*Age
+Wages per month ($) = \$2,000 - \$500*Gender + \$100*Age
 
 
 This means that as a worker’s age increases, his/her monthly wages increase by \$100. In reality, however, we do not know what we should multiply Gender and Age by (the numbers we multiply Gender and Age by are called the coefficients). Linear regression gives us a way to find these numbers.

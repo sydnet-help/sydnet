@@ -10,16 +10,10 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
  linktitle = "How to Analyse Data"
- [menu.htad]
+ [menu.docs]
  
- 
- linktitle = "How to Analyse Data"
+
   
-  [menu.docs]
-  
-   linktitle = "How to Analyse Data"
-  
-  [menu.SOCI832]
 +++
 
 

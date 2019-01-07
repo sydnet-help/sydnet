@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Lesson 3: Getting a quick feel for your data (Correlation)"
-[menu.htad]
+[menu.docs]
   parent = "How to Analyse Data"
   weight = 50
 +++

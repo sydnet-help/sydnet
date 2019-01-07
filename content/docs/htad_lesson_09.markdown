@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Lesson 9: Cleaning up Data with Word and Excel"
-[menu.htad]
+[menu.docs]
   parent = "How to Analyse Data"
   weight = 110
 +++

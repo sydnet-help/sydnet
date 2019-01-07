@@ -10,7 +10,7 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 linktitle = "Lesson 4: Experiments and Simple Tests (T-test)"
-[menu.htad]
+[menu.docs]
   parent = "How to Analyse Data"
   weight = 60
 +++
