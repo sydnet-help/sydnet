@@ -5,17 +5,17 @@
 {{ errorf "Please define menu items named `[menu.%s]` in your %s front matter or define `[[menu.%s]]` in `config.toml`." $menu_name .Path $menu_name }}
 {{ end }}
 
-<nav class="collapse docs-links" id="docs-nav" >
+<nav class="collapse docs-links" id="docs-nav">
   {{ with (index .Site.Menus $menu_name) }}
   {{ range (index $.Site.Menus $menu_name).ByWeight }}
     <div class="docs-toc-item{{ if $current_page.IsMenuCurrent $menu_name . }} active{{ end }}">
-    <a class="dropdown-btn"{{ if .URL }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}    
-	</a>
+    <button class="dropdown-btn"{{ if .URL }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}    
+	</i></button>
 
     {{- if .HasChildren }}
     <ul class="dropdown-container">
       {{ range .Children }}
-      <li {{ if $current_page.IsMenuCurrent $menu_name . }}class="active" {{ end }}>
+      <li {{ if $current_page.IsMenuCurrent $menu_name . }}class="active"{{ end }}>
         <a href="{{ .URL }}">{{ .Name }}</a>
       </li>
       {{ end }}
@@ -26,11 +26,8 @@
   {{ end }}
 </nav>
 
-
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-
-
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
 
@@ -45,6 +42,4 @@ for (i = 0; i < dropdown.length; i++) {
   }
   });
 }
-
 </script>
-
