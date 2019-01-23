@@ -1934,6 +1934,8 @@ div.alert a {
 /* Docs sidebar. */
 
 /* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
+
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -1950,8 +1952,8 @@ div.alert a {
   }
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-sidebar {
-      position: -webkit-sticky;
-      position: sticky;			/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
+      position: -webkit-relative;
+      position: relative;			/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
       top: 50px;
       z-index: 10;				/* if there are other elements on the page with a higher z-index they will appear first*/
       height: calc(100vh - 50px);
@@ -2009,12 +2011,11 @@ div.alert a {
 }
 
 
-
-/* Add an active class to the active dropdown button */
 .active {
   background-color: rgba(166, 25, 46, 1); /* This is the background colour of the button */
   color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
+
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
@@ -2027,11 +2028,18 @@ div.alert a {
 	paddint-top: 0px;
 	font-size: 13px;
 	background-color:  rgba(214, 210, 196, 0.1);
+	color: rgba(0, 0, 0, 1);
+}
+
+/*this styles the text in the dropdown container*/
+.docs-sidebar a, .active {
+	background-color: rgba(166, 25, 46, 1); /* This is the background colour of the button */
+  color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
 
 .docs-sidebar a:hover, .dropdown-container:hover {
   background-color: rgba(214, 210, 196, 0); /* This is the background colour of the button */
-  color: rgba(128, 34, 95, 1);  /* This is the text colour for the active button */
+  color: rgba(166, 25, 46, 1);  /* This is the text colour for the active button */
 }
 
 /* Optional: Style the caret down icon (this is currently removed from the sidebar but can be reinserted by putting <i class="fa fa-caret-down"></i> within
