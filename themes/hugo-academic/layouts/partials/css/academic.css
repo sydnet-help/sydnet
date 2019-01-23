@@ -1990,7 +1990,7 @@ div.alert a {
 .docs-sidebar a, .dropdown-btn {
   padding: 2px 0px 2px 20px; 
   text-decoration: none;
-  font-size: 16px;
+  font-size: 15px;
   color: rgba(0, 0, 0, 1);	
   display: inline-block;
   border: none;
@@ -2025,7 +2025,7 @@ div.alert a {
 /*this styles the text in the dropdown container*/
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
 	paddint-top: 2px;
-	font-size: 14px;
+	font-size: 13px;
 	background-color:  transparent;
 }
 
