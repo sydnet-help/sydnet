@@ -1909,6 +1909,11 @@ div.alert a {
 
 /* Docs sidebar. */
 
+/* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 
 .docs-sidebar {
   order: 0;
@@ -1999,7 +2004,7 @@ div.alert a {
 /* Add an active class to the active dropdown button */
 .active {
   background-color: transparent;
-  color: rgba(0, 0, 0, .65);
+  color: rgba(0, 0, 0, .65); /* this is the text colour for the active button */
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
