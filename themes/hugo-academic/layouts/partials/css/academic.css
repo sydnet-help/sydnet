@@ -2026,7 +2026,7 @@ div.alert a {
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
 	paddint-top: 0px;
 	font-size: 13px;
-	background-color:  transparent;
+	background-color:  rgba(214, 210, 196, 0.1);
 }
 
 .docs-sidebar a:hover, .dropdown-container:hover {
