@@ -1905,63 +1905,12 @@ div.alert a {
 
 
 
-/*BELOW IS THE NEW AND IMPROVED SIDEBAR CODE*/
-
-/* Docs sidebar. */
-
-/* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
-::-webkit-scrollbar { 
-    display: none; 
-}
-
-
-.docs-sidebar {
-  order: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .1)
-}
-
-@media (min-width:768px) {
-  .docs-sidebar {
-    border-right: 1px solid rgba(0, 0, 0, .1)
-  }
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
-    .docs-sidebar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 50px;
-      z-index: 10;
-      height: calc(100vh - 50px)
-    }
-  }
-}
-
-@media (min-width:1200px) {
-  .docs-sidebar {
-    border-right: 1px solid rgba(0, 0, 0, .1)
-  }
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
-    .docs-sidebar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 70px;
-      z-index: 10;
-      height: calc(100vh - 70px)
-    }
-  }
-}
-
-@media (min-width:1200px) {
-  .docs-sidebar {
-    flex: 0 1 320px
-  }
-}
-
- Docs sidebar li>a. 
+/* Docs sidebar li>a. 
 
 .docs-sidebar .nav>li>a {
   display: block;
   padding: .25rem 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: rgba(0, 0, 0, .65);
 }
 
@@ -1975,20 +1924,79 @@ div.alert a {
 .docs-sidebar .nav>.active:hover>a,
 .docs-sidebar .nav>.active>a {
   font-weight: bold;
-  color: {{ .Get "primary" }};
+  color: rgba(0, 0, 0, .65);
   background-color: transparent;
 }
 
+
+/*BELOW IS THE NEW AND IMPROVED SIDEBAR CODE*/
+
+/* Docs sidebar. */
+
+/* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.docs-sidebar {
+  order: 0;
+  border-bottom: 0px solid transparent;
+}
+
+@media (min-width:1200px) {
+  .docs-sidebar {
+    border-right: 1px solid transparent;
+  }
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+    .docs-sidebar {
+      position: -webkit-sticky;
+      position: sticky;			/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
+      top: 50px;
+      z-index: 10;				/* if there are other elements on the page with a higher z-index they will appear first*/
+      height: calc(100vh - 50px);
+	  padding-left: 60px;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .docs-sidebar {
+    border-right: 0px solid rgba(0, 0, 0, .1)
+  }
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+    .docs-sidebar {
+      position: -webkit-relative;
+      position: relative;
+      top: 50px;
+      z-index: 10;
+      min-height: 1000px;
+	  padding-left: 45px
+    }
+  }
+}
+
+
+@media (min-width:1200px) {
+  .docs-sidebar {
+    flex: 0 1 320px
+  }
+}
+
+
+
+
 /* Style the sidenav links and the dropdown button */
 .docs-sidebar a, .dropdown-btn {
-  padding: 20px 0px 6px 16px;
+  padding: 2px 0px 2px 20px; 
   text-decoration: none;
-  font-size: 18px;
-  color: rgba(0, 0, 0, .65);
-  display: block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);	
+  display: inline-block;
   border: none;
-  background: none;
+  background: rgba(214, 210, 196, 0.5); 
   width: 100%;
+  overflow: auto;
   text-align: left;
   cursor: pointer;
   outline: none;
@@ -1996,29 +2004,43 @@ div.alert a {
 
 /* On mouse-over */
 .docs-sidebar a:hover, .dropdown-btn:hover {
-  color: rgba(0, 0, 0, .65);
+  background-color: rgba(166, 25, 46, 1); /* This is the background colour of the button */
+  color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
 
 
 
 /* Add an active class to the active dropdown button */
 .active {
-  background-color: transparent;
-  color: rgba(0, 0, 0, .65); /* this is the text colour for the active button */
+  background-color: rgba(166, 25, 46, 1); /* This is the background colour of the button */
+  color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
 
 /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
+  padding-left: 0px;
   display: none;
-  background-color: transparent;
-  padding-left: 8px;
 }
 
-/* Optional: Style the caret down icon */
+/*this styles the text in the dropdown container*/
+.docs-sidebar a, .dropdown-btn .dropdown-container { 
+	paddint-top: 2px;
+	font-size: 14px;
+	background-color:  rgba(214, 210, 196, 0.3);
+}
+
+.docs-sidebar a:hover, .dropdown-container:hover {
+  background-color: rgba(214, 210, 196, 0); /* This is the background colour of the button */
+  color: rgba(128, 34, 95, 1);  /* This is the text colour for the active button */
+}
+
+/* Optional: Style the caret down icon (this is currently removed from the sidebar but can be reinserted by putting <i class="fa fa-caret-down"></i> within
+the button class in the sidebar HTML file) */ 
 .fa-caret-down {
   float: right;
+  padding-top: 3px;
   padding-right: 8px;
-  color: #A6192E;
+  color: rgba(166, 25, 46, 0.9);
 }
 
 /* Docs links. */
@@ -2040,7 +2062,7 @@ div.alert a {
 @media (min-width:768px) {
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-links {
-      max-height: calc(100vh - 5rem - 70px);
+      max-height: 3000px; /* this controls the heigt of the sidebar (and it likely effects other things)*/
       overflow-y: auto;
     }
   }
