@@ -2031,6 +2031,8 @@ div.alert a {
 	font-size: 13px;
 	background-color:  rgba(214, 210, 196, 0.1);
 	color: rgba(0, 0, 0, 1);
+	border-top: 3px solid rgba(255, 255, 255, 1);
+	border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
 
 
