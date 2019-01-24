@@ -2031,15 +2031,9 @@ div.alert a {
   padding-left: 0px;
   display: none;
   margin-bottom: 0;
-  height: 0;
-  transition: height 350ms ease-in-out;
 }
 
-/* this is for the dropdown animation*/
-.dropdown-container.active {
-	display: block;
-	height: auto;
-}
+
 
 /*this styles the text in the dropdown container*/
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
