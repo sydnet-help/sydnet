@@ -6,15 +6,15 @@
 {{ end }}
 
 
-
 <nav class="collapse docs-links" id="docs-nav">
-    <ul class = "menu-head" >
-Methods101 
+
+<ul class = "menu-head"> 
+ Methods101
 </ul>
   {{ with (index .Site.Menus $menu_name) }}
   {{ range (index $.Site.Menus $menu_name).ByWeight }}
-
-    <button class="dropdown-btn" {{ if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}    
+    <div class="docs-toc-item{{ if $current_page.IsMenuCurrent $menu_name . }} active{{ end }}">
+    <button class="dropdown-btn"{{ if .URL }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}    
 	<i class="fa fa-caret-down"></i></button>
 
     {{- if .HasChildren }}
@@ -26,7 +26,7 @@ Methods101
       {{ end }}
     </ul>
     {{ end }}	
-  
+  </div>
   {{ end }}
   {{ end }}
 </nav>
