@@ -2013,6 +2013,12 @@ div.alert a {
   border-left: 1px solid rgba(255, 255, 255, 1);
 }
 
+/* This overrides the bootstrap code that makes a blue box around a clicked button*/
+.docs-sidebar a, .dropdown-btn:focus {
+	outline: none;
+}
+
+
 /* On mouse-over */
 .docs-sidebar a:hover, .dropdown-btn:hover {
   background-color: rgba(166, 25, 46, 1);  /* This is the background colour of the button */
@@ -2037,7 +2043,7 @@ div.alert a {
 
 /*this styles the text in the dropdown container*/
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
-	paddint-top: 0px;
+	padding-top: 0px;
 	font-size: 13px;
 	background-color:  rgba(214, 210, 196, 0.1);
 	color: rgba(0, 0, 0, 1);
