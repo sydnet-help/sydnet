@@ -1985,7 +1985,11 @@ div.alert a {
   }
 }
 
-
+.ul a, .menu-head {
+	color: rgba(166, 25, 46, 1);
+	font-size: 25px;
+	margin-bottom: 0;
+}  
 
 
 /* Style the sidenav links and the dropdown button */
