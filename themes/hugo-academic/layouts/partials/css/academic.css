@@ -1996,7 +1996,7 @@ div.alert a {
   color: rgba(0, 0, 0, 1);	
   display: block;
   border: none;
-  background: rgba(214, 210, 196, 0.5); 
+  background: rgba(214, 210, 196, 0.8); 
   width: 100%;
   overflow: auto;
   text-align: left;
@@ -2012,8 +2012,8 @@ div.alert a {
 
 
 .active {
-  background-color: rgba(214, 210, 196, 1); /* This is the background colour of the button */
-  color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
+  background-color: rgba(214, 210, 196, 0.5); /* This is the background colour of the button */
+  color: rgba(255, 255, 0, 1); /* This is the text colour for the active button */
 }
 
 
