@@ -5,6 +5,8 @@
 {{ errorf "Please define menu items named `[menu.%s]` in your %s front matter or define `[[menu.%s]]` in `config.toml`." $menu_name .Path $menu_name }}
 {{ end }}
 
+
+<h3> Heading </h3>
 <nav class="collapse docs-links" id="docs-nav">
   {{ with (index .Site.Menus $menu_name) }}
   {{ range (index $.Site.Menus $menu_name).ByWeight }}
