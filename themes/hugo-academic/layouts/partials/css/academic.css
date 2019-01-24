@@ -1995,14 +1995,16 @@ div.alert a {
   font-size: 15px;
   color: rgba(0, 0, 0, 1);	
   display: block;
-  border: none;
   background: rgba(214, 210, 196, 0.8); 
   width: 100%;
   overflow: auto;
   text-align: left;
   cursor: pointer;
   outline: none;
-  
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
 }
 
 /* On mouse-over */
@@ -2031,8 +2033,8 @@ div.alert a {
 	font-size: 13px;
 	background-color:  rgba(214, 210, 196, 0.1);
 	color: rgba(0, 0, 0, 1);
-	border-top: 3px solid rgba(255, 255, 255, 1);
-	border-bottom: 3px solid rgba(255, 255, 255, 1);
+	border-top: 1px solid rgba(255, 255, 255, 1);
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
 
 
