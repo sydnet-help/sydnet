@@ -1978,21 +1978,7 @@ div.alert a {
   }
 }
 
-@media (min-width:0px) {
-  .docs-sidebar {
-    border-right: 0px solid rgba(0, 0, 0, .1)
-  }
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
-    .docs-sidebar {
-      position: -webkit-fixed;
-      position: fixed;
-      top: 50px;
-      z-index: 2;
-      min-height: 1000px;
-	  padding-left: 45px
-    }
-  }
-}
+
 
 
 
