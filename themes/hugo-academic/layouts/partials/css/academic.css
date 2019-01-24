@@ -1989,6 +1989,8 @@ div.alert a {
 	color: rgba(166, 25, 46, 1);
 	font-size: 25px;
 	margin-bottom: 0;
+	padding-inline-start: 20px;
+	font-weight: bold;
 }  
 
 
@@ -2029,6 +2031,14 @@ div.alert a {
   padding-left: 0px;
   display: none;
   margin-bottom: 0;
+  height: 0;
+  transition: height 350ms ease-in-out;
+}
+
+/* this is for the dropdown animation*/
+.dropdown-container.active {
+	display: block;
+	height: auto;
 }
 
 /*this styles the text in the dropdown container*/
@@ -2040,6 +2050,8 @@ div.alert a {
 	border-top: 1px solid rgba(255, 255, 255, 1);
 	border-bottom: 1px solid rgba(255, 255, 255, 1);
 }
+
+
 
 
 /* hover for container */
