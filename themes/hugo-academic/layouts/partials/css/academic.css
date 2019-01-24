@@ -55,7 +55,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Lists */
+/* Lists */ /* this changes the margin at the bottom of the container (will make a more specific entry)*/
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -1948,7 +1948,7 @@ div.alert a {
 
 @media (min-width:1200px) {
   .docs-sidebar {
-    border-right: 1px solid transparent;
+    border-right: 0px solid transparent;
   }
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-sidebar {
@@ -1994,7 +1994,7 @@ div.alert a {
   text-decoration: none;
   font-size: 15px;
   color: rgba(0, 0, 0, 1);	
-  display: block;
+  display: inline-block;
   border: none;
   background: rgba(214, 210, 196, 0.8); 
   width: 100%;
@@ -2002,6 +2002,7 @@ div.alert a {
   text-align: left;
   cursor: pointer;
   outline: none;
+  
 }
 
 /* On mouse-over */
@@ -2021,6 +2022,7 @@ div.alert a {
 .dropdown-container {
   padding-left: 0px;
   display: none;
+  margin-bottom: 0;
 }
 
 /*this styles the text in the dropdown container*/
