@@ -14,7 +14,7 @@
   {{ with (index .Site.Menus $menu_name) }}
   {{ range (index $.Site.Menus $menu_name).ByWeight }}
     <div class="docs-toc-item{{ if $current_page.IsMenuCurrent $menu_name . }} active{{ end }}">
-    <button class="dropdown-btn"{{ if .URL }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}>{{ .Name }}    
+    <button class="dropdown-btn"{{ if .URL }}href="{{ .URL }}"{{else if .HasChildren }}href="{{ (index .Children 0).URL }}"{{end}}{{ if $current_page.HasMenuCurrent $menu_name . }} class = "active"{{ end }}>{{ .Name }}    
 	<i class="fa fa-caret-down"></i></button>
 
     {{- if .HasChildren }}
