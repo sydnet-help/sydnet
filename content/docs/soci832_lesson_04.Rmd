@@ -12,7 +12,7 @@ maths = true
 # Add menu entry to sidebar.
 linktitle = "3.  R"
 [menu.docs]
-  parent = "SOCI832"
+  parent = SOCI832
   weight = 2
 +++
 
