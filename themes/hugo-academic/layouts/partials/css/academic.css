@@ -1978,7 +1978,7 @@ div.alert a {
   }
 }
 
-@media (min-width:200px) {
+@media (min-width:0px) {
   .docs-sidebar {
     border-right: 0px solid rgba(0, 0, 0, .1)
   }
@@ -1987,7 +1987,7 @@ div.alert a {
       position: -webkit-relative;
       position: relative;
       top: 50px;
-      z-index: 10;
+      z-index: 2;
       min-height: 1000px;
 	  padding-left: 45px
     }
