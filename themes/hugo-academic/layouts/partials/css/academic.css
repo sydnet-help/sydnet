@@ -2006,13 +2006,13 @@ div.alert a {
 
 /* On mouse-over */
 .docs-sidebar a:hover, .dropdown-btn:hover {
-  background-color: rgba(214, 210, 196, 1);  /* This is the background colour of the button */
+  background-color: rgba(166, 25, 46, 1);  /* This is the background colour of the button */
   color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
 
 
 .active {
-  background-color: rgba(166, 25, 46, 1); /* This is the background colour of the button */
+  background-color: rgba(214, 210, 196, 1); /* This is the background colour of the button */
   color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
 }
 
