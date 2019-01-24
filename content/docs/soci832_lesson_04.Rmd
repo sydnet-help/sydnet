@@ -1,19 +1,18 @@
----
-title: "SOCI832 Lesson 3: Regression in R"
++++
+title = "SOCI832 Lesson 3: Regression in R"
 
-lastmod: 2019-01-07T00:00:00.000Z
+lastmod = 2019-01-07T00:00:00.000Z
 
-draft: false
-toc: false
-type: docs
-math: true
+draft = false
+toc = false
+type = docs
+math = true
 
-linktitle: "3.  R"
-menu:
-  docs:
-    parent: SOCI832
-    weight: 40
----
+linktitle = "3.  R"
+[menu.docs]
+    parent = "SOCI832"
+    weight = 40
++++
 
 
 $$ y = x $$
