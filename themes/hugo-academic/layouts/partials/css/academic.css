@@ -1994,7 +1994,7 @@ div.alert a {
  .u1 a, .menu-head {
 	color: rgba(166, 25, 46, 1);
 	font-size: 25px;
-	margin-bottom: 0;
+	margin-bottom: 0px;
 	padding-inline-start: 20px;
 	font-weight: bold;
 }  
