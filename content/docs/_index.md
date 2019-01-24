@@ -22,5 +22,3 @@ However, we also cover a range of other topics, including:
 * advice on academic writing, and
 * guides to qualitative analysis with software like NVivo and Dedoose.
 
-Below are the units available on this site: (this is a temporary solution until I can work out how to collapse the sidebar menu)
-
