@@ -1,19 +1,21 @@
-+++
-title = "SOCI832 Introduction test"
+---
+title: "SOCI832 Introduction test"
 
-date = 2018-09-09T00:00:00
-# lastmod = 2018-09-09T00:00:00
+lastmod: 2019-01-07T00:00:00.000Z
 
-draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
-type = "docs"  # Do not modify.
+draft: false
+toc: false
+type: docs
+maths: true
 
-# Add menu entry to sidebar.
-linktitle = "Introduction asdf"
-[menu.docs]
-  parent = "SOCI832"
-  weight = 1
-+++
+linktitle: "Introduction asdf"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 1
+---
+
+{{% toc %}}
 
 This unit provides training in advanced quantitative analysis with an emphasis on social science applications using existing survey data. Lectures will cover the underlying theory and laboratory sessions the application and interpretation of models. This course will cover the following topics: variance analysis, correlation and alternative correlation coefficients, linear and logistic regression, multilevel modelling, factor analysis, and path analysis.
 

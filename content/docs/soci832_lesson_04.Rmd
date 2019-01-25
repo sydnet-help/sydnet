@@ -1,20 +1,21 @@
-+++
-title = "SOCI832 Lesson 3: Regression in R"
+---
+title: "SOCI832 Lesson 4: ..."
 
-date = 2018-09-09T00:00:00
-# lastmod = 2018-09-09T00:00:00
+lastmod: 2019-01-07T00:00:00.000Z
 
-draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
-type = "docs"  # Do not modify.
-maths = true
+draft: false
+toc: false
+type: docs
+maths: true
 
-# Add menu entry to sidebar.
-linktitle = "3.  R"
-[menu.docs]
-  parent = SOCI832
-  weight = 2
-+++
+linktitle: "4. ..."
+menu:
+  docs:
+    parent: SOCI832
+    weight: 70
+---
+
+{{% toc %}}
 
 
 $$ y = x $$

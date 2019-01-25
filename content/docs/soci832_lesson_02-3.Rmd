@@ -6,12 +6,13 @@ lastmod: 2019-01-07T00:00:00.000Z
 draft: false
 toc: false
 type: docs
+maths: true
 
 linktitle: "2.3 Linear Regression"
 menu:
   docs:
     parent: SOCI832
-    weight: 40
+    weight: 50
 ---
 
 {{% toc %}}
