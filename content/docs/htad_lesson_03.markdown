@@ -15,6 +15,8 @@ linktitle = "Lesson 3: Getting a quick feel for your data (Correlation)"
   weight = 50
 +++
 
+{{% toc %}}
+
 Summary: The first thing you generally want to do with a quantitative data set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.
 
 1)  Go to Analyze > Correlate > Bivariate

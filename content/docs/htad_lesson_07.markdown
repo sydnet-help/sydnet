@@ -5,7 +5,7 @@ date = 2018-12-30T00:00:00
 # lastmod = 2018-12-30T00:00:00
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,6 +14,8 @@ type = "docs"  # Do not modify.
    parent = "How to Analyse Data"
   weight = 90
 +++
+
+{{% toc %}}
 
 Summary: We generally use linear regressions when we have (1) a dependent variable that is continuous (or a scale, or an index, or a count), and (2) we want to test the impact of (and/or control for) multiple independent variables. The ‘unstandardized coefficients’ for each independent variable - also called B - can be read as “For a one unit increase in the independent variable, the dependent variable goes up by B units, controlling for all other variables in the model.” 
 

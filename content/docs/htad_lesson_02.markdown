@@ -15,6 +15,10 @@ linktitle = "Lesson 2: Downloading your data and making a codebook"
   weight = 40
 +++
 
+
+{{% toc %}}
+
+
 Summary: Before you analyse a quantitative dataset you need to (Step 1) download the data (generally from Qualtrics), (Step 2) make a codebook and then (Step 3) import your data into SPSS.
 
 ## STEP 1 - How to download your data from Qualtrics 

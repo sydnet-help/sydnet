@@ -5,7 +5,7 @@ date = 2018-12-30T00:00:00
 # lastmod = 2018-12-30T00:00:00
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,6 +14,10 @@ linktitle = "Lesson 9: Cleaning up Data with Word and Excel"
   parent = "How to Analyse Data"
   weight = 110
 +++
+
+
+{{% toc %}}
+
 
 Summary: Something else you may need to do is clean up your data in Word, Excel, or Notepad. This section gives some basic tips.
 

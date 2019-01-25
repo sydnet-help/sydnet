@@ -5,7 +5,7 @@ date = 2018-12-30T00:00:00
 # lastmod = 2018-12-30T00:00:00
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,6 +14,8 @@ linktitle = "Lesson5: Constructing and testing an index (Cronbach Alpha)"
   parent = "How to Analyse Data"
   weight = 70
 +++
+
+{{% toc %}}
 
 Summary: If you have done a survey, chances are you have many different questions which test for the same underlying theoretical concept. When you have this situation, often the best thing to do is to construct an index. There are generally three stages to constructing an index: (1) getting all variables onto the same scale (generally done with normalization); and (2) checking that scales are all moving together in a reliable fashion (generally done by measuring the Cronbach Alpha and making sure it is > 0.6); and (3) adding together all the variables into a new variable – the index.
 

@@ -5,7 +5,7 @@ date = 2018-12-30T00:00:00
 # lastmod = 2018-12-30T00:00:00
 
 draft = false  # Is this a draft? true/false
-toc = true  # Show table of contents? true/false
+toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
@@ -14,6 +14,8 @@ linktitle = "Lesson 4: Experiments and Simple Tests (T-test)"
   parent = "How to Analyse Data"
   weight = 60
 +++
+
+{{% toc %}}
 
 Summary: If you have quantitative data that is the result of an experiment, or which is basically a comparison of the mean values of a variable in two groups, then you are most likely to want to use a t-test. This will tell you whether the difference in the mean values of the variable for the two groups is statistically significant.
 
