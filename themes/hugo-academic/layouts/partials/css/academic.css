@@ -1969,10 +1969,10 @@ div.alert a {
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-sidebar {
       position: -webkit-relative;
-      position: relative;
+      position: relative;	/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
       top: 50px;
-      z-index: 10;
-      min-height: 1000px;
+      z-index: 10;    /* if there are other elements on the page with a higher z-index they will appear first*/
+      min-height: calc(100vh - 50px);
 	  padding-left: 45px
     }
   }
