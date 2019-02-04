@@ -6,3 +6,8 @@
   HUGO_VERSION = "0.53"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+
+[[redirects]]
+  from = "https://methods101.com"
+  to = "https://methods101.com/docs/"
+  force = true
