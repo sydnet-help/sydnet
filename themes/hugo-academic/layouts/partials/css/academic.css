@@ -1985,7 +1985,7 @@ div.alert a {
 
 
 
-@media (min-width:1200px) {
+@media (min-width:768px) {
   .docs-sidebar {
     flex: 0 1 320px
   }
