@@ -2017,6 +2017,7 @@ div.alert a {
   border-bottom: 1px solid rgba(255, 255, 255, 1);
   border-right: 1px solid rgba(255, 255, 255, 1);
   border-left: 1px solid rgba(255, 255, 255, 1);
+  transition: color 0.6s ease;
 }
 
 /* This overrides the bootstrap code that makes a blue box around a clicked button*/
