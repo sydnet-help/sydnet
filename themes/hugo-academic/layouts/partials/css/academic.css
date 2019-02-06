@@ -80,24 +80,42 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizeLegibility;
   overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
 }
+
 h1 {
-  font-size: 2.25rem;
+  color: #A6192E; 
+  font-size: 36px; 
+  font-weight: bold;
 }
 h2 {
   margin-top: 1rem;
-  font-size: 1.5rem;
-  color: rgba(118, 35, 47, 1);
+  color: #76232F; 
+  font-size: 30px; 
+  font-weight: bold;
 }
 h3 {
-  font-weight: 700;
   margin-top: 1.5rem;
-  font-size: 1.25rem;
-  font-style: italic;
+  color: #595959; 
+  font-size: 26px; 
+  font-weight: bold;
 }
-h4, h5, h6 {
-  font-weight: 700;
-  margin-top: 1rem;
-  font-size: 1rem;
+
+h4 {
+	color: #A6192E; 
+	font-size: 22px; 
+	font-weight: bold; 
+	font-style: italic;
+}
+h5 {
+	color: #76232F; 
+	font-size: 19px; 
+	font-weight: bold; 
+	font-style: italic;
+}
+h6 {
+	color: #595959; 
+	font-size: 16px; 
+	font-weight: bold; 
+	font-style: italic;
 }
 
 a,
