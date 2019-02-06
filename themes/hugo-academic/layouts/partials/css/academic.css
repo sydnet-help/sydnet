@@ -1530,7 +1530,7 @@ a.badge:hover {
 }
 
 .navbar-light {
-  background: {{ .Get "menu_primary" }} !important;
+  background: rgba( 214, 210, 196, 1) !important;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
