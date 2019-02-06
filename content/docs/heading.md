@@ -38,3 +38,27 @@ Content
 ###### Heading
 
 Content
+
+# Heading 2
+ 
+Content
+ 
+## Heading 2
+
+Content
+ 
+### Heading 2
+
+Content
+ 
+#### Heading 2
+ 
+ Content
+ 
+##### Heading 2
+ 
+ Content
+ 
+###### Heading 2
+
+Content
