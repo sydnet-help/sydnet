@@ -300,7 +300,7 @@ enableGitInfo = false
 
 
 [[menu.main]]
-  name = "Lessons"
+  name = "methods101.com"
   url = "docs/"
   weight = 30
     
