@@ -4,9 +4,14 @@ title: "SOCI832 Lesson 2.1: Univariate analysis"
 lastmod: 2018-12-28T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
+
+output: 
+  html_document:
+    toc: true
+    theme: academic 
+	
 
 linktitle: "2.1 Univariate analysis"
 menu:
@@ -14,8 +19,7 @@ menu:
     parent: SOCI832
     weight: 30
 ---
-
-{{% toc %}}
+ 
 
 Last updated: 27 Dec 2018
 
