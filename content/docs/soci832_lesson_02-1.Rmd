@@ -5,18 +5,18 @@ lastmod: 2018-12-28T00:00:00.000Z
 
 draft: false
 type: docs
-maths: true
+maths: true	
 
-output: 
-  html_document:
+output:
+  blogdown::html_page:
     toc: true
-	
 
 linktitle: "2.1 Univariate analysis"
 menu:
   docs:
     parent: SOCI832
     weight: 30
+
 ---
  
 

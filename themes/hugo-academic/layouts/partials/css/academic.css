@@ -2182,6 +2182,16 @@ the button class in the sidebar HTML file) */
 
 /* Docs TOC nav. */
 
+/* Add some Heading / Title before the TOC */
+
+#TOC:before{
+    content: "Table of Contents";
+    font-weight:600;
+    font-size: .875rem;
+	padding-left: calc(1.5rem + 1px);
+    margin-bottom: .5rem;
+}
+
 .docs-toc-title {
   color: #b5b5b5;
   font-size: .875rem;
