@@ -10,7 +10,6 @@ maths: true
 output: 
   html_document:
     toc: true
-    theme: academic 
 	
 
 linktitle: "2.1 Univariate analysis"
