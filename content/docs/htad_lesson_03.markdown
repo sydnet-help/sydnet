@@ -8,6 +8,8 @@ draft = false  # Is this a draft? true/false
 toc = false  # Show table of contents? true/false
 type = "docs"  # Do not modify.
 
+
+
 # Add menu entry to sidebar.
 linktitle = "Lesson 3: Getting a quick feel for your data (Correlation)"
 [menu.docs]

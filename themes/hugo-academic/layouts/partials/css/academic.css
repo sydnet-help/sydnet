@@ -2182,15 +2182,46 @@ the button class in the sidebar HTML file) */
 
 /* Docs TOC nav. */
 
+
+
+/* This is for the Rmarkdown TOC*/
+
+#TOC, ul {
+	list-style-type:none;
+}
+
+/* This modifies the 2nd order TOC entries */
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol,
+li {
+	font-color: #99979c;
+}
+
+
+/* to get differnt size fonts for the different levels I will have to learn more css or find some way to differentiate the levels by class */
+
 /* Add some Heading / Title before the TOC */
+
 
 #TOC:before{
     content: "Table of Contents";
-    font-weight:600;
-    font-size: .875rem;
+    font-weight:bold;
+    font-size: 26px;
 	padding-left: calc(1.5rem + 1px);
     margin-bottom: .5rem;
 }
+
+
 
 .docs-toc-title {
   color: #b5b5b5;

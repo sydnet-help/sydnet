@@ -15,6 +15,8 @@ linktitle = "Lesson 1: Analysing Qualitative Data"
   weight = 30
 +++
 
+
+
 {{% toc %}}
 
 Summary: The main method of analysing qualitative data – data like interviews, video footage, letters, etc. – is to code the data into thematic categories. I am going to assume for sake of convenience that in your case you are coding up qualitative interviews, but a similar method would be used for most qualitative data sources.
