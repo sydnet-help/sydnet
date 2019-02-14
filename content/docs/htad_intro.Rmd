@@ -6,7 +6,7 @@ date = 2018-12-30T00:00:00
 
 draft: false  # Is this a draft? true/false
 type: docs  # Do not modify.
-
+maths: true
 
 output:
   blogdown::html_page:
