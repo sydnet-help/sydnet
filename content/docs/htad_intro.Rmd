@@ -1,8 +1,8 @@
 ---
-title = "How to Analyse Data: Introduction"
+title: "How to Analyse Data: Introduction"
 
-date = 2018-12-30T00:00:00
-# lastmod = 2018-12-30T00:00:00
+date: 2018-12-30T00:00:00
+# lastmod: 2018-12-30T00:00:00
 
 draft: false  # Is this a draft? true/false
 type: docs  # Do not modify.
