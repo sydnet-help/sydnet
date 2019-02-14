@@ -4,9 +4,12 @@ title: "SOCI832 Lesson 2.2: Bivariate analysis"
 lastmod: 2018-12-28T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
 
 linktitle: "2.2 Bivariate analysis"
 menu:
