@@ -18,8 +18,6 @@ menu:
     weight: 40
 ---
 
-{{% toc %}}
-
 Last updated: 27 Dec 2018
 
 *_Author_: Nicholas Harrigan*
