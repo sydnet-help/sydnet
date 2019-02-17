@@ -4,7 +4,6 @@ title: Lesson 2 (SOCI830)
 lastmod: 2018-12-28T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
 
