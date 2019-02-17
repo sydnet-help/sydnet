@@ -1610,6 +1610,8 @@ nav#navbar-main li.nav-item {
 
 .navbar-brand img {
   max-height: 50px;
+  position: relative;
+  right: 70px;
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -2015,7 +2017,7 @@ div.alert a {
 	color: rgba(166, 25, 46, 1);
 	font-size: 25px;
 	margin-bottom: 0px;
-	padding-inline-start: 20px;
+	padding-inline-start: 15px;
 	font-weight: bold;
 }  
 
