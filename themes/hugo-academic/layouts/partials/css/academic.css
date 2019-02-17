@@ -56,10 +56,11 @@ p {
 }
 
 /* R code (and other code) quote */
-.hljs-comment, .hljs-quote {
-	color: #998;
-    font-style: italic;
-    font-size: 0.6rem;
+pre code {
+    /* font-size: inherit; */
+    color: inherit;
+    word-break: normal;
+}
 }
 
 /* Lists */ /* this changes the margin at the bottom of the container (will make a more specific entry)*/
