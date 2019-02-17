@@ -57,7 +57,7 @@ p {
 
 /* R code (and other code) quote */
 pre code {
-    /* font-size: inherit; */
+    font-size: 0.6rem;
     color: inherit;
     word-break: normal;
 }
