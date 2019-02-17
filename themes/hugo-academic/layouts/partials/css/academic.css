@@ -2228,7 +2228,7 @@ li {
     content: "Table of Contents";
     font-weight:bold;
     font-size: 26px;
-	padding-left: calc(1.5rem + 1px);
+	padding-left: 0px;
     margin-bottom: .5rem;
 }
 
