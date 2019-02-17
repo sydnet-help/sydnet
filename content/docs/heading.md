@@ -8,11 +8,6 @@ toc: false
 type: docs
 maths: true
 
-linktitle: "Headings test"
-menu:
-  docs:
-    parent: Headings
-    weight: 150
 ---
 
 {{% toc %}}
