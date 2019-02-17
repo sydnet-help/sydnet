@@ -1580,6 +1580,8 @@ nav#navbar-main li.nav-item {
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
   font-weight: 600;
+  position: relative;
+  right: 90px;
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus {
