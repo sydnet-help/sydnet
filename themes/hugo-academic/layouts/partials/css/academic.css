@@ -1583,13 +1583,14 @@ nav#navbar-main li.nav-item {
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
 .navbar-light .navbar-nav>.nav-item>.nav-link:hover {
   white-space: nowrap;
+   position: absolute;
+  left: 310px;
+  bottom: 0px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
   font-weight: 600;
-  position: absolute;
-  left: 310px;
-  bottom; 0px;
+ 
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus {
@@ -1621,8 +1622,8 @@ nav#navbar-main li.nav-item {
 .navbar-brand img {
   max-height: 50px;
   position: absolute;
-  left; 60px;
-  bottom; 5px;
+  left: 60px;
+  bottom: 5px;
 }
 
 .navbar-light .navbar-toggler .icon-bar {
