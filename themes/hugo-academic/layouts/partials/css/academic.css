@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 0.7rem;
   line-height: inherit;
   color: inherit;
   background-color: {{ .Get "background" }};
@@ -55,7 +55,15 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Lists */
+/* R code (and other code) quote */
+pre code {
+    font-size: 0.6rem;
+    color: inherit;
+    word-break: normal;
+}
+}
+
+/* Lists */ /* this changes the margin at the bottom of the container (will make a more specific entry)*/
 ul, ol, dl {
   margin-top: 0;
   margin-bottom: 1rem;
@@ -78,33 +86,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   color: #313131;
   text-rendering: optimizeLegibility;
-
-  /* Ensure long words do not overflow into content. */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-
-  /* Add a hyphen where the word breaks (use `&shy;` to insert a soft-hyphen in a word). */
-  -webkit-hyphens: manual;
-  -ms-hyphens: manual;
-  hyphens: manual;
+  overflow-wrap: break-word; /* Ensures very long heading words do not overflow into content. */
 }
 h1 {
-  font-size: 2.25rem;
+  margin-top: 1rem;
+  color: #76232F; 
+  font-size: 25px; 
+  font-weight: bold;
 }
 h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-h3 {
-  font-weight: 700;
   margin-top: 1.5rem;
-  font-size: 1.25rem;
+  color: #595959; 
+  font-size: 20px; 
+  font-weight: bold;
 }
-h4, h5, h6 {
-  font-weight: 700;
-  margin-top: 1rem;
-  font-size: 1rem;
+
+h3 {
+	color: #A6192E; 
+	font-size: 18px; 
+	font-weight: bold; 
+	font-style: italic;
+}
+h4 {
+	color: #76232F; 
+	font-size: 15px; 
+	font-weight: bold; 
+	font-style: italic;
+}
+h5 {
+	color: #595959; 
+	font-size: 14px; 
+	font-weight: bold; 
+	font-style: italic;
+}
+h6{
+	color: #595959; 
+	font-size: 14px; 
+	font-weight: bold; 
 }
 
 a,
@@ -523,15 +541,6 @@ a[data-fancybox] img {
 }
 
 /*************************************************
- *  Widgets (common)
- **************************************************/
-
-.see-all {
-  margin-top: 2rem;
-  text-transform: uppercase;
-}
-
-/*************************************************
  *  Hero Widget
  **************************************************/
 
@@ -559,58 +568,22 @@ a[data-fancybox] img {
 
 .hero-overlay .hero-title,
 .hero-overlay .hero-lead,
-.hero-overlay .hero-cta-alt,
-.hero-overlay .hero-note {
+.hero-overlay .btn {
   color: #fff;
-  /*text-shadow: 1px 1px 4px rgba(0,0,0,0.5);*/ /* Uncomment to standout on complicated backgrounds. */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-.hero-overlay a:not(.hero-overlay .btn) {
+.hero-overlay a {
   color: #fff;
 }
 
 .hero-overlay .hero-lead a {
-  text-decoration: underline;
-}
-
-.hero-overlay .cta-btns {
-  margin-bottom: 16px;
-}
-
-.hero-overlay .btn {
-  color: {{ .Get "primary_dark" }};
-  padding: .6em 2.1em;
-}
-
-a.hero-cta-alt {
-  display: inline-block;
-  position: relative;
-  transition-duration: .2s;
-  transition-property: transform;
-  transition-timing-function: ease-out;
-  font-size: 1.1rem;
-}
-
-a.hero-cta-alt:active,
-a.hero-cta-alt:focus,
-a.hero-cta-alt:hover {
-  transform: scale(1.1);
+  color: #fff;
+  text-decoration-line: underline;
 }
 
 .hero-overlay .btn-lg {
   font-size: 1.1rem;
-}
-
-.hero-overlay .hero-note {
-  font-size: 0.8rem;
-}
-
-.hero-media {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
 }
 
 /*************************************************
@@ -645,7 +618,7 @@ a.hero-cta-alt:hover {
 }
 
 /*************************************************
- *  About widget
+ *  Biography
  **************************************************/
 
 #profile {
@@ -654,7 +627,7 @@ a.hero-cta-alt:hover {
   position: relative;
 }
 
-.portrait {
+#profile .portrait {
   width: 200px;
   height: 200px;
   margin: 0 auto;
@@ -662,14 +635,14 @@ a.hero-cta-alt:hover {
   object-fit: cover;
 }
 
-.portrait-title h2 {
+#profile .portrait-title h2 {
   font-size: 1.75em;
   font-weight: 300;
   color: #000000;
   margin: 20px 0 10px 0;
 }
 
-.portrait-title h3 {
+#profile .portrait-title h3 {
   font-size: 1rem;
   font-weight: 300;
   color: rgba(0,0,0, 0.54);
@@ -729,40 +702,6 @@ ul.ul-edu li .description p.course {
 ul.ul-edu li .description p.institution {
   font-size: 0.75rem;
   color: rgba(0,0,0,0.6);
-}
-
-/*************************************************
- *  People widget
- **************************************************/
-
-.people-widget {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.people-widget .portrait-title h2 {
-  font-size: 1rem;
-}
-
-.people-widget .portrait-title h3 {
-  font-size: 0.7rem;
-}
-
-.people-widget .portrait {
-  width: 80%;
-  max-width: 150px;
-  height: auto;
-}
-
-@media (min-width: 576px) {
-  .people-widget  .col-sm-auto {
-    max-width: 30% !important;
-  }
-}
-@media (min-width: 992px) {
-  .people-widget  .col-sm-auto {
-    max-width: 20% !important;
-  }
 }
 
 /*************************************************
@@ -862,6 +801,12 @@ article {
   margin-left: auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+/* Prevent FA's line height of 1 causing FA button links to be taller than other button links. */
+.btn-links .fab,
+.btn-links .fas {
+  line-height: inherit !important;
 }
 
 .split-header-image {
@@ -1043,13 +988,11 @@ article .article-metadata {
   margin-bottom: 2rem;
 }
 
-.media.stream-item .article-title,
-.card-simple .article-title {
+.media.stream-item .article-title {
   font-size: 1.2rem;
 }
 
-.media.stream-item .article-style,
-.card-simple .article-style {
+.media.stream-item .article-style {
   margin-top: 2px;
   font-size: 0.8rem;
 }
@@ -1134,34 +1077,14 @@ article .article-metadata {
 }
 
 /*************************************************
- *  List items
+ *  Publications
  **************************************************/
-
-.view-list-item {
-  margin-bottom: 1rem;
-}
 
 .pub-icon {
   color: rgba(0, 0, 0, 0.54);
   font-size: 0.81em;
-  padding-right: 6px;
+  padding-top: 6px;
 }
-
-.view-list-item .article-metadata {
-  margin-bottom: 0;
-}
-
-.pub-list-item .pub-abstract {
-  font-size: 1rem;
-}
-
-.pub-list-item .btn-links {
-  padding-top: 10px;
-}
-
-/*************************************************
- *  Publications
- **************************************************/
 
 .pub-banner {
   max-width: 100%;
@@ -1170,8 +1093,39 @@ article .article-metadata {
   margin-right: auto;
 }
 
+.pub .pub-authors {
+  font-style: italic;
+  line-height: 30px; /* Match share bar line height. */
+}
+
 .pub-row-heading {
   font-weight: bold;
+}
+
+.pub-list-item .pub-abstract {
+  font-size: 1rem;
+}
+
+.pub-list-item .pub-authors {
+  line-height: normal;
+  font-style: normal;
+  font-size: 0.9rem;
+  color: rgba(0,0,0,0.54);
+}
+
+.pub-list-item .pub-publication {
+  color: rgba(0,0,0,0.54);
+  font-size: 0.9rem;
+}
+
+
+.dark .pub-authors,
+.dark .pub-publication {
+  color: rgba(255,255,255,0.54);
+}
+
+.pub-list-item .btn-links {
+  padding-top: 10px;
 }
 
 #container-publications {
@@ -1267,31 +1221,8 @@ article .article-metadata {
   margin-bottom: 2rem;
 }
 
-.project-card {
-  position: relative;
-  width: calc(33.3% - 2*20px); /* Fluid 3 columns (inc. 20px gutter) */
-}
-@media screen and (max-width: 1199px) {
-  .project-card {
-    width: calc(50% - 20px); /* Fluid 2 columns (inc. 20px gutter) */
-  }
-}
-@media screen and (max-width: 768px) {
-  .project-card {
-    width: 100%; /* 1 column */
-  }
-}
-
 .project-item {
   margin-bottom: 1.5rem;
-}
-
-.project-card.project-item {
-  margin: 0 0 20px 0; /* Set to Isotope's gutter size */
-}
-
-.project-card .card {
-  margin: 0; /* Remove default card margin and use Isotope gutter */
 }
 
 .project-showcase .project-item {
@@ -1308,30 +1239,6 @@ article .article-metadata {
 
 .isotope-item:hover{
   z-index: 3;
-}
-
-/*************************************************
- *  Accomplishments
- **************************************************/
- 
-.course {
-  margin-bottom: -0.5rem;
-}
-
-.course h6 {
-  font-size: 0.80rem;
-  font-weight: 700;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.course h6 a {
-  border-bottom: solid 1px transparent;
-}
-
-.course h6 a:hover {
-  border-bottom: solid 1px;
-  text-decoration: none;
 }
 
 /*************************************************
@@ -1538,29 +1445,6 @@ a.badge:hover {
   color: rgba(0,0,0,.68);
 }
 
-.tag-cloud a {
-  display: inline-block;
-  position: relative;
-  margin: 5px 10px;
-  word-wrap: break-word;
-  transition-duration: .2s;
-  transition-property: transform;
-  transition-timing-function: ease-out;
-}
-
-.tag-cloud a:active,
-.tag-cloud a:focus,
-.tag-cloud a:hover {
-  color: {{ .Get "primary_dark" }};
-  transform: scale(1.2);
-}
-
-.dark .tag-cloud a:active,
-.dark .tag-cloud a:focus,
-.dark .tag-cloud a:hover {
-  color: {{ .Get "primary_light" }};
-}
-
 /*************************************************
  *  Button size override
  *************************************************/
@@ -1572,13 +1456,8 @@ a.badge:hover {
   border-radius: .3rem;
 }
 
-.btn-links .btn {
-  padding: 5px .5rem 5px .5rem;
-  line-height: 1;
-}
-
 .btn.btn-sm {
-  padding: 5px .4rem 5px .4rem;
+  padding: .4rem;
   font-size: .6rem;
   border-radius: .2rem;
 }
@@ -1678,7 +1557,7 @@ a.badge:hover {
 }
 
 .navbar-light {
-  background: {{ .Get "menu_primary" }} !important;
+  background: rgba( 214, 210, 196, 1) !important;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
@@ -1704,10 +1583,14 @@ nav#navbar-main li.nav-item {
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
 .navbar-light .navbar-nav>.nav-item>.nav-link:hover {
   white-space: nowrap;
+   position: absolute;
+  left: 310px;
+  bottom: 0px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
   font-weight: 600;
+ 
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus {
@@ -1738,6 +1621,9 @@ nav#navbar-main li.nav-item {
 
 .navbar-brand img {
   max-height: 50px;
+  position: absolute;
+  left: 60px;
+  bottom: 9px;
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -1930,7 +1816,7 @@ table > tbody > tr:hover > th {
  *  Alerts
  **************************************************/
 
-div.alert > div {
+div.alert p {
   position: relative;
   display: block;
   font-size: 1rem;
@@ -1939,15 +1825,7 @@ div.alert > div {
   margin-bottom: 0;
 }
 
-div.alert div > * {
-  margin-bottom: .5rem;  /* Use smaller paragraph spacing than usual. */
-}
-
-div.alert div > :last-child {
-  margin-bottom: 0;
-}
-
-div.alert > div:first-child::before {
+div.alert p:first-child::before {
   position: absolute;
   top: -0.5rem;
   left: -2rem;
@@ -1960,7 +1838,7 @@ div.alert > div:first-child::before {
   text-align: center;
 }
 
-div.alert-warning > div:first-child::before {
+div.alert-warning p:first-child::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   color: #ff3860;
@@ -2036,55 +1914,37 @@ div.alert a {
   box-shadow: 0 0 0 3px {{ .Get "primary_light" }};
 }
 
-/* Docs sidebar. */
 
-.docs-sidebar {
-  order: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, .1)
-}
+/* BELOW IS THE UNUSED NEW SIDEBAR CODE*/
 
-@media (min-width:768px) {
-  .docs-sidebar {
-    border-right: 1px solid rgba(0, 0, 0, .1)
-  }
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
-    .docs-sidebar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 50px;
-      z-index: 10;
-      height: calc(100vh - 50px)
-    }
-  }
-}
+/* Fixed sidenav, full height */
+/*.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow-x: hidden;
+  padding-top: 20px;
+}*\
 
-@media (min-width:1200px) {
-  .docs-sidebar {
-    border-right: 1px solid rgba(0, 0, 0, .1)
-  }
-  @supports ((position:-webkit-sticky) or (position:sticky)) {
-    .docs-sidebar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 70px;
-      z-index: 10;
-      height: calc(100vh - 70px)
-    }
-  }
-}
+/* Main content */
+/*.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  /*font-size: 20px; /* Increased text to enable scrolling */
+ /* padding: 0px 10px;
+} *\
 
-@media (min-width:1200px) {
-  .docs-sidebar {
-    flex: 0 1 320px
-  }
-}
 
-/* Docs sidebar li>a. */
+
+/* Docs sidebar li>a. 
 
 .docs-sidebar .nav>li>a {
   display: block;
   padding: .25rem 1.5rem;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: rgba(0, 0, 0, .65);
 }
 
@@ -2098,8 +1958,156 @@ div.alert a {
 .docs-sidebar .nav>.active:hover>a,
 .docs-sidebar .nav>.active>a {
   font-weight: bold;
-  color: {{ .Get "primary" }};
+  color: rgba(0, 0, 0, .65);
   background-color: transparent;
+}
+
+
+/*BELOW IS THE NEW AND IMPROVED SIDEBAR CODE*/
+
+/* Docs sidebar. */
+
+/* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.docs-sidebar {
+  order: 0;
+  border-bottom: 0px solid transparent;
+}
+
+@media (min-width:1200px) {
+  .docs-sidebar {
+    border-right: 0px solid transparent;
+  }
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+    .docs-sidebar {
+      position: -webkit-relative;
+      position: relative;			/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
+      top: 50px;
+      z-index: 10;				/* if there are other elements on the page with a higher z-index they will appear first*/
+      height: calc(100vh - 50px);
+	  padding-left: 60px;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .docs-sidebar {
+    border-right: 0px solid rgba(0, 0, 0, .1)
+  }
+  @supports ((position:-webkit-sticky) or (position:sticky)) {
+    .docs-sidebar {
+      position: -webkit-relative;
+      position: relative;	/* this effects the behaviour of the menu when scrolling main content (this should be the same as above)*/
+      top: 50px;
+      z-index: 10;    /* if there are other elements on the page with a higher z-index they will appear first*/
+      min-height: calc(100vh - 50px);
+	  padding-left: 45px
+    }
+  }
+}
+
+
+
+
+
+
+
+
+@media (min-width:1200px) {
+  .docs-sidebar {
+    flex: 0 1 320px
+  }
+}
+
+ .u1 a, .menu-head {
+	color: rgba(166, 25, 46, 1);
+	font-size: 25px;
+	margin-bottom: 0px;
+	padding-inline-start: 15px;
+	font-weight: bold;
+}  
+
+
+/* Style the sidenav links and the dropdown button */
+.docs-sidebar a, .dropdown-btn {
+  padding: 2px 0px 2px 20px; 
+  text-decoration: none;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 1);	
+  display: block;
+  background: rgba(214, 210, 196, 0.8); 
+  width: 100%;
+  overflow: auto;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border-top: 1px solid rgba(255, 255, 255, 1);
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+  border-right: 1px solid rgba(255, 255, 255, 1);
+  border-left: 1px solid rgba(255, 255, 255, 1);
+  transition: color 0.6s ease;
+}
+
+/* This overrides the bootstrap code that makes a blue box around a clicked button*/
+.docs-sidebar a, .dropdown-btn:focus {
+	outline: none;
+}
+
+
+/* On mouse-over */
+.docs-sidebar a:hover, .dropdown-btn:hover {
+  background-color: rgba(166, 25, 46, 1);  /* This is the background colour of the button */
+  color: rgba(255, 255, 255, 1); /* This is the text colour for the active button */
+}
+
+
+.active {
+  background-color: rgba(214, 210, 196, 0.5); /* This is the background colour of the button */
+  color: rgba(0, 0, 0, 1); /* This is the text colour for the active button */
+}
+
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  padding-left: 0px;
+  display: none;
+  margin-bottom: 0;
+}
+
+
+
+/*this styles the text in the dropdown container*/
+.docs-sidebar a, .dropdown-btn .dropdown-container { 
+	padding-top: 0px;
+	font-size: 13px;
+	background-color:  rgba(214, 210, 196, 0.1);
+	color: rgba(0, 0, 0, 1);
+	border-top: 1px solid rgba(255, 255, 255, 1);
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+
+
+
+/* hover for container */
+/*.docs-sidebar a:hover, .dropdown-container:hover {
+  background-color: rgba(214, 210, 196, 0); /* This is the background colour of the button */
+ /* color: rgba(166, 25, 46, 1);  /* This is the text colour for the active button */
+/*} */
+
+/* Optional: Style the caret down icon (this is currently removed from the sidebar but can be reinserted by putting <i class="fa fa-caret-down"></i> within
+the button class in the sidebar HTML file) */ 
+.fa-caret-down {
+  float: right;
+  padding-top: 3px;
+  padding-right: 8px;
+  color: rgba(166, 25, 46, 0.9);
 }
 
 /* Docs links. */
@@ -2121,7 +2129,7 @@ div.alert a {
 @media (min-width:768px) {
   @supports ((position:-webkit-sticky) or (position:sticky)) {
     .docs-links {
-      max-height: calc(100vh - 5rem - 70px);
+      max-height: 3000px; /* this controls the heigt of the sidebar (and it likely effects other things)*/
       overflow-y: auto;
     }
   }
@@ -2187,6 +2195,47 @@ div.alert a {
 }
 
 /* Docs TOC nav. */
+
+
+
+/* This is for the Rmarkdown TOC*/
+
+#TOC, ul {
+	list-style-type:none;
+}
+
+/* This modifies the 2nd order TOC entries */
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol,
+li {
+	font-color: #99979c;
+}
+
+
+/* to get differnt size fonts for the different levels I will have to learn more css or find some way to differentiate the levels by class */
+
+/* Add some Heading / Title before the TOC */
+
+
+#TOC:before{
+    content: "Table of Contents";
+    font-weight:bold;
+    font-size: 26px;
+	padding-left: 0px;
+    margin-bottom: .5rem;
+}
+
+
 
 .docs-toc-title {
   color: #b5b5b5;
@@ -2318,11 +2367,11 @@ body.dark,
   color: #fff;
 }
 
-.dark .portrait-title h2 {
+.dark #profile .portrait-title h2 {
   color: #fff;
 }
 
-.dark .portrait-title h3 {
+.dark #profile .portrait-title h3 {
   color: rgba(255, 255, 255, 0.54);
 }
 
