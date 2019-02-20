@@ -191,7 +191,7 @@ So of the 3955 respondents to our survey, 126 said that they would definitely no
 
 We can visualise this with the the 'barplot()' function:
 
-```{r}
+```{r fig.cap="Barplot of the likelihood to vote"}
 barplot(table(elect_2013$likelihood_vote))
 ```
 
