@@ -1556,6 +1556,19 @@ a.badge:hover {
   min-height: 70px !important;
 }
 
+.navbar>.container, .navbar>.container-fluid {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    left: 43px;
+}
+
 .navbar-light {
   background: rgba( 214, 210, 196, 1) !important;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
@@ -1583,9 +1596,6 @@ nav#navbar-main li.nav-item {
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus,
 .navbar-light .navbar-nav>.nav-item>.nav-link:hover {
   white-space: nowrap;
-   position: absolute;
-  left: 310px;
-  bottom: 0px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
@@ -1621,9 +1631,7 @@ nav#navbar-main li.nav-item {
 
 .navbar-brand img {
   max-height: 50px;
-  position: absolute;
-  left: 60px;
-  bottom: 9px;
+  margin-right: 60px;
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -1631,7 +1639,7 @@ nav#navbar-main li.nav-item {
 }
 
 .dropdown-menu {
-  background-color: {{ .Get "menu_primary" }} !important;
+  background-color: rgba( 214, 210, 196, 0.7) !important;
 }
 
 .dropdown-menu > li > a {
