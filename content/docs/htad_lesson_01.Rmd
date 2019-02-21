@@ -10,12 +10,12 @@ maths: true
 output:
   blogdown::html_page:
     toc: true
-	
+
 linktitle: "Lesson 1: Analysing Qualitative Data"
 menu:
-  docs:
-	parent: How to Analyse Data
-	weight: 20
+   docs:
+      parent: How to Analyse Data
+      weight: 20
 
 ---
 
