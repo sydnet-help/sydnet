@@ -25,7 +25,7 @@ body {
   font-size: 0.7rem;
   line-height: inherit;
   color: inherit;
-  background-color: ghostwhite;
+  background-color: {{ .Get "background" }};
   margin-top: 70px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
@@ -1566,11 +1566,11 @@ a.badge:hover {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: absolute;
-    left: 43px;
+    left: 22px;
 }
 
 .navbar-light {
-  background: rgba( 214, 210, 196, 1) !important;
+  background: {{ .Get "menu_primary" }} !important;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0,0,0,.11)
 }
 
@@ -1630,7 +1630,7 @@ nav#navbar-main li.nav-item {
 }
 
 .navbar-brand img {
-  max-height: 50px;
+  max-height: 90px;
   margin-right: 60px;
 }
 
@@ -1702,7 +1702,7 @@ nav#navbar-main li.nav-item {
   }
 
   .navbar-brand img {
-    max-height: 40px;
+    max-height: 70px;
   }
 
   .navbar-toggler {
