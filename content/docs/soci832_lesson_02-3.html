@@ -4,9 +4,12 @@ title: "SOCI832 Lesson 2.3: Regression in R"
 lastmod: 2019-01-07T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
 
 linktitle: "2.3 Linear Regression"
 menu:
@@ -16,8 +19,27 @@ menu:
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#stuff-you-need-to-do-before-starting">Stuff you need to do before starting</a><ul>
+<li><a href="#set-your-working-directory">1) Set your working directory</a></li>
+<li><a href="#put-the-file-elect_2013.csv-into-that-folder-this-file-can-be-found-here">2) Put the file “elect_2013.csv” into that folder This file can be found here:</a></li>
+<li><a href="#keep-the-codebook-openned-in-a-browser-so-you-can-refer-to-it-when-you-need-it.-the-codebook-is-here">3) Keep the codebook openned in a browser so you can refer to it when you need it. The codebook is here:</a></li>
+<li><a href="#import-the-data">4) Import the data</a></li>
+<li><a href="#the-next-command-below-gets-rid-of-the-first-column-which-is-not-needed.">5) The next command (below) gets rid of the first column which is not needed.</a></li>
+</ul></li>
+<li><a href="#linear-regression">1. Linear Regression</a><ul>
+<li><a href="#example-1-political-knowledge">Example 1: Political Knowledge</a></li>
+</ul></li>
+<li><a href="#r-squared-and-adjusted-r-squared">2. R-squared and Adjusted R-squared</a><ul>
+<li><a href="#example-2-a-more-complex-model">Example 2: A more complex model</a></li>
+</ul></li>
+<li><a href="#standardised-coefficients---beta">3. Standardised Coefficients - Beta</a><ul>
+<li><a href="#example-2-continued">Example 2 (continued)</a></li>
+</ul></li>
+</ul>
+</div>
 
-<p>{{% toc %}}</p>
 <p>Last updated: 7 Jan 2019</p>
 <p><em><em>Author</em>: Nicholas Harrigan</em></p>
 <div id="stuff-you-need-to-do-before-starting" class="section level1">
@@ -32,7 +54,7 @@ menu:
 </div>
 <div id="keep-the-codebook-openned-in-a-browser-so-you-can-refer-to-it-when-you-need-it.-the-codebook-is-here" class="section level3">
 <h3>3) Keep the codebook openned in a browser so you can refer to it when you need it. The codebook is here:</h3>
-<p><a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
+<p><a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html" class="uri">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
 </div>
 <div id="import-the-data" class="section level3">
 <h3>4) Import the data</h3>
@@ -63,7 +85,10 @@ menu:
 <p>Well we might think that there are two important variables (1) the number of hours the person has been in the bar; and (2) the number of drinks the person has had at the bar.</p>
 <p>To express this as a line we could say that, on average:</p>
 <pre><code>    Rest room visits = B1*hours_at_bar + B2*drinks + C</code></pre>
-<p>And we have three ‘coefficients’ which we need to try to estimate. These are * B1 - which is the slope of the relations between hours_at_bar and rest_room_visits. * B2 - the slope of the relationship between drinks and vists * C - the constant or y-intercept, which is the number of rest_room_visits (on average) for someone with zero for the other two variables - i.e. who just arrive at the bar (hours_at_bar = 0) and has not had a drink yet (drinks = 0).</p>
+<p>And we have three ‘coefficients’ which we need to try to estimate. These are
+* B1 - which is the slope of the relations between hours_at_bar and rest_room_visits.
+* B2 - the slope of the relationship between drinks and vists
+* C - the constant or y-intercept, which is the number of rest_room_visits (on average) for someone with zero for the other two variables - i.e. who just arrive at the bar (hours_at_bar = 0) and has not had a drink yet (drinks = 0).</p>
 <p>Now if we want to try to work out what B1, B2, and C are we would first need to get a whole lot of data. Well we are lucky, because we have collected data from 100 people on a Saturday night at a local Irish Pub.</p>
 <p>The data looks like this, with four columns</p>
 <table>
@@ -289,14 +314,13 @@ summary(model1)</code></pre>
 <p>Let’s estimate the standardised regression coefficients - which are also called ‘standardized betas’ or just ‘betas’ - for model 2.</p>
 <p>To do this we need to install and then load the package “lm.beta”.</p>
 <pre class="r"><code>    install.packages(&quot;lm.beta&quot;, repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;lm.beta&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4knR1z\downloaded_packages</code></pre>
+##  C:\Users\julie\AppData\Local\Temp\RtmpaobjtJ\downloaded_packages</code></pre>
 <pre class="r"><code>    library(lm.beta)</code></pre>
-<pre><code>## Warning: package &#39;lm.beta&#39; was built under R version 3.5.2</code></pre>
 <p>and then the command is simple: we just run lm.beta() before we run summary (and after we have run lm())</p>
 <pre class="r"><code>    model2b &lt;- lm.beta(model2)
     summary(model2b)</code></pre>

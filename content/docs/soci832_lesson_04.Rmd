@@ -4,9 +4,12 @@ title: "SOCI832 Lesson 4: ..."
 lastmod: 2019-01-07T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
 
 linktitle: "4. ..."
 menu:
@@ -14,8 +17,6 @@ menu:
     parent: SOCI832
     weight: 70
 ---
-
-{{% toc %}}
 
 
 $$ y = x $$

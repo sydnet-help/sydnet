@@ -4,9 +4,12 @@ title: "SOCI832 Lesson 2.3: Regression in R"
 lastmod: 2019-01-07T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
 
 linktitle: "2.3 Linear Regression"
 menu:
@@ -14,8 +17,6 @@ menu:
     parent: SOCI832
     weight: 50
 ---
-
-{{% toc %}}
 
 Last updated: 7 Jan 2019
 
