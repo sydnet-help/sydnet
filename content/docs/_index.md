@@ -10,11 +10,6 @@ type = "docs"  # Do not modify.
 
 # Add menu entry to sidebar.
 
-linktitle = "Overview"
-[menu.docs]
-  parent = "About"
-  weight = 1
-
 +++
 
 Methods101.com provides easy to follow lessons on social research methods.
