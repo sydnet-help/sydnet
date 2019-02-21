@@ -304,9 +304,46 @@ enableGitInfo = false
   url = "docs/"
   weight = 30
   
+[[menu.docs]]
+  name = "About"
+  weight = 10
 
-    
+[[menu.docs]]
+  name = "R"
+  weight = 20
 
+[[menu.docs]]
+  name = "SPSS"
+  weight = 30
+  
+[[menu.docs]]
+  name = "Dedoose"
+  weight = 40
+
+[[menu.docs]]
+  name = "NVivo"
+  weight = 50
+  
+[[menu.docs]]
+  name = "How to Analyse Data"
+  weight = 55
+
+[[menu.docs]]
+  name = "SSCI202"
+  weight = 60
+
+[[menu.docs]]
+  name = "SOC224"
+  weight = 70
+
+[[menu.docs]]
+  name = "SOCI830"
+  weight = 90
+ 
+[[menu.docs]]
+  name = "SOCI832"
+  weight = 100
+  
 # Search.
 [params.search]
   # Search provider:

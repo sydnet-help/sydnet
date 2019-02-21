@@ -1,0 +1,146 @@
+---
+title: "Lesson 2: Downloading your data and making a codebook"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lesson 2: Downloading your data and making a codebook"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 40
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#step-1---how-to-download-your-data-from-qualtrics">STEP 1 - How to download your data from Qualtrics</a></li>
+<li><a href="#step-2---creating-a-codebook">STEP 2 - Creating a codebook</a></li>
+<li><a href="#step-3-importing-into-spss">STEP 3 – Importing into SPSS</a></li>
+</ul>
+</div>
+
+<p>Summary: Before you analyse a quantitative dataset you need to (Step 1) download the data (generally from Qualtrics), (Step 2) make a codebook and then (Step 3) import your data into SPSS.</p>
+<div id="step-1---how-to-download-your-data-from-qualtrics" class="section level2">
+<h2>STEP 1 - How to download your data from Qualtrics</h2>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://smusg.asia.qualtrics.com/ControlPanel/" class="uri">https://smusg.asia.qualtrics.com/ControlPanel/</a></p></li>
+<li><p>Type in your User ID and password</p></li>
+<li><p>Click the Login button</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_01.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>After logging in, scroll down</p></li>
+<li><p>Click on the name of the survey you want to work on</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_02.png” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Click the “Reporting” tab</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_03.png” &gt;}}</p>
+<ol start="7" style="list-style-type: decimal">
+<li>Click the “Download Data” icon</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_04.png” &gt;}}</p>
+<ol start="8" style="list-style-type: decimal">
+<li>We want to download 2 versions of the data</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p>Coded values where data is seen as 0,1,2,3 for analysis in SPSS after clean up</p></li>
+<li><p>Choice text so we know what the 0 or 1 in the coded values version means. E.g. 0=Male; 1=Female</p></li>
+</ol>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Leave file format as CSV</p></li>
+<li><p>Go to Data representation and select coded values</p></li>
+<li><p>Click the “ Download CSV Data” button</p></li>
+<li><p>Save dataset as DS#1</p></li>
+<li><p>Go to Data representation and select choice text</p></li>
+<li><p>Click the “ Download CSV Data” button</p></li>
+<li><p>Save dataset as DS#2</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_05.png” &gt;}}</p>
+</div>
+<div id="step-2---creating-a-codebook" class="section level2">
+<h2>STEP 2 - Creating a codebook</h2>
+<p>A codebook enables other people to understand your data. They will know the descriptive statistics and how each variable is coded.
+There are examples of codebooks that you can use as models in the Dropbox under the folder:</p>
+<p>• /Week 11 and 12 – Datasets/</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_06.png” &gt;}}</p>
+<p>The sections of a codebook:</p>
+<ol style="list-style-type: decimal">
+<li>Introduction</li>
+</ol>
+<p>This is a description of the data set, how and when it is collected and what the purposes of collecting the data were. It also lists who are the people who collected the dataset and how to cite the dataset properly. You can see an example of an introduction in Example 2.1</p>
+<div id="example-2.1-a-codebook-introduction" class="section level4">
+<h4>Example 2.1: A Codebook Introduction</h4>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_07.png” &gt;}}</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Overview of the dataset</li>
+</ol>
+<p>This tells you the file format of the dataset, the file name and the structure of the data: how many rows and columns.</p>
+</div>
+<div id="example-2.2-overview-of-a-dataset" class="section level4">
+<h4>Example 2.2: Overview of a dataset</h4>
+<p><strong>Dataset: ‘Singapore Sex Dataset’.</strong>
+File format: Excel 2010 file: .xlsx
+File name: 2012, Harrigan, Dataset 5a, Attribute data as excel file.xlsx
+Data structure:
+* 1112 x 32 matrix + column headings
+* 1112 rows (participants)
+* 35 cols (variables)</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Descriptive statistics</li>
+</ol>
+<p>This tells you variable name, variable number, minimum, maximum, mean, standard deviation of each variable.</p>
+</div>
+<div id="example-2.3-descriptive-statistics" class="section level4">
+<h4>Example 2.3: Descriptive statistics</h4>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_08.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Long descriptions of attribute variables</li>
+</ol>
+<p>This section lists each variable in detail. It states the type of variable and the coding of the variable. THIS IS THE MOST IMPORTANT PART OF A CODEBOOK.</p>
+</div>
+<div id="example-2.4-long-descriptions-of-attribute-values" class="section level4">
+<h4>Example 2.4: Long descriptions of attribute values</h4>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_09.png” &gt;}}</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Sources</li>
+</ol>
+<p>This section lists where the data from the codebook is taken from (if any).</p>
+<ol start="6" style="list-style-type: decimal">
+<li>References</li>
+</ol>
+<p>This section lists the references (if any).</p>
+<p>Once done with your codebook, you generally save your datasets like this:</p>
+<ol style="list-style-type: decimal">
+<li><p>[Your Dataset].xlsx (Coded data)</p></li>
+<li><p>[Your Dataset].docx (Codebook)</p></li>
+</ol>
+<p>Note:</p>
+<p>• That we have saved the ‘coded values’ not the ‘choice text’ version of the dataset. We used the ‘choice text’ version to make the codebook, but now that we have the codebook, the ‘choice text’ version is redundant.</p>
+<p>• That we have saved the data as Excel files. This is needed to import into SPSS.</p>
+</div>
+</div>
+<div id="step-3-importing-into-spss" class="section level2">
+<h2>STEP 3 – Importing into SPSS</h2>
+<ol style="list-style-type: decimal">
+<li><p>Open SPSS (if you don’t have this installed, go to IITS to get it installed).</p></li>
+<li><p>Close the first dialogue box that opens</p></li>
+<li><p>Go to File &gt; Open &gt; Data</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_10.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>In the dialogue box that opens, change “Files of type” to “Excel”.</p></li>
+<li><p>Navigate to select your dataset.</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_02_image_11.png” &gt;}}</p>
+</div>

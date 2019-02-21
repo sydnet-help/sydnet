@@ -1,0 +1,167 @@
+---
+title: "Lesson 6: Linear Regression"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lesson 6: Linear Regression"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 80
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#step-1a-running-a-regression-with-forced-entry-of-independent-variables">STEP 1A: Running a regression with FORCED ENTRY of independent variables</a></li>
+<li><a href="#step-1b-running-a-regression-with-heirarchical-entry-of-independent-variables">STEP 1B: Running a regression with HEIRARCHICAL entry of independent variables</a></li>
+<li><a href="#step-1c-running-a-stepwise-regression">STEP 1C: Running a STEPWISE regression</a></li>
+<li><a href="#step-2-interpreting-the-r-square">STEP 2: Interpreting the R-square</a></li>
+</ul>
+</div>
+
+<p>Summary: We generally use linear regressions when we have (1) a dependent variable that is continuous (or a scale, or an index, or a count), and (2) we want to test the impact of (and/or control for) multiple independent variables. The ‘unstandardized coefficients’ for each independent variable - also called B - can be read as “For a one unit increase in the independent variable, the dependent variable goes up by B units, controlling for all other variables in the model.”</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>We generally use <strong>linear regressions</strong> when we have (1) a <strong>dependent variable</strong> that is continuous (or a scale, or an index, or a count), and (2) we want to test the impact of (and/or control for) multiple <strong>independent variables</strong>.</p>
+<p>The process of running a regression in SPSS is relatively straight-forward.</p>
+<p>STEP 1: You put your dependent variable in one field, and then you have three main options for putting in your independent variables: you can put them in all at once (<strong>forced entry</strong>), you can put them in as sets (<strong>hierarchical</strong>), or you can put them all in and then drop out the non-significant results (a <strong>stepwise method</strong> called <strong>backwards selection</strong>).</p>
+<p>When you read your results from a regression, there are two main columns you read: the ‘<strong>unstandardized coefficients</strong>’ for <strong>B</strong>; and the <strong>significance</strong> (sig.). You can ignore all coefficients for which sig. &gt; 0.05. Coefficients where the sig. &lt; 0.05 are interpreted as:</p>
+<p><strong>“For a one unit increase in the independent variable, the dependent variable goes up by B units, controlling for all other variables in the model.”</strong></p>
+<p>STEP 2: You also want to look for the <strong>R-square</strong>: this is the proportion of variation in the dependent variable explained by the independent variables in the model.</p>
+</div>
+<div id="step-1a-running-a-regression-with-forced-entry-of-independent-variables" class="section level2">
+<h2>STEP 1A: Running a regression with FORCED ENTRY of independent variables</h2>
+<ol style="list-style-type: decimal">
+<li>Select Analyze &gt; Regression &gt; Linear</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_01.png” &gt;}}</p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Select the dependent variable and put it in the top box</p></li>
+<li><p>Select the independent variables and put these in the “Independent(s)” box.</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_02.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Press OK. The regression will run and the output screen will appear</p></li>
+<li><p>You can then interpret the coefficients of the regression.</p></li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li>Look in the ‘Sig.’ column for the p-values</li>
+<li>If the p-value &lt; 0.05 then the independent variable has a significant impact on the dependent variable</li>
+<li>For the significant variables, we then read the B values (coefficients), which are the effect of a one unit increase of the independent variable on the dependent variable.</li>
+<li>In this case the dependent variable is a 7 point scale from “Never” (1) to “Extremely Often” (7).</li>
+<li>Gender is 1 if the person is a woman and 0 if they are a man. Note that the B coefficients state that women answer, on average, 2.20 points lower on this scale than men.</li>
+<li>Nationality is 1 if the person is Singaporean. It has no significant effect.</li>
+<li>Age is measured in years. Older people are more likely to masturbate, raising the score by 0.085 for each year of age.</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_03.png” &gt;}}</p>
+</div>
+<div id="step-1b-running-a-regression-with-heirarchical-entry-of-independent-variables" class="section level2">
+<h2>STEP 1B: Running a regression with HEIRARCHICAL entry of independent variables</h2>
+<ol style="list-style-type: decimal">
+<li><p>Select Analyze &gt; Regression &gt; Linear</p></li>
+<li><p>Select the dependent variable and put it in the top box</p></li>
+<li><p>When you run HEIRARCHICAL models, you need to divide your independent variables into groups.</p></li>
+</ol>
+<p>Select the FIRST SET of independent variables and put these in the “Independent(s)” box</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_04.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Press the “Next” button. The independent variables box will clear.</p></li>
+<li><p>Select the SECOND SET of independent variables and put these in the “Independent(s)” box</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_05.png” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Press the “Next” button. The independent variables box will clear.</p></li>
+<li><p>Select the THIRD SET of independent variables and put these in the “Independent(s)” box</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_06.png” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Press OK. The regression will run and the output screen will appear</p></li>
+<li><p>How do you interpret a hierarchical linear regression?</p></li>
+</ol>
+<p>The simplest way to think about it is that each of Model 1, Model 2, and Model 3 are completely separate FORCED ENTRY models.</p>
+<p>The coefficients for each variable in the three models are interpreted as “controlling for all the other variables in the model”. The difference with the later models (like Model 3) is that there are more controls (and more variables with coefficients).</p>
+<p>So how would we interpret this set of models?</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Look in the ‘Sig.’ column for the p-values</p></li>
+<li><p>If the p-value &lt; 0.05 then the independent variable has a significant impact on the dependent variable</p></li>
+<li><p>For the significant variables, we then read the B values (coefficients), which are the effect of a one unit increase of the independent variable on the dependent variable.</p></li>
+<li><p>In this case the dependent variable is a scale from “Never” to “Extremely Often”.</p></li>
+<li>Let’s look at the transition of one variable – age – over the three models.</li>
+<li><p>In models 1 and 2, age is statistically significant (Sig. column p, 0.05).</p></li>
+</ol>
+<ol start="2" style="list-style-type: lower-roman">
+<li><p>In model 3, age just drops out of statistical significance (p = 0.051). Why? Because we added the variable “I feel guilty when I have sex”. This variable turns out to be highly statistically significant: the guiltier a person is, the less they masturbate (or the less they report masturbating).</p></li>
+<li><p>The fact that age loses significance when we add ‘guilt’ suggests that the variables are related, and the simplest interpretation is this:</p></li>
+</ol>
+<blockquote>
+<p>“The older a person is, the more they masturbate, but the reason that they masturbate more is that they feel less guilt. Once we control for guilt, there is no effect of age on masturbation. Older people are probably less guilty, and older people masturbate more, but they do so because they are less guilty, not because of their age per se.”</p>
+</blockquote>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_07.png” &gt;}}</p>
+</div>
+<div id="step-1c-running-a-stepwise-regression" class="section level2">
+<h2>STEP 1C: Running a STEPWISE regression</h2>
+<p><strong>WARNING: YOU SHOULD PROBABLY NOT BE RUNNING A STEPWISE REGRESSION
+WHY? BECAUSE THEY ARE A-THEORETICAL, AND SO PRONE TO MASSIVE CONCEPTUAL FLAWS.</strong></p>
+<p>Let me show you through an example:</p>
+<ol style="list-style-type: decimal">
+<li><p>Select Analyze &gt; Regression &gt; Linear</p></li>
+<li><p>Select the dependent variable and put it in the top box</p></li>
+<li><p>When you run STEPWISE models, you tend to put a lot of variables into the model. You don’t generally have multiple blocks.</p></li>
+</ol>
+<p>Select the independent variables and put these in the “Independent(s)” box</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_08.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Under the independent variables, there is the label “Method”. Select “Backward” from the dropdown menu.</p></li>
+<li><p>Click on “Options”.</p></li>
+</ol>
+<p>This will reveal the options for ‘Stepping’. Because we are doing “Backwards selection”, you can just look at the “Removal” box. Variables with Significance (p-value) greater than 0.10 will be removed from the model, one at a time. If you want you can adjust this up or down.
+Press ‘Continue’. Then press OK and run the model</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_09.png” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li>How do you interpret stepwise linear regression?</li>
+</ol>
+<p>First you need to wade through the huge mass of output.</p>
+<p>The way a stepwise backwards selection regression works is that SPSS estimates a complete model with all the variables, and then if any variables have a significance of greater than 0.10, then it removes the one with the highest p-value (i.e. the least significant variable is removed). It then re-estimates the model, and repeats this process until only variables with p-values &lt; 0.10 are left.</p>
+<p>So generally we interpret a STEPWISE model by just interpreting the LAST model as a FORCED ENTRY model.</p>
+<p>Here are the last two models for our example. Notice the 21 and 22 next to the word (Constant). These are the model numbers, and this means that the method has dropped out 21 variables before getting to the final model.</p>
+<p>So how would we interpret this set of models?</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Look in the ‘Sig.’ column for the p-values</p></li>
+<li><p>If the p-value &lt; 0.05 then the independent variable has a significant impact on the dependent variable</p></li>
+<li><p>Almost all the variables are significant at p &lt; 0.05 level. But does this mean that we should SAY that these variables are significant CAUSE of masturbation?</p></li>
+</ol>
+<p>Well take a look at the variables “v16 Have you masturbated”. This is positive and of large magnitude, but is it really a causal variable? Does it make sense to “If you have masturbated you are like to masturbate more.” Maybe, but you would need to make a strong argument.</p>
+<p><strong>THIS IS THE PROBLEM WITH STEPWISE MODELS: THEY DON’T DO THE THINKING FOR YOU, AND IF YOU GIVE IT SILLY MODELS, IT WILL STILL RUN THEM.</strong></p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_10.png” &gt;}}</p>
+</div>
+<div id="step-2-interpreting-the-r-square" class="section level2">
+<h2>STEP 2: Interpreting the R-square</h2>
+<p>The R-square is a summary measure of goodness of fit that refers to the proportion of variation in the dependent variable that can be explained by the independent variable.</p>
+<ul>
+<li>R-square is between 0 and 1.</li>
+<li>The higher the score, the better it is.</li>
+</ul>
+<p>With this measure, you can say, “Approximately XXX% of the model can be explained by the independent variable.
+ 
+### STEP 3: Reporting Results</p>
+<p>The key thing to say here is: <strong>DO NOT JUST CUT AND PASTE THE TABLES FROM SPSS INTO YOUR PAPER OR PRESENTATION.</strong></p>
+<p>You need to be selective about what you present, and you need to make it look neat and nice!</p>
+<p>I am going to set a rule for what I want to see. I only want to see:
+• B coefficients
+• Sig./p-values
+• The number of cases in your sample (n)
+• The R-square for your model</p>
+<p>Here is an example of a table of the models produced by the hierarchical method..</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_06_image_11.png” &gt;}}</p>
+</div>

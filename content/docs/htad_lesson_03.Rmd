@@ -1,23 +1,23 @@
-+++
-title = "Lesson 3: Getting a quick feel for your data (Correlation)"
+---
+title: "Lesson 3: Getting a quick feel for your data (Correlation)"
 
-date = 2018-12-30T00:00:00
-# lastmod = 2018-12-30T00:00:00
+lastmod: 2018-12-30T00:00:00
 
-draft = false  # Is this a draft? true/false
-toc = false  # Show table of contents? true/false
-type = "docs"  # Do not modify.
+draft: false
+type: docs
+maths: true	
 
+output:
+  blogdown::html_page:
+    toc: true
 
+linktitle: "Lesson 3: Getting a quick feel for your data (Correlation)"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 50
 
-# Add menu entry to sidebar.
-linktitle = "Lesson 3: Getting a quick feel for your data (Correlation)"
-[menu.docs]
-  parent = "How to Analyse Data"
-  weight = 50
-+++
-
-{{% toc %}}
+---
 
 Summary: The first thing you generally want to do with a quantitative data set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.
 

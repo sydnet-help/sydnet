@@ -1,0 +1,119 @@
+---
+title: "Lesson 9: Cleaning up Data with Word and Excel"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lesson 9: Cleaning up Data with Word and Excel"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 110
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-9.1-ways-to-strip-out-formatting">Lesson 9.1: Ways to strip out formatting</a></li>
+<li><a href="#lesson-9.2-use-of-tab-in-word-to-create-columns-in-excel">Lesson 9.2: Use of TAB in Word to create columns in Excel</a></li>
+<li><a href="#lesson-9.3-binarizing-categorical-variables">Lesson 9.3: Binarizing Categorical Variables</a></li>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</div>
+
+<p>Summary: Something else you may need to do is clean up your data in Word, Excel, or Notepad. This section gives some basic tips.</p>
+<div id="lesson-9.1-ways-to-strip-out-formatting" class="section level2">
+<h2>Lesson 9.1: Ways to strip out formatting</h2>
+<div id="option-1" class="section level4">
+<h4>Option 1:</h4>
+<ol style="list-style-type: decimal">
+<li><p>Open Excel</p></li>
+<li><p>Press Ctrl+A (Command if Mac) or Press the top left button+ Right click +copy</p></li>
+<li><p>Go to sheet 2</p></li>
+<li><p>Right click and past values</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_01.png” &gt;}}</p>
+<p> 
+#### Option 2:</p>
+<ol style="list-style-type: decimal">
+<li><p>Open Excel</p></li>
+<li><p>Press Ctrl+A (Command if Mac) or Press the top left button+ Right click +copy</p></li>
+<li><p>Open Word</p></li>
+<li><p>Right click and paste values in Word</p></li>
+<li><p>Select all and copy and past back to excel</p></li>
+</ol>
+</div>
+<div id="option-3" class="section level4">
+<h4>Option 3:</h4>
+<ol style="list-style-type: decimal">
+<li><p>Open Excel</p></li>
+<li><p>Press Ctrl+A (Command if Mac) or Press the top left button+ Right click +copy</p></li>
+<li><p>Open Notepad</p></li>
+<li><p>Right click and paste into Notepad</p></li>
+<li><p>Select all and copy and past back to excel</p></li>
+</ol>
+</div>
+</div>
+<div id="lesson-9.2-use-of-tab-in-word-to-create-columns-in-excel" class="section level2">
+<h2>Lesson 9.2: Use of TAB in Word to create columns in Excel</h2>
+<ol style="list-style-type: decimal">
+<li><p>Select All in Excel and copy</p></li>
+<li><p>Paste values in word (You must paste VALUES)</p></li>
+<li><p>Use Find (Ctrl +H ; Shift+ Command +H for Mac)</p></li>
+</ol>
+<ol style="list-style-type: decimal">
+<li>Find @ and replace with ^t (This means find all @ in email addresses and replace with a tab; which will be a column space in Excel)
+ </li>
+<li><p>Find .smu.edu.sg and replace with ^t</p></li>
+<li><p>Find .20 and replace with ^t</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_02.png” &gt;}}</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_03.jpg” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Copy and paste everything back to excel</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_04.jpg” &gt;}}</p>
+</div>
+<div id="lesson-9.3-binarizing-categorical-variables" class="section level2">
+<h2>Lesson 9.3: Binarizing Categorical Variables</h2>
+<ol style="list-style-type: decimal">
+<li><p>Check Excel file for any mistake and manually delete or correct (Audit Students; etc)</p></li>
+<li><p>Move the “Role” column right about 10 columns</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_05.jpg” &gt;}}</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Select column of majors ( The column under “Last Accessed”)</p></li>
+<li><p>Copy and past a new copy</p></li>
+<li><p>Remove duplicates</p></li>
+<li><p>Sort A-Z (Ascending)</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_06.png” &gt;}}</p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Copy + paste special: Transpose as headings</p></li>
+<li><p>In the first cell type: =if($E3=f$2,1,0)</p></li>
+<li><p>Paste down all cells (Either drag cells or highlight and use the ctrl+d shortcut)</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_07.jpg” &gt;}}</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_08.jpg” &gt;}}</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_09_image_09.jpg” &gt;}}</p>
+</div>
+<div id="notes" class="section level2">
+<h2>Notes</h2>
+<p>^t= tab</p>
+<p>^p= paragraph mark</p>
+<p>You can use XXX as a placeholder sometimes between Find &amp; Replace</p>
+<p>E.g. Text that has had a paragraph mark inserted at the end of every line (fwded emails) can be rejuvenated with the following commands:</p>
+<ol style="list-style-type: decimal">
+<li>Find and replace ^p ^p with xxxx</li>
+<li>Find and replace ^p with [blank]</li>
+<li>Find and replace xxxx with ^p</li>
+</ol>
+</div>

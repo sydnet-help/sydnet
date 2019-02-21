@@ -1,0 +1,100 @@
+---
+title: "Lesson 4: Experiments and Simple Tests (T-test)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lesson 4: Experiments and Simple Tests (T-test)"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 60
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#independent-samples-t-test">4.1 Independent Samples t-test</a></li>
+<li><a href="#paired-samples-t-test">4.2 Paired Samples t-test</a></li>
+</ul>
+</div>
+
+<p>Summary: If you have quantitative data that is the result of an experiment, or which is basically a comparison of the mean values of a variable in two groups, then you are most likely to want to use a t-test. This will tell you whether the difference in the mean values of the variable for the two groups is statistically significant.</p>
+<div id="independent-samples-t-test" class="section level2">
+<h2>4.1 Independent Samples t-test</h2>
+<p>This test is used when there are two experimental conditions and different participants were assigned to each condition.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to Analyze under the function bar</p></li>
+<li><p>Select Compare Means</p></li>
+<li><p>Select Independent-Samples T test</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_01.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Select THE DEPENDENT VARIABLE as the test variable and GROUPING VARIABLE as the grouping variable using the buttons in the middle</p></li>
+<li><p>Click the “Define Groups” button</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_02.png” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Normally we define Group 1 as 0 and Group 2 as 1</p></li>
+<li><p>Click the Continue button</p></li>
+<li><p>Click the OK button</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_03.png” &gt;}}</p>
+<ol start="9" style="list-style-type: decimal">
+<li>Results which look like the following will be produced:</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_04.png” &gt;}}</p>
+<ol start="10" style="list-style-type: decimal">
+<li>How do you interpret these results?</li>
+</ol>
+<p>Here is a quick summary:</p>
+<ol style="list-style-type: decimal">
+<li>Look at Levene’s test for equality of variance
+<ol style="list-style-type: decimal">
+<li>If P &lt;= 0.05, then it’s significant. Look at the Equal variances are not assumed row</li>
+<li>If P &gt; 0.05, then it’s not significant. Look at the Equal variances are assumed row</li>
+</ol></li>
+<li>Look at the T test
+<ol style="list-style-type: decimal">
+<li>Check if p is less than or greater than 0.05</li>
+<li>If P &lt;= 0.05, then it’s significant</li>
+<li>If P &gt; 0.05, then it’s not significant</li>
+</ol></li>
+<li>If significant, we conclude that there is a significant difference between the means of these two samples.</li>
+</ol>
+<p>In this particular case, equal variances is not assumed row (Leven’s test = .000). We conclude that there is a significant difference between virgins and non-virgins in their comfort level of doing the survey (T test= .000)</p>
+</div>
+<div id="paired-samples-t-test" class="section level2">
+<h2>4.2 Paired Samples t-test</h2>
+<p>The Paired-Samples T Test procedure compares the means of two variables for a single group. The procedure computes the differences between values of the two variables for each case and tests whether the average differs from 0.</p>
+<p>This is typically used when you employ a repeated measures design where you are testing the same people twice: you give the same person a pre-test followed by a post-test and then you compare the scores at two different times.</p>
+<ol style="list-style-type: decimal">
+<li><p>Go to Analyze under the function bar</p></li>
+<li><p>Select Compare Means</p></li>
+<li><p>Select Paired-Samples T test</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_05.png” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Select DEPENDENT VARIABLE MEASURE 1 as Variable 1</p></li>
+<li><p>Select DEPENDENT VARIABLE MEASURE 2 as Variable 2</p></li>
+<li><p>Click the OK button</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_06.png” &gt;}}</p>
+<ol start="7" style="list-style-type: decimal">
+<li>You will get output like the following:</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_04_image_07.png” &gt;}}</p>
+<ol start="8" style="list-style-type: decimal">
+<li>How do you interpret these?</li>
+</ol>
+<p>Check Sig. 2-tailed: If value of p is less than 0.05, we can conclude that there was a significant difference between the means of these two samples. If greater, there is no significant difference.</p>
+<p>In this example, the significance was 0.003, which is less than 0.05. We conclude that there is a significant difference between the means.</p>
+</div>

@@ -1,0 +1,114 @@
+---
+title: "Lesson 8: Recode and Select Cases"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lesson 8: Recode and Select Cases"
+menu:
+   docs:
+      parent: How to Analyse Data
+      weight: 100
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#lesson-8.1-recode-into-same-variable">Lesson 8.1: Recode into same variable</a></li>
+<li><a href="#lesson-8.2-recode-into-different-variable">Lesson 8.2: Recode into different variable</a></li>
+<li><a href="#lesson-8.3-select-cases">Lesson 8.3: Select Cases</a></li>
+</ul>
+</div>
+
+<p>Summary: A couple of other useful axillary functions you may want to use in SPSS are (1) Recode into same variable; (2) Recode into different variables; and (3) Select cases.</p>
+<div id="lesson-8.1-recode-into-same-variable" class="section level2">
+<h2>Lesson 8.1: Recode into same variable</h2>
+<p>Say we want to recode into same variable so as to change missing values to 999.</p>
+<ol style="list-style-type: decimal">
+<li><p>Select Transform under the function bar</p></li>
+<li><p>Select Recode into Same Variables</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_01.jpg” &gt;}}</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Select v33. virginswithdoublebed</p></li>
+<li><p>Click “Old and New Values…”</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_02.jpg” &gt;}}</p>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Select System-missing under “Old Value”</p></li>
+<li><p>Select value under “New Value”</p></li>
+<li><p>Input 999</p></li>
+<li><p>Click “Add”</p></li>
+<li><p>Click the Continue button</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_03.png” &gt;}}</p>
+<ol start="10" style="list-style-type: decimal">
+<li><p>Click the OK button</p></li>
+<li><p>SPSS changes the missing values to 999</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_04.jpg” &gt;}}</p>
+</div>
+<div id="lesson-8.2-recode-into-different-variable" class="section level2">
+<h2>Lesson 8.2: Recode into different variable</h2>
+<p>Now instead of changing the missing values to 999, we want to recode to a different variable (column). We want to create v33b. virginswithdoublebed2.</p>
+<ol style="list-style-type: decimal">
+<li><p>Select Transform under the function bar</p></li>
+<li><p>Select Recode into Different Variables…</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_05.jpg” &gt;}}</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Select v33. Virginswithdoublebed</p></li>
+<li><p>Click “Old and New Values…”</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_06.png” &gt;}}</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Add the following:</li>
+</ol>
+<ul>
+<li><p>Old Value: 0; New Value: Copy old value(s)</p></li>
+<li><p>Old Value: 1; New Value: Copy old value(s)</p></li>
+<li><p>Old Value 999; New Value: Copy old value(s)</p></li>
+</ul>
+<ol start="6" style="list-style-type: decimal">
+<li>Click the continue button</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_07.png” &gt;}}</p>
+<ol start="7" style="list-style-type: decimal">
+<li><p>Input v33b. virginswithdoublebed2 under Name: in the Output Variable Section</p></li>
+<li><p>Click the Change button</p></li>
+<li><p>Click the OK button</p></li>
+<li><p>SPSS recodes the variable into a new variable</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_08.jpg” &gt;}}</p>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_09.jpg” &gt;}}</p>
+</div>
+<div id="lesson-8.3-select-cases" class="section level2">
+<h2>Lesson 8.3: Select Cases</h2>
+<p>SPSS allows us to select part of the data set for further analysis, while excluding the remaining cases from these analyses. We will now perform analyzes on only females. We select the data to include only females:</p>
+<ol style="list-style-type: decimal">
+<li><p>Select Data under the function bar</p></li>
+<li><p>Select “Select Cases…”</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_10.jpg” &gt;}}</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Click the “If…” button.</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_11.jpg” &gt;}}</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Select v31. Gender</p></li>
+<li><p>Input V31. Gender = 1 (Female only)</p></li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_12.jpg” &gt;}}</p>
+<ol start="6" style="list-style-type: decimal">
+<li>Only cases that are female (Gender=1) are not selected. Notice that cases that are not female have their case number crossed out and that SPSS has added a new filter variable that is equal to 0 for cases not counted and equal to 1 for cases that are counted.</li>
+</ol>
+<p>{{&lt; figure library=“1” src=“htad_lesson_08_image_13.jpg” &gt;}}</p>
+</div>
