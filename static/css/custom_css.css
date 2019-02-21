@@ -2093,7 +2093,7 @@ div.alert a {
 /*this styles the text in the dropdown container*/
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
 	padding-top: 0px;
-	font-size: 6.5rem;
+	font-size: 0.65rem;
 	background-color:  rgba(214, 210, 196, 0.1);
 	color: rgba(0, 0, 0, 1);
 	border-top: 1px solid rgba(255, 255, 255, 1);
