@@ -25,7 +25,7 @@ body {
   font-size: 0.7rem;
   line-height: inherit;
   color: inherit;
-  background-color: {{ .Get "background" }};
+  background-color: ghostwhite;
   margin-top: 70px; /* Offset body content by navbar height. */
   padding-top: 0;
   counter-reset: captions;
@@ -2093,7 +2093,7 @@ div.alert a {
 /*this styles the text in the dropdown container*/
 .docs-sidebar a, .dropdown-btn .dropdown-container { 
 	padding-top: 0px;
-	font-size: 0.65rem;
+	font-size: 13px;
 	background-color:  rgba(214, 210, 196, 0.1);
 	color: rgba(0, 0, 0, 1);
 	border-top: 1px solid rgba(255, 255, 255, 1);
