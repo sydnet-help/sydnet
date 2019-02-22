@@ -12,6 +12,7 @@ type = "docs"  # Do not modify.
 
 +++
 
+
 Methods101.com provides easy to follow lessons on social research methods.
 
 The site focuses on teaching you how to analyse quantitative data with the statistical packages R and SPSS. 
