@@ -15,6 +15,7 @@ menu:
     weight: 10
 ---
 
+{{% toc %}}
 
 ## Sample Content
 
