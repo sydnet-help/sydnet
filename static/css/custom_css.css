@@ -2208,9 +2208,10 @@ the button class in the sidebar HTML file) */
 
 /* This is for the Rmarkdown TOC*/
 
-#TOC, ul {
-	list-style-type:none;
+ul ul, ol ul {
+  list-style-type:none;
 }
+
 
 /* This modifies the 2nd order TOC entries */
 ol ol,

@@ -1,21 +1,20 @@
-+++
-title = "Acknowledgements"
+---
+title: "Acknowledgements"
 
-date = 2019-02-19T00:00:00
-# lastmod = 2019-02-19T00:00:00
+lastmod: 2019-02-19T00:00:00
 
-draft = false  # Is this a draft? true/false
-toc = false  # Show table of contents? true/false
-type = "docs"  # Do not modify.
+draft: false
+toc: false
+type: docs
+maths: true
 
-# Add menu entry to sidebar.
+linktitle: "Acknowledgements"
+menu:
+  docs:
+    parent: About
+    weight: 10
 
-linktitle = "Acknowledgements"
-[menu.docs]
-  parent = "About"
-  weight = 10
-
-+++
+---
 
 This website would not have been possible without the funding provided by the Macquarie University PVC Teaching and Learning Office and facilitated by Professor Garry Falloon. Brian Ballsun-Stanton was of great assistance in setting this project on track with advice and guidance. 
 
