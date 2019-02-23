@@ -1978,9 +1978,9 @@ div.alert a {
 /* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
 
 
-::-webkit-scrollbar { 
+/*::-webkit-scrollbar { 
     display: none; 
-}
+}*/
 
 
 .docs-sidebar {
