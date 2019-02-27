@@ -29,21 +29,22 @@ Summary: Before you analyse a quantitative dataset you need to (Step 1) download
 
 3) Click the Login button
 
-{{< figure library="1" src="htad_lesson_02_image_01.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_01.png'/>
 
 4) After logging in, scroll down 
 
 5) Click on the name of the survey you want to work on
 
-{{< figure library="1" src="htad_lesson_02_image_02.png" >}}
+<img alt = '' width='720' src='/img/htad_lesson_02_image_02.png'/>
 
 6)  Click the “Reporting” tab
 
-{{< figure library="1" src="htad_lesson_02_image_03.png" >}}
+<img alt = '' width='700' src='/img/htad_lesson_02_image_03.png'/>
 
 7)  Click the “Download Data” icon
  
-{{< figure library="1" src="htad_lesson_02_image_04.png" >}}
+<img alt = 'my new screenshot' width='700' src='/img/htad_lesson_02_image_04.png'/>
+
 
 8)  We want to download 2 versions of the data
 
@@ -65,7 +66,7 @@ b.  Choice text so we know what the 0 or 1 in the coded values version means. E.
 
 15) Save dataset as DS#2
 
-{{< figure library="1" src="htad_lesson_02_image_05.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_05.png'/>
 
 
 ## STEP 2 - Creating a codebook
@@ -74,8 +75,8 @@ There are examples of codebooks that you can use as models in the Dropbox under 
 
 • /Week 11 and 12 – Datasets/
 
-{{< figure library="1" src="htad_lesson_02_image_06.png" >}}
-  
+<img width='720' src='/img/htad_lesson_02_image_06.png'/>
+
 The sections of a codebook:
 
 1)  Introduction
@@ -84,7 +85,7 @@ This is a description of the data set, how and when it is collected and what the
 
 #### Example 2.1: A Codebook Introduction
  
-{{< figure library="1" src="htad_lesson_02_image_07.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_07.png'/>
 
 2)  Overview of the dataset
 
@@ -106,7 +107,7 @@ This tells you variable name, variable number, minimum, maximum, mean, standard 
 
 #### Example 2.3: Descriptive statistics
 
-{{< figure library="1" src="htad_lesson_02_image_08.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_08.png'/>
 
 4)  Long descriptions of attribute variables
 
@@ -114,7 +115,7 @@ This section lists each variable in detail. It states the type of variable and t
 
 #### Example 2.4: Long descriptions of attribute values
 
-{{< figure library="1" src="htad_lesson_02_image_09.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_09.png'/>
 
 5)  Sources
 
@@ -144,10 +145,10 @@ Note:
 
 3)  Go to File > Open > Data 
 
-{{< figure library="1" src="htad_lesson_02_image_10.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_10.png'/>
  
 4)  In the dialogue box that opens, change “Files of type” to “Excel”.
 
 5)  Navigate to select your dataset.
  
-{{< figure library="1" src="htad_lesson_02_image_11.png" >}}
+<img width='720' src='/img/htad_lesson_02_image_11.png'/>

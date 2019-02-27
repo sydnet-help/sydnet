@@ -30,13 +30,13 @@ Say we want to recode into same variable so as to change missing values to 999.
 
 2)  Select Recode into Same Variables
 
-{{< figure library="1" src="htad_lesson_08_image_01.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_01.png'/>
 
 3)  Select v33. virginswithdoublebed
 
 4)  Click “Old and New Values…”
 
-{{< figure library="1" src="htad_lesson_08_image_02.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_02.png'/>
 
 5)  Select System-missing under “Old Value”
 
@@ -48,13 +48,13 @@ Say we want to recode into same variable so as to change missing values to 999.
 
 9)  Click the Continue button
 
-{{< figure library="1" src="htad_lesson_08_image_03.png" >}}
+<img width='720' src='/img/htad_lesson_08_image_03.png'/>
 
 10) Click the OK button
 
 11) SPSS changes the missing values to 999
 
-{{< figure library="1" src="htad_lesson_08_image_04.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_04.png'/>
  
 ## Lesson 8.2: Recode into different variable
 
@@ -64,13 +64,13 @@ Now instead of changing the missing values to 999, we want to recode to a differ
 
 2)  Select Recode into Different Variables...
 
-{{< figure library="1" src="htad_lesson_08_image_05.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_05.png'/>
 
 3)  Select v33. Virginswithdoublebed
 
 4)  Click “Old and New Values…”
 
-{{< figure library="1" src="htad_lesson_08_image_06.png" >}}
+<img width='720' src='/img/htad_lesson_08_image_06.png'/>
 
 5)  Add the following:
 
@@ -82,7 +82,7 @@ Now instead of changing the missing values to 999, we want to recode to a differ
 
 6)  Click the continue button
 
-{{< figure library="1" src="htad_lesson_08_image_07.png" >}}
+<img width='720' src='/img/htad_lesson_08_image_07.png'/>
 
 7)  Input v33b. virginswithdoublebed2 under Name: in the Output Variable Section
 
@@ -92,9 +92,9 @@ Now instead of changing the missing values to 999, we want to recode to a differ
 
 10) SPSS recodes the variable into a new variable 
 
-{{< figure library="1" src="htad_lesson_08_image_08.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_08.png'/>
 
-{{< figure library="1" src="htad_lesson_08_image_09.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_09.png'/>
 
 ## Lesson 8.3: Select Cases
 
@@ -104,18 +104,18 @@ SPSS allows us to select part of the data set for further analysis, while exclud
 
 2)  Select “Select Cases…”
 
-{{< figure library="1" src="htad_lesson_08_image_10.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_10.png'/>
 
 3)  Click the “If…” button.
 
-{{< figure library="1" src="htad_lesson_08_image_11.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_11.png'/>
 
 4)  Select v31. Gender
 
 5)  Input V31. Gender = 1 (Female only) 
 
-{{< figure library="1" src="htad_lesson_08_image_12.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_12.png'/>
 
 6)  Only cases that are female (Gender=1) are not selected. Notice that cases that are not female have their case number crossed out and that SPSS has added a new filter variable that is equal to 0 for cases not counted and equal to 1 for cases that are counted.
 
-{{< figure library="1" src="htad_lesson_08_image_13.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_13.png'/>
