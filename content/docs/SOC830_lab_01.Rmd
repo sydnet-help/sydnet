@@ -54,7 +54,9 @@ Both R and RStudio are available for Windows, MacOS, and Linux. But make sure th
 
 Once installation is complete, the next step is to start RStudio. When you open RStudio the first time, you will see a window consisting of three panes (see <Figure 1-1>). 
 
-<img alt = '<Figure 1-1>' width='700' src='/img/SOC830_lab01_01.png'/>
+```{r, fig.cap="<Figure 1-5>"}
+knitr::include_graphics("/img/SOC830_lab01_01.png")
+```
 
 However, this default look of RStudio does not contain an important pane where you spend most time during your statistical projects. It is the pane in which you write and save your R codes. To add this pane, click on the first icon with a green plus sign, and then choose "R Script" (See <Figure 1-2>).
 
