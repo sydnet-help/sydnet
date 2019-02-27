@@ -1,20 +1,22 @@
 ---
-title: Lesson 1 (SOCI830)
+title: "SOC830 Lab 2"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
 draft: false
-toc: false
 type: docs
 maths: true
 
-linktitle: "Lesson 1 (SOC830)"
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 2"
 menu:
   docs:
-    parent: SOCI830
-    weight: 10
+    parent: SOC830
+    weight: 20
 ---
-
 
 ## Sample Content
 
