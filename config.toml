@@ -129,7 +129,7 @@ enableGitInfo = false
 
   # Diplay a logo in navigation bar rather than title (optional).
   #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
-  logo = "logo1.png" 
+  logo = "logo1.png"
 
   # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
@@ -303,7 +303,7 @@ enableGitInfo = false
   name = "Methods101"
   url = "docs/"
   weight = 30
-  
+
 [[menu.docs]]
   name = "About"
   weight = 10
@@ -315,7 +315,7 @@ enableGitInfo = false
 [[menu.docs]]
   name = "SPSS"
   weight = 30
-  
+
 [[menu.docs]]
   name = "Dedoose"
   weight = 40
@@ -323,7 +323,7 @@ enableGitInfo = false
 [[menu.docs]]
   name = "NVivo"
   weight = 50
-  
+
 [[menu.docs]]
   name = "How to Analyse Data"
   weight = 55
@@ -339,11 +339,11 @@ enableGitInfo = false
 [[menu.docs]]
   name = "SOC830"
   weight = 90
- 
+
 [[menu.docs]]
   name = "SOCI832"
   weight = 100
-  
+
 # Search.
 [params.search]
   # Search provider:

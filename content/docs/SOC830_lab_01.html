@@ -1,0 +1,139 @@
+---
+title: "SOC830 Lab 1: Introducing R and RStudio"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 1: Introducing R and RStudio"
+menu:
+  docs:
+    parent: SOC830
+    weight: 10
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#installing-r-and-rstudio">Installing R and RStudio</a><ul>
+<li><a href="#installing-r">Installing R</a><ul>
+<li><a href="#for-window">For Window</a></li>
+<li><a href="#for-macos">For MacOS</a></li>
+</ul></li>
+<li><a href="#installing-rstudio">Installing RStudio</a></li>
+</ul></li>
+<li><a href="#customising-rstudio">Customising RStudio</a><ul>
+<li><a href="#setting-your-default-working-directory">Setting your default working directory</a></li>
+<li><a href="#automatically-loading-your-previous-r-codes">Automatically loading your previous R codes</a></li>
+<li><a href="#setting-automatic-line-wrap">Setting automatic line wrap</a></li>
+<li><a href="#customising-the-look-of-rstudio">Customising the look of RStudio</a></li>
+<li><a href="#configuring-panes">Configuring panes</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>Last updated: 27 Feb 2019</p>
+<p><em><em>Author</em>: Hang Young Lee</em></p>
+<p>R is a free, open-source programming language for statistical analysis and graphics. RStudio is a free, open-source IDE(integrated development environment) for R and provides a convenient interface of R programming by incorporating many features such as data viewer, full-featured text editor, workspace browser, graphical tools and R help..</p>
+<div id="installing-r-and-rstudio" class="section level1">
+<h1>Installing R and RStudio</h1>
+<p>Both R and RStudio are available for Windows, MacOS, and Linux. But make sure that you must install R before installing RStudio.</p>
+<div id="installing-r" class="section level2">
+<h2>Installing R</h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="http://cran.us.r-project.org" class="uri">http://cran.us.r-project.org</a>.</li>
+<li>In the left pane, click on <strong>CRAN</strong>(You can find it under <strong>Download</strong>).</li>
+<li>In the new webpage, choose a CRAN Mirror which is close to your place. If you are in Australia, my recommendation is CSIRO( <a href="https://cran.csiro.au" class="uri">https://cran.csiro.au</a>) which is the fastest server for most of you.</li>
+<li>Then, you will see three links for downloading R which correspond to each OS(operating system). Click on the link that supports your OS.</li>
+</ol>
+<div id="for-window" class="section level3">
+<h3>For Window</h3>
+<ol style="list-style-type: decimal">
+<li>After clicking on <strong>“Download R for Windows”</strong>, choose <u><strong>base</strong></u> among Subdirectories.</li>
+<li>Then, click on <strong>“Download R 3.5.2 for Windows”</strong>(the most current version in February 2019).</li>
+<li>It will start downloading “R-3.5.2-win.exe”. After downloading it, execute this file, which will guide you to install R. Leave all default settings in the installation option.</li>
+</ol>
+</div>
+<div id="for-macos" class="section level3">
+<h3>For MacOS</h3>
+<ol style="list-style-type: decimal">
+<li>After clicking on <strong>“Download R for (Mac) OS X”</strong>, click on <strong>“R-3.5.2.pkg”</strong>(the most current version in February 2019).</li>
+<li>Execute this file, which will guide you to install R. Leave all default settings in the installation option.</li>
+<li>This step is <strong>OPTIONAL</strong>! Go to <a href="https://www.xquartz.org" class="uri">https://www.xquartz.org</a>. Download <strong>“XQuartz-2.7.11.dmg”</strong>(the most current version in February 2019). Install this dmg file.</li>
+</ol>
+</div>
+</div>
+<div id="installing-rstudio" class="section level2">
+<h2>Installing RStudio</h2>
+<ol style="list-style-type: decimal">
+<li>Go to <a href="https://www.rstudio.com" class="uri">https://www.rstudio.com</a>.</li>
+<li>Click on <strong>“Download RStudio”</strong> in the banner.</li>
+<li>Next, scroll down and find a section of <strong>“Installers for Supported Platforms”</strong>.</li>
+<li>Choose an installer that supports your OS. For Window, click on <strong>“RStudio 1.1.463 - Windows Vista/7/8/10”</strong>. For MacOS, click on <strong>“RStudio 1.1.463 - Mac OS X 10.6+ (64-bit)”</strong>.</li>
+<li>Install the downloaded file. Choose default installation options.</li>
+</ol>
+</div>
+</div>
+<div id="customising-rstudio" class="section level1">
+<h1>Customising RStudio</h1>
+<p>Once installation is complete, the next step is to start RStudio. When you open RStudio the first time, you will see a window consisting of three panes (see &lt;Figure 1-1&gt;).</p>
+<p><img alt = '<Figure 1-1>’ width=‘700’ src=‘/img/SOC830_lab01_01.png’/&gt;</p>
+<p>However, this default look of RStudio does not contain an important pane where you spend most time during your statistical projects. It is the pane in which you write and save your R codes. To add this pane, click on the first icon with a green plus sign, and then choose “R Script” (See &lt;Figure 1-2&gt;).</p>
+<p><img alt = '<Figure 1-2>’ width=‘700’ src=‘/img/SOC830_lab01_02.png’/&gt;</p>
+<p>Then, you will see a new pane in the RStudio (See &lt;Figure 1-3&gt;).</p>
+<p><img alt = '<Figure 1-3>’ width=‘700’ src=‘/img/SOC830_lab01_03.png’/&gt;</p>
+<p>Next, I would like to introduce RStudio customisation tips which could make your R programming much easier. To customise RStudio,</p>
+<ul>
+<li><strong>For Window</strong>, go to <strong>Tools</strong> in the top menu, and then click on <strong>“Global Options…”</strong>.</li>
+<li><strong>For MacOS</strong>, go to <strong>RStudio</strong> in the top menu, and then click on <strong>“Preferences…”</strong>.</li>
+</ul>
+<div id="setting-your-default-working-directory" class="section level2">
+<h2>Setting your default working directory</h2>
+<p>A default working directory is a folder in which R saves all the files unless you specify another file location. Also, R always opens files from the default working directory. For this reason, it would be convenient to save your data files in your default working directory. Otherwise, you may have to type a long file location to open them.</p>
+<p>You can set or change the default working directory by the following steps. In the section of <strong>General</strong> (of Options window), click on <strong>“Browse…”</strong> under <strong>“Default working directory (when not in a project):”</strong> (See &lt;Figure 1-4&gt;). It will open a file navigation window. For Windows, you would be in the folder of Documents. For MacOS, you would be in your home folder.</p>
+<p><img alt = '<Figure 1-4>’ width=‘700’ src=‘/img/SOC830_lab01_04.png’/&gt;</p>
+<p><strong>(Optional)</strong> Make a new folder titled “r-working” and choose this folder as your default working directory (Go into this <strong>“r-working”</strong> folder and click on <strong>Open</strong>; it will be back to the previous RStudio Options menu). Check your default working directory. If you follow the steps correctly, you will see “~/r-working” is set as your default working directory.</p>
+<p>Of course, you can choose any other folders as your working directory.</p>
+</div>
+<div id="automatically-loading-your-previous-r-codes" class="section level2">
+<h2>Automatically loading your previous R codes</h2>
+<p>In the section of <strong>General</strong>, find “Restore previously open source documents at startup” and tick the box of it (See &lt;Figure 1-5&gt;). This allows RStudio to open automatically R files on which you worked. Thus, you can always start with your current R files.</p>
+<p><img alt = '<Figure 1-5>’ width=‘700’ src=‘/img/SOC830_lab01_05.png’/&gt;</p>
+<p>Tip: Every time you make changes in RStudio options, do not forget to click on <strong>Apply</strong> on the bottom. This will save all the changes you made.</p>
+</div>
+<div id="setting-automatic-line-wrap" class="section level2">
+<h2>Setting automatic line wrap</h2>
+<p>Sometimes you may write a very long line of codes so that you have to move a horizontal scroll bar to read all of them, which should be cumbersome. Setting automatic line wrap would be a good choice to avoid this inconvenience.</p>
+<p>In the section of <strong>Code</strong> (in the left) and the tab of <strong>Editing</strong> (in the top), find <strong>“Soft-wrap R source files”</strong> and tick the box of it (See &lt;Figure 1-6&gt;).</p>
+<p><img alt = '<Figure 1-6>’ width=‘700’ src=‘/img/SOC830_lab01_06.png’/&gt;</p>
+</div>
+<div id="customising-the-look-of-rstudio" class="section level2">
+<h2>Customising the look of RStudio</h2>
+<p>You can change font family, font size, and the look of RStudio in the section of <strong>Appearance</strong> (See &lt;Figure 1-7&gt;).</p>
+<ul>
+<li><strong>RStudio theme:</strong> RStudio provides support for three global themes that customize RStudio’s user interface: Classic, Modern and Sky. By default, the Modern theme is selected.</li>
+<li><strong>Editor font:</strong> Choose a font for panes which display code (Console, Source, History, and Workspace)</li>
+<li><strong>Font size:</strong> Set the font size (in points) for panes which display code (Console, Source, History, and Workspace)</li>
+<li><strong>Editor theme:</strong> Specify the visual theme for the Console and Source panes. You can preview the theme using the inline preview or by pressing the Apply button.</li>
+</ul>
+<p><img alt = '<Figure 1-7>’ width=‘700’ src=‘/img/SOC830_lab01_07.png’/&gt;</p>
+</div>
+<div id="configuring-panes" class="section level2">
+<h2>Configuring panes</h2>
+<p>You can change the layout of four RStudio panes in the section of <strong>“Pane Layout”</strong>. &lt;Figure 1-8&gt; shows how I configured the four panes.</p>
+<p><img alt = '<Figure 1-8>’ width=‘700’ src=‘/img/SOC830_lab01_08.png’/&gt;</p>
+<ul>
+<li>Console is a command window. Here you can type any valid R command after the &gt; prompt followed by Enter and R will execute that command.</li>
+<li>Source is a text editor. It is where you edit and save your R codes.</li>
+<li>Bottom left pane includes files, plots, packages, help and viewer. Here you can open files, view graphical outcomes, install and load packages, access R help documents, and view markdown and html documents.</li>
+<li>Bottom right pane includes Environment, History, Connections, Build and VCS. Environment shows objects (data, values, functions) R has currently stored in its memory. History shows all R commands that were executed in the Console.</li>
+</ul>
+<p>Click on OK at the bottom. Then, you will see newly configured panes.</p>
+</div>
+</div>
