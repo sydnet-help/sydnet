@@ -41,13 +41,13 @@ STEP 2: You also want to look for the **R-square**: this is the proportion of va
 
 1)  Select Analyze > Regression > Linear
 
-{{< figure library="1" src="htad_lesson_06_image_01.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_01.png'/>
 
 2)  Select the dependent variable and put it in the top box
 
 3)  Select the independent variables and put these in the “Independent(s)” box.
 
-{{< figure library="1" src="htad_lesson_06_image_02.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_02.png'/>
  
 4)  Press OK. The regression will run and the output screen will appear
 
@@ -61,7 +61,7 @@ STEP 2: You also want to look for the **R-square**: this is the proportion of va
   f. Nationality is 1 if the person is Singaporean. It has no significant effect.
   g. Age is measured in years. Older people are more likely to masturbate, raising the score by 0.085 for each year of age.
 
-{{< figure library="1" src="htad_lesson_06_image_03.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_03.png'/>
 
 ## STEP 1B: Running a regression with HEIRARCHICAL entry of independent variables
 
@@ -73,19 +73,19 @@ STEP 2: You also want to look for the **R-square**: this is the proportion of va
 
 Select the FIRST SET of independent variables and put these in the “Independent(s)” box
 
-{{< figure library="1" src="htad_lesson_06_image_04.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_04.png'/>
 
 4)  Press the “Next” button. The independent variables box will clear.
 
 5)  Select the SECOND SET of independent variables and put these in the “Independent(s)” box
 
-{{< figure library="1" src="htad_lesson_06_image_05.png" >}} 
+<img width='720' src='/img/htad_lesson_06_image_05.png'/>
 
 6)  Press the “Next” button. The independent variables box will clear.
 
 7)  Select the THIRD SET of independent variables and put these in the “Independent(s)” box
 
-{{< figure library="1" src="htad_lesson_06_image_06.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_06.png'/>
 
 6)  Press OK. The regression will run and the output screen will appear
 
@@ -114,7 +114,7 @@ So how would we interpret this set of models?
 
 > “The older a person is, the more they masturbate, but the reason that they masturbate more is that they feel less guilt. Once we control for guilt, there is no effect of age on masturbation. Older people are probably less guilty, and older people masturbate more, but they do so because they are less guilty, not because of their age per se.”
 
-{{< figure library="1" src="htad_lesson_06_image_07.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_07.png'/>
  
 ## STEP 1C: Running a STEPWISE regression
 
@@ -131,7 +131,7 @@ Let me show you through an example:
 
 Select the independent variables and put these in the “Independent(s)” box
 
-{{< figure library="1" src="htad_lesson_06_image_08.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_08.png'/>
  
 4)  Under the independent variables, there is the label “Method”. Select “Backward” from the dropdown menu.
 
@@ -140,7 +140,7 @@ Select the independent variables and put these in the “Independent(s)” box
 This will reveal the options for ‘Stepping’. Because we are doing “Backwards selection”, you can just look at the “Removal” box. Variables with Significance (p-value) greater than 0.10 will be removed from the model, one at a time. If you want you can adjust this up or down.
 Press ‘Continue’. Then press OK and run the model
 
-{{< figure library="1" src="htad_lesson_06_image_09.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_09.png'/>
  
 6)  How do you interpret stepwise linear regression?
 
@@ -164,7 +164,7 @@ So how would we interpret this set of models?
 
   **THIS IS THE PROBLEM WITH STEPWISE MODELS: THEY DON’T DO THE THINKING FOR YOU, AND IF YOU GIVE IT SILLY MODELS, IT WILL STILL RUN THEM.**
 
-{{< figure library="1" src="htad_lesson_06_image_10.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_10.png'/>
  
 ## STEP 2: Interpreting the R-square
 
@@ -190,5 +190,5 @@ I am going to set a rule for what I want to see. I only want to see:
 Here is an example of a table of the models produced by the hierarchical method..
 
  
-{{< figure library="1" src="htad_lesson_06_image_11.png" >}}
+<img width='720' src='/img/htad_lesson_06_image_11.png'/>
 

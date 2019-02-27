@@ -32,13 +32,13 @@ This test is used when there are two experimental conditions and different parti
 
 3)  Select Independent-Samples T test
 
-{{< figure library="1" src="htad_lesson_04_image_01.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_01.png'/>
 
 4)  Select THE DEPENDENT VARIABLE as the test variable and GROUPING VARIABLE as the grouping variable using the buttons in the middle
 
 5)  Click the “Define Groups” button 
 
-{{< figure library="1" src="htad_lesson_04_image_02.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_02.png'/>
 
 6)  Normally we define Group 1 as 0 and Group 2 as 1 
 
@@ -46,11 +46,11 @@ This test is used when there are two experimental conditions and different parti
 
 8)  Click the OK button
 
-{{< figure library="1" src="htad_lesson_04_image_03.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_03.png'/>
 
 9)  Results which look like the following will be produced:
  
-{{< figure library="1" src="htad_lesson_04_image_04.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_04.png'/>
 
 10) How do you interpret these results?
 
@@ -79,7 +79,7 @@ This is typically used when you employ a repeated measures design where you are 
 
 3)  Select Paired-Samples T test
 
-{{< figure library="1" src="htad_lesson_04_image_05.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_05.png'/>
 
 4)   Select DEPENDENT VARIABLE MEASURE 1 as Variable 1 
 
@@ -87,11 +87,11 @@ This is typically used when you employ a repeated measures design where you are 
 
 6)  Click the OK button
  
-{{< figure library="1" src="htad_lesson_04_image_06.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_06.png'/>
 
 7)  You will get output like the following: 
  
-{{< figure library="1" src="htad_lesson_04_image_07.png" >}}
+<img width='720' src='/img/htad_lesson_04_image_07.png'/>
 
 8)  How do you interpret these?
 

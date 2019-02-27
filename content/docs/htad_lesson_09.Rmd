@@ -34,7 +34,7 @@ Summary: Something else you may need to do is clean up your data in Word, Excel,
 
 4) Right click and past values 
 
-{{< figure library="1" src="htad_lesson_09_image_01.png" >}}
+<img width='720' src='/img/htad_lesson_09_image_01.png'/>
 
  
 #### Option 2:
@@ -75,13 +75,13 @@ Summary: Something else you may need to do is clean up your data in Word, Excel,
 
 3.  Find .20 and replace with ^t
 
-{{< figure library="1" src="htad_lesson_09_image_02.png" >}}
+<img width='720' src='/img/htad_lesson_08_image_02.png'/>
 
-{{< figure library="1" src="htad_lesson_09_image_03.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_03.jpg'/>
 
 4)  Copy and paste everything back to excel 
 
-{{< figure library="1" src="htad_lesson_09_image_04.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_04.jpg'/>
 
 ## Lesson 9.3: Binarizing Categorical Variables
 
@@ -89,7 +89,7 @@ Summary: Something else you may need to do is clean up your data in Word, Excel,
 
 2)  Move the “Role” column right about 10 columns
 
-{{< figure library="1" src="htad_lesson_09_image_05.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_05.jpg'/>
 
 3)  Select column of majors ( The column under “Last Accessed”)
 
@@ -99,7 +99,7 @@ Summary: Something else you may need to do is clean up your data in Word, Excel,
 
 6)  Sort A-Z (Ascending) 
 
-{{< figure library="1" src="htad_lesson_09_image_06.png" >}}
+<img width='720' src='/img/htad_lesson_08_image_06.png'/>
 
 7)  Copy + paste special: Transpose as headings
 
@@ -107,13 +107,13 @@ Summary: Something else you may need to do is clean up your data in Word, Excel,
 
 9)  Paste down all cells (Either drag cells or highlight and use the ctrl+d shortcut) 
 
-{{< figure library="1" src="htad_lesson_09_image_07.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_07.jpg'/>
 
 
-{{< figure library="1" src="htad_lesson_09_image_08.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_08.jpg'/>
 
 
-{{< figure library="1" src="htad_lesson_09_image_09.jpg" >}}
+<img width='720' src='/img/htad_lesson_08_image_09.jpg'/>
 
 ## Notes
 
