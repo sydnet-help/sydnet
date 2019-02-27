@@ -30,13 +30,13 @@ Say we want to recode into same variable so as to change missing values to 999.
 
 2)  Select Recode into Same Variables
 
-<img width='720' src='/img/htad_lesson_08_image_01.png'/>
+<img width='720' src='/img/htad_lesson_08_image_01.jpg'/>
 
 3)  Select v33. virginswithdoublebed
 
 4)  Click “Old and New Values…”
 
-<img width='720' src='/img/htad_lesson_08_image_02.png'/>
+<img width='720' src='/img/htad_lesson_08_image_02.jpg'/>
 
 5)  Select System-missing under “Old Value”
 
@@ -54,7 +54,7 @@ Say we want to recode into same variable so as to change missing values to 999.
 
 11) SPSS changes the missing values to 999
 
-<img width='720' src='/img/htad_lesson_08_image_04.png'/>
+<img width='720' src='/img/htad_lesson_08_image_04.jpg'/>
  
 ## Lesson 8.2: Recode into different variable
 
@@ -64,7 +64,7 @@ Now instead of changing the missing values to 999, we want to recode to a differ
 
 2)  Select Recode into Different Variables...
 
-<img width='720' src='/img/htad_lesson_08_image_05.png'/>
+<img width='720' src='/img/htad_lesson_08_image_05.jpg'/>
 
 3)  Select v33. Virginswithdoublebed
 
@@ -94,7 +94,7 @@ Now instead of changing the missing values to 999, we want to recode to a differ
 
 <img width='720' src='/img/htad_lesson_08_image_08.png'/>
 
-<img width='720' src='/img/htad_lesson_08_image_09.png'/>
+<img width='720' src='/img/htad_lesson_08_image_09.jpg'/>
 
 ## Lesson 8.3: Select Cases
 
@@ -104,17 +104,17 @@ SPSS allows us to select part of the data set for further analysis, while exclud
 
 2)  Select “Select Cases…”
 
-<img width='720' src='/img/htad_lesson_08_image_10.png'/>
+<img width='720' src='/img/htad_lesson_08_image_10.jpg'/>
 
 3)  Click the “If…” button.
 
-<img width='720' src='/img/htad_lesson_08_image_11.png'/>
+<img width='720' src='/img/htad_lesson_08_image_11.jpg'/>
 
 4)  Select v31. Gender
 
 5)  Input V31. Gender = 1 (Female only) 
 
-<img width='720' src='/img/htad_lesson_08_image_12.png'/>
+<img width='720' src='/img/htad_lesson_08_image_12.jpg'/>
 
 6)  Only cases that are female (Gender=1) are not selected. Notice that cases that are not female have their case number crossed out and that SPSS has added a new filter variable that is equal to 0 for cases not counted and equal to 1 for cases that are counted.
 

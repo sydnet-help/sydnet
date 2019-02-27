@@ -41,13 +41,13 @@ I’m just going to illustrate logistic regressions with FORCED ENTRY, because t
 
 1)  Select Analyze > Regression > Binary Logistic…
 
-<img width='720' src='/img/htad_lesson_07_image_01.png'/>
+<img width='720' src='/img/htad_lesson_07_image_01.jpg'/>
  
 2)  Select the dependent variable and put it in the top box
 
 3)  Select the independent variables and put these in the “Independent(s)” box.
 
-<img width='720' src='/img/htad_lesson_07_image_02.png'/>
+<img width='720' src='/img/htad_lesson_07_image_02.jpg'/>
 
 3)  Press OK. The regression will run and the output screen will appear
 
@@ -67,11 +67,11 @@ I’m just going to illustrate logistic regressions with FORCED ENTRY, because t
 
   g.  Religiosity is statistically significant. The more religious a person, the more likely they are a virgin (B = 0.249)
 
-<img width='720' src='/img/htad_lesson_07_image_03.png'/>
+<img width='720' src='/img/htad_lesson_07_image_03.jpg'/>
  
 5)  You can find an R-square value for the regression model, in the SPSS output:
 
-<img width='720' src='/img/htad_lesson_07_image_04.png'/>
+<img width='720' src='/img/htad_lesson_07_image_04.jpg'/>
  
 You can choose to interpret either the Cox & Snell R Square, or the Nagelkerke R Square. These basically say that between 9% and 12% of the explained variance in virginity is explained by our three variables (gender, age, and religiosity).
 
