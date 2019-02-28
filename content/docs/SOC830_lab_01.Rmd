@@ -18,7 +18,7 @@ menu:
     weight: 10
 ---
 
-Last updated: "`r format(Sys.time(), '%d %B, %Y')`"
+Last updated: `r format(Sys.time(), '%d %B, %Y')`
 
 *_Author_: Hang Young Lee*
 
