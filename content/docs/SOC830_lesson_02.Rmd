@@ -14,7 +14,7 @@ output:
 linktitle: "Lab 2"
 menu:
   docs:
-    parent: SOC830
+    parent: SOC830(SOCI702)
     weight: 20
 ---
 

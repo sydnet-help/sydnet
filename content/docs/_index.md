@@ -35,7 +35,7 @@ Here you can access the following pages:
 * **SPSS**: A tutorial for learning the SPSS software suite
 * **SSCI202**: A Macquarie University undergraduate unit called Survery Research in the Social Sciences
 * **SOC224**: A Macquarie University undergraduate unit called Methods of Social Research
-* **SOC830**: A Macquarie University postgraduate unit called Doing Social Survey Research (co-badged with **SOCI702**)
+* **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
 * **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 
 
