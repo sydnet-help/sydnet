@@ -1,0 +1,213 @@
+---
+title: "SOC830 Lab 2: Creating Datasets"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 2: Creating Datasets"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 15
+---
+The second lab session covers the following:
+
+* How to install packages in RStudio
+* How to enter data manually
+* How to save and open various kinds of data files
+
+# How to install packages in RStudio
+R packages are a collection of R functions, sample datasets, and compiled codes developed by the R developer community. Base R (which you installed in Lab 1) provides just essential functions. To conduct more complicated analyses, it would be easier and more efficient to take advantage of predefined R functions that are widely used by researchers. Installing packages is an easy way to access and use such popular R functions. Currently, there are more than 10,000 R packages which are available for free. Out of them, we will use seven packages throughout the course. They are:
+
+* gmodels
+* gplots
+* sjlabelled
+* sjmisc
+* sjPlot
+* summarytools
+* tidyverse
+
+Let's start installing these packages. First, we will install _gmodels_ package (See Figure 1).
+
+```{r, echo=FALSE, fig.cap="Installing Packages", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab02_01.png")
+```
+
+
+1. Open RStudio.
+2. Click on the **Packages** tab in the bottom left pane and then click on **install**. This will open a new window.
+3. Type the name of packages you want to install (in this case _gmodels_) in the section of **Packages**. You can install multiple packages at one time, but each package name should be separated with space or comma (e.g., "gmodels, gplots, sjlabelled") Also, make sure that the box of **"Install dependencies"** should be ticked, which enables R to install other packages that are required for running the package of your choice.
+4. Click on OK. RStudio will start installing packages.
+
+---
+
+<span style="color:cyan">**Note**</span>: It is recommended to update installed R packages. An easy way to update them is to click on **Update** in the **Package** tab.
+
+---
+
+Alternatively, you can also install packages using an R code. In the R Console, type the following code:
+
+```{r eval=FALSE, echo=TRUE}
+install.packages("gmodels", dependencies = TRUE)
+```
+
+Then, hit Enter (for Windows) or Return (for MacOS). It will start installing the _gmodels_ packages. Package names should be enclosed by double quotation marks. Otherwise, R cannot recognise the package name and will show an error message.
+
+---
+
+<span style="color:cyan">**Note**</span>: Installed packages can be updated by an R code. For example, if you want to update the  _gmodels_ package. execute the following code in your R Console:
+```{r eval=FALSE, echo=TRUE}
+update.packages("gmodels")
+```
+
+---
+
+# How to enter data manually
+It is not often the case that researchers have to construct datasets manually. They often use constructed datasets, or survey companies often construct datasets instead of them. Nonetheless, we will create a very simple dataset because it helps you understand basic data structures.
+
+Now, we will manually enter a subsample of 30 respondents from Aussa (Australian Survey of Social Attitudes) dataset using **Table 1**. It includes four variables: gender, age, political orientation and social class.
+
+---
+
+The questionnaires used for this dataset are:
+
+| 1. Firstly, are you ...?
+|     (1) Male
+|     (2) Female
+|     (999) Don't know; No answer; refused
+|
+| 2. How old are you?
+|     (________) years old
+|
+|     (999) Don't know; No answer; Refused
+|
+| 3. In politics, people often talk about left or right. Where would you put yourself among the following?
+|     (1) Far left
+|     (2) Left
+|     (3) Center
+|     (4) Right
+|     (5) Far right
+|     (999) Don't know; No answer; Refused
+|
+| 4. Most people see themselves as belonging to a particular class. Please tell me which social class you would say you belong to?
+|     (1) Lower class
+|     (2) Working class
+|     (3) Lower middle class
+|     (4) Middle class
+|     (5) Upper middle class
+|     (6) Upper class
+|     (999) Don't know; No answer; Refused
+
+---
+
+```{r, echo=FALSE}
+data <- read.csv(url("https://github.com/hylee87/surveyclass/raw/master/data/SOC830_lab2_data_01.csv"))
+names(data) <- c("Gender", "Age", "Political Orientation", "Social Class")
+library(kableExtra)
+kable(data, "html", booktabs = T, caption = "A Subsample of 30 Respondents from Aussa", align = 
+        "c") %>%
+  kable_styling()
+```
+
+## Step 1: Creating a CSV file using Excel
+It is possible to input information directly into R. However, I do not recommend this approach because it is not an efficient way to create datasets. Instead, we will use Excel (or any spreadsheet program) for entering data, and then will import the created datasets into R. 
+
+Open Excel and look at **Table 1**. When you enter gender information, you may start by inputting either "Male" or "Female". However, typing texts will not be an efficient way to enter data. Instead of typing "Male" or "Female", I recommend inputting numbers that correspond to each gender category. Look at the questionnaire 1. You will see 1s for males and 2s for females. For the same reason, we will use numbers instead of texts for all other questionnaires. In addition, we will make a new variable of identification numbers for each respondent. The identification number for the first respondent is 1, that for the second is 2, and finally that for the 30th is 30. Also, we need to make variable name in a simple way. Most important is that the variable name should have no space in it. For example, I assign variable names in the following way:
+
+1. _**id**_: identification number
+2. _**sex**_: gender
+3. _**age**_: age
+4. _**polorient**_: political orientation
+5. _**class**_: social class 
+
+Your final dataframe will look like **Table 2**.
+
+```{r, echo=FALSE}
+mydata <- read.csv(url("https://github.com/hylee87/surveyclass/raw/master/data/SOC830_lab2_data_02.csv"))
+kable(mydata, "html", booktabs = T, caption = "A Dataframe of 30 Respondents from Aussa", align = 
+        "c") %>%
+  kable_styling()
+```
+
+Enter **Table 2** in Excel. Variable names should be entered in the first row (See Figure 2).
+
+```{r, echo=FALSE, fig.cap="Creating Data in Excel", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab02_02.png")
+```
+
+After data input is completed, save your data as a format of **CSV (Comma delimited)** in your <span style="color:red">**WORKING DIRECTORY**</span> (See Figure 3).
+
+---
+
+<span style="color:cyan">**Note**</span>: If you are not sure about what working directory is, see ["Setting your default working directory"](https://methods101.com/docs/soc830_lab_01/#setting-your-default-working-directory) in Lab 1.
+
+---
+
+```{r, echo=FALSE, fig.cap="creating CSV Files", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab02_03.png")
+```
+
+## Step 2: Importing CSV Files
+Open RStudio. You will see the tab of "Untitled1" in the "Source" window. In this window, we will write R codes. First, write the following codes (See Figure 4).
+
+```{r eval=FALSE, echo =TRUE}
+# Import CSV files
+mydata <- read.csv("table-1-30-respondents.csv")
+```
+
+```{r, echo=FALSE, fig.cap="Writing Codes in RStudio", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab02_04.png")
+```
+
+The first line starts with a hashtag. Any line beginning with a hashtag is a comment for codes in which researchers often put explanations about codes. When you write new codes with which you are not familiar, it would always be good to add comments for them. Otherwise, you may forget the meaning of those codes when you work with them again in the future.
+The second line is a real R code which imports CSV files into R.
+
+* <span style="color:red">_**mydata**_</span>_ is a name of data I assign. You can assign other names as well.
+* <span style="color:red">**<-**</span> has the same meaning as an equal sign(=).
+* _<span style="color:red">_**read.csv("file name")**_</span> is a code for importing CSV files. You need to specify your file name between the parentheses.
+
+Overall, the meaning of this code is:
+1) import CSV files from your working directory.
+2) call the imported CSV file mydata.
+
+Next, we need to execute this code. Move the cursor at the line you want to execute. Then, hit **Ctrl** and **Enter** key (For MacOS, **command** and **return** key) simultaneously. You will see your code transmitted to the "Console" window. After executing the line of code, RStudio automatically advances the cursor to the next line. This enables you to single-step through a sequence of lines.
+
+---
+
+<span style="color:cyan">**Note**</span>: If you fail to import CSV files, please check the warning message in your R console. It is often the case that you see "No such file or directory" in the warning message. This means that R cannot find your CSV files. Check whether your CSV files are in your working directory and whether the file name is correctly specified (Note that R distinguishes uppercase and lowercase letters).
+
+---
+
+## Step 3: Check Imported Datasets
+Let's check whether the dataset is imported correctly. 
+
+```{r, echo =TRUE}
+mydata
+```
+
+If you write the data name and execute it, this will show the whole dataset.
+
+## Step 4: Saving Your R Codes
+Let's save our R codes so far so that we can import and work on it again next time. Click on the icon of disks in the top menu of the "Source" window (See Figure 5).
+
+```{r, echo=FALSE, fig.cap="Saving R Files", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab02_05.png")
+```
+
+In a newly popped-up window, type "myRcode-1.R" in the "File name". Note that the file name should end with ".R", which means the file type is an R code file. Then, click on "Save". This will save your R file in your working directory. Also, you will see the tab of "Untitled" changed into "myRcode-1.R".
+
+Close RStudio (Do not save workspace image when it is asked) and open it again. If you followed all my instructions in Lab 1, you will see the file of "myRcode-1.R" is automatically loaded. If not, review ["Automatically loading your previous R codes"](https://methods101.com/docs/soc830_lab_01/#automatically-loading-your-previous-r-codes) in Lab 1.
+
+In the next lab, we will keep working on the dataset and R file we have made so far. Thus, please keep all the files.
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
+
