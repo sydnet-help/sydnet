@@ -169,9 +169,9 @@ knitr::include_graphics("/img/SOC830_lab02_04.png")
 The first line starts with a hashtag. Any line beginning with a hashtag is a comment for codes in which researchers often put explanations about codes. When you write new codes with which you are not familiar, it would always be good to add comments for them. Otherwise, you may forget the meaning of those codes when you work with them again in the future.
 The second line is a real R code which imports CSV files into R.
 
-* <span style="color:red">**mydata**</span>_ is a name of data I assign. You can assign other names as well.
+* <span style="color:red">_**mydata**_</span> is a name of data I assign. You can assign other names as well.
 * <span style="color:red">**<-**</span> has the same meaning as an equal sign(=).
-* _<span style="color:red">**read.csv("file name")**</span> is a code for importing CSV files. You need to specify your file name between the parentheses.
+* <span style="color:red">_**read.csv("file name")**_</span> is a code for importing CSV files. You need to specify your file name between the parentheses.
 
 Overall, the meaning of this code is:
 1) import CSV files from your working directory.
