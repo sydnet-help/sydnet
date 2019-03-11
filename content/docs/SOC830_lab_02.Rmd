@@ -21,7 +21,7 @@ The second lab session covers the following:
 
 * How to install packages in RStudio
 * How to enter data manually
-* How to save and open various kinds of data files
+* How to save R files
 
 # How to install packages in RStudio
 R packages are a collection of R functions, sample datasets, and compiled codes developed by the R developer community. Base R (which you installed in Lab 1) provides just essential functions. To conduct more complicated analyses, it would be easier and more efficient to take advantage of predefined R functions that are widely used by researchers. Installing packages is an easy way to access and use such popular R functions. Currently, there are more than 10,000 R packages which are available for free. Out of them, we will use seven packages throughout the course. They are:
