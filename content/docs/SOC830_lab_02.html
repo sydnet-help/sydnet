@@ -64,13 +64,13 @@ Figure 1: Installing Packages
 <li>Click on OK. RStudio will start installing packages.</li>
 </ol>
 <hr />
-<p><span style="color:cyan"><strong>Note</strong></span>: It is recommended to update installed R packages. An easy way to update them is to click on <strong>Update</strong> in the <strong>Package</strong> tab.</p>
+<p><span style="color:navy"><strong>Note</strong></span>: It is recommended to update installed R packages. An easy way to update them is to click on <strong>Update</strong> in the <strong>Package</strong> tab.</p>
 <hr />
 <p>Alternatively, you can also install packages using an R code. In the R Console, type the following code:</p>
 <pre class="r"><code>install.packages(&quot;gmodels&quot;, dependencies = TRUE)</code></pre>
 <p>Then, hit Enter (for Windows) or Return (for MacOS). It will start installing the <em>gmodels</em> packages. Package names should be enclosed by double quotation marks. Otherwise, R cannot recognise the package name and will show an error message.</p>
 <hr />
-<p><span style="color:cyan"><strong>Note</strong></span>: Installed packages can be updated by an R code. For example, if you want to update the <em>gmodels</em> package. execute the following code in your R Console:</p>
+<p><span style="color:navy"><strong>Note</strong></span>: Installed packages can be updated by an R code. For example, if you want to update the <em>gmodels</em> package. execute the following code in your R Console:</p>
 <pre class="r"><code>update.packages(&quot;gmodels&quot;)</code></pre>
 <hr />
 </div>
@@ -1107,7 +1107,7 @@ Figure 2: Creating Data in Excel
 </div>
 <p>After data input is completed, save your data as a format of <strong>CSV (Comma delimited)</strong> in your <span style="color:red"><strong>WORKING DIRECTORY</strong></span> (See Figure 3).</p>
 <hr />
-<p><span style="color:cyan"><strong>Note</strong></span>: If you are not sure about what working directory is, see <a href="https://methods101.com/docs/soc830_lab_01/#setting-your-default-working-directory">“Setting your default working directory”</a> in Lab 1.</p>
+<p><span style="color:navy"><strong>Note</strong></span>: If you are not sure about what working directory is, see <a href="https://methods101.com/docs/soc830_lab_01/#setting-your-default-working-directory">“Setting your default working directory”</a> in Lab 1.</p>
 <hr />
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
 <img src="/img/SOC830_lab02_03.png" alt="creating CSV Files"  />
@@ -1130,16 +1130,16 @@ Figure 4: Writing Codes in RStudio
 <p>The first line starts with a hashtag. Any line beginning with a hashtag is a comment for codes in which researchers often put explanations about codes. When you write new codes with which you are not familiar, it would always be good to add comments for them. Otherwise, you may forget the meaning of those codes when you work with them again in the future.
 The second line is a real R code which imports CSV files into R.</p>
 <ul>
-<li><span style="color:red"><em><strong>mydata</strong></em></span>_ is a name of data I assign. You can assign other names as well.</li>
+<li><span style="color:red"><strong>mydata</strong></span>_ is a name of data I assign. You can assign other names as well.</li>
 <li><span style="color:red"><strong>&lt;-</strong></span> has the same meaning as an equal sign(=).</li>
-<li>_<span style="color:red"><em><strong>read.csv(“file name”)</strong></em></span> is a code for importing CSV files. You need to specify your file name between the parentheses.</li>
+<li>_<span style="color:red"><strong>read.csv(“file name”)</strong></span> is a code for importing CSV files. You need to specify your file name between the parentheses.</li>
 </ul>
 <p>Overall, the meaning of this code is:
 1) import CSV files from your working directory.
 2) call the imported CSV file mydata.</p>
 <p>Next, we need to execute this code. Move the cursor at the line you want to execute. Then, hit <strong>Ctrl</strong> and <strong>Enter</strong> key (For MacOS, <strong>command</strong> and <strong>return</strong> key) simultaneously. You will see your code transmitted to the “Console” window. After executing the line of code, RStudio automatically advances the cursor to the next line. This enables you to single-step through a sequence of lines.</p>
 <hr />
-<p><span style="color:cyan"><strong>Note</strong></span>: If you fail to import CSV files, please check the warning message in your R console. It is often the case that you see “No such file or directory” in the warning message. This means that R cannot find your CSV files. Check whether your CSV files are in your working directory and whether the file name is correctly specified (Note that R distinguishes uppercase and lowercase letters).</p>
+<p><span style="color:navy"><strong>Note</strong></span>: If you fail to import CSV files, please check the warning message in your R console. It is often the case that you see “No such file or directory” in the warning message. This means that R cannot find your CSV files. Check whether your CSV files are in your working directory and whether the file name is correctly specified (Note that R distinguishes uppercase and lowercase letters).</p>
 <hr />
 </div>
 <div id="step-3-check-imported-datasets" class="section level2">
