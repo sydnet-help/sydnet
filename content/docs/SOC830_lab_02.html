@@ -1,0 +1,1198 @@
+---
+title: "SOC830 Lab 2: Creating Datasets"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 2: Creating Datasets"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 15
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#how-to-install-packages-in-rstudio">How to install packages in RStudio</a></li>
+<li><a href="#how-to-enter-data-manually">How to enter data manually</a><ul>
+<li><a href="#step-1-creating-a-csv-file-using-excel">Step 1: Creating a CSV file using Excel</a></li>
+<li><a href="#step-2-importing-csv-files">Step 2: Importing CSV Files</a></li>
+<li><a href="#step-3-check-imported-datasets">Step 3: Check Imported Datasets</a></li>
+<li><a href="#step-4-saving-your-r-codes">Step 4: Saving Your R Codes</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>The second lab session covers the following:</p>
+<ul>
+<li>How to install packages in RStudio</li>
+<li>How to enter data manually</li>
+<li>How to save R files</li>
+</ul>
+<div id="how-to-install-packages-in-rstudio" class="section level1">
+<h1>How to install packages in RStudio</h1>
+<p>R packages are a collection of R functions, sample datasets, and compiled codes developed by the R developer community. Base R (which you installed in Lab 1) provides just essential functions. To conduct more complicated analyses, it would be easier and more efficient to take advantage of predefined R functions that are widely used by researchers. Installing packages is an easy way to access and use such popular R functions. Currently, there are more than 10,000 R packages which are available for free. Out of them, we will use seven packages throughout the course. They are:</p>
+<ul>
+<li>gmodels</li>
+<li>gplots</li>
+<li>sjlabelled</li>
+<li>sjmisc</li>
+<li>sjPlot</li>
+<li>summarytools</li>
+<li>tidyverse</li>
+</ul>
+<p>Let’s start installing these packages. First, we will install <em>gmodels</em> package (See Figure 1).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="/img/SOC830_lab02_01.png" alt="Installing Packages"  />
+<p class="caption">
+Figure 1: Installing Packages
+</p>
+</div>
+<ol style="list-style-type: decimal">
+<li>Open RStudio.</li>
+<li>Click on the <strong>Packages</strong> tab in the bottom left pane and then click on <strong>install</strong>. This will open a new window.</li>
+<li>Type the name of packages you want to install (in this case <em>gmodels</em>) in the section of <strong>Packages</strong>. You can install multiple packages at one time, but each package name should be separated with space or comma (e.g., “gmodels, gplots, sjlabelled”) Also, make sure that the box of <strong>“Install dependencies”</strong> should be ticked, which enables R to install other packages that are required for running the package of your choice.</li>
+<li>Click on OK. RStudio will start installing packages.</li>
+</ol>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span>: It is recommended to update installed R packages. An easy way to update them is to click on <strong>Update</strong> in the <strong>Package</strong> tab.</p>
+<hr />
+<p>Alternatively, you can also install packages using an R code. In the R Console, type the following code:</p>
+<pre class="r"><code>install.packages(&quot;gmodels&quot;, dependencies = TRUE)</code></pre>
+<p>Then, hit Enter (for Windows) or Return (for MacOS). It will start installing the <em>gmodels</em> packages. Package names should be enclosed by double quotation marks. Otherwise, R cannot recognise the package name and will show an error message.</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span>: Installed packages can be updated by an R code. For example, if you want to update the <em>gmodels</em> package. execute the following code in your R Console:</p>
+<pre class="r"><code>update.packages(&quot;gmodels&quot;)</code></pre>
+<hr />
+</div>
+<div id="how-to-enter-data-manually" class="section level1">
+<h1>How to enter data manually</h1>
+<p>It is not often the case that researchers have to construct datasets manually. They often use constructed datasets, or survey companies often construct datasets instead of them. Nonetheless, we will create a very simple dataset because it helps you understand basic data structures.</p>
+<p>Now, we will manually enter a subsample of 30 respondents from Aussa (Australian Survey of Social Attitudes) dataset using <strong>Table 1</strong>. It includes four variables: gender, age, political orientation and social class.</p>
+<hr />
+<p>The questionnaires used for this dataset are:</p>
+<div class="line-block">1. Firstly, are you …?<br />
+    (1) Male<br />
+    (2) Female<br />
+    (999) Don’t know; No answer; refused<br />
+<br />
+2. How old are you?<br />
+    (________) years old<br />
+<br />
+    (999) Don’t know; No answer; Refused<br />
+<br />
+3. In politics, people often talk about left or right. Where would you put yourself among the following?<br />
+    (1) Far left<br />
+    (2) Left<br />
+    (3) Center<br />
+    (4) Right<br />
+    (5) Far right<br />
+    (999) Don’t know; No answer; Refused<br />
+<br />
+4. Most people see themselves as belonging to a particular class. Please tell me which social class you would say you belong to?<br />
+    (1) Lower class<br />
+    (2) Working class<br />
+    (3) Lower middle class<br />
+    (4) Middle class<br />
+    (5) Upper middle class<br />
+    (6) Upper class<br />
+    (999) Don’t know; No answer; Refused</div>
+<hr />
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 1: </span>A Subsample of 30 Respondents from Aussa
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+Gender
+</th>
+<th style="text-align:center;">
+Age
+</th>
+<th style="text-align:center;">
+Political Orientation
+</th>
+<th style="text-align:center;">
+Social Class
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+66
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+72
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+59
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Lower middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+68
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+76
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+61
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+90
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+64
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Lower middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+39
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+57
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+47
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Lower class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+56
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+51
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+34
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Working class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+Center
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Working class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+65
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+35
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+44
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Upper class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+40
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+57
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+40
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Lower middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+59
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+82
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+44
+</td>
+<td style="text-align:center;">
+Far right
+</td>
+<td style="text-align:center;">
+Working class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Male
+</td>
+<td style="text-align:center;">
+77
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+Working class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+Female
+</td>
+<td style="text-align:center;">
+60
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+Lower middle class
+</td>
+</tr>
+</tbody>
+</table>
+<div id="step-1-creating-a-csv-file-using-excel" class="section level2">
+<h2>Step 1: Creating a CSV file using Excel</h2>
+<p>It is possible to input information directly into R. However, I do not recommend this approach because it is not an efficient way to create datasets. Instead, we will use Excel (or any spreadsheet program) for entering data, and then will import the created datasets into R.</p>
+<p>Open Excel and look at <strong>Table 1</strong>. When you enter gender information, you may start by inputting either “Male” or “Female”. However, typing texts will not be an efficient way to enter data. Instead of typing “Male” or “Female”, I recommend inputting numbers that correspond to each gender category. Look at the questionnaire 1. You will see 1s for males and 2s for females. For the same reason, we will use numbers instead of texts for all other questionnaires. In addition, we will make a new variable of identification numbers for each respondent. The identification number for the first respondent is 1, that for the second is 2, and finally that for the 30th is 30. Also, we need to make variable name in a simple way. Most important is that the variable name should have no space in it. For example, I assign variable names in the following way:</p>
+<ol style="list-style-type: decimal">
+<li><em><strong>id</strong></em>: identification number</li>
+<li><em><strong>sex</strong></em>: gender</li>
+<li><em><strong>age</strong></em>: age</li>
+<li><em><strong>polorient</strong></em>: political orientation</li>
+<li><em><strong>class</strong></em>: social class</li>
+</ol>
+<p>Your final dataframe will look like <strong>Table 2</strong>.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 2: </span>A Dataframe of 30 Respondents from Aussa
+</caption>
+<thead>
+<tr>
+<th style="text-align:center;">
+id
+</th>
+<th style="text-align:center;">
+sex
+</th>
+<th style="text-align:center;">
+age
+</th>
+<th style="text-align:center;">
+polorient
+</th>
+<th style="text-align:center;">
+class
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+66
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+72
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+59
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+68
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+76
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+61
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+90
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+64
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+10
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+39
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+11
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+57
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+12
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+47
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+13
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+56
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+14
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+51
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+15
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+34
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+16
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+17
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+18
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+19
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+65
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+35
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+21
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+44
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+22
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+40
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+23
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+57
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+24
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+40
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+25
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+59
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+26
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+82
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+27
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+44
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+28
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+29
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+77
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+30
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+60
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+3
+</td>
+</tr>
+</tbody>
+</table>
+<p>Enter <strong>Table 2</strong> in Excel. Variable names should be entered in the first row (See Figure 2).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="/img/SOC830_lab02_02.png" alt="Creating Data in Excel"  />
+<p class="caption">
+Figure 2: Creating Data in Excel
+</p>
+</div>
+<p>After data input is completed, save your data as a format of <strong>CSV (Comma delimited)</strong> in your <span style="color:red"><strong>WORKING DIRECTORY</strong></span> (See Figure 3).</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span>: If you are not sure about what working directory is, see <a href="https://methods101.com/docs/soc830_lab_01/#setting-your-default-working-directory">“Setting your default working directory”</a> in Lab 1.</p>
+<hr />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="/img/SOC830_lab02_03.png" alt="creating CSV Files"  />
+<p class="caption">
+Figure 3: creating CSV Files
+</p>
+</div>
+</div>
+<div id="step-2-importing-csv-files" class="section level2">
+<h2>Step 2: Importing CSV Files</h2>
+<p>Open RStudio. You will see the tab of “Untitled1” in the “Source” window. In this window, we will write R codes. First, write the following codes (See Figure 4).</p>
+<pre class="r"><code># Import CSV files
+mydata &lt;- read.csv(&quot;table-1-30-respondents.csv&quot;)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="/img/SOC830_lab02_04.png" alt="Writing Codes in RStudio"  />
+<p class="caption">
+Figure 4: Writing Codes in RStudio
+</p>
+</div>
+<p>The first line starts with a hashtag. Any line beginning with a hashtag is a comment for codes in which researchers often put explanations about codes. When you write new codes with which you are not familiar, it would always be good to add comments for them. Otherwise, you may forget the meaning of those codes when you work with them again in the future.
+The second line is a real R code which imports CSV files into R.</p>
+<ul>
+<li><span style="color:red"><em><strong>mydata</strong></em></span> is a name of data I assign. You can assign other names as well.</li>
+<li><span style="color:red"><strong>&lt;-</strong></span> has the same meaning as an equal sign(=).</li>
+<li><span style="color:red"><em><strong>read.csv(“file name”)</strong></em></span> is a code for importing CSV files. You need to specify your file name between the parentheses.</li>
+</ul>
+<p>Overall, the meaning of this code is:
+1) import CSV files from your working directory.
+2) call the imported CSV file mydata.</p>
+<p>Next, we need to execute this code. Move the cursor at the line you want to execute. Then, hit <strong>Ctrl</strong> and <strong>Enter</strong> key (For MacOS, <strong>command</strong> and <strong>return</strong> key) simultaneously. You will see your code transmitted to the “Console” window. After executing the line of code, RStudio automatically advances the cursor to the next line. This enables you to single-step through a sequence of lines.</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span>: If you fail to import CSV files, please check the warning message in your R console. It is often the case that you see “No such file or directory” in the warning message. This means that R cannot find your CSV files. Check whether your CSV files are in your working directory and whether the file name is correctly specified (Note that R distinguishes uppercase and lowercase letters).</p>
+<hr />
+</div>
+<div id="step-3-check-imported-datasets" class="section level2">
+<h2>Step 3: Check Imported Datasets</h2>
+<p>Let’s check whether the dataset is imported correctly.</p>
+<pre class="r"><code>mydata</code></pre>
+<pre><code>##    id sex age polorient class
+## 1   1   1  66         4     4
+## 2   2   2  72         4     5
+## 3   3   2  59         2     4
+## 4   4   2  20         2     3
+## 5   5   2  68         4     5
+## 6   6   1  76         4     4
+## 7   7   1  61         2     5
+## 8   8   1  90         4     4
+## 9   9   2  64         2     3
+## 10 10   2  39         2     5
+## 11 11   1  57         4     4
+## 12 12   1  47         2     1
+## 13 13   2  56         2     4
+## 14 14   2  51         2     4
+## 15 15   1  34         2     2
+## 16 16   1  18         3     4
+## 17 17   2  18         2     2
+## 18 18   2  30         2     5
+## 19 19   2  65         4     4
+## 20 20   1  35         4     4
+## 21 21   2  44         4     6
+## 22 22   2  40         4     4
+## 23 23   1  57         2     5
+## 24 24   1  40         2     3
+## 25 25   2  59         2     4
+## 26 26   2  82         4     4
+## 27 27   2  44         5     2
+## 28 28   2  30         2     4
+## 29 29   1  77         2     2
+## 30 30   2  60         4     3</code></pre>
+<p>If you write the data name and execute it, this will show the whole dataset.</p>
+</div>
+<div id="step-4-saving-your-r-codes" class="section level2">
+<h2>Step 4: Saving Your R Codes</h2>
+<p>Let’s save our R codes so far so that we can import and work on it again next time. Click on the icon of disks in the top menu of the “Source” window (See Figure 5).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="/img/SOC830_lab02_05.png" alt="Saving R Files"  />
+<p class="caption">
+Figure 5: Saving R Files
+</p>
+</div>
+<p>In a newly popped-up window, type “myRcode-1.R” in the “File name”. Note that the file name should end with “.R”, which means the file type is an R code file. Then, click on “Save”. This will save your R file in your working directory. Also, you will see the tab of “Untitled” changed into “myRcode-1.R”.</p>
+<p>Close RStudio (Do not save workspace image when it is asked) and open it again. If you followed all my instructions in Lab 1, you will see the file of “myRcode-1.R” is automatically loaded. If not, review <a href="https://methods101.com/docs/soc830_lab_01/#automatically-loading-your-previous-r-codes">“Automatically loading your previous R codes”</a> in Lab 1.</p>
+<p>In the next lab, we will keep working on the dataset and R file we have made so far. Thus, please keep all the files.</p>
+<center>
+Last updated on <em>11 March, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>
+</div>

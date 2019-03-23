@@ -1,0 +1,317 @@
+---
+title: "SOC830 Lab 3: Playing with Variables"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 3: Playing with Variables"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 20
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#playing-with-variables">Playing with variables</a><ul>
+<li><a href="#r-is-a-calculator.">R is a calculator.</a></li>
+<li><a href="#variables">How to make variables</a></li>
+<li><a href="#how-to-remove-variables-we-made-so-far.">How to remove variables we made so far.</a></li>
+</ul></li>
+<li><a href="#assigning-labels-and-value-labels-to-the-aussa-subsample-dataset">Assigning labels and value labels to the AuSSa subsample dataset</a><ul>
+<li><a href="#loading-packages">Loading packages</a></li>
+<li><a href="#how-to-access-variables-in-a-data-frame.">How to access variables in a data frame.</a></li>
+<li><a href="#how-to-add-variable-labels">How to add variable labels</a></li>
+<li><a href="#how-to-add-value-labels">How to add value labels</a></li>
+<li><a href="#saving-data-into-rds-format">Saving data into RDS format</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>The third lab session covers the following:</p>
+<ul>
+<li>How to make variables</li>
+<li>How to assign variable labels</li>
+<li>How to assign value labels</li>
+<li>How to save datasets</li>
+</ul>
+<p>We continue working on the dataset we created in the last lab. Open RStudio, and you will see the R file you made in the last lab. If you do not see your R file, go to <strong>File &gt;&gt; Open File…</strong> in the top menu. And open it from your working directory. Then, run all the codes you wrote in the previous lab. You will see <em><strong>mydata</strong></em> in the tab of <strong>Environment</strong>.</p>
+<p>Now, you are ready to learn new codes.</p>
+<div id="playing-with-variables" class="section level1">
+<h1>Playing with variables</h1>
+<div id="r-is-a-calculator." class="section level2">
+<h2>R is a calculator.</h2>
+<p>Just think of R as a calculator. It can compute elementary equations. Examples are:</p>
+<pre class="r"><code>250 + 125</code></pre>
+<pre><code>## [1] 375</code></pre>
+<pre class="r"><code>250 - 125</code></pre>
+<pre><code>## [1] 125</code></pre>
+<pre class="r"><code>250 * 125</code></pre>
+<pre><code>## [1] 31250</code></pre>
+<pre class="r"><code>250/125</code></pre>
+<pre><code>## [1] 2</code></pre>
+<p>As expected, R can do complicated equations as well. The example below computes <span class="math inline">\({e}^{5}+\sqrt{\frac{\ln{253}+\pi}{653-258}}\)</span>.</p>
+<pre class="r"><code>exp(5)+sqrt((log(253) + pi)/(653-258))</code></pre>
+<pre><code>## [1] 148.5614</code></pre>
+<p>If you want to learn more about basic mathematical operations in R, go to <a href="https://www.cyclismo.org/tutorial/R/basicOps.html#basic-operations">Basic Operations in R Tutorial</a>.</p>
+</div>
+<div id="variables" class="section level2">
+<h2>How to make variables</h2>
+<p>In R, variables can take several forms. In this lab, we will cover only 1) numbers, 2) characters, and 3) data frames that are essential for the course. If you want to study more about variables in R, go to <a href="https://www.cyclismo.org/tutorial/R/types.html#variable-types">Variable Types in R Tutorial</a>.
+A variable could be a single number. For instance, we can assign 3 to variable <em>a</em>.</p>
+<pre class="r"><code>a &lt;- 5</code></pre>
+<p>The “&lt;-” tells R to assign the number to the right of the symbol (in this case, a). If you want to see numbers assigned to variables, type the variable name and run it. It will show the numbers.</p>
+<pre class="r"><code>a</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>R can assign the outcomes of mathematical operations to variables. For example,</p>
+<pre class="r"><code>b &lt;- a * a + 3
+b</code></pre>
+<pre><code>## [1] 28</code></pre>
+<p>Now, we finished assigning numbers to two variables. Can you guess what the outcome will be if we add <em>a</em> and <em>b</em>? Let’s check the result.</p>
+<pre class="r"><code>a + b</code></pre>
+<pre><code>## [1] 33</code></pre>
+<p>Besides, R can assign texts to variables. In R, this form of data is called characters; any value written within a pair of single or double quotes in R is treated as a character. For example,</p>
+<pre class="r"><code>c &lt;- &quot;soc 830&quot;
+c</code></pre>
+<pre><code>## [1] &quot;soc 830&quot;</code></pre>
+<p>Note that you are not limited to assigning one single value. You can also make a list of values (called a vector in R) and assign it to a variable. For example, we are going to input age and gender for five respondents.</p>
+<pre class="r"><code>age &lt;- c(36, 19, 30, 55, 42)
+age</code></pre>
+<pre><code>## [1] 36 19 30 55 42</code></pre>
+<pre class="r"><code>gender &lt;- c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;, &quot;female&quot;)
+gender</code></pre>
+<pre><code>## [1] &quot;male&quot;   &quot;female&quot; &quot;female&quot; &quot;male&quot;   &quot;female&quot;</code></pre>
+<p><em>age</em> is a list of numbers, and <em>gender</em> is a list of characters. If you want to confirm this, run the following code:</p>
+<pre class="r"><code>class(age)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>class(gender)</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>Now, we will make a data frame that combines <em>age</em> and <em>gender</em> that we just created.</p>
+<pre class="r"><code>data &lt;- cbind(age, gender)
+data &lt;- as.data.frame(data)</code></pre>
+<p>Let’s check the data frame we just made and also the type of variable.</p>
+<pre class="r"><code>data</code></pre>
+<pre><code>##   age gender
+## 1  36   male
+## 2  19 female
+## 3  30 female
+## 4  55   male
+## 5  42 female</code></pre>
+<pre class="r"><code>class(data)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+</div>
+<div id="how-to-remove-variables-we-made-so-far." class="section level2">
+<h2>How to remove variables we made so far.</h2>
+<p>So far, we have made seven variables: <em>mydata</em>, <em>a</em>, <em>b</em>, <em>c</em>, <em>age</em>, <em>gender</em>, and <em>data</em>. However, we will keep only <em>mydata</em> which will be used for the remaining lab.
+If you want to remove only one variable, use ‘<code>rm(variable name)</code>’. For example,</p>
+<pre class="r"><code>rm(a)</code></pre>
+<p>If you want to remove multiple variables, use ‘<code>rm(variable name 1, variable name 2, variable name 3, ...)</code>’. For example,</p>
+<pre class="r"><code>rm(b, c, age, gender, data)</code></pre>
+<p>Check the tab of Environment. You will see the variables you specified are removed.</p>
+</div>
+</div>
+<div id="assigning-labels-and-value-labels-to-the-aussa-subsample-dataset" class="section level1">
+<h1>Assigning labels and value labels to the AuSSa subsample dataset</h1>
+<p>The remaining lab will work on the AuSSA subsample dataset we created in the previous lab. We will assign labels and value labels to each variable.</p>
+<div id="loading-packages" class="section level2">
+<h2>Loading packages</h2>
+<p>For labelling data, we need to use two packages which I recommended to install in the lab 2: <em>sjlabelled</em> and <em>sjmisc</em>. To load them in R, run the following codes:</p>
+<pre class="r"><code>library(sjlabelled)
+library(sjmisc) </code></pre>
+<p>Every time you want to use packages, you need to run ‘<code>library(package name)</code>’. Otherwise, you will see a warning message that says “<em>could not find function</em>”.</p>
+</div>
+<div id="how-to-access-variables-in-a-data-frame." class="section level2">
+<h2>How to access variables in a data frame.</h2>
+<p>A data frame consists of many variables. For instance, <em>mydata</em> consists of five variables: <em>id</em>, <em>sex</em>, <em>age</em>, <em>polorient</em>, <em>class</em>. We learned how to see a data frame (if you are not sure, review <a href="#variables">How to make variables</a>). But we do not know how to see a specific variable in a data frame. To access it, use ‘<code>data frame name$variable name</code>’. For example, the following codes will show each of four variables in <em>mydata</em>.</p>
+<pre class="r"><code>mydata$sex</code></pre>
+<pre><code>##  [1] 1 2 2 2 2 1 1 1 2 2 1 1 2 2 1 1 2 2 2 1 2 2 1 1 2 2 2 2 1 2</code></pre>
+<pre class="r"><code>mydata$age  </code></pre>
+<pre><code>##  [1] 66 72 59 20 68 76 61 90 64 39 57 47 56 51 34 18 18 30 65 35 44 40 57
+## [24] 40 59 82 44 30 77 60</code></pre>
+<pre class="r"><code>mydata$polorient</code></pre>
+<pre><code>##  [1] 4 4 2 2 4 4 2 4 2 2 4 2 2 2 2 3 2 2 4 4 4 4 2 2 2 4 5 2 2 4</code></pre>
+<pre class="r"><code>mydata$class</code></pre>
+<pre><code>##  [1] 4 5 4 3 5 4 5 4 3 5 4 1 4 4 2 4 2 5 4 4 6 4 5 3 4 4 2 4 2 3</code></pre>
+</div>
+<div id="how-to-add-variable-labels" class="section level2">
+<h2>How to add variable labels</h2>
+<p>It is recommended to add short descriptions of variables which I call variable labels. We often set variable names in a simple way such as <em>polorient</em>. Consequently, it is easy to forget what variables are about after a while. In that case, variable labels will be helpful for recalling them.
+First, check the variable label of <em>id</em>. ‘<code>get_label(data name$variable name)</code>’ will show a variable label.</p>
+<pre class="r"><code>get_label(mydata$id)</code></pre>
+<pre><code>## NULL</code></pre>
+<p>Expectedly, it shows nothing. Let’s assign the variable label of <em>id</em>.</p>
+<pre class="r"><code>mydata$id &lt;- set_label(mydata$id, label = &quot;Identification Number&quot;)
+get_label(mydata$id)</code></pre>
+<pre><code>## [1] &quot;Identification Number&quot;</code></pre>
+<p>‘<code>data name$variable name &lt;- set_label(data name$variable name, label = &quot;variable label&quot;)</code>’
+will assign variable labels to specified variables. After assigning it, ‘<code>get_label</code>’ function will show a newly assigned variable label.</p>
+<p>Let’s assign variable labels to the others as well.</p>
+<pre class="r"><code>mydata$sex &lt;- set_label(mydata$sex, label = &quot;Gender&quot;)
+mydata$age &lt;- set_label(mydata$age, label = &quot;Age&quot;)
+mydata$polorient &lt;- set_label(mydata$polorient, label = &quot;Political Orientation&quot;)
+mydata$class &lt;- set_label(mydata$class, label = &quot;Social Class&quot;)</code></pre>
+</div>
+<div id="how-to-add-value-labels" class="section level2">
+<h2>How to add value labels</h2>
+<p>When we created the dataset in lab 2, we inputted numbers instead of texts. Nonetheless, the number itself has no meaning except for <em>age</em>. Therefore, it is recommended to assign a (category) label to each value (number). Category information of each variable can be found in <a href="https://methods101.com/docs/soc830_lab_02/#how-to-enter-data-manually">Lab 2: How to enter data manually</a>. For example, in <em>sex</em> “Male” will be assigned to 1, and “Female” will be assigned to 2. We will use ‘<code>set_labels</code>’ function for this purpose. The R code is ‘<code>data name$variable name &lt;- set_labels(data name$variable name, labels = c(&quot;category 1&quot; = value 1, &quot;category 2&quot; = value 2, ...))</code>’.</p>
+<pre class="r"><code>mydata$sex &lt;- set_labels(mydata$sex, labels = c(&quot;male&quot; = 1, &quot;female&quot; = 2))</code></pre>
+<p>Then, let’s assign value labels to <em>polorient</em> and <em>class</em> as well.</p>
+<pre class="r"><code>mydata$polorient &lt;- set_labels(mydata$polorient, 
+                               labels = c(&quot;Far left&quot; = 1,
+                                          &quot;Left&quot; = 2,
+                                          &quot;Center&quot; = 3,
+                                          &quot;Right&quot; = 4,
+                                          &quot;Far right&quot; = 5))
+mydata$class &lt;- set_labels(mydata$class, labels = c(&quot;Lower class&quot; = 1,
+                                                   &quot;Working class&quot; = 2,
+                                                   &quot;Lower middle class&quot; = 3,
+                                                   &quot;Middle class&quot; = 4,
+                                                   &quot;Upper middle class&quot; = 5,
+                                                   &quot;Upper class&quot; = 6))</code></pre>
+<p>Now is the time to check whether you followed all the steps so far correctly. We will make frequency tables of <em>sex</em>, <em>polorient</em> and <em>class</em> using ‘<code>frq</code>’ function (you will learn more about this function in lab 5). If you followed well, you will see the variable and value labels of the tree variables.</p>
+<pre class="r"><code>frq(mydata$sex)</code></pre>
+<pre><code>## 
+## # Gender (x) &lt;integer&gt; 
+## # total N=30  valid N=30  mean=1.60  sd=0.50
+##  
+##  val  label frq raw.prc valid.prc cum.prc
+##    1   male  12      40        40      40
+##    2 female  18      60        60     100
+##   NA     NA   0       0        NA      NA</code></pre>
+<pre class="r"><code>frq(mydata$polorient)</code></pre>
+<pre><code>## 
+## # Political Orientation (x) &lt;integer&gt; 
+## # total N=30  valid N=30  mean=2.93  sd=1.05
+##  
+##  val     label frq raw.prc valid.prc cum.prc
+##    1  Far left   0    0.00      0.00    0.00
+##    2      Left  16   53.33     53.33   53.33
+##    3    Center   1    3.33      3.33   56.67
+##    4     Right  12   40.00     40.00   96.67
+##    5 Far right   1    3.33      3.33  100.00
+##   NA        NA   0    0.00        NA      NA</code></pre>
+<pre class="r"><code>frq(mydata$class)</code></pre>
+<pre><code>## 
+## # Social Class (x) &lt;integer&gt; 
+## # total N=30  valid N=30  mean=3.77  sd=1.14
+##  
+##  val              label frq raw.prc valid.prc cum.prc
+##    1        Lower class   1    3.33      3.33    3.33
+##    2      Working class   4   13.33     13.33   16.67
+##    3 Lower middle class   4   13.33     13.33   30.00
+##    4       Middle class  14   46.67     46.67   76.67
+##    5 Upper middle class   6   20.00     20.00   96.67
+##    6        Upper class   1    3.33      3.33  100.00
+##   NA                 NA   0    0.00        NA      NA</code></pre>
+</div>
+<div id="saving-data-into-rds-format" class="section level2">
+<h2>Saving data into RDS format</h2>
+<p>Now, we have a complete dataset. So, we will save it for future use. There are multiple ways to save datasets in R. However, I recommend to save them in RDS format because this format preserves data structure and reduces the size of files considerably. The R code for this job is ‘<code>saveRDS(data name, file = &quot;file-name.rds&quot;)</code>’. Note that the file name should end with “.rds”.</p>
+<pre class="r"><code>saveRDS(mydata, file = &quot;mydata.rds&quot;)</code></pre>
+<p>After running this code, look at your working directory. You will see “mydata.rds” there. Also, do not forget to save this R file as well. If you click on the icon of disk in the text editor, your R file will be saved.</p>
+<p>The next lab will introduce how to import this file into R. So, please keep this file.</p>
+<p>The R codes you have written so far look like:</p>
+<pre class="r"><code>################################################################################
+# Title: Lab 2 &amp; 3
+# Date: 18/03/2019
+################################################################################
+
+# Import CSV files
+mydata &lt;- read.csv(&quot;table-1-30-respondents.csv&quot;)
+mydata
+
+# Elementary equations
+250 + 125
+250 - 125
+250 * 125
+250/125
+
+# A complicated equation
+exp(5)+sqrt((log(253) + pi)/(653-258))
+
+# Make variables
+a &lt;- 5
+a
+b &lt;- a * a + 3
+b
+a + b
+c &lt;- &quot;soc 830&quot;
+c
+
+# Create vectors
+age &lt;- c(36, 19, 30, 55, 42)
+age
+gender &lt;- c(&quot;male&quot;, &quot;female&quot;, &quot;female&quot;, &quot;male&quot;, &quot;female&quot;)
+gender
+
+class(age)
+class(gender)
+
+# Create data frames
+data &lt;- cbind(age, gender)
+data &lt;- as.data.frame(data)
+data
+class(data)
+
+# How to remove variables
+rm(a)
+rm(b, c, age, gender, data)
+
+# Load package
+library(sjlabelled)
+library(sjmisc) 
+
+# How to access variables in data frame
+mydata$sex
+mydata$age  
+mydata$polorient
+mydata$class
+
+# How to add variable labels
+get_label(mydata$id)
+mydata$id &lt;- set_label(mydata$id, label = &quot;Identification Number&quot;)
+get_label(mydata$id)
+
+mydata$sex &lt;- set_label(mydata$sex, label = &quot;Gender&quot;)
+mydata$age &lt;- set_label(mydata$age, label = &quot;Age&quot;)
+mydata$polorient &lt;- set_label(mydata$polorient, label = &quot;Political Orientation&quot;)
+mydata$class &lt;- set_label(mydata$class, label = &quot;Social Class&quot;)
+
+# How to add value labels 
+mydata$sex &lt;- set_labels(mydata$sex, labels = c(&quot;male&quot; = 1, &quot;female&quot; = 2))
+mydata$polorient &lt;- set_labels(mydata$polorient, 
+                               labels = c(&quot;Far left&quot; = 1,
+                                          &quot;Left&quot; = 2,
+                                          &quot;Center&quot; = 3,
+                                          &quot;Right&quot; = 4,
+                                          &quot;Far right&quot; = 5))
+mydata$class &lt;- set_labels(mydata$class, labels = c(&quot;Lower class&quot; = 1,
+                                                   &quot;Working class&quot; = 2,
+                                                   &quot;Lower middle class&quot; = 3,
+                                                   &quot;Middle class&quot; = 4,
+                                                   &quot;Upper middle class&quot; = 5,
+                                                   &quot;Upper class&quot; = 6))
+
+# Let me check whether all the steps so far have made differences.
+# The following codes will show frequency tables along with variable names and value labels.
+frq(mydata$sex)
+frq(mydata$polorient)
+frq(mydata$class)
+
+# Saving data into RDS format
+saveRDS(mydata, file = &quot;mydata.rds&quot;)
+
+# Do not forget to save this R file.</code></pre>
+<center>
+Last updated on <em>18 March, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>
+</div>
