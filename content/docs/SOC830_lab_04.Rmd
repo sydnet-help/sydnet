@@ -34,13 +34,12 @@ library(sjlabelled)
 library(sjmisc) 
 ```
 
-\smallskip
+
 ```{r eval=FALSE, echo=TRUE}
 library(dplyr)
 library(sjlabelled)
 library(sjmisc) 
 ```
-\smallskip
 
 # How to see explanations of R codes in RStudio
 Even R experts do not know all R codes. When they come across new R codes, they often rely on R documentation that explains them. An advantage of using RStudio is that you can easily access R documentation. Click on the tab of **"Help"** and type an R code you want to learn in the top right box (See Figure 1). Then, it will show R documentation about the code.

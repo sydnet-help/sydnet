@@ -1,0 +1,350 @@
+---
+title: "SOC830 Lab 5: Univariate Statistics"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 5: Univariate Statistics"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 30
+---
+The fifth lab session covers the following:
+
+* How to make a frequency table
+* How to compute the mode
+* How to calculate descriptive statistics
+* How to visualise the distribution
+
+We will use four packages for this lab. Load them using the following code:
+
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+library(summarytools)
+```
+
+```{r eval=FALSE, echo=TRUE}
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+library(summarytools)
+```
+
+Note that the loading order of packages is essential. If you do not follow the suggested loading order, you will not get the same result as in the all below examples.
+
+Also, you may see some warning messages when you load these packages. Please ignore them. They will not affect your analytic outcomes. The issue is mostly from the fact that you did not update R or necessary packages. Nonetheless, it is always recommended to update R and R packages.
+
+# Import the 2009 AuSSa dataset.
+This lab uses the 2009 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code: 
+
+```{r, echo=FALSE}
+aus2009 <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2009.rds"))
+```
+
+```{r eval=FALSE, echo=TRUE}
+aus2009 <-readRDS("aussa2009.rds")
+```
+
+The dataset is loaded as _aus2009_.
+
+# How to make a frquency table
+I  briefly introduced how to make a frequency table in Lab 4. '`frq(data name$variable name)`' generates a frequecy table. For instance, the following code produces a frequency table of _sex_ in _aus2009_:
+
+```{r, echo=TRUE}
+frq(aus2009$sex) 
+```
+
+In the outcome, **NA** means missing values (item non-responses). **frq** is frequencies, **raw.prc** denotes raw percentages (based on the number of total cases), **valid.prc** indicates valid percentages (based on the number of valid cases), and **cum.prc** means cumulative percentages. 
+
+Alternatively, you can make a frequency table using '`freq()`' from _summarytools_ package. I prefer to use '`freq()`' because this function provides more detailed information. 
+
+```{r, echo=TRUE}
+freq(aus2009$sex) 
+```
+
+The problem of this output is that value labels are not shown in the frequency table. This is because _summarytools_ package does not support the value labels assigned by _sjlabelled_ package. To show value labels, we need to add one more function: '`to_label()`'.
+
+```{r, echo=TRUE}
+freq(to_label(aus2009$sex))
+```
+
+Now, you can see the labels of all values in the frequency table. In the table, **Freq** is frequencies, **% Valid** indicates valid percentages (based on the number of valid cases), and **% Valid Cum.** means cumulative percentages based on valid cases, **% Total** denotes raw percentages (based on the number of total cases), and **% Total Cum.** is cumulative percentages based on total cases. Also, this frequency table provides the number of total cases at the bottom row.
+
+The next codes will create frequency tables of _marital_ and _richcol_.
+
+```{r, echo=TRUE}
+freq(to_label(aus2009$marital))
+freq(to_label(aus2009$richcol))
+```
+
+## How to make a frequency table of age groups 
+The frequency table of continuous variables is not easy to read because there are so many values in them. Consequently, researchers often transform continuous variables into ordinal ones and then create the frequency table. Let's try to make the frequency table of respondents' age. We will first recode _age_ into a variable of age groups (you did this in Lab 4) and then make the frequency table of age groups.
+
+```{r, echo=TRUE}
+aus2009 <- rec(aus2009, age, rec = "min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9", 
+              append = TRUE)
+aus2009$age_r <- set_label(aus2009$age_r, label = "Age Category")
+aus2009$age_r <- set_labels(aus2009$age_r, labels = c ("10s" = 1,
+                                                     "20s" = 2,
+                                                     "30s" = 3,
+                                                     "40s" = 4,
+                                                     "50s" = 5,
+                                                     "60s" = 6,
+                                                     "70s" = 7,
+                                                     "80s" = 8,
+                                                     "90s" = 9))
+freq(to_label(aus2009$age_r))
+```
+
+# How to compute the mode
+R does not have a built-in function to compute a mode of a variable. So, I made a function called '`getmode()`' which lets you calculate the mode. First, run the following code:
+
+```{r, echo=TRUE}
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+```
+
+You will see **getmode** in the tab of Environment. This is the custom function you just added. Thus, every time you want to compute the mode, you need to run the above code first.
+Let's caculate the mode of _sex_, _martial_, _richcol_, _age_ and _age_r_. Again, we will use '`to_label()` function for nominal and ordinal variables to see value labels instead of values.
+
+```{r, echo=TRUE}
+getmode(to_label(aus2009$sex))
+getmode(to_label(aus2009$marital))
+getmode(to_label(aus2009$richcol))
+getmode(to_label(aus2009$age))
+getmode(to_label(aus2009$age_r))
+```
+
+The results show that 'Female' is the mode for _sex_, 'Married' for _marital_, 'Disagree' for _richcol_, 62 for _age_, and '50s' for _age_r_. 
+
+# How to compute descriptive statistics
+'`descr()`' from _summarytools_ package shows various descriptive statistics. The notable statistics include:
+
+1. Mean
+2. Std.Dev. (Standard Deviation)
+3. Min (Minimum Value)
+4. Q1 (25th percentile)
+5. Median (50th percentile)
+6. Q3 (75th percentile)
+7. Max (Maximum Value)
+8. IQR (Inter-quartile Range)
+9. Skewness
+10. N.Valid (Number of Valid Cases)
+11. % Valid (Percentage of Valid Cases)
+
+The following code shows descriptive statistics of _richcol_(ordinal variable):
+
+```{r, echo=TRUE}
+descr(aus2009$richcol)
+```
+
+Please note that incase of ordinal variables, you need to be careful in interpreting the results. For instance, the median value of _richcol_ is 4, which means the median response is "Disagree".
+
+The following code will show descriptive statistics of _age_(continuous variable):
+
+```{r, echo=TRUE}
+descr(aus2009$age)
+```
+
+# How to visualise the distribution
+There are many packages to visualise your data in R. In our course I will use _sjPlot_ package because it supports the labels assigned by _sjlabelled_ package and is easy to use. If you want to learn more advanced graphics of R, I recommend using _ggplot2_ package. One good reliable online resource can be found [here](http://www.sthda.com/english/wiki/be-awesome-in-ggplot2-a-practical-guide-to-be-highly-effective-r-software-and-data-visualization).
+
+## How to make bar graphs
+Bar graphs provide appropriate ways to present nominal or ordinal variables graphically. '`sjp.frq(data name$variable name, type = "bar")`' makes a bar graph of the specified variable. For example, the following code will make a bar graph of _sex_ in _aus2009_:
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$sex, type = "bar")
+```
+
+If you want to add the title of a figure, add '`title = "Any title"`' to the code. The following code will add "Gender distribution" as the title of the figure:
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution") 
+```
+
+The title of X-axis(R: Sex) is somewhat bizarre. The title of X-axis can be changed by adding '`axis.title = "Any title"`'. I change it into "Gender". Thus, the code is:
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        axis.title = "Gender")  
+```
+
+If you want to remove percentages of each category at the top of bars, add '`show.prc = FALSE`' to the code.
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        show.prc = FALSE)
+```
+
+If you want to remove frequencies of each category at the top of bars, add '`show.n = FALSE`' to the code.
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        show.n = FALSE)
+```
+
+Next, let's make a bar graph of another variable, _marital_. 
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+        axis.title = "Marital Status", show.n = FALSE)
+```
+
+You may notice that one axis label is too long, which makes it difficult to read other labels. So, we will change this long label into a more brief one. To change the axis label, '`axis.labels`' option will be used.
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+        axis.title = "Marital Status", 
+        axis.labels = c("Married", "Widowed", "Divorced", 
+                        "Separated", "Never Married or Single"), 
+        show.n = FALSE)
+```
+
+We assigned "Married", "Widowed", "Divorced", "Separated", and "Never Married or Single" to labels of each axis, respectively.
+
+## How to make stacked bar graphs
+A stacked bar graph is used to break down and compare parts of a whole. Each bar in the graph represents a whole, and segments in the bar represent different categories or responses of that whole. Stacked bar graphs can be created by '`sjp.stackfrq(data name$variable name)`'. The following code makes a stacked bar graph of _marital_:
+
+```{r, echo=TRUE}
+sjp.stackfrq(aus2009$marital, title = "Marital Status", 
+	axis.labels = "Marital Status",
+	legend.labels =  c("Married", "Widowed", "Divorced", 
+	                   "Separated", "Never Married or Single"))
+```
+
+Note that I changed the label of axis and legend using '`axis.labels`' and '`legend.labels`' option.
+
+'`plot_likert(data name$variable name)`' also can be used for making grouped bar graphs. However, this function is designed specifically for visualising Likert scales. Let me create a grouped bar graph of _richcol_ which uses a Likert scale.
+
+```{r, echo=TRUE}
+plot_likert(aus2009$richcol, cat.neutral = 3, 
+            axis.labels = "Only the rich can afford the cost of attending university.")
+```
+
+You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using '`cat.neutral`' option.
+
+## How to make histograms
+Histograms are used with continuous variables which have many scores. Histograms look like bar graphs, except that the sides of the "bars" touch to form a continuous series.
+To make histograms, use '`sjp.frq(data name$variable name, type = "hist")`'. The following code creates a histogram of _age_.
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
+```
+
+In this graph, I would like to set the distance between axis labels equal to 10. So, I add '`grid.breaks = 10`' to the code. Thus, the code is:
+
+```{r, echo=TRUE}
+sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
+        grid.breaks = 10)
+```
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+################################################################################
+# Week6: Univariate Analysis
+# 01/04/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# load packages
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+library(summarytools)
+
+# load Aussa2009
+aus2009 <-readRDS("aussa2009.rds")
+
+# Frequency table
+frq(aus2009$sex) 
+freq(aus2009$sex)
+freq(to_label(aus2009$sex))
+
+freq(to_label(aus2009$marital))
+freq(to_label(aus2009$richcol))
+#freq(to_label(aus2009$age))
+
+# Make a frequency table of age gropus
+aus2009 <- rec(aus2009, age, rec = "min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9", 
+              append = TRUE)
+aus2009$age_r <- set_label(aus2009$age_r, label = "Age Category")
+aus2009$age_r <- set_labels(aus2009$age_r, labels = c ("10s" = 1,
+                                                     "20s" = 2,
+                                                     "30s" = 3,
+                                                     "40s" = 4,
+                                                     "50s" = 5,
+                                                     "60s" = 6,
+                                                     "70s" = 7,
+                                                     "80s" = 8,
+                                                     "90s" = 9))
+freq(to_label(aus2009$age_r))
+
+# Mode
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
+getmode(to_label(aus2009$sex))
+getmode(to_label(aus2009$marital))
+getmode(to_label(aus2009$richcol))
+getmode(to_label(aus2009$age))
+getmode(to_label(aus2009$age_r))
+
+# Descriptive statistics
+descr(aus2009$richcol)
+descr(aus2009$age)
+
+# Visualise the distribution
+## Bar graph
+sjp.frq(aus2009$sex, type = "bar")
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution") # change the title of figure
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        axis.title = "Gender") # change the title of axis
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        show.prc = FALSE) # do not show percentages
+sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+        show.n = FALSE) # do not show frequencies
+
+sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+        axis.title = "Marital Status", show.n = FALSE)
+sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+        axis.title = "Marital Status", 
+        axis.labels = c("Married", "Widowed", "Divorced", 
+            "Separated", "Never Married or Single"), 
+        show.n = FALSE) # change the labels of axis
+
+## Stacked bar graph for Likert scales
+sjp.stackfrq(aus2009$marital, title = "Marital Status", 
+	axis.labels = "Marital Status",
+	legend.labels =  c("Married", "Widowed", "Divorced", 
+        "Separated", "Never Married or Single"))
+plot_likert(aus2009$richcol, cat.neutral = 3, axis.labels = "Only the rich can afford the cost of attending university.")
+
+## Histogram
+sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
+sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
+        grid.breaks = 10) # grid.breks:sets the distance between breaks for the axis
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
+
+
+

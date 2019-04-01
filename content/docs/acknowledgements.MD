@@ -18,7 +18,7 @@ menu:
 
 This website would not have been possible without the funding provided by the Macquarie University PVC Teaching and Learning Office and facilitated by Professor Garry Falloon. Brian Ballsun-Stanton was of great assistance in setting this project on track with advice and guidance. 
 
-The materials on this website have been contributed by Nicholas Harrigan, Hang-Young Lee, Ben Spiers-Butcher, and Tobia Fattore.
+The materials on this website have been contributed by Nicholas Harrigan, Hang Young Lee, Ben Spiers-Butcher, and Tobia Fattore.
 
 The website was developed using the Hugo Academic theme and modified by Ryan King and Nicholas Harrigan.
 
