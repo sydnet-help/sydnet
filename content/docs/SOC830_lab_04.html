@@ -1,0 +1,631 @@
+---
+title: "SOC830 Lab 4: Recoding Variables"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 4: Recoding Variables"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 25
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#how-to-see-explanations-of-r-codes-in-rstudio">How to see explanations of R codes in RStudio</a></li>
+<li><a href="#how-to-import-an-rds-file">How to import an RDS file</a></li>
+<li><a href="#recoding-variables">Recoding variables</a><ul>
+<li><a href="#creating-a-variable-of-age-groups">Creating a Variable of Age Groups</a></li>
+<li><a href="#creating-a-new-political-orientation-variable">Creating a new political orientation variable</a></li>
+<li><a href="#creating-a-new-social-class-variable">Creating a new social class variable</a></li>
+</ul></li>
+<li><a href="#renaming-variables">Renaming variables</a></li>
+<li><a href="#computing-variables">Computing variables</a></li>
+<li><a href="#removing-variables">Removing variables</a></li>
+<li><a href="#making-datasets-compact-optional">Making datasets compact (Optional)</a></li>
+<li><a href="#how-to-import-other-formats-of-datasets">How to import other formats of datasets</a></li>
+</ul>
+</div>
+
+<p>The fourth lab session covers the following:</p>
+<ul>
+<li>How to see explanations of R codes in RStudio</li>
+<li>How to import an RDS file</li>
+<li>How to recode variables</li>
+<li>How to compute variables</li>
+<li>How to import other formats of datasets</li>
+<li>How to export datasets as other formats</li>
+</ul>
+<p>We will use three packages for this lab. Load them using the following code:</p>
+<pre class="r"><code>library(dplyr)
+library(sjlabelled)
+library(sjmisc) </code></pre>
+<div id="how-to-see-explanations-of-r-codes-in-rstudio" class="section level1">
+<h1>How to see explanations of R codes in RStudio</h1>
+<p>Even R experts do not know all R codes. When they come across new R codes, they often rely on R documentation that explains them. An advantage of using RStudio is that you can easily access R documentation. Click on the tab of <strong>“Help”</strong> and type an R code you want to learn in the top right box (See Figure 1). Then, it will show R documentation about the code.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="/img/SOC830_lab04_01.png" alt="First Look of RStudio"  />
+<p class="caption">
+Figure 1: First Look of RStudio
+</p>
+</div>
+<p>The documentation provides not only detailed information on R codes but also examples of codes. Nonetheless, reading it is not an easy task especially for novices. However, you will get more familiar with reading it at the end of this course..</p>
+</div>
+<div id="how-to-import-an-rds-file" class="section level1">
+<h1>How to import an RDS file</h1>
+<p>You saved the AuSSa subsample dataset as RDS format in lab 3. In this lab, we will import your saved data file into R. Use ‘<code>data name &lt;- readRDS(&quot;file-name.rds&quot;)</code>’ to import it. Then, you will see the data loaded in the tab of <strong>Environment</strong>.</p>
+<pre class="r"><code>mydata &lt;- readRDS(&quot;mydata.rds&quot;)</code></pre>
+</div>
+<div id="recoding-variables" class="section level1">
+<h1>Recoding variables</h1>
+<p>After you start analysing survey data, you will spend most time in recoding variables. It is rare that researchers use variables as they are initially provided. Instead, researchers often customise the values of variables for their needs. This lab introduces this critical process of data management.</p>
+<div id="creating-a-variable-of-age-groups" class="section level2">
+<h2>Creating a Variable of Age Groups</h2>
+<p>Suppose that we want to investigate how different age groups hold different political attitudes. However, <em>age</em> variable in <em>mydata</em> is not suitable for this purspse. Thus, we need to make a new variable of age group using <em>age</em> variable. Table 1 shows the recoding scheme for this task.</p>
+<table>
+<caption>
+<span id="tab:unnamed-chunk-7">Table 1: </span>Recoding Scheme of Age
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="1">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Old variable(age)
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+New variable(age_r)
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Labels
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+0 - 19
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+10s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20 - 29
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+20s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+30 - 39
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+30s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+40 - 49
+</td>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+40s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+50 - 59
+</td>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+50s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+60 - 69
+</td>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+60s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+70 - 79
+</td>
+<td style="text-align:center;">
+7
+</td>
+<td style="text-align:center;">
+70s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+80 - 89
+</td>
+<td style="text-align:center;">
+8
+</td>
+<td style="text-align:center;">
+80s
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+90 or more
+</td>
+<td style="text-align:center;">
+9
+</td>
+<td style="text-align:center;">
+90s
+</td>
+</tr>
+</tbody>
+</table>
+<p>To recode variables, use ‘<code>data name &lt;- rec(data name, variable name, rec = &quot;recoding scheme&quot;, append = TRUE)</code>’. ‘<code>append = TRUE</code>’ means that R will append a newly recoded variable to <em>data name</em>. For example, the following code will recode <em>age</em> variable in <em>mydata</em> and generate a new variable of age group titled <em>age_r</em>.</p>
+<pre class="r"><code>mydata &lt;- rec(mydata, age, rec = &quot;min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9&quot;, 
+              append = TRUE)</code></pre>
+<p>Let me explain more about “recoding scheme” in the above code. ‘<code>a:b</code>’ means all values from <em>a</em> to <em>b</em>. For example, ‘<code>min:19</code>’ means all the numbers from the minimum value to 19. In “recoding scheme”, we need to specify how the values of old variables are converted into the values of new variables. The left side of equal signs (=) is for the values of old variables, and the left side for the values of new variables. For example, ‘<code>min:19 = 1</code>’ means that all the values from the minimum value to 19 will be converted into 1. Semicolon(;) is used for separating the coding schemes of each value.</p>
+<p>Running this code will make a new variable titled “age_r”. Then, we will assign the variable and value label to this new variable by running the following code:</p>
+<pre class="r"><code>mydata$age_r &lt;- set_label(mydata$age_r, label = &quot;Age Category&quot;)
+mydata$age_r &lt;- set_labels(mydata$age_r, labels = c (&quot;10s&quot; = 1,
+                                                     &quot;20s&quot; = 2,
+                                                     &quot;30s&quot; = 3,
+                                                     &quot;40s&quot; = 4,
+                                                     &quot;50s&quot; = 5,
+                                                     &quot;60s&quot; = 6,
+                                                     &quot;70s&quot; = 7,
+                                                     &quot;80s&quot; = 8,
+                                                     &quot;90s&quot; = 9))</code></pre>
+<p>Then, let us check the new variable by making a frequency table of it.</p>
+<pre class="r"><code>frq(mydata$age_r)</code></pre>
+<pre><code>## 
+## # Age Category (x) &lt;numeric&gt; 
+## # total N=30  valid N=30  mean=4.77  sd=1.92
+##  
+##  val label frq raw.prc valid.prc cum.prc
+##    1   10s   2    6.67      6.67    6.67
+##    2   20s   1    3.33      3.33   10.00
+##    3   30s   5   16.67     16.67   26.67
+##    4   40s   5   16.67     16.67   43.33
+##    5   50s   6   20.00     20.00   63.33
+##    6   60s   6   20.00     20.00   83.33
+##    7   70s   3   10.00     10.00   93.33
+##    8   80s   1    3.33      3.33   96.67
+##    9   90s   1    3.33      3.33  100.00
+##   NA    NA   0    0.00        NA      NA</code></pre>
+</div>
+<div id="creating-a-new-political-orientation-variable" class="section level2">
+<h2>Creating a new political orientation variable</h2>
+<p>Suppose that we want to use a variable political orientation that consists of three categories: left, central, and right. <em>polorient</em> in <em>mydata</em> does not fit well for this purpose because it collects more detailed information than we want. However, we can make a new variable that will serve our purpose by recoding <em>polorient</em>. Table 2 shows the recoding scheme for this task.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-11">Table 2: </span>Recoding Scheme of Political Orientation
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Old variable(polorient)
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+New variable(polorient_r)
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Labels
+</th>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Labels
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Far left
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Left
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Left
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Left
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+Center
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Center
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+Right
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+Right
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+Far right
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+Right
+</td>
+</tr>
+</tbody>
+</table>
+<p>The following code will recode <em>polorient</em> variable in <em>mydata</em> and generate a new variable of political orientation titled <em>polorient_r</em>.</p>
+<pre class="r"><code>mydata &lt;- rec(mydata, polorient, rec = &quot;1:2 = 1; 3 = 2; 4:5 = 3&quot;, append = TRUE)</code></pre>
+<p>Then, we will assign the variable and value label to <em>polorient_r</em>.</p>
+<pre class="r"><code>mydata$polorient_r &lt;- set_label(mydata$polorient_r, 
+                                label = &quot;3-category Political Orientation&quot;)
+mydata$polorient_r &lt;- set_labels(mydata$polorient_r, labels = c(&quot;Left&quot; = 1,
+                                                                &quot;Center&quot; = 2,
+                                                                &quot;Right&quot; = 3))</code></pre>
+<p>The final step is to check the recoded variable.</p>
+<pre class="r"><code>frq(mydata$polorient_r)</code></pre>
+<pre><code>## 
+## # 3-category Political Orientation (x) &lt;numeric&gt; 
+## # total N=30  valid N=30  mean=1.90  sd=0.99
+##  
+##  val  label frq raw.prc valid.prc cum.prc
+##    1   Left  16   53.33     53.33   53.33
+##    2 Center   1    3.33      3.33   56.67
+##    3  Right  13   43.33     43.33  100.00
+##   NA     NA   0    0.00        NA      NA</code></pre>
+</div>
+<div id="creating-a-new-social-class-variable" class="section level2">
+<h2>Creating a new social class variable</h2>
+<p>Suppose that we want to make a new variable which consists of three classes: lower, middle and upper class. We can make this variable by recoding <em>class</em>. Table 3 shows the recoding scheme for this task.</p>
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-15">Table 3: </span>Recoding Scheme of Social Class
+</caption>
+<thead>
+<tr>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Old variable(class)
+</div>
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+New variable(class_r)
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Labels
+</th>
+<th style="text-align:center;">
+Values
+</th>
+<th style="text-align:center;">
+Labels
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Lower class
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Lower class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Working class
+</td>
+<td style="text-align:center;">
+1
+</td>
+<td style="text-align:center;">
+Lower class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+Lower middle class
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+4
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+5
+</td>
+<td style="text-align:center;">
+Upper middle class
+</td>
+<td style="text-align:center;">
+2
+</td>
+<td style="text-align:center;">
+Middle class
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+6
+</td>
+<td style="text-align:center;">
+Upper class
+</td>
+<td style="text-align:center;">
+3
+</td>
+<td style="text-align:center;">
+Upper class
+</td>
+</tr>
+</tbody>
+</table>
+<p>Using the following code, recode <em>class</em> into <em>class_r</em>.</p>
+<pre class="r"><code>mydata &lt;- rec(mydata, class, rec = &quot;1:2 = 1; 3:5 = 2; 6 = 3&quot;, append = TRUE)</code></pre>
+<p>Then, we will assign the variable and value label to <em>class_r</em>.</p>
+<pre class="r"><code>mydata$class_r &lt;- set_label(mydata$class_r, 
+                            label = &quot;3-category Social Class&quot;)
+mydata$class_r &lt;- set_labels(mydata$class_r, labels = c(&quot;Lower class&quot; = 1,
+                                                        &quot;Middle class&quot; = 2,
+                                                        &quot;Upper class&quot; = 3))</code></pre>
+<p>Finally, check the recoded variable.</p>
+<pre class="r"><code>frq(mydata$class_r)</code></pre>
+<pre><code>## 
+## # 3-category Social Class (x) &lt;numeric&gt; 
+## # total N=30  valid N=30  mean=1.87  sd=0.43
+##  
+##  val        label frq raw.prc valid.prc cum.prc
+##    1  Lower class   5   16.67     16.67   16.67
+##    2 Middle class  24   80.00     80.00   96.67
+##    3  Upper class   1    3.33      3.33  100.00
+##   NA           NA   0    0.00        NA      NA</code></pre>
+</div>
+</div>
+<div id="renaming-variables" class="section level1">
+<h1>Renaming variables</h1>
+<p>The name of recoded variables are automatically assigned as ‘<em>variable name_r</em>’. However, you may want to change variable names. In this case, use ‘<code>data name &lt;- var_rename(data name, current name = &quot;new name&quot;, ...)</code>’ For example, the following code will change <em>age_r</em>, <em>polorient_r</em> and <em>class_r</em> into <em>age_gr</em>, <em>polorient_3</em> and <em>class_3</em>, respectively.</p>
+<pre class="r"><code>mydata &lt;- var_rename(mydata, age_r = &quot;age_gr&quot;, polorient_r = &quot;polorient_3&quot;, 
+                     class_r = &quot;class_3&quot;)</code></pre>
+</div>
+<div id="computing-variables" class="section level1">
+<h1>Computing variables</h1>
+<p>Another way to make a new variable is to compute variables. It is useful especially when the relationship between old and new variables can be expressed in mathematical equations.</p>
+<p>For example, let us make a variable of birth year. The relationship between birth year and age is <span class="math inline">\(birth year = 2019 - Age\)</span>. Using this equation, we can create a variable of birth year by ‘<code>data name &lt;- add_variables(data name, new variable name = Equation)</code>’. The following code will also assign the variable label.</p>
+<pre class="r"><code>mydata &lt;- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata$b_year &lt;- set_label(mydata$b_year, label = &quot;Year of Birth&quot;)
+mydata$b_year</code></pre>
+<pre><code>##  [1] 1953 1947 1960 1999 1951 1943 1958 1929 1955 1980 1962 1972 1963 1968
+## [15] 1985 2001 2001 1989 1954 1984 1975 1979 1962 1979 1960 1937 1975 1989
+## [29] 1942 1959
+## attr(,&quot;label&quot;)
+## [1] &quot;Year of Birth&quot;</code></pre>
+</div>
+<div id="removing-variables" class="section level1">
+<h1>Removing variables</h1>
+<p>In case you want to remove unnecessary variables from data, use ‘the following code’<code>remove_var()</code>’ function. The following code will remove <em>b_year</em>. The code is ‘<code>data name &lt;- data name %&gt;% remove_var(variable name)</code>’. You can remove multiple variables by ‘<code>remove_var(var 1, var 2, var 3, var 4, ...)</code>’.</p>
+<pre class="r"><code>mydata &lt;- mydata %&gt;%
+  remove_var(b_year)</code></pre>
+<p>In this code, ‘<code>%&gt;%</code>’ is called as pipes. Think of it simply as “then”. Thus, the code means that choose <em>mydata</em>, and then remove a variable of <em>b_year</em>, which will be new <em>mydata</em>.</p>
+</div>
+<div id="making-datasets-compact-optional" class="section level1">
+<h1>Making datasets compact (Optional)</h1>
+<p>I recommend to change your data file into a format of <strong>tibbles</strong> (another format of data frames) because it will make life a little easier especially when you work with large datasets (For more information, visit <a href="https://r4ds.had.co.nz/tibbles.html">Tibbles</a>). You can easily achieve this job by ‘<code>data name &lt;- as_tibble(data name)</code>’. For example, we will convert <em>mydata</em> into tibble formats using the following code:</p>
+<pre class="r"><code>mydata &lt;- as_tibble(mydata)</code></pre>
+<p>Then, save your dataset again. This time I use a file name different from what I used in lab 3 so that I can keep all the dataset files I have worked on so far.</p>
+<pre class="r"><code>saveRDS(mydata, file = &quot;mydata-2.rds&quot;)</code></pre>
+</div>
+<div id="how-to-import-other-formats-of-datasets" class="section level1">
+<h1>How to import other formats of datasets</h1>
+<p>Public datasets are not provided as an R-compatible format. Normally, they are offered as either SPSS or STATA formats. To import SPSS-format datasets (.sav), use the ‘<code>read_spss()</code>’ function. Click on <a href="https://github.com/hylee87/surveyclass/raw/master/data/spss-example.sav">this</a>. It will download an example of SPSS dataset. Put the downloaded file in your working folder and run the following code:</p>
+<pre class="r"><code>spss &lt;- read_spss(&quot;spss-example.sav&quot;)
+spss &lt;- as_tibble(spss)</code></pre>
+<p>To import STATA-format datasets (.dta), use the ‘<code>read_stata()</code>’ function. Click on <a href="https://github.com/hylee87/surveyclass/raw/master/data/stata-example.dta">this</a>. It will download an example of STATA dataset. Put the downloaded file in your working folder and run the following code:</p>
+<pre class="r"><code>stata &lt;- read_stata(&quot;stata-example.dta&quot;)
+stata &lt;- as_tibble(stata)</code></pre>
+<p>The R codes you have written so far look like:</p>
+<pre class="r"><code>################################################################################
+# Title: Lab 3
+# Course: SOC830 &amp; SOCI702 &amp; SOCX830
+# Date: 25/03/2019
+################################################################################
+
+# Load packages
+library(sjlabelled)
+library(sjmisc)
+
+# Import an RDS dataset
+mydata &lt;- readRDS(&quot;mydata.rds&quot;)
+
+# Recode variables
+## Create age groups
+mydata &lt;- rec(mydata, age, rec = &quot;min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9&quot;, 
+              append = TRUE)
+mydata$age_r &lt;- set_label(mydata$age_r, label = &quot;Age Category&quot;)
+mydata$age_r &lt;- set_labels(mydata$age_r, labels = c (&quot;10s&quot; = 1,
+                                                     &quot;20s&quot; = 2,
+                                                     &quot;30s&quot; = 3,
+                                                     &quot;40s&quot; = 4,
+                                                     &quot;50s&quot; = 5,
+                                                     &quot;60s&quot; = 6,
+                                                     &quot;70s&quot; = 7,
+                                                     &quot;80s&quot; = 8,
+                                                     &quot;90s&quot; = 9))
+frq(mydata$age_r)
+
+## Create 3-category political orientation
+mydata &lt;- rec(mydata, polorient, rec = &quot;1:2 = 1; 3 = 2; 4:5 = 3&quot;, append = TRUE)
+mydata$polorient_r &lt;- set_label(mydata$polorient_r, 
+                                label = &quot;3-category Political Orientation&quot;)
+mydata$polorient_r &lt;- set_labels(mydata$polorient_r, labels = c(&quot;Left&quot; = 1,
+                                                                &quot;Center&quot; = 2,
+                                                                &quot;Right&quot; = 3))
+frq(mydata$polorient_r)
+
+## Create 3-category social class
+mydata &lt;- rec(mydata, class, rec = &quot;1:2 = 1; 3:5 = 2; 6 = 3&quot;, append = TRUE)
+mydata$class_r &lt;- set_label(mydata$class_r, 
+                            label = &quot;3-category Social Class&quot;)
+mydata$class_r &lt;- set_labels(mydata$class_r, labels = c(&quot;Lower class&quot; = 1,
+                                                        &quot;Middle class&quot; = 2,
+                                                        &quot;Upper class&quot; = 3))
+frq(mydata$class_r)
+
+# Rename variables
+mydata &lt;- var_rename(mydata, age_r = &quot;age_gr&quot;, polorient_r = &quot;polorient_3&quot;, 
+                     class_r = &quot;class_3&quot;)
+
+# Compute variables
+mydata &lt;- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata$b_year &lt;- set_label(mydata$b_year, label = &quot;Year of Birth&quot;)
+mydata$b_year
+
+# Remove variables
+mydata &lt;- mydata %&gt;%
+  remove_var(b_year)
+
+# Make the dataset compact
+
+mydata &lt;- as_tibble(mydata)
+# Save the data file
+saveRDS(mydata, file = &quot;mydata-2.rds&quot;)
+
+# Import other formats of datasets
+# Import SPSS datasets
+spss &lt;- read_spss(&quot;spss-example.sav&quot;)
+spss &lt;- as_tibble(spss)
+
+## Import STATA datasets
+stata &lt;- read_stata(&quot;stata-example.dta&quot;)
+stata &lt;- as_tibble(stata)</code></pre>
+<center>
+Last updated on <em>01 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>

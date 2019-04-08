@@ -1,0 +1,345 @@
+---
+title: "SOC830 Lab 4: Recoding Variables"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 4: Recoding Variables"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 25
+---
+The fourth lab session covers the following:
+
+* How to see explanations of R codes in RStudio
+* How to import an RDS file
+* How to recode variables
+* How to compute variables
+* How to import other formats of datasets
+* How to export datasets as other formats
+
+We will use three packages for this lab. Load them using the following code:
+
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(dplyr)
+library(sjlabelled)
+library(sjmisc) 
+```
+
+
+```{r eval=FALSE, echo=TRUE}
+library(dplyr)
+library(sjlabelled)
+library(sjmisc) 
+```
+
+# How to see explanations of R codes in RStudio
+Even R experts do not know all R codes. When they come across new R codes, they often rely on R documentation that explains them. An advantage of using RStudio is that you can easily access R documentation. Click on the tab of **"Help"** and type an R code you want to learn in the top right box (See Figure 1). Then, it will show R documentation about the code.
+
+```{r, echo=FALSE, fig.cap="First Look of RStudio", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab04_01.png")
+```
+
+The documentation provides not only detailed information on R codes but also examples of codes. Nonetheless, reading it is not an easy task especially for novices. However, you will get more familiar with reading it at the end of this course..
+
+# How to import an RDS file
+You saved the AuSSa subsample dataset as RDS format in lab 3. In this lab, we will import your saved data file into R. Use '`data name <- readRDS("file-name.rds")`' to import it. Then, you will see the data loaded in the tab of **Environment**.
+
+```{r, echo=FALSE}
+mydata <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/mydata.rds"))
+```
+
+```{r eval=FALSE, echo=TRUE}
+mydata <- readRDS("mydata.rds")
+```
+
+# Recoding variables
+After you start analysing survey data, you will spend most time in recoding variables. It is rare that researchers use variables as they are initially provided. Instead, researchers often customise the values of variables for their needs. This lab introduces this critical process of data management.
+
+## Creating a Variable of Age Groups
+Suppose that we want to investigate how different age groups hold different political attitudes. However, _age_ variable in _mydata_ is not suitable for this purspse. Thus, we need to make a new variable of age group using _age_ variable. Table 1 shows the recoding scheme for this task.
+
+```{r, echo=FALSE, include=FALSE}
+library(kableExtra)
+```
+
+```{r, echo=FALSE}
+age <- c("0 - 19", "20 - 29", "30 - 39", "40 - 49", "50 - 59", "60 - 69",
+               "70 - 79", "80 - 89", "90 or more")
+age_r <- c(1, 2, 3, 4, 5, 6, 7, 8, 9)
+label <- c("10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s")
+tab1 <- cbind(age, age_r, label)
+tab1 <- as.data.frame(tab1)
+kable(tab1, "html", booktabs = T, caption = "Recoding Scheme of Age", 
+      col.names = c("Values", "Values", "Labels"),align = 
+        "c") %>%
+  add_header_above(c("Old variable(age)" = 1, "New variable(age_r)" = 2))
+```
+
+To recode variables, use '`data name <- rec(data name, variable name, rec = "recoding scheme", append = TRUE)`'. '`append = TRUE`' means that R will append a newly recoded variable to _data name_. For example, the following code will recode _age_ variable in _mydata_ and generate a new variable of age group titled _age_r_.
+
+```{r, echo=TRUE}
+mydata <- rec(mydata, age, rec = "min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9", 
+              append = TRUE)
+```
+
+Let me explain more about "recoding scheme" in the above code. '`a:b`' means all values from _a_ to _b_. For example, '`min:19`' means all the numbers from the minimum value to 19. In "recoding scheme", we need to specify how the values of old variables are converted into the values of new variables. The left side of equal signs (=) is for the values of old variables, and the left side for the values of new variables. For example, '`min:19 = 1`' means that all the values from the minimum value to 19 will be converted into 1. Semicolon(;) is used for separating the coding schemes of each value. 
+
+Running this code will make a new variable titled "age_r". Then, we will assign the variable and value label to this new variable by running the following code:
+
+```{r, echo=TRUE}
+mydata$age_r <- set_label(mydata$age_r, label = "Age Category")
+mydata$age_r <- set_labels(mydata$age_r, labels = c ("10s" = 1,
+                                                     "20s" = 2,
+                                                     "30s" = 3,
+                                                     "40s" = 4,
+                                                     "50s" = 5,
+                                                     "60s" = 6,
+                                                     "70s" = 7,
+                                                     "80s" = 8,
+                                                     "90s" = 9))
+```
+
+Then, let us check the new variable by making a frequency table of it.
+
+```{r, echo=TRUE}
+frq(mydata$age_r)
+```
+
+## Creating a new political orientation variable
+Suppose that we want to use a variable political orientation that consists of three categories: left, central, and right. _polorient_ in _mydata_ does not fit well for this purpose because it collects more detailed information than we want. However, we can make a new variable that will serve our purpose by recoding _polorient_. Table 2 shows the recoding scheme for this task.
+
+```{r, echo=FALSE}
+polorient <- c(1, 2, 3, 4, 5)
+label1 <- c("Far left", "Left", "Center", "Right", "Far right")
+polorient_r <- c(1, 1, 2, 3, 3)
+label2 <- c("Left", "Left", "Center", "Right", "Right")
+tab2 <- cbind(polorient, label1, polorient_r, label2)
+tab2 <- as.data.frame(tab2)
+kable(tab2, "html", booktabs = T, caption = "Recoding Scheme of Political Orientation", 
+      col.names = c("Values", "Labels", "Values", "Labels"), align = "c") %>%
+  kable_styling() %>%
+  add_header_above(c("Old variable(polorient)" = 2, "New variable(polorient_r)" = 2))
+```
+
+The following code will recode _polorient_ variable in _mydata_ and generate a new variable of political orientation titled _polorient_r_.
+
+```{r, echo=TRUE}
+mydata <- rec(mydata, polorient, rec = "1:2 = 1; 3 = 2; 4:5 = 3", append = TRUE)
+```
+
+Then, we will assign the variable and value label to _polorient_r_.
+
+```{r, echo=TRUE}
+mydata$polorient_r <- set_label(mydata$polorient_r, 
+                                label = "3-category Political Orientation")
+mydata$polorient_r <- set_labels(mydata$polorient_r, labels = c("Left" = 1,
+                                                                "Center" = 2,
+                                                                "Right" = 3))
+```
+
+The final step is to check the recoded variable.
+
+```{r, echo=TRUE}
+frq(mydata$polorient_r)
+```
+
+## Creating a new social class variable
+Suppose that we want to make a new variable which consists of three classes: lower, middle and upper class. We can make this variable by recoding _class_. Table 3 shows the recoding scheme for this task.
+
+```{r, echo=FALSE}
+class <- c(1, 2, 3, 4, 5, 6)
+label3 <- c("Lower class", "Working class", "Lower middle class", "Middle class", 
+            "Upper middle class", "Upper class")
+class_r <- c(1, 1, 2, 2, 2, 3)
+label4 <- c("Lower class", "Lower class", "Middle class", "Middle class", "Middle class",
+            "Upper class")
+tab3 <- cbind(class, label3, class_r, label4)
+tab3 <- as.data.frame(tab3)
+kable(tab3, "html", booktabs = T, caption = "Recoding Scheme of Social Class", 
+      col.names = c("Values", "Labels", "Values", "Labels"), align = "c") %>%
+  kable_styling() %>%
+  add_header_above(c("Old variable(class)" = 2, "New variable(class_r)" = 2))
+```
+
+Using the following code, recode _class_ into _class_r_.
+
+```{r, echo=TRUE}
+mydata <- rec(mydata, class, rec = "1:2 = 1; 3:5 = 2; 6 = 3", append = TRUE)
+```
+
+Then, we will assign the variable and value label to _class_r_.
+
+```{r, echo=TRUE}
+mydata$class_r <- set_label(mydata$class_r, 
+                            label = "3-category Social Class")
+mydata$class_r <- set_labels(mydata$class_r, labels = c("Lower class" = 1,
+                                                        "Middle class" = 2,
+                                                        "Upper class" = 3))
+```
+
+Finally, check the recoded variable.
+
+```{r, echo=TRUE}
+frq(mydata$class_r)
+```
+
+# Renaming variables
+The name of recoded variables are automatically assigned as '_variable name_r_'. However, you may want to change variable names. In this case, use '`data name <- var_rename(data name, current name = "new name", ...)`' For example, the following code will change _age_r_, _polorient_r_ and _class_r_ into _age_gr_, _polorient_3_ and _class_3_, respectively.
+
+```{r, echo=TRUE}
+mydata <- var_rename(mydata, age_r = "age_gr", polorient_r = "polorient_3", 
+                     class_r = "class_3")
+```
+
+# Computing variables
+Another way to make a new variable is to compute variables. It is useful especially when the relationship between old and new variables can be expressed in mathematical equations.
+
+For example, let us make a variable of birth year. The relationship between birth year and age is $birth year = 2019 - Age$. Using this equation, we can create a variable of birth year by '`data name <- add_variables(data name, new variable name = Equation)`'. The following code will also assign the variable label.
+
+```{r, echo=TRUE}
+mydata <- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata$b_year <- set_label(mydata$b_year, label = "Year of Birth")
+mydata$b_year
+```
+
+# Removing variables
+In case you want to remove unnecessary variables from data, use 'the following code'`remove_var()`' function. The following code will remove _b_year_. The code is '`data name <- data name %>% remove_var(variable name)`'. You can remove multiple variables by '`remove_var(var 1, var 2, var 3, var 4, ...)`'.
+
+```{r, echo=TRUE}
+mydata <- mydata %>%
+  remove_var(b_year)
+```
+
+In this code, '`%>%`' is called as pipes. Think of it simply as "then". Thus, the code means that choose _mydata_, and then remove a variable of _b_year_, which will be new _mydata_.
+
+# Making datasets compact (Optional)
+I recommend to change your data file into a format of **tibbles** (another format of data frames) because it will make life a little easier especially when you work with large datasets (For more information, visit [Tibbles](https://r4ds.had.co.nz/tibbles.html)). You can easily achieve this job by '`data name <- as_tibble(data name)`'. For example, we will convert _mydata_ into tibble formats using the following code:
+
+```{r, echo=TRUE}
+mydata <- as_tibble(mydata)
+```
+
+Then, save your dataset again. This time I use a file name different from what I used in lab 3 so that I can keep all the dataset files I have worked on so far.
+
+```{r, echo=TRUE}
+saveRDS(mydata, file = "mydata-2.rds")
+```
+
+# How to import other formats of datasets
+Public datasets are not provided as an R-compatible format. Normally, they are offered as either SPSS or STATA formats. To import SPSS-format datasets (.sav), use the '`read_spss()`' function. Click on [this](https://github.com/hylee87/surveyclass/raw/master/data/spss-example.sav). It will download an example of SPSS dataset. Put the downloaded file in your working folder and run the following code:
+
+```{r, echo=FALSE, include=FALSE}
+spss <- read_spss(url("https://github.com/hylee87/surveyclass/raw/master/data/spss-example.sav"))
+spss <- as_tibble(spss)
+```
+
+```{r eval=FALSE, echo=TRUE}
+spss <- read_spss("spss-example.sav")
+spss <- as_tibble(spss)
+```
+
+To import STATA-format datasets (.dta), use the '`read_stata()`' function. Click on [this](https://github.com/hylee87/surveyclass/raw/master/data/stata-example.dta). It will download an example of STATA dataset. Put the downloaded file in your working folder and run the following code:
+
+```{r, echo=FALSE, include=FALSE}
+stata <- read_stata(url("https://github.com/hylee87/surveyclass/raw/master/data/stata-example.dta"))
+stata <- as_tibble(stata)
+```
+
+```{r eval=FALSE, echo=TRUE}
+stata <- read_stata("stata-example.dta")
+stata <- as_tibble(stata)
+```
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+################################################################################
+# Title: Lab 3
+# Course: SOC830 & SOCI702 & SOCX830
+# Date: 25/03/2019
+################################################################################
+
+# Load packages
+library(sjlabelled)
+library(sjmisc)
+
+# Import an RDS dataset
+mydata <- readRDS("mydata.rds")
+
+# Recode variables
+## Create age groups
+mydata <- rec(mydata, age, rec = "min:19 = 1; 20:29 = 2; 30:39 = 3; 40:49 = 4;
+              50:59 = 5; 60:69 = 6; 70:79 = 7; 80:89 = 8; 90:max = 9", 
+              append = TRUE)
+mydata$age_r <- set_label(mydata$age_r, label = "Age Category")
+mydata$age_r <- set_labels(mydata$age_r, labels = c ("10s" = 1,
+                                                     "20s" = 2,
+                                                     "30s" = 3,
+                                                     "40s" = 4,
+                                                     "50s" = 5,
+                                                     "60s" = 6,
+                                                     "70s" = 7,
+                                                     "80s" = 8,
+                                                     "90s" = 9))
+frq(mydata$age_r)
+
+## Create 3-category political orientation
+mydata <- rec(mydata, polorient, rec = "1:2 = 1; 3 = 2; 4:5 = 3", append = TRUE)
+mydata$polorient_r <- set_label(mydata$polorient_r, 
+                                label = "3-category Political Orientation")
+mydata$polorient_r <- set_labels(mydata$polorient_r, labels = c("Left" = 1,
+                                                                "Center" = 2,
+                                                                "Right" = 3))
+frq(mydata$polorient_r)
+
+## Create 3-category social class
+mydata <- rec(mydata, class, rec = "1:2 = 1; 3:5 = 2; 6 = 3", append = TRUE)
+mydata$class_r <- set_label(mydata$class_r, 
+                            label = "3-category Social Class")
+mydata$class_r <- set_labels(mydata$class_r, labels = c("Lower class" = 1,
+                                                        "Middle class" = 2,
+                                                        "Upper class" = 3))
+frq(mydata$class_r)
+
+# Rename variables
+mydata <- var_rename(mydata, age_r = "age_gr", polorient_r = "polorient_3", 
+                     class_r = "class_3")
+
+# Compute variables
+mydata <- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata$b_year <- set_label(mydata$b_year, label = "Year of Birth")
+mydata$b_year
+
+# Remove variables
+mydata <- mydata %>%
+  remove_var(b_year)
+
+# Make the dataset compact
+
+mydata <- as_tibble(mydata)
+# Save the data file
+saveRDS(mydata, file = "mydata-2.rds")
+
+# Import other formats of datasets
+# Import SPSS datasets
+spss <- read_spss("spss-example.sav")
+spss <- as_tibble(spss)
+
+## Import STATA datasets
+stata <- read_stata("stata-example.dta")
+stata <- as_tibble(stata)
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
