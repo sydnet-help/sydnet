@@ -219,22 +219,21 @@ sjp.grpfrq(aus2012$age, aus2012$sex, type = "box",
 
 <span style="color:navy">**Note**</span> 
 
-You may see a warning message saying <span style="color:red">"Package 'snakecase' needs to be installed for case-conversion"</span> when you try to make a grouped boxplot. To fix this problem, run the following code.
+You may see a warning message saying <span style="color:red">"_Package 'snakecase' needs to be installed for case-conversion_"</span> when you try to make a grouped boxplot. To fix this problem, run the following code.
 
 ```{r eval=FALSE, echo=TRUE}
 install.packages("snakecase")
 ```
 
-Or you may see a warning message saying <span style="color:red">"there is no pacakge called 'quantreg'"</span>. In this case run the following code.
+Or you may see a warning message saying <span style="color:red">"_there is no pacakge called 'quantreg'_"</span>. In this case run the following code.
 
 ```{r eval=FALSE, echo=TRUE}
 install.packages("quantreg")
 ```
 
 Then, restart RStudio, load all the packages again and make a grouped boxplot. 
+
 ---
-
-
 
 ## Histograms for different groups
 There is no simple code to generate the histograms of one variable by groups.  Thus, we need to create datasets for each group and use them for visualisation. Suppose that we want to plot the histogram of age for male and female respondents, respectively. We use _aus2012.m_ which includes only males and _aus2012.f_ which includes only females that we constructed in the previous section. The following code generates these two histograms.
