@@ -375,7 +375,7 @@ library(sjPlot)
 library(summarytools)
 
 # Import the 2012 AuSSa dataset.
-aus2012 &lt;-readRDS(url(&quot;https://github.com/hylee87/surveyclass/raw/master/data/aussa2012.rds&quot;))
+aus2012 &lt;-readRDS(&quot;aussa2012.rds&quot;)
 
 # How to compute percentiles
 ## .10: 10%; .25: 25%; .50: 50%; .75: 75%; .90: 90%
@@ -456,7 +456,7 @@ sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Ag
 sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
 <center>
-Last updated on <em>08 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+Last updated on <em>09 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
 </center>
 </div>
 </div>

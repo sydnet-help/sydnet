@@ -273,7 +273,7 @@ library(sjPlot)
 library(summarytools)
 
 # Import the 2012 AuSSa dataset.
-aus2012 <-readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2012.rds"))
+aus2012 <-readRDS("aussa2012.rds")
 
 # How to compute percentiles
 ## .10: 10%; .25: 25%; .50: 50%; .75: 75%; .90: 90%

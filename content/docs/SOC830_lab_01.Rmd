@@ -17,11 +17,6 @@ menu:
     parent: SOC830(SOCI702)
     weight: 10
 ---
-
-Last updated: `r format(Sys.time(), '%d %B, %Y')`
-
-*_Author_: Hang Young Lee*
-
 R is a free, open-source programming language for statistical analysis and graphics. RStudio is a free, open-source IDE(integrated development environment) for R and provides a convenient interface of R programming by incorporating many features such as data viewer, full-featured text editor, workspace browser, graphical tools and R help.
 
 # Installing R and RStudio
@@ -136,3 +131,7 @@ knitr::include_graphics("/img/SOC830_lab01_08.png")
 * Bottom right pane includes Environment, History, Connections, Build and VCS. Environment shows objects (data, values, functions) R has currently stored in its memory. History shows all R commands that were executed in the Console.
 
 Click on OK at the bottom. Then, you will see newly configured panes.
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
