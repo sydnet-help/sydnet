@@ -35,6 +35,7 @@ menu:
 <li><a href="#grouped-stacked-bar-graphs">Grouped stacked bar graphs</a></li>
 <li><a href="#simple-boxplots">Simple boxplots</a></li>
 <li><a href="#grouped-boxplots">Grouped boxplots</a></li>
+<li><a href="#then-restart-rstudio-load-all-the-packages-again-and-make-a-grouped-boxplot.">Then, restart RStudio, load all the packages again and make a grouped boxplot.</a></li>
 <li><a href="#histograms-for-different-groups">Histograms for different groups</a></li>
 </ul></li>
 <li><a href="#how-to-include-r-outputs-in-your-document">How to include R outputs in your document</a><ul>
@@ -311,16 +312,25 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
            axis.title = &quot;Respondent&#39;s Age&quot;,  ylim = c(0, 100))</code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <p>‘<code>ylim = c(minimum value, maximum value)</code>’ sets the range of y-axis. As instructed, the y-axis ranges from 0 to 100.</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span></p>
+<p>You may see a warning message saying <span style="color:red">“Package ‘snakecase’ needs to be installed for case-conversion”</span> when you try to make a grouped boxplot. To fix this problem, run the following code.</p>
+<pre class="r"><code>install.packages(&quot;snakecase&quot;)</code></pre>
+<p>Or you may see a warning message saying <span style="color:red">“there is no pacakge called ‘quantreg’”</span>. In this case run the following code.</p>
+<pre class="r"><code>install.packages(&quot;quantreg&quot;)</code></pre>
+</div>
+<div id="then-restart-rstudio-load-all-the-packages-again-and-make-a-grouped-boxplot." class="section level2">
+<h2>Then, restart RStudio, load all the packages again and make a grouped boxplot.</h2>
 </div>
 <div id="histograms-for-different-groups" class="section level2">
 <h2>Histograms for different groups</h2>
 <p>There is no simple code to generate the histograms of one variable by groups. Thus, we need to create datasets for each group and use them for visualisation. Suppose that we want to plot the histogram of age for male and female respondents, respectively. We use <em>aus2012.m</em> which includes only males and <em>aus2012.f</em> which includes only females that we constructed in the previous section. The following code generates these two histograms.</p>
 <pre class="r"><code>sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
-<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <pre class="r"><code>sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
-<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
 </div>
 </div>
 <div id="how-to-include-r-outputs-in-your-document" class="section level1">
@@ -329,14 +339,14 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 <div id="how-to-include-r-outputs-from-the-window-of-console" class="section level2">
 <h2>How to include R outputs from the window of Console</h2>
 <p>When you want to include R outputs from the window of <strong>Console</strong> (e.g., frequency tables, descriptive statistics), select the output you want to include and then right-click. You will see the copy option. Choose it (See Figure 1).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
 <img src="/img/SOC830_lab06_01.png" alt="Copy from R Console"  />
 <p class="caption">
 Figure 1: Copy from R Console
 </p>
 </div>
 <p>Open MS Word and right-click. In the paste option, choose “Keep Source Formatting”.</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
 <img src="/img/SOC830_lab06_02.png" alt="Import R Outputs into MS Word"  />
 <p class="caption">
 Figure 2: Import R Outputs into MS Word
@@ -346,14 +356,14 @@ Figure 2: Import R Outputs into MS Word
 <div id="how-to-include-r-graphs-from-the-window-of-plots" class="section level2">
 <h2>How to include R graphs from the window of Plots</h2>
 <p>When you want to include R outputs from the window of <strong>Plots</strong> (all kinds of graphs), click <strong>Export</strong> at the top of the <strong>Plots</strong> window and choose “Copy to Clipboard” (See Figure 3).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
 <img src="/img/SOC830_lab06_03.png" alt="Copy from R Plots"  />
 <p class="caption">
 Figure 3: Copy from R Plots
 </p>
 </div>
 <p>In a popped-up window, click “Copy Plot” at the bottom. If you do not like the size of graphs, you can change it either by 1) specifying the width and height at the top (then click “Update Preview”) or 2) moving the bottom-right triangle while pressing down the right button of the mouse (See Figure 4).</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
 <img src="/img/SOC830_lab06_04.png" alt="Import R Graphs into MS Word"  />
 <p class="caption">
 Figure 4: Import R Graphs into MS Word
