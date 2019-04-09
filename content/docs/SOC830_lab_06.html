@@ -292,7 +292,7 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 </div>
 <div id="grouped-stacked-bar-graphs" class="section level2">
 <h2>Grouped stacked bar graphs</h2>
-<p>This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of <em>fechld</em> between men and women. ‘<code>sjp.xtab(the name of variable to be compared, grouping variable, bar.pos = “stack”)</code>’ make this job easier. The following code shows the grouped stacked bar graph of <em>fechld</em> by <em>sex</em>.</p>
+<p>This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of <em>fechld</em> between men and women. ‘<code>sjp.xtab(grouping variable, the name of variable to be compared, bar.pos = “stack”)</code>’ make this job easier. The following code shows the grouped stacked bar graph of <em>fechld</em> by <em>sex</em>.</p>
 <pre class="r"><code>sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = &quot;stack&quot;, show.total = FALSE,
          margin = &quot;row&quot;, coord.flip = TRUE, show.n = FALSE) </code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
@@ -464,7 +464,7 @@ sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Ag
 sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
 <center>
-Last updated on <em>09 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+Last updated on <em>10 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
 </center>
 </div>
 </div>

@@ -189,7 +189,7 @@ plot_likert(aus2012.working.mom,
 ```
 
 ## Grouped stacked bar graphs
-This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of _fechld_ between men and women. ‘`sjp.xtab(the name of variable to be compared, grouping variable, bar.pos = “stack”)`’ make this job easier. The following code shows the grouped stacked bar graph of _fechld_ by _sex_.
+This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of _fechld_ between men and women. ‘`sjp.xtab(grouping variable, the name of variable to be compared, bar.pos = “stack”)`’ make this job easier. The following code shows the grouped stacked bar graph of _fechld_ by _sex_.
 
 ```{r, echo=TRUE, fig.height=5, fig.width=10}
 sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = "stack", show.total = FALSE,
