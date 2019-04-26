@@ -6,7 +6,7 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://model-by-nick.netlify.com/"
+baseurl = "https://methods101.com"
 
 # Title of your site
 title = ""
@@ -27,7 +27,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-139149616-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -119,7 +119,7 @@ enableGitInfo = false
   font = "default"
 
   # Description for social sharing and search engines. If undefined, author role is used in place.
-  description = ""
+  description = "Easy to follow lessons on social research methods. Includes topic selection, study design, qualitative and statistical analysis, and writing."
 
   # Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
   sharing_image = ""
@@ -311,10 +311,6 @@ enableGitInfo = false
 [[menu.docs]]
   name = "How to Analyse Data"
   weight = 55
-
-[[menu.docs]]
-  name = "SSCI202"
-  weight = 60
 
 [[menu.docs]]
   name = "SOC830(SOCI702)"

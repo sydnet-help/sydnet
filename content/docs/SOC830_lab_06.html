@@ -1,0 +1,493 @@
+---
+title: "SOC830 Lab 6: Univariate Statistics 2"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 6: Univariate Statistics 2"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 35
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#import-the-2012-aussa-dataset.">Import the 2012 AuSSa dataset.</a></li>
+<li><a href="#how-to-compute-percentiles">How to compute percentiles</a></li>
+<li><a href="#how-to-calculate-descriptive-statistics-for-sub-groups">How to calculate descriptive statistics for sub-groups</a><ul>
+<li><a href="#creating-a-dataset-of-a-sub-group">Creating a dataset of a sub-group</a></li>
+<li><a href="#creating-a-dataset-of-specific-variables">Creating a dataset of specific variables</a></li>
+<li><a href="#frequency-tables-for-sub-groups">Frequency tables for sub-groups</a></li>
+<li><a href="#descriptive-statiscs-for-sub-groups">Descriptive statiscs for sub-groups</a></li>
+</ul></li>
+<li><a href="#how-to-visualise-the-distributions-for-multiple-variables-and-sub-groups">How to visualise the distributions for multiple variables and sub-groups</a><ul>
+<li><a href="#stacked-bar-graphs-for-multiple-variables">Stacked bar graphs for multiple variables</a></li>
+<li><a href="#stacked-bar-graphs-for-multiple-likert-scales">Stacked bar graphs for multiple Likert scales</a></li>
+<li><a href="#grouped-stacked-bar-graphs">Grouped stacked bar graphs</a></li>
+<li><a href="#simple-boxplots">Simple boxplots</a></li>
+<li><a href="#grouped-boxplots">Grouped boxplots</a></li>
+<li><a href="#histograms-for-different-groups">Histograms for different groups</a></li>
+</ul></li>
+<li><a href="#how-to-include-r-outputs-in-your-document">How to include R outputs in your document</a><ul>
+<li><a href="#how-to-include-r-outputs-from-the-window-of-console">How to include R outputs from the window of Console</a><ul>
+<li><a href="#if-you-use-window">If you use Window,</a></li>
+<li><a href="#if-you-use-mac">If you use Mac,</a></li>
+</ul></li>
+<li><a href="#how-to-include-r-graphs-from-the-window-of-plots">How to include R graphs from the window of Plots</a></li>
+</ul></li>
+</ul>
+</div>
+
+<p>The sixth lab session covers the following:</p>
+<ul>
+<li>How to compute percentiles</li>
+<li>How to calculate descriptive statistics for sub-groups</li>
+<li>How to visualise the distribution for multiple variables and sub-groups</li>
+<li>How to include R outputs in your Word document</li>
+</ul>
+<p>We will use five packages for this lab. Load them using the following code:</p>
+<pre class="r"><code>library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+library(summarytools)</code></pre>
+<div id="import-the-2012-aussa-dataset." class="section level1">
+<h1>Import the 2012 AuSSa dataset.</h1>
+<p>This lab uses the 2012 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code:</p>
+<pre class="r"><code>aus2012 &lt;-readRDS(&quot;aussa2012.rds&quot;)</code></pre>
+<p>The dataset is loaded as <em>aus2012</em>.</p>
+</div>
+<div id="how-to-compute-percentiles" class="section level1">
+<h1>How to compute percentiles</h1>
+<p>A percentile is a statistical measure indicating that the value below which a given percentage of cases (or observations) falls. . ‘<code>quantile(data name$variable name, c(pct1, pct2, pct3,…), na.rm = TRUE)</code>’ computes the percentiles of variables of your choice. Percentile values (e.g., <code>pct1</code>, <code>pct2</code>) should be entered as proportions. For example, when you want to calculate the 10th percentile, you should input .10. ‘<code>na.rm = TRUE</code>’ excludes cases with missing values (NA) in calculating the percentile. The following code computes 10th, 25th, 50th, 75th and 90th percentile of <em>age</em> in <em>aus2012</em>.</p>
+<pre class="r"><code>quantile(aus2012$age, c(.10, .25, .50, .75, .90), na.rm = TRUE)</code></pre>
+<pre><code>## 10% 25% 50% 75% 90% 
+##  29  41  54  65  73</code></pre>
+</div>
+<div id="how-to-calculate-descriptive-statistics-for-sub-groups" class="section level1">
+<h1>How to calculate descriptive statistics for sub-groups</h1>
+<p>In lab 5 I showed how to compute descriptive statistics for all respondents. However, we sometimes need to calculate them for sub-groups such as only male or female respondents. This kind of analysis is called sub-group analysis. This section focuses on how to conduct this sub-group analysis.</p>
+<div id="creating-a-dataset-of-a-sub-group" class="section level2">
+<h2>Creating a dataset of a sub-group</h2>
+<p>We will make a new dataset called <em>aus2012.m</em> which includes only male respondents. Run the following code:</p>
+<pre class="r"><code>aus2012.m &lt;- aus2012 %&gt;%
+  filter(sex == 1)
+frq(aus2012.m$sex)</code></pre>
+<pre><code>## 
+## # Sex of Respondent (x) &lt;numeric&gt; 
+## # total N=699  valid N=699  mean=1.00  sd=0.00
+##  
+##  val  label frq raw.prc valid.prc cum.prc
+##    1   Male 699     100       100     100
+##    2 Female   0       0         0     100
+##   NA     NA   0       0        NA      NA</code></pre>
+<p>The first line assigns a new dataset name before the arrow (&lt;-) and the name of the dataset from which the new dataset is extracted after the arrow. The second line specifies selection criteria. Use ‘<code>filter(selection criteria)</code>’. In this case, we select cases in which respondents are males (sex == 1). Note that we use two equal signs (==), which is a logical operator meaning “exactly equal to”. Table 1 shows logical operators.</p>
+<p>The third line generates a frequency table of gender for the new dataset. As expected, it only includes male respondents.</p>
+
+<p>The following code creates a dataset which includes only female respondents.</p>
+<pre class="r"><code>aus2012.f &lt;- aus2012 %&gt;%
+  filter(sex == 2)
+frq(aus2012.f$sex)</code></pre>
+<pre><code>## 
+## # Sex of Respondent (x) &lt;numeric&gt; 
+## # total N=876  valid N=876  mean=2.00  sd=0.00
+##  
+##  val  label frq raw.prc valid.prc cum.prc
+##    1   Male   0       0         0       0
+##    2 Female 876     100       100     100
+##   NA     NA   0       0        NA      NA</code></pre>
+<p>When you select cases, you can specify multiple criteria. For example, the following code generates a dataset which includes male respondents who live in NSW (<em>region</em> == 1).</p>
+<pre class="r"><code>aus2012.m.nsw &lt;- aus2012 %&gt;%
+  filter(sex == 1, region == 1)
+frq(aus2012.m.nsw$sex)</code></pre>
+<pre><code>## 
+## # Sex of Respondent (x) &lt;numeric&gt; 
+## # total N=211  valid N=211  mean=1.00  sd=0.00
+##  
+##  val  label frq raw.prc valid.prc cum.prc
+##    1   Male 211     100       100     100
+##    2 Female   0       0         0     100
+##   NA     NA   0       0        NA      NA</code></pre>
+<pre class="r"><code>frq(aus2012.m.nsw$region)</code></pre>
+<pre><code>## 
+## # Country specific region: Australia (x) &lt;numeric&gt; 
+## # total N=211  valid N=211  mean=1.00  sd=0.00
+##  
+##  val                        label frq raw.prc valid.prc cum.prc
+##    1              New South Wales 211     100       100     100
+##    2                     Victoria   0       0         0     100
+##    3                   Queensland   0       0         0     100
+##    4              South Australia   0       0         0     100
+##    5            Western Australia   0       0         0     100
+##    6                     Tasmania   0       0         0     100
+##    7 Australian Capital Territory   0       0         0     100
+##    8           Northern Territory   0       0         0     100
+##   NA                           NA   0       0        NA      NA</code></pre>
+</div>
+<div id="creating-a-dataset-of-specific-variables" class="section level2">
+<h2>Creating a dataset of specific variables</h2>
+<p>This time we will make a dataset which includes only variables of your choice. Suppose that we want to make a dataset which includes only variables measuring attitudes toward working mom in the 2012 AuSSa. The following code will do this job.</p>
+<pre class="r"><code>aus2012.working.mom &lt;- aus2012 %&gt;%
+  select(&quot;fechld&quot;, &quot;fepresch&quot;, &quot;famsuffr&quot;, &quot;homekid&quot;, &quot;housewrk&quot;)
+aus2012.working.mom</code></pre>
+<pre><code>## # A tibble: 1,612 x 5
+##    fechld fepresch famsuffr homekid housewrk
+##     &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+##  1      5        1        3       3        3
+##  2      1        5        5       5        1
+##  3      2        4        2       5        2
+##  4      2        4        4       2        3
+##  5      1        4        4       4        4
+##  6     NA       NA       NA      NA       NA
+##  7      2        4        4       4        2
+##  8      4        3        2       5        4
+##  9      2        4        4       4        4
+## 10      2        3        2       5        1
+## # ... with 1,602 more rows</code></pre>
+<p>There is only one difference in this code from what you used for selecting cases. ‘<code>select(var1, var2, var3, …)</code>’ is the function for choosing variables of your choice. The third line shows the newly created dataset.</p>
+</div>
+<div id="frequency-tables-for-sub-groups" class="section level2">
+<h2>Frequency tables for sub-groups</h2>
+<p>Based on the codes you have learned so far, let us make a frequency table of <em>fechld</em> for only male respondents. The following code will do this job.</p>
+<pre class="r"><code>aus2012 %&gt;%
+  filter(sex == 1) %&gt;%
+  select(fechld) %&gt;%
+  frq()</code></pre>
+<pre><code>## 
+## # Q1a Working mom: warm relationship with children as a not working mom (fechld) &lt;numeric&gt; 
+## # total N=699  valid N=683  mean=2.62  sd=1.14
+##  
+##  val                      label frq raw.prc valid.prc cum.prc
+##    1             Strongly agree  89   12.73     13.03   13.03
+##    2                      Agree 313   44.78     45.83   58.86
+##    3 Neither agree nor disagree  86   12.30     12.59   71.45
+##    4                   Disagree 157   22.46     22.99   94.44
+##    5          Strongly disagree  38    5.44      5.56  100.00
+##   NA                         NA  16    2.29        NA      NA</code></pre>
+<p>What this code does is 1) to use the aus2012 dataset, and then (%&gt;%) 2) to select cases where respondents are males, and then 3) to choose the <em>fechld</em> variable, and then 4) to make a frequency table.
+When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>’ for making frequency tables, a different approach should be used since the <em>summarytools</em> package does not support labelled datasets. We need to use the dataset of male respondents that we created in the previous section. The code is:</p>
+<pre class="r"><code>freq(to_label(aus2012.m$fechld))</code></pre>
+<pre><code>## Frequencies  
+## 
+##                                    Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+## -------------------------------- ------ --------- -------------- --------- --------------
+##                   Strongly agree     89     13.03          13.03     12.73          12.73
+##                            Agree    313     45.83          58.86     44.78          57.51
+##       Neither agree nor disagree     86     12.59          71.45     12.30          69.81
+##                         Disagree    157     22.99          94.44     22.46          92.27
+##                Strongly disagree     38      5.56         100.00      5.44          97.71
+##                             &lt;NA&gt;     16                               2.29         100.00
+##                            Total    699    100.00         100.00    100.00         100.00</code></pre>
+<p>The following code generates a frequency table of <em>fechld</em> for female respondents.</p>
+<pre class="r"><code>aus2012 %&gt;%
+  filter(sex == 2) %&gt;%
+  select(fechld) %&gt;%
+  frq()</code></pre>
+<pre><code>## 
+## # Q1a Working mom: warm relationship with children as a not working mom (fechld) &lt;numeric&gt; 
+## # total N=876  valid N=852  mean=2.11  sd=1.05
+##  
+##  val                      label frq raw.prc valid.prc cum.prc
+##    1             Strongly agree 260   29.68     30.52   30.52
+##    2                      Agree 387   44.18     45.42   75.94
+##    3 Neither agree nor disagree  77    8.79      9.04   84.98
+##    4                   Disagree 107   12.21     12.56   97.54
+##    5          Strongly disagree  21    2.40      2.46  100.00
+##   NA                         NA  24    2.74        NA      NA</code></pre>
+<pre class="r"><code>freq(to_label(aus2012.f$fechld))</code></pre>
+<pre><code>## Frequencies  
+## 
+##                                    Freq   % Valid   % Valid Cum.   % Total   % Total Cum.
+## -------------------------------- ------ --------- -------------- --------- --------------
+##                   Strongly agree    260     30.52          30.52     29.68          29.68
+##                            Agree    387     45.42          75.94     44.18          73.86
+##       Neither agree nor disagree     77      9.04          84.98      8.79          82.65
+##                         Disagree    107     12.56          97.54     12.21          94.86
+##                Strongly disagree     21      2.46         100.00      2.40          97.26
+##                             &lt;NA&gt;     24                               2.74         100.00
+##                            Total    876    100.00         100.00    100.00         100.00</code></pre>
+</div>
+<div id="descriptive-statiscs-for-sub-groups" class="section level2">
+<h2>Descriptive statiscs for sub-groups</h2>
+<p>The code for calculating descriptive statistics for sub-groups is similar to that for frequency tables. The only difference is to use ‘<code>descr()</code>’ instead of ‘<code>frq()</code>’. The following code computes descriptive statistics of <em>age</em> for male and female respondents, respectively.</p>
+<pre class="r"><code>aus2012 %&gt;%
+  filter(sex == 1) %&gt;%
+  select(age) %&gt;%
+  descr()</code></pre>
+<pre><code>## Descriptive Statistics  
+## aus2012 %&gt;% filter(sex == 1)$age  
+## N: 699  
+## 
+##                        age
+## ----------------- --------
+##              Mean    55.22
+##          Std.Dev.    16.30
+##               Min    18.00
+##                Q1    44.00
+##            Median    57.00
+##                Q3    66.00
+##               Max    93.00
+##               MAD    16.31
+##               IQR    22.00
+##                CV     0.30
+##          Skewness    -0.24
+##       SE.Skewness     0.09
+##          Kurtosis    -0.44
+##           N.Valid   691.00
+##           % Valid    98.86</code></pre>
+<pre class="r"><code>aus2012 %&gt;%
+  filter(sex == 2) %&gt;%
+  select(age) %&gt;%
+  descr()</code></pre>
+<pre><code>## Descriptive Statistics  
+## aus2012 %&gt;% filter(sex == 2)$age  
+## N: 876  
+## 
+##                        age
+## ----------------- --------
+##              Mean    51.13
+##          Std.Dev.    16.23
+##               Min    18.00
+##                Q1    39.00
+##            Median    52.00
+##                Q3    64.00
+##               Max    91.00
+##               MAD    17.79
+##               IQR    24.75
+##                CV     0.32
+##          Skewness    -0.05
+##       SE.Skewness     0.08
+##          Kurtosis    -0.68
+##           N.Valid   866.00
+##           % Valid    98.86</code></pre>
+</div>
+</div>
+<div id="how-to-visualise-the-distributions-for-multiple-variables-and-sub-groups" class="section level1">
+<h1>How to visualise the distributions for multiple variables and sub-groups</h1>
+<p>In lab 5 we learned how to visualise the distribution of one variable. Building on this knowledge, this lab introduces how to visualise the distribution for multiple variables and sub-groups.</p>
+<div id="stacked-bar-graphs-for-multiple-variables" class="section level2">
+<h2>Stacked bar graphs for multiple variables</h2>
+<p>Suppose that we want to visualise all the variables of attitudes toward working moms so that we can easily compare the distributions. For doing this, we need to create a dataset consisting of all variables we want to visualise. We already made this dataset in the previous section, which is <em>aus2012.working.mom</em>. The following code visualises all the five variables of attitudes toward working moms.</p>
+<pre class="r"><code>sjp.stackfrq(aus2012.working.mom,
+             title = &quot;Attitude toward working mom&quot;) </code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-16-1.png" width="1152" /></p>
+<p>If you want to flip coordinates of stacked bar graphs, add ‘<code>coord.flip = FALSE</code>’ to the option. In the following code, I also add ‘<code>wrap.labels = 20</code>’ to avoid the overlap between labels.</p>
+<pre class="r"><code>sjp.stackfrq(aus2012.working.mom,
+             title = &quot;Attitude toward working mom&quot;, 
+             wrap.labels = 20, coord.flip = FALSE) </code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-17-1.png" width="960" /></p>
+</div>
+<div id="stacked-bar-graphs-for-multiple-likert-scales" class="section level2">
+<h2>Stacked bar graphs for multiple Likert scales</h2>
+<p>‘<code>plot_likert()</code>’ is a function specifically designed for visualising Likert scales. Since all the variables of attitudes toward working moms use Likert scales, it would be better to visualise them using this function. The code is:</p>
+<pre class="r"><code>plot_likert(aus2012.working.mom,
+           cat.neutral = 3, title = &quot;Attitude toward working mom&quot;) </code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-18-1.png" width="1152" /></p>
+</div>
+<div id="grouped-stacked-bar-graphs" class="section level2">
+<h2>Grouped stacked bar graphs</h2>
+<p>This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of <em>fechld</em> between men and women. ‘<code>sjp.xtab(grouping variable, the name of variable to be compared, bar.pos = “stack”)</code>’ make this job easier. The following code shows the grouped stacked bar graph of <em>fechld</em> by <em>sex</em>.</p>
+<pre class="r"><code>sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = &quot;stack&quot;, show.total = FALSE,
+         margin = &quot;row&quot;, coord.flip = TRUE, show.n = FALSE) </code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
+<p>The margin option sets how percentages are calculated. ‘<code>margin = “row”</code>’ computes the percentages of responses for each group.</p>
+</div>
+<div id="simple-boxplots" class="section level2">
+<h2>Simple boxplots</h2>
+<p>When you want to make a boxplot of one variable, use ‘<code>sjp.frq(variable name, type = “box”)</code>’. The following code makes a boxplot of age in the aus2012 dataset.</p>
+<pre class="r"><code>sjp.frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)</code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+</div>
+<div id="grouped-boxplots" class="section level2">
+<h2>Grouped boxplots</h2>
+<p>When you want to make the boxplot of one variable by different groups, use ‘<code>sjpgrp.frq(the name of variable to be compared, grouping variable, type = “box”)</code>’. The following code creates the boxplots of <em>age</em> by <em>sex</em>.</p>
+<pre class="r"><code>sjp.grpfrq(aus2012$age, aus2012$sex, type = &quot;box&quot;, 
+           axis.title = &quot;Respondent&#39;s Age&quot;,  ylim = c(0, 100))</code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>‘<code>ylim = c(minimum value, maximum value)</code>’ sets the range of y-axis. As instructed, the y-axis ranges from 0 to 100.</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span></p>
+<p>You may see a warning message saying <span style="color:red">“<em>Package ‘snakecase’ needs to be installed for case-conversion</em>”</span> when you try to make a grouped boxplot. To fix this problem, run the following code.</p>
+<pre class="r"><code>install.packages(&quot;snakecase&quot;)</code></pre>
+<p>Or you may see a warning message saying <span style="color:red">“<em>there is no pacakge called ‘quantreg’</em>”</span>. In this case run the following code.</p>
+<pre class="r"><code>install.packages(&quot;quantreg&quot;)</code></pre>
+<p>Then, restart RStudio, load all the packages again and make a grouped boxplot.</p>
+<hr />
+</div>
+<div id="histograms-for-different-groups" class="section level2">
+<h2>Histograms for different groups</h2>
+<p>There is no simple code to generate the histograms of one variable by groups. Thus, we need to create datasets for each group and use them for visualisation. Suppose that we want to plot the histogram of age for male and female respondents, respectively. We use <em>aus2012.m</em> which includes only males and <em>aus2012.f</em> which includes only females that we constructed in the previous section. The following code generates these two histograms.</p>
+<pre class="r"><code>sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
+  axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<pre class="r"><code>sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
+  axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
+<p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+</div>
+</div>
+<div id="how-to-include-r-outputs-in-your-document" class="section level1">
+<h1>How to include R outputs in your document</h1>
+<p>The lab assignment requires you to include relevant R outputs in your documents. This section introduces how to include them in an MS Word document.</p>
+<div id="how-to-include-r-outputs-from-the-window-of-console" class="section level2">
+<h2>How to include R outputs from the window of Console</h2>
+<p>When you want to include R outputs from the window of <strong>Console</strong> (e.g., frequency tables, descriptive statistics), select the output you want to include and then right-click. You will see the copy option. Choose it (See Figure 1).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="/img/SOC830_lab06_01.png" alt="Copy from R Console"  />
+<p class="caption">
+Figure 1: Copy from R Console
+</p>
+</div>
+<div id="if-you-use-window" class="section level3">
+<h3>If you use Window,</h3>
+<p>Open MS Word and right-click. In the paste option, choose “Keep Source Formatting”.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<img src="/img/SOC830_lab06_02.png" alt="Import R Outputs into MS Word"  />
+<p class="caption">
+Figure 2: Import R Outputs into MS Word
+</p>
+</div>
+</div>
+<div id="if-you-use-mac" class="section level3">
+<h3>If you use Mac,</h3>
+<p>Open MS Word and right-click. Choose “Paste”.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="/img/SOC830_lab06_05.png" alt="Import R Outputs into MS Word on Mac (1)"  />
+<p class="caption">
+Figure 3: Import R Outputs into MS Word on Mac (1)
+</p>
+</div>
+<p>Then, select the copied R outputs. Choose a fixed-width font such as ‘Courier New’. If you want, decrease the size of fonts (optional). Set 1.0 for line spacing.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="/img/SOC830_lab06_06.png" alt="Import R Outputs into MS Word on Mac (2)"  />
+<p class="caption">
+Figure 4: Import R Outputs into MS Word on Mac (2)
+</p>
+</div>
+</div>
+</div>
+<div id="how-to-include-r-graphs-from-the-window-of-plots" class="section level2">
+<h2>How to include R graphs from the window of Plots</h2>
+<p>When you want to include R outputs from the window of <strong>Plots</strong> (all kinds of graphs), click <strong>Export</strong> at the top of the <strong>Plots</strong> window and choose “Copy to Clipboard” (See Figure 3).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<img src="/img/SOC830_lab06_03.png" alt="Copy from R Plots"  />
+<p class="caption">
+Figure 5: Copy from R Plots
+</p>
+</div>
+<p>In a popped-up window, click “Copy Plot” at the bottom. If you do not like the size of graphs, you can change it either by 1) specifying the width and height at the top (then click “Update Preview”) or 2) moving the bottom-right triangle while pressing down the right button of the mouse (See Figure 4).</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
+<img src="/img/SOC830_lab06_04.png" alt="Import R Graphs into MS Word"  />
+<p class="caption">
+Figure 6: Import R Graphs into MS Word
+</p>
+</div>
+<p>Then, paste the graph into a MS Word document.</p>
+<p>The R codes you have written so far look like:</p>
+<pre class="r"><code>################################################################################
+# Week7: Univariate Analysis 2 &amp; Normal Distribution
+# 08/04/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+library(summarytools)
+
+# Import the 2012 AuSSa dataset.
+aus2012 &lt;-readRDS(&quot;aussa2012.rds&quot;)
+
+# How to compute percentiles
+## .10: 10%; .25: 25%; .50: 50%; .75: 75%; .90: 90%
+## na.rm = TRUE : exclude missing values (NA)
+quantile(aus2012$age, c(.10, .25, .50, .75, .90), na.rm = TRUE)
+
+# Creating a dataset of a sub-group
+aus2012.m &lt;- aus2012 %&gt;%
+  filter(sex == 1)
+frq(aus2012.m$sex)
+
+aus2012.f &lt;- aus2012 %&gt;%
+  filter(sex == 2)
+frq(aus2012.f$sex)
+
+aus2012.m.nsw &lt;- aus2012 %&gt;%
+  filter(sex == 1, region == 1)
+frq(aus2012.m.nsw$sex)
+frq(aus2012.m.nsw$region)
+
+# Creating a dataset of specific variables
+aus2012.working.mom &lt;- aus2012 %&gt;%
+  select(&quot;fechld&quot;, &quot;fepresch&quot;, &quot;famsuffr&quot;, &quot;homekid&quot;, &quot;housewrk&quot;)
+aus2012.working.mom
+
+# Frequency tables for sub-groups
+aus2012 %&gt;%
+  filter(sex == 1) %&gt;%
+  select(fechld) %&gt;%
+  frq() # for males
+
+
+freq(to_label(aus2012.m$fechld))
+
+aus2012 %&gt;%
+  filter(sex == 2) %&gt;%
+  select(fechld) %&gt;%
+  frq()
+freq(to_label(aus2012.f$fechld))
+
+# Descriptive statistics for sub-groups
+aus2012 %&gt;%
+  filter(sex == 1) %&gt;%
+  select(age) %&gt;%
+  descr() # for males
+
+aus2012 %&gt;%
+  filter(sex == 2) %&gt;%
+  select(age) %&gt;%
+  descr() # for females
+
+# Stacked bar graphs for multiple variables
+sjp.stackfrq(aus2012.working.mom,
+             title = &quot;Attitude toward working mom&quot;) 
+sjp.stackfrq(aus2012.working.mom,
+             title = &quot;Attitude toward working mom&quot;, 
+             wrap.labels = 20, coord.flip = FALSE) 
+
+# Stacked bar graphs for likert scale
+plot_likert(aus2012.working.mom,
+           cat.neutral = 3, title = &quot;Attitude toward working mom&quot;) 
+
+# Grouped stacked bar graphs
+sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = &quot;stack&quot;, show.total = FALSE,
+         margin = &quot;row&quot;, coord.flip = TRUE, show.n = FALSE)
+
+# Simple boxplots
+sjp.frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)
+
+# Grouped boxplots
+sjp.grpfrq(aus2012$age, aus2012$sex, type = &quot;box&quot;, 
+           axis.title = &quot;Respondent&#39;s Age&quot;, ylim = c(0, 100))
+
+
+# Histograms for different groups
+sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
+  axis.title = &quot;Age&quot;, grid.breaks = 10)
+sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
+  axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
+<center>
+Last updated on <em>26 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>
+</div>

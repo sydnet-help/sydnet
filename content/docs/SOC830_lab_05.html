@@ -284,12 +284,12 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
     axis.labels = &quot;Marital Status&quot;,
     legend.labels =  c(&quot;Married&quot;, &quot;Widowed&quot;, &quot;Divorced&quot;, 
                        &quot;Separated&quot;, &quot;Never Married or Single&quot;))</code></pre>
-<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-21-1.png" width="1152" /></p>
 <p>Note that I changed the label of axis and legend using ‘<code>axis.labels</code>’ and ‘<code>legend.labels</code>’ option.</p>
 <p>‘<code>plot_likert(data name$variable name)</code>’ also can be used for making grouped bar graphs. However, this function is designed specifically for visualising Likert scales. Let me create a grouped bar graph of <em>richcol</em> which uses a Likert scale.</p>
 <pre class="r"><code>plot_likert(aus2009$richcol, cat.neutral = 3, 
             axis.labels = &quot;Only the rich can afford the cost of attending university.&quot;)</code></pre>
-<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-22-1.png" width="1152" /></p>
 <p>You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using ‘<code>cat.neutral</code>’ option.</p>
 </div>
 <div id="how-to-make-histograms" class="section level2">
@@ -390,7 +390,7 @@ sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&
 sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;,
         grid.breaks = 10) # grid.breks:sets the distance between breaks for the axis</code></pre>
 <center>
-Last updated on <em>01 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+Last updated on <em>08 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
 </center>
 </div>
 </div>

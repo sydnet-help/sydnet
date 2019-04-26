@@ -218,7 +218,7 @@ We assigned "Married", "Widowed", "Divorced", "Separated", and "Never Married or
 ## How to make stacked bar graphs
 A stacked bar graph is used to break down and compare parts of a whole. Each bar in the graph represents a whole, and segments in the bar represent different categories or responses of that whole. Stacked bar graphs can be created by '`sjp.stackfrq(data name$variable name)`'. The following code makes a stacked bar graph of _marital_:
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.height=5, fig.width=12}
 sjp.stackfrq(aus2009$marital, title = "Marital Status", 
 	axis.labels = "Marital Status",
 	legend.labels =  c("Married", "Widowed", "Divorced", 
@@ -229,7 +229,7 @@ Note that I changed the label of axis and legend using '`axis.labels`' and '`leg
 
 '`plot_likert(data name$variable name)`' also can be used for making grouped bar graphs. However, this function is designed specifically for visualising Likert scales. Let me create a grouped bar graph of _richcol_ which uses a Likert scale.
 
-```{r, echo=TRUE}
+```{r, echo=TRUE, fig.height=5, fig.width=12}
 plot_likert(aus2009$richcol, cat.neutral = 3, 
             axis.labels = "Only the rich can afford the cost of attending university.")
 ```
