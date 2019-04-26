@@ -313,10 +313,6 @@ enableGitInfo = false
   weight = 55
 
 [[menu.docs]]
-  name = "SSCI202"
-  weight = 60
-
-[[menu.docs]]
   name = "SOC830(SOCI702)"
   weight = 90
 
