@@ -29,12 +29,6 @@ Here you can access the following pages:
 
 * **About**: Under this you will find information about the website, how to contact the creators and how to give feedback
 * **How to Analyse Data**: A guide to analysing both qualitative and quantitative data sets focused on "practical applications of tools"
-* **Dedoose**: A guide to learning the Dedoose software package to analyse data
-* **NVivo**: A tutorial for learning the NVivo software suite
-* **R**: A tutorial for learning the R software suite
-* **SPSS**: A tutorial for learning the SPSS software suite
-* **SSCI202**: A Macquarie University undergraduate unit called Survery Research in the Social Sciences
-* **SOC224**: A Macquarie University undergraduate unit called Methods of Social Research
 * **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
 * **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 
