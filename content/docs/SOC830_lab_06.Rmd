@@ -394,3 +394,4 @@ plot_frq(aus2012.f$age, type = "hist", title = "Distribution of Age for Females"
 <center>
 Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
 </center>
+

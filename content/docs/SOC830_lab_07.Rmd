@@ -1,0 +1,245 @@
+---
+title: "SOC830 Lab 7: Normal Distribution & Confidence Intervals"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 7: Normal Distribution & Confidence Intervals"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 40
+---
+The seventh lab session covers the following:
+  
+* How to create a variable of z-scores
+* How to compute the z-score of a specific value and its associated probabilities
+* How to compute the confidence intervals of numbers
+* How to compute the confidence interval of proportions
+* How to compute confidence intervals for sub-groups
+* How to visualise the confidence intervals between groups
+
+We will use six packages for this lab. Load them using the following code:
+  
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(summarytools)
+library(gmodels)
+library(gplots)
+```
+
+```{r eval=FALSE, echo=TRUE}
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(summarytools)
+library(gmodels)
+library(gplots)
+```
+
+# Import the 2012 AuSSa dataset.
+This lab uses the 2012 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code: 
+
+```{r, echo=FALSE}
+aus2012 <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2012.rds"))
+```
+```{r eval=FALSE, echo=TRUE}
+aus2012 <-readRDS("aussa2012.rds")
+```
+
+The dataset is loaded as _aus2012_.
+
+# How to create a variable of z-scores
+We will make a new variable which is the standardised scores (z-scores) of *wrkhrs*(hours spent on work per week). `std(data name, variable name, append = TRUE)` from the **sjmisc** package will add a variable of standardised scores to your dataset. Run the following code.
+
+```{r, echo=TRUE}
+aus2012 <- std(aus2012, wrkhrs, append = TRUE)
+```
+
+Then, you will see *wrkhrs_z* added to your dataset. The name of the new variables is always ‘*old variable name_z*’. Let’s check this newly created variable by running the following code:
+
+```{r, echo=TRUE}
+aus2012 %>%
+  select("id", "wrkhrs", "wrkhrs_z") %>%
+  head()
+```
+
+Out of the aus2012 dataset, we select three variables: *id*, *wrkhrs*, and *wrkhrs_z* (If you don't understand, see [Creating a dataset of specific variables](https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-specific-variables). `head()` shows data for the first six cases. Now you see the original and standardised scores of *wrkhrs* for the first six cases.
+
+# How to compute the z-score of a specific value and its associated probabilities
+In the week 8 lecture, you learned how to calculate the z-score of a specific value and find its associated probabilities using the standard normal table. This section will introduce how to perform this job in R. 
+
+Suppose that you want to get the z-score of respondents who work 50 hours per week and its associated probabilities. To do this, you need to run the following code first. Run this code without changing anything.
+
+```{r, echo=TRUE}
+getZ <- function(v1, v2){
+  score <- (v1 -mean(v2, na.rm = TRUE))/sd(v2, na.rm = TRUE)
+  prob <- pnorm(abs(round(score, digits = 2)))
+  cat(" 1. Z-score for", v1, ":", round(score, digits = 2))
+  cat("\n 2. The area between mean and Z-score (B)", ":", round(prob-0.5, digits = 4))
+  cat("\n 3. The area beyond Z-score (C)", ":", 0.5-round(prob-0.5, digits = 4))
+}
+```
+
+This is a custom code that I made for computing the z-score of a specific value and its associated probabilities. After running this, you will see `getZ` in the tab of Environment.
+
+Now, compute the z-score of respondents who work 50 hours per week and its associated probabilities using this function. `getZ(value, data name$variable name)` shows all the necessary information.
+
+```{r, echo=TRUE}
+getZ(50, aus2012$wrkhrs) 
+```
+
+* First, it shows the z-score.
+* Second, it shows the area between mean and z-score that corresponds to B area in the Standard Normal Table that I posted in week 8.
+* Third, it shows the area beyond Z-score that corresponds to C area in the Standard Normal Table.
+
+# How to compute the confidence intervals of numbers
+To compute confidence intervals, we use `ci()` from the **gmodels** package. '`ci(data name$variable name, confidence = value, na.rm = TRUE)`' computes the confidence interval of a variable of your choice. For example, you can calculate the confidence interval of *wrkhrs* using the following code:
+
+```{r, echo=TRUE}
+ci(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE)
+```
+
+Ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. '`na.rm = TURE`' means that cases with missing values are excluded in calculating the confidence intervals. '`confidence = value`' set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.
+
+```{r, echo=TRUE, warning=FALSE}
+ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)
+```
+
+# How to compute the confidence interval of proportions
+The confidence interval of proportions can be computed only for binary variables where values are either 0 or 1. Suppose that we want to calculate the 95% confidence intervals for the proportion of those who agree or strongly agree with the statement that a working mother can establish as warm and secure relationships with her children as a mother who does not work(*fechld*). First, we need to recode *fechld* into a binary variable in which 1 = "agree" and 0 = "not agree". Before doing it, please check the labels for fechld in the codebook of the 2012 AuSSa. The below codes recode *fechld* in such a way (If you don't understand them, see [Recoding variables](https://methods101.com/docs/soc830_lab_04/#recoding-variables).
+
+```{r, echo=TRUE}
+aus2012 <- rec(aus2012, fechld, rec = "1:2=1; 3:5=0", append = TRUE)
+aus2012$fechld_r <- set_labels(aus2012$fechld_r,
+                               labels = c("agree" = 1, "not agree" = 0))
+```
+
+Then, run the following code:
+
+```{r, echo=TRUE, warning=FALSE}
+ci(aus2012$fechld_r, confidence = 0.95, na.rm = TRUE)
+```
+
+The output shows the 95% confidence interval of the proportion of people who agree or strongly agree with the statement.
+
+# How to compute confidence intervals for sub-groups
+We often need to compute the confidence intervals for sub-groups such as male and female respondents. Suppose that we want to calculate the confidence intervals of working hours per week(*wrkhrs*) for men and women respectively. The first step is to create a dataset for each sub-groups. You learned how to do this in [Creating a dataset of a sub-group](https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-a-sub-group). The below codes make two datasets, one for male and the other for female respondents.
+
+```{r, echo=TRUE}
+aus2012.m <- aus2012 %>%
+              filter(sex==1)
+aus2012.f <- aus2012 %>%
+  filter(sex==2)
+```
+
+Then, using these datasets, compute the 90% confidence intervals for men and women. The codes are:
+
+```{r, echo=TRUE, warning=FALSE}
+ci(aus2012.m$wrkhrs, confidence = 0.9, na.rm = TRUE) # for male
+ci(aus2012.f$wrkhrs, confidence = 0.9, na.rm = TRUE) # for female
+```
+
+# How to visualise the confidence intervals between groups
+Visualising the confidence intervals between groups could be a good way to examine the relationship between variables of groups and your choice. To do this, we use `plotmeans()` from the **gplots** package.
+
+'`plotmeans(variable of your choice ~ to_label(group variable), data = data name, p = values for confidence levels, n.label = FALSE, connect = FALSE, xlab = “Label of X-axis”, ylab = “Label of Y-axis”)`' makes the plot of the confidence interval for all groups. The following code generates a plot of 90% confidence intervals for all gender categories.
+
+```{r, echo=TRUE}
+plotmeans(wrkhrs ~ to_label(sex), data = aus2012, p = 0.90, n.label = FALSE,
+          connect = FALSE, xlab = "Gender", ylab = "Hours worked per week")
+```
+
+'`n.label = FALSE`' means that the plot does not show the total number of cases for each group. '`connect = FALSE`' means that the plot does not make lines connected between the average for each group. If you want to draw a connected line, change it into '`connect = TRUE`'.
+
+---
+
+<span style="color:navy">**Note**</span>: If the plot is not displayed correctly (e.g., no confidence intervals), increase the size of plot areas. Move your cursor at the border between plot areas and console (see Figure 1). Then, move up while keeping clicking the left mouse button. This will increase the height of plot areas.
+
+```{r, echo=FALSE, fig.cap="Increase the Size of Plot Areas(1)", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab07_01.png")
+```
+
+Move your cursor at the border between plot areas and right panes (see Figure 2). Then, move right while keeping clicking the left mouse button. This will increase the width of plot areas.
+
+```{r, echo=FALSE, fig.cap="Increase the Size of Plot Areas(2)", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab07_02.png")
+```
+
+---
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+###############################################################################
+# Lab 7: Normal Distribution & Confidence Interval
+# 6/05/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages.
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(summarytools)
+library(gmodels)
+library(gplots)
+
+# Import the 2012 AuSSA dataset
+aus2012 <- readRDS("aussa2012.RDS")
+
+# How to create a variable of z-scores
+aus2012 <- std(aus2012, wrkhrs, append = TRUE)
+
+aus2012 %>%
+  select("id", "wrkhrs", "wrkhrs_z") %>%
+  head()
+
+# How to compute the z-score of a specific value and its associated probabilities
+getZ <- function(v1, v2){
+  score <- (v1 -mean(v2, na.rm = TRUE))/sd(v2, na.rm = TRUE)
+  prob <- pnorm(abs(round(score, digits = 2)))
+  cat(" 1. Z-score for", v1, ":", round(score, digits = 2))
+  cat("\n 2. The area between mean and Z-score (B)", ":", round(prob-0.5, digits = 4))
+  cat("\n 3. The area beyond Z-score (C)", ":", 0.5-round(prob-0.5, digits = 4))
+}
+
+getZ(50, aus2012$wrkhrs) 
+
+# How to compute confidence intervals of numbers
+ci(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE)
+ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)
+
+# How to compute the confidence interval of proportions
+aus2012 <- rec(aus2012, fechld, rec = "1:2=1; 3:5=0", append = TRUE)
+aus2012$fechld_r <- set_labels(aus2012$fechld_r,
+                               labels = c("agree" = 1, "not agree" = 0))
+
+ci(aus2012$fechld_r, confidence = 0.95, na.rm = TRUE)
+
+# How to compute confidence intervals for sub-groups
+aus2012.m <- aus2012 %>%
+              filter(sex==1)
+aus2012.f <- aus2012 %>%
+  filter(sex==2)
+
+ci(aus2012.m$wrkhrs, confidence = 0.9, na.rm = TRUE) # for male
+ci(aus2012.f$wrkhrs, confidence = 0.9, na.rm = TRUE) # for female
+
+# How to visualise the confidence intervals between groups
+plotmeans(wrkhrs ~ to_label(sex), data = aus2012, p = 0.90, n.label = FALSE,
+          connect = FALSE, xlab = "Gender", ylab = "Hours worked per week")
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>

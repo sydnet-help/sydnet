@@ -1,0 +1,224 @@
+---
+title: "SOC830 Lab 7: Normal Distribution & Confidence Intervals"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 7: Normal Distribution & Confidence Intervals"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 40
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#import-the-2012-aussa-dataset.">Import the 2012 AuSSa dataset.</a></li>
+<li><a href="#how-to-create-a-variable-of-z-scores">How to create a variable of z-scores</a></li>
+<li><a href="#how-to-compute-the-z-score-of-a-specific-value-and-its-associated-probabilities">How to compute the z-score of a specific value and its associated probabilities</a></li>
+<li><a href="#how-to-compute-the-confidence-intervals-of-numbers">How to compute the confidence intervals of numbers</a></li>
+<li><a href="#how-to-compute-the-confidence-interval-of-proportions">How to compute the confidence interval of proportions</a></li>
+<li><a href="#how-to-compute-confidence-intervals-for-sub-groups">How to compute confidence intervals for sub-groups</a></li>
+<li><a href="#how-to-visualise-the-confidence-intervals-between-groups">How to visualise the confidence intervals between groups</a></li>
+</ul>
+</div>
+
+<p>The seventh lab session covers the following:</p>
+<ul>
+<li>How to create a variable of z-scores</li>
+<li>How to compute the z-score of a specific value and its associated probabilities</li>
+<li>How to compute the confidence intervals of numbers</li>
+<li>How to compute the confidence interval of proportions</li>
+<li>How to compute confidence intervals for sub-groups</li>
+<li>How to visualise the confidence intervals between groups</li>
+</ul>
+<p>We will use six packages for this lab. Load them using the following code:</p>
+<pre class="r"><code>library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(summarytools)
+library(gmodels)
+library(gplots)</code></pre>
+<div id="import-the-2012-aussa-dataset." class="section level1">
+<h1>Import the 2012 AuSSa dataset.</h1>
+<p>This lab uses the 2012 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code:</p>
+<pre class="r"><code>aus2012 &lt;-readRDS(&quot;aussa2012.rds&quot;)</code></pre>
+<p>The dataset is loaded as <em>aus2012</em>.</p>
+</div>
+<div id="how-to-create-a-variable-of-z-scores" class="section level1">
+<h1>How to create a variable of z-scores</h1>
+<p>We will make a new variable which is the standardised scores (z-scores) of <em>wrkhrs</em>(hours spent on work per week). <code>std(data name, variable name, append = TRUE)</code> from the <strong>sjmisc</strong> package will add a variable of standardised scores to your dataset. Run the following code.</p>
+<pre class="r"><code>aus2012 &lt;- std(aus2012, wrkhrs, append = TRUE)</code></pre>
+<p>Then, you will see <em>wrkhrs_z</em> added to your dataset. The name of the new variables is always ‘<em>old variable name_z</em>’. Let’s check this newly created variable by running the following code:</p>
+<pre class="r"><code>aus2012 %&gt;%
+  select(&quot;id&quot;, &quot;wrkhrs&quot;, &quot;wrkhrs_z&quot;) %&gt;%
+  head()</code></pre>
+<pre><code>## # A tibble: 6 x 3
+##        id wrkhrs wrkhrs_z
+##     &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+## 1 2.01e15     NA    NA   
+## 2 2.01e15     NA    NA   
+## 3 2.01e15     NA    NA   
+## 4 2.01e15      7    -2.01
+## 5 2.01e15      6    -2.08
+## 6 2.01e15     NA    NA</code></pre>
+<p>Out of the aus2012 dataset, we select three variables: <em>id</em>, <em>wrkhrs</em>, and <em>wrkhrs_z</em> (If you don’t understand, see <a href="https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-specific-variables">Creating a dataset of specific variables</a>. <code>head()</code> shows data for the first six cases. Now you see the original and standardised scores of <em>wrkhrs</em> for the first six cases.</p>
+</div>
+<div id="how-to-compute-the-z-score-of-a-specific-value-and-its-associated-probabilities" class="section level1">
+<h1>How to compute the z-score of a specific value and its associated probabilities</h1>
+<p>In the week 8 lecture, you learned how to calculate the z-score of a specific value and find its associated probabilities using the standard normal table. This section will introduce how to perform this job in R.</p>
+<p>Suppose that you want to get the z-score of respondents who work 50 hours per week and its associated probabilities. To do this, you need to run the following code first. Run this code without changing anything.</p>
+<pre class="r"><code>getZ &lt;- function(v1, v2){
+  score &lt;- (v1 -mean(v2, na.rm = TRUE))/sd(v2, na.rm = TRUE)
+  prob &lt;- pnorm(abs(round(score, digits = 2)))
+  cat(&quot; 1. Z-score for&quot;, v1, &quot;:&quot;, round(score, digits = 2))
+  cat(&quot;\n 2. The area between mean and Z-score (B)&quot;, &quot;:&quot;, round(prob-0.5, digits = 4))
+  cat(&quot;\n 3. The area beyond Z-score (C)&quot;, &quot;:&quot;, 0.5-round(prob-0.5, digits = 4))
+}</code></pre>
+<p>This is a custom code that I made for computing the z-score of a specific value and its associated probabilities. After running this, you will see <code>getZ</code> in the tab of Environment.</p>
+<p>Now, compute the z-score of respondents who work 50 hours per week and its associated probabilities using this function. <code>getZ(value, data name$variable name)</code> shows all the necessary information.</p>
+<pre class="r"><code>getZ(50, aus2012$wrkhrs) </code></pre>
+<pre><code>##  1. Z-score for 50 : 0.82
+##  2. The area between mean and Z-score (B) : 0.2939
+##  3. The area beyond Z-score (C) : 0.2061</code></pre>
+<ul>
+<li>First, it shows the z-score.</li>
+<li>Second, it shows the area between mean and z-score that corresponds to B area in the Standard Normal Table that I posted in week 8.</li>
+<li>Third, it shows the area beyond Z-score that corresponds to C area in the Standard Normal Table.</li>
+</ul>
+</div>
+<div id="how-to-compute-the-confidence-intervals-of-numbers" class="section level1">
+<h1>How to compute the confidence intervals of numbers</h1>
+<p>To compute confidence intervals, we use <code>ci()</code> from the <strong>gmodels</strong> package. ‘<code>ci(data name$variable name, confidence = value, na.rm = TRUE)</code>’ computes the confidence interval of a variable of your choice. For example, you can calculate the confidence interval of <em>wrkhrs</em> using the following code:</p>
+<pre class="r"><code>ci(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE)</code></pre>
+<pre><code>## Warning in ci.numeric(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE): No
+## class or unkown class. Using default calcuation.</code></pre>
+<pre><code>##   Estimate   CI lower   CI upper Std. Error 
+## 37.5182482 36.5568291 38.4796673  0.4899092</code></pre>
+<p>Ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. ‘<code>na.rm = TURE</code>’ means that cases with missing values are excluded in calculating the confidence intervals. ‘<code>confidence = value</code>’ set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.</p>
+<pre class="r"><code>ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)</code></pre>
+<pre><code>##   Estimate   CI lower   CI upper Std. Error 
+## 37.5182482 36.7116392 38.3248571  0.4899092</code></pre>
+</div>
+<div id="how-to-compute-the-confidence-interval-of-proportions" class="section level1">
+<h1>How to compute the confidence interval of proportions</h1>
+<p>The confidence interval of proportions can be computed only for binary variables where values are either 0 or 1. Suppose that we want to calculate the 95% confidence intervals for the proportion of those who agree or strongly agree with the statement that a working mother can establish as warm and secure relationships with her children as a mother who does not work(<em>fechld</em>). First, we need to recode <em>fechld</em> into a binary variable in which 1 = “agree” and 0 = “not agree”. Before doing it, please check the labels for fechld in the codebook of the 2012 AuSSa. The below codes recode <em>fechld</em> in such a way (If you don’t understand them, see <a href="https://methods101.com/docs/soc830_lab_04/#recoding-variables">Recoding variables</a>.</p>
+<pre class="r"><code>aus2012 &lt;- rec(aus2012, fechld, rec = &quot;1:2=1; 3:5=0&quot;, append = TRUE)
+aus2012$fechld_r &lt;- set_labels(aus2012$fechld_r,
+                               labels = c(&quot;agree&quot; = 1, &quot;not agree&quot; = 0))</code></pre>
+<p>Then, run the following code:</p>
+<pre class="r"><code>ci(aus2012$fechld_r, confidence = 0.95, na.rm = TRUE)</code></pre>
+<pre><code>##   Estimate   CI lower   CI upper Std. Error 
+## 0.68343949 0.66040651 0.70647247 0.01174267</code></pre>
+<p>The output shows the 95% confidence interval of the proportion of people who agree or strongly agree with the statement.</p>
+</div>
+<div id="how-to-compute-confidence-intervals-for-sub-groups" class="section level1">
+<h1>How to compute confidence intervals for sub-groups</h1>
+<p>We often need to compute the confidence intervals for sub-groups such as male and female respondents. Suppose that we want to calculate the confidence intervals of working hours per week(<em>wrkhrs</em>) for men and women respectively. The first step is to create a dataset for each sub-groups. You learned how to do this in <a href="https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-a-sub-group">Creating a dataset of a sub-group</a>. The below codes make two datasets, one for male and the other for female respondents.</p>
+<pre class="r"><code>aus2012.m &lt;- aus2012 %&gt;%
+              filter(sex==1)
+aus2012.f &lt;- aus2012 %&gt;%
+  filter(sex==2)</code></pre>
+<p>Then, using these datasets, compute the 90% confidence intervals for men and women. The codes are:</p>
+<pre class="r"><code>ci(aus2012.m$wrkhrs, confidence = 0.9, na.rm = TRUE) # for male</code></pre>
+<pre><code>##   Estimate   CI lower   CI upper Std. Error 
+## 43.7266355 42.6159862 44.8372848  0.6737619</code></pre>
+<pre class="r"><code>ci(aus2012.f$wrkhrs, confidence = 0.9, na.rm = TRUE) # for female</code></pre>
+<pre><code>##   Estimate   CI lower   CI upper Std. Error 
+## 32.5876686 31.5609295 33.6144076  0.6230967</code></pre>
+</div>
+<div id="how-to-visualise-the-confidence-intervals-between-groups" class="section level1">
+<h1>How to visualise the confidence intervals between groups</h1>
+<p>Visualising the confidence intervals between groups could be a good way to examine the relationship between variables of groups and your choice. To do this, we use <code>plotmeans()</code> from the <strong>gplots</strong> package.</p>
+<p>‘<code>plotmeans(variable of your choice ~ to_label(group variable), data = data name, p = values for confidence levels, n.label = FALSE, connect = FALSE, xlab = “Label of X-axis”, ylab = “Label of Y-axis”)</code>’ makes the plot of the confidence interval for all groups. The following code generates a plot of 90% confidence intervals for all gender categories.</p>
+<pre class="r"><code>plotmeans(wrkhrs ~ to_label(sex), data = aus2012, p = 0.90, n.label = FALSE,
+          connect = FALSE, xlab = &quot;Gender&quot;, ylab = &quot;Hours worked per week&quot;)</code></pre>
+<p><img src="/docs/SOC830_lab_07_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>‘<code>n.label = FALSE</code>’ means that the plot does not show the total number of cases for each group. ‘<code>connect = FALSE</code>’ means that the plot does not make lines connected between the average for each group. If you want to draw a connected line, change it into ‘<code>connect = TRUE</code>’.</p>
+<hr />
+<p><span style="color:navy"><strong>Note</strong></span>: If the plot is not displayed correctly (e.g., no confidence intervals), increase the size of plot areas. Move your cursor at the border between plot areas and console (see Figure 1). Then, move up while keeping clicking the left mouse button. This will increase the height of plot areas.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<img src="/img/SOC830_lab07_01.png" alt="Increase the Size of Plot Areas(1)"  />
+<p class="caption">
+Figure 1: Increase the Size of Plot Areas(1)
+</p>
+</div>
+<p>Move your cursor at the border between plot areas and right panes (see Figure 2). Then, move right while keeping clicking the left mouse button. This will increase the width of plot areas.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<img src="/img/SOC830_lab07_02.png" alt="Increase the Size of Plot Areas(2)"  />
+<p class="caption">
+Figure 2: Increase the Size of Plot Areas(2)
+</p>
+</div>
+<hr />
+<p>The R codes you have written so far look like:</p>
+<pre class="r"><code>###############################################################################
+# Lab 7: Normal Distribution &amp; Confidence Interval
+# 6/05/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages.
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(summarytools)
+library(gmodels)
+library(gplots)
+
+# Import the 2012 AuSSA dataset
+aus2012 &lt;- readRDS(&quot;aussa2012.RDS&quot;)
+
+# How to create a variable of z-scores
+aus2012 &lt;- std(aus2012, wrkhrs, append = TRUE)
+
+aus2012 %&gt;%
+  select(&quot;id&quot;, &quot;wrkhrs&quot;, &quot;wrkhrs_z&quot;) %&gt;%
+  head()
+
+# How to compute the z-score of a specific value and its associated probabilities
+getZ &lt;- function(v1, v2){
+  score &lt;- (v1 -mean(v2, na.rm = TRUE))/sd(v2, na.rm = TRUE)
+  prob &lt;- pnorm(abs(round(score, digits = 2)))
+  cat(&quot; 1. Z-score for&quot;, v1, &quot;:&quot;, round(score, digits = 2))
+  cat(&quot;\n 2. The area between mean and Z-score (B)&quot;, &quot;:&quot;, round(prob-0.5, digits = 4))
+  cat(&quot;\n 3. The area beyond Z-score (C)&quot;, &quot;:&quot;, 0.5-round(prob-0.5, digits = 4))
+}
+
+getZ(50, aus2012$wrkhrs) 
+
+# How to compute confidence intervals of numbers
+ci(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE)
+ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)
+
+# How to compute the confidence interval of proportions
+aus2012 &lt;- rec(aus2012, fechld, rec = &quot;1:2=1; 3:5=0&quot;, append = TRUE)
+aus2012$fechld_r &lt;- set_labels(aus2012$fechld_r,
+                               labels = c(&quot;agree&quot; = 1, &quot;not agree&quot; = 0))
+
+ci(aus2012$fechld_r, confidence = 0.95, na.rm = TRUE)
+
+# How to compute confidence intervals for sub-groups
+aus2012.m &lt;- aus2012 %&gt;%
+              filter(sex==1)
+aus2012.f &lt;- aus2012 %&gt;%
+  filter(sex==2)
+
+ci(aus2012.m$wrkhrs, confidence = 0.9, na.rm = TRUE) # for male
+ci(aus2012.f$wrkhrs, confidence = 0.9, na.rm = TRUE) # for female
+
+# How to visualise the confidence intervals between groups
+plotmeans(wrkhrs ~ to_label(sex), data = aus2012, p = 0.90, n.label = FALSE,
+          connect = FALSE, xlab = &quot;Gender&quot;, ylab = &quot;Hours worked per week&quot;)</code></pre>
+<center>
+Last updated on <em>06 May, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>
