@@ -188,6 +188,8 @@ plot_likert(aus2012.working.mom,
            cat.neutral = 3, title = "Attitude toward working mom") 
 ```
 
+You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using '`cat.neutral`' option.
+
 ## Grouped stacked bar graphs
 This time we visualise the distribution of one variable but do it by different groups. Suppose that we want to compare the distribution of _fechld_ between men and women. ‘`sjp.xtab(grouping variable, the name of variable to be compared, bar.pos = “stack”)`’ make this job easier. The following code shows the grouped stacked bar graph of _fechld_ by _sex_.
 
@@ -199,10 +201,10 @@ sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = "stack", show.total = FALSE,
 The margin option sets how percentages are calculated. ‘`margin = “row”`’ computes the percentages of responses for each group.
 
 ## Simple boxplots
-When you want to make a boxplot of one variable, use ‘`sjp.frq(variable name, type = “box”)`’.  The following code makes a boxplot of age in the aus2012 dataset.
+When you want to make a boxplot of one variable, use ‘`plot_frq(variable name, type = “box”)`’.  The following code makes a boxplot of age in the aus2012 dataset.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2012$age, type = "box", axis.title = "Respondent's Age")
+plot_frq(aus2012$age, type = "box", axis.title = "Respondent's Age")
 ```
 
 ## Grouped boxplots
@@ -239,9 +241,9 @@ Then, restart RStudio, load all the packages again and make a grouped boxplot.
 There is no simple code to generate the histograms of one variable by groups.  Thus, we need to create datasets for each group and use them for visualisation. Suppose that we want to plot the histogram of age for male and female respondents, respectively. We use _aus2012.m_ which includes only males and _aus2012.f_ which includes only females that we constructed in the previous section. The following code generates these two histograms.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2012.m$age, type = "hist", title = "Distribution of Age for Males", 
+plot_frq(aus2012.m$age, type = "hist", title = "Distribution of Age for Males", 
   axis.title = "Age", grid.breaks = 10)
-sjp.frq(aus2012.f$age, type = "hist", title = "Distribution of Age for Females", 
+plot_frq(aus2012.f$age, type = "hist", title = "Distribution of Age for Females", 
   axis.title = "Age", grid.breaks = 10)
 ```
 
@@ -361,7 +363,7 @@ sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = "stack", show.total = FALSE,
          margin = "row", coord.flip = TRUE, show.n = FALSE)
 
 # Simple boxplots
-sjp.frq(aus2012$age, type = "box", axis.title = "Respondent's Age")
+plot_frq(aus2012$age, type = "box", axis.title = "Respondent's Age")
 
 # Grouped boxplots
 sjp.grpfrq(aus2012$age, aus2012$sex, type = "box", 
@@ -369,9 +371,9 @@ sjp.grpfrq(aus2012$age, aus2012$sex, type = "box",
 
 
 # Histograms for different groups
-sjp.frq(aus2012.m$age, type = "hist", title = "Distribution of Age for Males", 
+plot_frq(aus2012.m$age, type = "hist", title = "Distribution of Age for Males", 
   axis.title = "Age", grid.breaks = 10)
-sjp.frq(aus2012.f$age, type = "hist", title = "Distribution of Age for Females", 
+plot_frq(aus2012.f$age, type = "hist", title = "Distribution of Age for Females", 
   axis.title = "Age", grid.breaks = 10)
 ```
 

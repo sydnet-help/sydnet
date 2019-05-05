@@ -221,13 +221,13 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
   select(age) %&gt;%
   descr()</code></pre>
 <pre><code>## Descriptive Statistics  
-## aus2012 %&gt;% filter(sex == 1)$age  
+## aus2012$age  
 ## N: 699  
 ## 
 ##                        age
 ## ----------------- --------
 ##              Mean    55.22
-##          Std.Dev.    16.30
+##           Std.Dev    16.30
 ##               Min    18.00
 ##                Q1    44.00
 ##            Median    57.00
@@ -240,19 +240,19 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 ##       SE.Skewness     0.09
 ##          Kurtosis    -0.44
 ##           N.Valid   691.00
-##           % Valid    98.86</code></pre>
+##         Pct.Valid    98.86</code></pre>
 <pre class="r"><code>aus2012 %&gt;%
   filter(sex == 2) %&gt;%
   select(age) %&gt;%
   descr()</code></pre>
 <pre><code>## Descriptive Statistics  
-## aus2012 %&gt;% filter(sex == 2)$age  
+## aus2012$age  
 ## N: 876  
 ## 
 ##                        age
 ## ----------------- --------
 ##              Mean    51.13
-##          Std.Dev.    16.23
+##           Std.Dev    16.23
 ##               Min    18.00
 ##                Q1    39.00
 ##            Median    52.00
@@ -265,7 +265,7 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 ##       SE.Skewness     0.08
 ##          Kurtosis    -0.68
 ##           N.Valid   866.00
-##           % Valid    98.86</code></pre>
+##         Pct.Valid    98.86</code></pre>
 </div>
 </div>
 <div id="how-to-visualise-the-distributions-for-multiple-variables-and-sub-groups" class="section level1">
@@ -289,6 +289,7 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 <pre class="r"><code>plot_likert(aus2012.working.mom,
            cat.neutral = 3, title = &quot;Attitude toward working mom&quot;) </code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-18-1.png" width="1152" /></p>
+<p>You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using ‘<code>cat.neutral</code>’ option.</p>
 </div>
 <div id="grouped-stacked-bar-graphs" class="section level2">
 <h2>Grouped stacked bar graphs</h2>
@@ -300,8 +301,8 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 </div>
 <div id="simple-boxplots" class="section level2">
 <h2>Simple boxplots</h2>
-<p>When you want to make a boxplot of one variable, use ‘<code>sjp.frq(variable name, type = “box”)</code>’. The following code makes a boxplot of age in the aus2012 dataset.</p>
-<pre class="r"><code>sjp.frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)</code></pre>
+<p>When you want to make a boxplot of one variable, use ‘<code>plot_frq(variable name, type = “box”)</code>’. The following code makes a boxplot of age in the aus2012 dataset.</p>
+<pre class="r"><code>plot_frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)</code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 </div>
 <div id="grouped-boxplots" class="section level2">
@@ -323,10 +324,10 @@ When you want to use ‘<code>freq()</code>’ instead of ‘<code>frq()</code>�
 <div id="histograms-for-different-groups" class="section level2">
 <h2>Histograms for different groups</h2>
 <p>There is no simple code to generate the histograms of one variable by groups. Thus, we need to create datasets for each group and use them for visualisation. Suppose that we want to plot the histogram of age for male and female respondents, respectively. We use <em>aus2012.m</em> which includes only males and <em>aus2012.f</em> which includes only females that we constructed in the previous section. The following code generates these two histograms.</p>
-<pre class="r"><code>sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
+<pre class="r"><code>plot_frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
-<pre class="r"><code>sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
+<pre class="r"><code>plot_frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
 <p><img src="/docs/SOC830_lab_06_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
 </div>
@@ -451,7 +452,7 @@ sjp.xtab(aus2012$sex, aus2012$fechld, bar.pos = &quot;stack&quot;, show.total = 
          margin = &quot;row&quot;, coord.flip = TRUE, show.n = FALSE)
 
 # Simple boxplots
-sjp.frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)
+plot_frq(aus2012$age, type = &quot;box&quot;, axis.title = &quot;Respondent&#39;s Age&quot;)
 
 # Grouped boxplots
 sjp.grpfrq(aus2012$age, aus2012$sex, type = &quot;box&quot;, 
@@ -459,12 +460,12 @@ sjp.grpfrq(aus2012$age, aus2012$sex, type = &quot;box&quot;,
 
 
 # Histograms for different groups
-sjp.frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
+plot_frq(aus2012.m$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Males&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)
-sjp.frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
+plot_frq(aus2012.f$age, type = &quot;hist&quot;, title = &quot;Distribution of Age for Females&quot;, 
   axis.title = &quot;Age&quot;, grid.breaks = 10)</code></pre>
 <center>
-Last updated on <em>10 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+Last updated on <em>05 May, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
 </center>
 </div>
 </div>

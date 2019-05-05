@@ -163,50 +163,50 @@ descr(aus2009$age)
 There are many packages to visualise your data in R. In our course I will use _sjPlot_ package because it supports the labels assigned by _sjlabelled_ package and is easy to use. If you want to learn more advanced graphics of R, I recommend using _ggplot2_ package. One good reliable online resource can be found [here](http://www.sthda.com/english/wiki/be-awesome-in-ggplot2-a-practical-guide-to-be-highly-effective-r-software-and-data-visualization).
 
 ## How to make bar graphs
-Bar graphs provide appropriate ways to present nominal or ordinal variables graphically. '`sjp.frq(data name$variable name, type = "bar")`' makes a bar graph of the specified variable. For example, the following code will make a bar graph of _sex_ in _aus2009_:
+Bar graphs provide appropriate ways to present nominal or ordinal variables graphically. '`plot_frq(data name$variable name, type = "bar")`' makes a bar graph of the specified variable. For example, the following code will make a bar graph of _sex_ in _aus2009_:
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$sex, type = "bar")
+plot_frq(aus2009$sex, type = "bar")
 ```
 
 If you want to add the title of a figure, add '`title = "Any title"`' to the code. The following code will add "Gender distribution" as the title of the figure:
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution") 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution") 
 ```
 
 The title of X-axis(R: Sex) is somewhat bizarre. The title of X-axis can be changed by adding '`axis.title = "Any title"`'. I change it into "Gender". Thus, the code is:
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         axis.title = "Gender")  
 ```
 
 If you want to remove percentages of each category at the top of bars, add '`show.prc = FALSE`' to the code.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         show.prc = FALSE)
 ```
 
 If you want to remove frequencies of each category at the top of bars, add '`show.n = FALSE`' to the code.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         show.n = FALSE)
 ```
 
 Next, let's make a bar graph of another variable, _marital_. 
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+plot_frq(aus2009$marital, type = "bar", title = "Marital Status", 
         axis.title = "Marital Status", show.n = FALSE)
 ```
 
 You may notice that one axis label is too long, which makes it difficult to read other labels. So, we will change this long label into a more brief one. To change the axis label, '`axis.labels`' option will be used.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+plot_frq(aus2009$marital, type = "bar", title = "Marital Status", 
         axis.title = "Marital Status", 
         axis.labels = c("Married", "Widowed", "Divorced", 
                         "Separated", "Never Married or Single"), 
@@ -227,27 +227,18 @@ sjp.stackfrq(aus2009$marital, title = "Marital Status",
 
 Note that I changed the label of axis and legend using '`axis.labels`' and '`legend.labels`' option.
 
-'`plot_likert(data name$variable name)`' also can be used for making grouped bar graphs. However, this function is designed specifically for visualising Likert scales. Let me create a grouped bar graph of _richcol_ which uses a Likert scale.
-
-```{r, echo=TRUE, fig.height=5, fig.width=12}
-plot_likert(aus2009$richcol, cat.neutral = 3, 
-            axis.labels = "Only the rich can afford the cost of attending university.")
-```
-
-You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using '`cat.neutral`' option.
-
 ## How to make histograms
 Histograms are used with continuous variables which have many scores. Histograms look like bar graphs, except that the sides of the "bars" touch to form a continuous series.
-To make histograms, use '`sjp.frq(data name$variable name, type = "hist")`'. The following code creates a histogram of _age_.
+To make histograms, use '`plot_frq(data name$variable name, type = "hist")`'. The following code creates a histogram of _age_.
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
+plot_frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
 ```
 
 In this graph, I would like to set the distance between axis labels equal to 10. So, I add '`grid.breaks = 10`' to the code. Thus, the code is:
 
 ```{r, echo=TRUE}
-sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
+plot_frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
         grid.breaks = 10)
 ```
 
@@ -312,18 +303,18 @@ descr(aus2009$age)
 
 # Visualise the distribution
 ## Bar graph
-sjp.frq(aus2009$sex, type = "bar")
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution") # change the title of figure
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar")
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution") # change the title of figure
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         axis.title = "Gender") # change the title of axis
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         show.prc = FALSE) # do not show percentages
-sjp.frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
+plot_frq(aus2009$sex, type = "bar", title = "Gender Distribution", 
         show.n = FALSE) # do not show frequencies
 
-sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+plot_frq(aus2009$marital, type = "bar", title = "Marital Status", 
         axis.title = "Marital Status", show.n = FALSE)
-sjp.frq(aus2009$marital, type = "bar", title = "Marital Status", 
+plot_frq(aus2009$marital, type = "bar", title = "Marital Status", 
         axis.title = "Marital Status", 
         axis.labels = c("Married", "Widowed", "Divorced", 
             "Separated", "Never Married or Single"), 
@@ -334,11 +325,10 @@ sjp.stackfrq(aus2009$marital, title = "Marital Status",
 	axis.labels = "Marital Status",
 	legend.labels =  c("Married", "Widowed", "Divorced", 
         "Separated", "Never Married or Single"))
-plot_likert(aus2009$richcol, cat.neutral = 3, axis.labels = "Only the rich can afford the cost of attending university.")
 
 ## Histogram
-sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
-sjp.frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
+plot_frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age")
+plot_frq(aus2009$age, type = "hist", title = "Distribution of Age", axis.title = "Age",
         grid.breaks = 10) # grid.breks:sets the distance between breaks for the axis
 ```
 

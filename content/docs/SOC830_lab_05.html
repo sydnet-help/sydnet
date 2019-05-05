@@ -202,7 +202,7 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
 ##                     richcol
 ## ----------------- ---------
 ##              Mean      3.22
-##          Std.Dev.      1.22
+##           Std.Dev      1.22
 ##               Min      1.00
 ##                Q1      2.00
 ##            Median      4.00
@@ -215,7 +215,7 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
 ##       SE.Skewness      0.06
 ##          Kurtosis     -1.09
 ##           N.Valid   1492.00
-##           % Valid     97.84</code></pre>
+##         Pct.Valid     97.84</code></pre>
 <p>Please note that incase of ordinal variables, you need to be careful in interpreting the results. For instance, the median value of <em>richcol</em> is 4, which means the median response is “Disagree”.</p>
 <p>The following code will show descriptive statistics of <em>age</em>(continuous variable):</p>
 <pre class="r"><code>descr(aus2009$age)</code></pre>
@@ -226,7 +226,7 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
 ##                         age
 ## ----------------- ---------
 ##              Mean     52.53
-##          Std.Dev.     16.78
+##           Std.Dev     16.78
 ##               Min     17.00
 ##                Q1     41.00
 ##            Median     54.00
@@ -239,37 +239,37 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
 ##       SE.Skewness      0.06
 ##          Kurtosis     -0.68
 ##           N.Valid   1484.00
-##           % Valid     97.31</code></pre>
+##         Pct.Valid     97.31</code></pre>
 </div>
 <div id="how-to-visualise-the-distribution" class="section level1">
 <h1>How to visualise the distribution</h1>
 <p>There are many packages to visualise your data in R. In our course I will use <em>sjPlot</em> package because it supports the labels assigned by <em>sjlabelled</em> package and is easy to use. If you want to learn more advanced graphics of R, I recommend using <em>ggplot2</em> package. One good reliable online resource can be found <a href="http://www.sthda.com/english/wiki/be-awesome-in-ggplot2-a-practical-guide-to-be-highly-effective-r-software-and-data-visualization">here</a>.</p>
 <div id="how-to-make-bar-graphs" class="section level2">
 <h2>How to make bar graphs</h2>
-<p>Bar graphs provide appropriate ways to present nominal or ordinal variables graphically. ‘<code>sjp.frq(data name$variable name, type = &quot;bar&quot;)</code>’ makes a bar graph of the specified variable. For example, the following code will make a bar graph of <em>sex</em> in <em>aus2009</em>:</p>
-<pre class="r"><code>sjp.frq(aus2009$sex, type = &quot;bar&quot;)</code></pre>
+<p>Bar graphs provide appropriate ways to present nominal or ordinal variables graphically. ‘<code>plot_frq(data name$variable name, type = &quot;bar&quot;)</code>’ makes a bar graph of the specified variable. For example, the following code will make a bar graph of <em>sex</em> in <em>aus2009</em>:</p>
+<pre class="r"><code>plot_frq(aus2009$sex, type = &quot;bar&quot;)</code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>If you want to add the title of a figure, add ‘<code>title = &quot;Any title&quot;</code>’ to the code. The following code will add “Gender distribution” as the title of the figure:</p>
-<pre class="r"><code>sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;) </code></pre>
+<pre class="r"><code>plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;) </code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>The title of X-axis(R: Sex) is somewhat bizarre. The title of X-axis can be changed by adding ‘<code>axis.title = &quot;Any title&quot;</code>’. I change it into “Gender”. Thus, the code is:</p>
-<pre class="r"><code>sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+<pre class="r"><code>plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         axis.title = &quot;Gender&quot;)  </code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p>If you want to remove percentages of each category at the top of bars, add ‘<code>show.prc = FALSE</code>’ to the code.</p>
-<pre class="r"><code>sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+<pre class="r"><code>plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         show.prc = FALSE)</code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p>If you want to remove frequencies of each category at the top of bars, add ‘<code>show.n = FALSE</code>’ to the code.</p>
-<pre class="r"><code>sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+<pre class="r"><code>plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         show.n = FALSE)</code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p>Next, let’s make a bar graph of another variable, <em>marital</em>.</p>
-<pre class="r"><code>sjp.frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
+<pre class="r"><code>plot_frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
         axis.title = &quot;Marital Status&quot;, show.n = FALSE)</code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <p>You may notice that one axis label is too long, which makes it difficult to read other labels. So, we will change this long label into a more brief one. To change the axis label, ‘<code>axis.labels</code>’ option will be used.</p>
-<pre class="r"><code>sjp.frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
+<pre class="r"><code>plot_frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
         axis.title = &quot;Marital Status&quot;, 
         axis.labels = c(&quot;Married&quot;, &quot;Widowed&quot;, &quot;Divorced&quot;, 
                         &quot;Separated&quot;, &quot;Never Married or Single&quot;), 
@@ -286,22 +286,17 @@ Let’s caculate the mode of <em>sex</em>, <em>martial</em>, <em>richcol</em>, <
                        &quot;Separated&quot;, &quot;Never Married or Single&quot;))</code></pre>
 <p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-21-1.png" width="1152" /></p>
 <p>Note that I changed the label of axis and legend using ‘<code>axis.labels</code>’ and ‘<code>legend.labels</code>’ option.</p>
-<p>‘<code>plot_likert(data name$variable name)</code>’ also can be used for making grouped bar graphs. However, this function is designed specifically for visualising Likert scales. Let me create a grouped bar graph of <em>richcol</em> which uses a Likert scale.</p>
-<pre class="r"><code>plot_likert(aus2009$richcol, cat.neutral = 3, 
-            axis.labels = &quot;Only the rich can afford the cost of attending university.&quot;)</code></pre>
-<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-22-1.png" width="1152" /></p>
-<p>You may notice that the neutral category (Neither agree nor disagree) is separated from other categories because it is not our primary focus. Thus, you always need to tell which is a neutral category using ‘<code>cat.neutral</code>’ option.</p>
 </div>
 <div id="how-to-make-histograms" class="section level2">
 <h2>How to make histograms</h2>
 <p>Histograms are used with continuous variables which have many scores. Histograms look like bar graphs, except that the sides of the “bars” touch to form a continuous series.
-To make histograms, use ‘<code>sjp.frq(data name$variable name, type = &quot;hist&quot;)</code>’. The following code creates a histogram of <em>age</em>.</p>
-<pre class="r"><code>sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;)</code></pre>
-<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+To make histograms, use ‘<code>plot_frq(data name$variable name, type = &quot;hist&quot;)</code>’. The following code creates a histogram of <em>age</em>.</p>
+<pre class="r"><code>plot_frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;)</code></pre>
+<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p>In this graph, I would like to set the distance between axis labels equal to 10. So, I add ‘<code>grid.breaks = 10</code>’ to the code. Thus, the code is:</p>
-<pre class="r"><code>sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;,
+<pre class="r"><code>plot_frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;,
         grid.breaks = 10)</code></pre>
-<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="/docs/SOC830_lab_05_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <p>The R codes you have written so far look like:</p>
 <pre class="r"><code>################################################################################
 # Week6: Univariate Analysis
@@ -361,18 +356,18 @@ descr(aus2009$age)
 
 # Visualise the distribution
 ## Bar graph
-sjp.frq(aus2009$sex, type = &quot;bar&quot;)
-sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;) # change the title of figure
-sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+plot_frq(aus2009$sex, type = &quot;bar&quot;)
+plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;) # change the title of figure
+plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         axis.title = &quot;Gender&quot;) # change the title of axis
-sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         show.prc = FALSE) # do not show percentages
-sjp.frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
+plot_frq(aus2009$sex, type = &quot;bar&quot;, title = &quot;Gender Distribution&quot;, 
         show.n = FALSE) # do not show frequencies
 
-sjp.frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
+plot_frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
         axis.title = &quot;Marital Status&quot;, show.n = FALSE)
-sjp.frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
+plot_frq(aus2009$marital, type = &quot;bar&quot;, title = &quot;Marital Status&quot;, 
         axis.title = &quot;Marital Status&quot;, 
         axis.labels = c(&quot;Married&quot;, &quot;Widowed&quot;, &quot;Divorced&quot;, 
             &quot;Separated&quot;, &quot;Never Married or Single&quot;), 
@@ -383,14 +378,13 @@ sjp.stackfrq(aus2009$marital, title = &quot;Marital Status&quot;,
     axis.labels = &quot;Marital Status&quot;,
     legend.labels =  c(&quot;Married&quot;, &quot;Widowed&quot;, &quot;Divorced&quot;, 
         &quot;Separated&quot;, &quot;Never Married or Single&quot;))
-plot_likert(aus2009$richcol, cat.neutral = 3, axis.labels = &quot;Only the rich can afford the cost of attending university.&quot;)
 
 ## Histogram
-sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;)
-sjp.frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;,
+plot_frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;)
+plot_frq(aus2009$age, type = &quot;hist&quot;, title = &quot;Distribution of Age&quot;, axis.title = &quot;Age&quot;,
         grid.breaks = 10) # grid.breks:sets the distance between breaks for the axis</code></pre>
 <center>
-Last updated on <em>08 April, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+Last updated on <em>05 May, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
 </center>
 </div>
 </div>
