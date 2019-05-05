@@ -257,10 +257,24 @@ When you want to include R outputs from the window of **Console** (e.g., frequen
 knitr::include_graphics("/img/SOC830_lab06_01.png")
 ```
 
+### If you use Window,
 Open MS Word and right-click. In the paste option, choose “Keep Source Formatting”. 
 
 ```{r, echo=FALSE, fig.cap="Import R Outputs into MS Word", fig.align='center'}
 knitr::include_graphics("/img/SOC830_lab06_02.png")
+```
+
+### If you use Mac,
+Open MS Word and right-click. Choose "Paste".
+
+```{r, echo=FALSE, fig.cap="Import R Outputs into MS Word on Mac (1)", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab06_05.png")
+```
+
+Then, select the copied R outputs. Choose a fixed-width font such as 'Courier New'. If you want, decrease the size of fonts (optional). Set 1.0 for line spacing.
+
+```{r, echo=FALSE, fig.cap="Import R Outputs into MS Word on Mac (2)", fig.align='center'}
+knitr::include_graphics("/img/SOC830_lab06_06.png")
 ```
 
 ## How to include R graphs from the window of Plots
