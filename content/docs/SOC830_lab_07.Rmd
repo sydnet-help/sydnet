@@ -109,7 +109,9 @@ To compute confidence intervals, we use `ci()` from the **gmodels** package. '`c
 ci(aus2012$wrkhrs, confidence = 0.95, na.rm = TRUE)
 ```
 
-Ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. '`na.rm = TURE`' means that cases with missing values are excluded in calculating the confidence intervals. '`confidence = value`' set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.
+In the output, ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. **Estimate** is the mean. **CI Lower** is the lower limit of confidence intervals, and **CI Upper** is the upper limit of confidence intervals. **Std. Error** is a standard error of a variable. In this output, the average is 37.5, the 95% confidence interval is the range between 36.6 and 38.5, and the standard error is 0.49. 
+
+'`na.rm = TURE`' means that cases with missing values are excluded in calculating the confidence intervals. '`confidence = value`' set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.
 
 ```{r, echo=TRUE, warning=FALSE}
 ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)
@@ -174,6 +176,8 @@ Move your cursor at the border between plot areas and right panes (see Figure 2)
 ```{r, echo=FALSE, fig.cap="Increase the Size of Plot Areas(2)", fig.align='center'}
 knitr::include_graphics("/img/SOC830_lab07_02.png")
 ```
+
+After increasing the size of plot areas, run the code for confidence interval plots again. It will show perfect plots.
 
 ---
 

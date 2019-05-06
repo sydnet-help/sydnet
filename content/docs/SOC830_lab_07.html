@@ -103,7 +103,8 @@ library(gplots)</code></pre>
 ## class or unkown class. Using default calcuation.</code></pre>
 <pre><code>##   Estimate   CI lower   CI upper Std. Error 
 ## 37.5182482 36.5568291 38.4796673  0.4899092</code></pre>
-<p>Ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. ‘<code>na.rm = TURE</code>’ means that cases with missing values are excluded in calculating the confidence intervals. ‘<code>confidence = value</code>’ set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.</p>
+<p>In the output, ignore the warning message. This does not affect the outcome. As long as you see the confidence interval, it is fine. <strong>Estimate</strong> is the mean. <strong>CI Lower</strong> is the lower limit of confidence intervals, and <strong>CI Upper</strong> is the upper limit of confidence intervals. <strong>Std. Error</strong> is a standard error of a variable. In this output, the average is 37.5, the 95% confidence interval is the range between 36.6 and 38.5, and the standard error is 0.49.</p>
+<p>‘<code>na.rm = TURE</code>’ means that cases with missing values are excluded in calculating the confidence intervals. ‘<code>confidence = value</code>’ set the confidence level. In this case, we use 0.95 because we want to get 95% confidence intervals. If you want to get the 90% confidence interval, change the value into 0.90 as in the below code.</p>
 <pre class="r"><code>ci(aus2012$wrkhrs, confidence = 0.90, na.rm = TRUE)</code></pre>
 <pre><code>##   Estimate   CI lower   CI upper Std. Error 
 ## 37.5182482 36.7116392 38.3248571  0.4899092</code></pre>
@@ -158,6 +159,7 @@ Figure 1: Increase the Size of Plot Areas(1)
 Figure 2: Increase the Size of Plot Areas(2)
 </p>
 </div>
+<p>After increasing the size of plot areas, run the code for confidence interval plots again. It will show perfect plots.</p>
 <hr />
 <p>The R codes you have written so far look like:</p>
 <pre class="r"><code>###############################################################################
