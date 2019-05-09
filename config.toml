@@ -312,9 +312,10 @@ enableGitInfo = false
   name = "How to Analyse Data"
   weight = 55
 
-[[menu.docs]]
-  name = "SOC224"
-  weight = 65
+
+# [[menu.docs]]
+#  name = "SOC224"
+#  weight = 65
 
 [[menu.docs]]
   name = "SOC830(SOCI702)"
