@@ -59,7 +59,7 @@ It is worth reading the last two paragraph of the **Methods** section of this pa
 4. The authors describe how they checked for **intercoder reliability** and ensured that their coding was **reliable** and **valid** when they describe **"check coding reliability"** and calculating the **"Cohen's kappa"** (which is roughly speaking a form of correlation analysis - testing whether the results of the two coders were similar) 
 5. The authors then describe how they engaged in **selective coding** to extract **"Illustrative quotes"** which are used to present the five qualitative themes in the Results section of the paper.
 
-# Step-by-step guide: But what did they actually do?
+# But what did they actually do?
 
 But in simple terms, what did they actually do to analyse this data? 
 
