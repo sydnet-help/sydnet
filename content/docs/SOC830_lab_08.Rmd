@@ -1,0 +1,131 @@
+---
+title: "SOC830 Lab 8: Testing Hypothesis(t-test)"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 8: Testing Hypothesis(t-test)"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 45
+---
+The eighth lab session covers the following:
+  
+* One Sample t-test
+* Two Sample t-test
+* t-test of Proportion Difference
+
+We will use two packages for this lab. Load them using the following code:
+  
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(sjlabelled)
+library(sjmisc)
+```
+
+```{r eval=FALSE, echo=TRUE}
+library(sjlabelled)
+library(sjmisc)
+```
+
+Also, run the following code. Otherwise, you will see scientific notations (e.g., *2e-16*) instead of numbers in the R output
+
+```{r, echo=TRUE}
+options(digits=5, scipen=15)
+```
+
+# Import the 2012 AuSSa dataset.
+This lab uses the 2012 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code: 
+
+```{r, echo=FALSE}
+aus2012 <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2012.rds"))
+```
+```{r eval=FALSE, echo=TRUE}
+aus2012 <-readRDS("aussa2012.rds")
+```
+
+The dataset is loaded as _aus2012_.
+
+# One-Sample t-test
+The standard working hours per week in Australia is currently 38. Let’s test whether Australians work, on average, less than 38 hours per week. Using a variable of weekly working hours (*wrkhrs*), we will test whether the average working hours of Australians is less than 38 hours. Thus, our research hypothesis is that Australians work, on average, less than 38 hours per week, and the null hypothesis is that Australians work, on average, 38 or more hours per week. Consequently, we will use a <u>**one-tailed t-test**</u>. Also, this is **one-sample t-test** because we compare a sample mean with the population mean.
+To conduct one-sample t-test, ‘`t.test(data name$variable name, mu = a value of comparison)`’ is used. In this test, *mu* is 38 because we compare the average working hours with 38 (hours). Thus, the code is:
+
+```{r, echo=TRUE}
+t.test(aus2012$wrkhrs, mu = 38)
+```
+
+The output shows t-statistic (*t = -0.983*), degree of freedom (*df = 958*), and its p-value (*p-value = 0.33*).  It also shows the average working hours per week in the sample (*mean of X: 37.518*) and 95% confidence interval (*36.577* to *38.480*). Let’s set the significance level (alpha) at .05. The p-value in the output is 0.33, but this is based on two-tailed t-test. <u>**If you want to get a p-value for one-tailed t-test, you need to divide it by two**</u>. Thus, the p-value is 0.165. Since the p-value is greater than alpha (0.165 > 0.05), we fail to reject the null hypothesis. Therefore, it is difficult to argue that Australians work, on average, less than 38 hours per week.
+
+# Two-Sample t-test
+Suppose that we would like to test whether the average working hours are different between men and women. The null hypothesis is that there is no gender difference in average working hours. We use two-sample t-test because we compare the average working hours between two different groups (men and women). Also, this is two-tailed t-test since we do not assume which group works more or less than the other group.
+
+To conduct two-sample t-test, ‘`t.test(data name$name of dependent variable  ~ data name$name of independent variable)`’ is used. In this test, the dependent variable is working hours (*wrkhrs*), and the independent variable is gender (*sex*). Thus, the code is:
+
+```{r, echo=TRUE}
+t.test(aus2012$wrkhrs ~ aus2012$sex)
+```
+
+t-statistic is 12.1, and its p-value is less than 0.0000000000000002. The output also shows the average working hours for men (*mean in group 1 is 43.727*) and for women (*mean in group 2 is 32.588*). Again, let’s set the significance level (alpha) at .05. The p-value is much less than the alpha. As a result, we reject the null hypothesis and conclude that there is a significant gender difference in working hours per week.
+
+# t-test of Proportion Differences
+Suppose that we would like to test whether there is a gender difference in the proportion of people who have a favourable view of cohabitation. For the test, we use *cohabok* which measure whether respondents agree or disagree with the statement that it is all right for a couple to live together without intending to get married. Since *cohabok* uses a Likert-scale ranging from “Strongly disagree” to “Strongly agree”, we need to recode it into a binary variable in which 1 = “agree” and 0 = “not agree”. Then, we will be able to compute the proportion of people who have a favourable view of cohabitation. The following code recode *cohabok* in such a way.
+
+```{r, echo=TRUE}
+aus2012 <- rec(aus2012, cohabok, rec = "1:2=1; 3:5=0", append = TRUE)
+aus2012$cohabok_r <- set_labels(aus2012$cohabok_r, 
+                    labels = c("agree" = 1, "do not agree" = 0))
+```
+
+Let’s conduct two-sample t-test of proportion difference. We test whether there is a significant gender difference in the proportion of people who have a favourable view of cohabitation. Thus, the dependent variable is the newly recoded variable, *cohabok_r*, and the independent variable is gender (*sex*). Run the following code:
+
+```{r, echo=TRUE}
+t.test(aus2012$cohabok_r ~ aus2012$sex)
+```
+
+t-statistic is -3.08 and its p-value is 0.0021. Again, let’s set the significance level (alpha) at .05. The p-value is much less than alpha. As a result, we reject the null hypothesis and conclude that there is a significant gender difference in the proportion of people who have a favourable view of cohabitation
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+###############################################################################
+# Week10: Hypothesis Testing
+# 13/05/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages.
+library(sjlabelled)
+library(sjmisc)
+
+# Run the following code, which will make R to show numbers 
+# instead of scientific notations (such as '2e-16') for tiny values.
+options(digits=5, scipen=15)
+
+# Import the 2012 AuSSA dataset
+aus2012 <- readRDS("aussa2012.RDS")
+
+# One-sample t-test
+# t.test(variable, mu = "a value for the null hypothesis")
+t.test(aus2012$wrkhrs, mu = 38)
+
+# Two-sample t-test
+t.test(aus2012$wrkhrs ~ aus2012$sex)
+
+# t-test of Proportion Differences
+aus2012 <- rec(aus2012, cohabok, rec = "1:2=1; 3:5=0", append = TRUE)
+aus2012$cohabok_r <- set_labels(aus2012$cohabok_r, 
+                    labels = c("agree" = 1, "do not agree" = 0))
+
+t.test(aus2012$cohabok_r ~ aus2012$sex)
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
