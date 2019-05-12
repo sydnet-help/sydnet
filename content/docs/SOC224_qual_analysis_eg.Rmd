@@ -1,5 +1,5 @@
 ---
-title: "SOC224: Qualitative Analysis (Example)"
+title: "SOC224: Qualitative Analysis 2: Example"
 
 lastmod: 2019-05-10T00:00:00.000Z
 
@@ -11,10 +11,10 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Qualitative Analysis (Example)"
+linktitle: "Qual Analysis 2: Example"
 menu:
   docs:
-    parent: SOC224
+    parent: SOC224 Qualitative Analysis
     weight: 20
 ---
 
@@ -56,7 +56,7 @@ It is worth reading the last two paragraph of the **Methods** section of this pa
 1. When the authors say **"thematic analysis was an iterative process"** and that **"initial coding progressed inductively"** they are stating that they did not start with a pre-existing theory or set of categories which they coded the data. Instead the thematic codes developed. From this we know that they start with **open coding** of the newspaper articles. 
 2. When the authors say **"refined through further coding and discussion to produce five key themes"** and **"All articles were then coded for the presence of the five themes"** they are describing how at the end of their **open coding** they developed a **codebook**, and then engaged in **axial coding**. 
 3. These authors present some of their results as **quantitative data**, which is described in the methods when they say that **"prevalence of themes is provided in the Results (table 1)."**
-4. The authors describe how they checked for **intercoder reliability** and ensured that their coding was **reliable** and **valid** when they describe **"check coding reliability"** and calculating the **"Cohen's kappa"** (which is roughly speaking a form of correlation analysis - testing whether the results of the two coders were similar) 
+4. The authors describe how they checked for **intercoder reliability** and ensured that their coding was **reliable** and **valid** when they describe **"check coding reliability"** and calculating the **"Cohen's kappa"** (which is roughly speaking a form of correlation analysis - testing whether the results of the two coders were similar) [Follow this link to read more on Cohen's kappa and intercoder reliability](https://www.dedoose.com/resources/articledetail/interrater_reliability_calculating_kappa)
 5. The authors then describe how they engaged in **selective coding** to extract **"Illustrative quotes"** which are used to present the five qualitative themes in the Results section of the paper.
 
 # But what did they actually do?
@@ -73,7 +73,7 @@ Their data would have been a series of newspaper articles, like this one:
 
 Let's pretend they use microsoft word, and in that case they would have pasted all their articles into one or more word documents.
 
-Below we can see an example of the same article. On the right it is on the internet, viewed through a web browser. On the right is the same article in a Word document.
+Below we can see an example of the same article. On the left it is on the internet, viewed through a web browser. On the right is the same article in a Word document.
 
 ```{r, echo=FALSE, out.width=600,fig.cap="Newspaper article in Word document, next to same article on internet.", fig.align='center'}
 knitr::include_graphics("/img/soc224_qual_analysis_eg_figure_1.png")

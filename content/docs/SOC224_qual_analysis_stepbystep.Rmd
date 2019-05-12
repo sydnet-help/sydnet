@@ -1,5 +1,5 @@
 ---
-title: "SOC224: Qualitative Analysis (Step-by-step)"
+title: "SOC224: Qualitative Analysis 3: Step-by-step (Word)"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,10 +11,10 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Qualitative Analysis (Step-by-step)"
+linktitle: "Qual Analysis 3: Step-by-step (Word)"
 menu:
    docs:
-      parent: SOC224
+      parent: SOC224 Qualitative Analysis
       weight: 30
 
 ---
@@ -50,7 +50,7 @@ As you read, highlight or underline relevant sections.
 
 Have a second word document open next to the notes where you jot down ideas, notes, and start to attempt to work out what the themes and argument for your paper will be. 
 
-# Step 2: Come up with and come up with a preliminary argument for your analysis, based around 3-10 key themes, and put these headings into your note document (a simple codebook)
+# Step 2: Come up with a preliminary argument for your analysis, based around 3-10 key themes, and put these headings into your note document (a simple codebook)
 
 #### 2.1. Come up with an argument and 3-10 themes
 At this stage you want to come up with 
