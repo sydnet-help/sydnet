@@ -1,0 +1,175 @@
+---
+title: "SOC224: Qualitative Analysis 3: Step-by-step (Word)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Qual Analysis 3: Step-by-step (Word)"
+menu:
+   docs:
+      parent: SOC224 Qualitative Analysis
+      weight: 30
+
+---
+
+
+# Summary
+The main method of analysing qualitative data - data like interviews, video footage, letters, etc. - is to code the data into thematic categories. 
+
+This is a step-by-step guide for doing very simple qualitative analysis using two Word documents. 
+
+There are much more advanced software available, such as Dedoose, Atlas.ti, and NVivo. However, to be perfectly honest, you can get 80-90% of qualitative analysis done with just two Word documents, so I suggest you keep your life simple.
+
+I am going to assume for sake of convenience that in your case you are coding up qualitative interviews or short open-ended answers to a survey. However, a similar method would be used for most qualitative data sources.
+
+# Step 1: Read your data, underlining key sections, and making notes in a separate document (open coding).
+
+#### 1.1 Prepare your data
+Your primary data will something like:
+
+1. complete transcripts (if you have recorded and transcribed interviews);
+2. field notes (notes you have typed up from interviews or observation); or
+3. open-ended answers to one or more survey questions (which will probably be in an Excel spreadsheet, downloaded from Qualtrics).
+
+For transcripts and field notes, I would suggest putting them into a Word document. Open-ended survey responses can be left in the Excel file, or transferred to a word document.
+
+#### 1.2 Read your data (or a sample)
+If you have a small number of large transcripts, or a large number of short notes (such as open ended survey questions) then you can read all the transcripts/notes at this stage.
+
+If you have a large number of transcripts, then you should read a sample - maybe 10 to 20 - to get a feel for the data. 
+
+#### 1.3. Highlight, underline, and take notes in a second document
+As you read, highlight or underline relevant sections. 
+
+Have a second word document open next to the notes where you jot down ideas, notes, and start to attempt to work out what the themes and argument for your paper will be. 
+
+# Step 2: Come up with a preliminary argument for your analysis, based around 3-10 key themes, and put these headings into your note document (a simple codebook)
+
+#### 2.1. Come up with an argument and 3-10 themes
+At this stage you want to come up with 
+
+1. your overall argument for your paper, and 
+2. the headings which you will organise your evidence under.
+
+In terms of formulating your argument, remember that virtually all academic arguments have a simple formula:
+
+1. Other people say [theory/explanation I am arguing against].
+2. However, I say [my theory/explanation, which I am arguing for].
+3. Because, [my evidence].
+
+This is called "Belcher's Pre-Fab Thesis Generator".
+
+Sometimes you can skip the first part of the formula (other people say), but remember that you always need to have parts 2 + 3: your explanation, and your evidence.
+
+In the case of qualitative research "your evidence" is going to be the 3-10 key themes (and the explanation and examples that support these themes). Note that these themes can be nested.
+
+Examples 1.1 and 1.2 include a few examples of headings used in qualitative articles.
+
+#### 2.2. Put the theme, definitions, and examples (the simple codebook) in your notes document 
+Once you have chosen your 3-10 headings, write them in your notes document, and include with them a very short definition, and also some example quotes. These headings, definitions, and examples are a simple **codebook**.
+
+**Example 1.1: One of Nick's research projects on migrant workers and threats of repatriation**
+
+1.  Motivation to threaten repatriation
+    1. discipline poor performance
+    1. enforce lowered or delayed pay
+    1. avoid paying medical entitlements
+    1. hide workplace injuries
+2.  How threats of repatriation lead to psychological distress 
+    1. fear of unemployment 
+    1. lack of medical care in their home countries
+    1. need to repay debts 
+    1. need to care for immediate family
+    1. leads to workers running away from employer accommodation
+
+**Example 1.2: Substance Use and Pregnant Women**
+
+1.  Practice style
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+2.  Assessment of substance use
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+3.  Environment and privacy
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+4.  Child protection issues
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+5.  Health of the baby
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+6.  Continuity of care
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+7.  Referral to other services
+    1. As a barrier to disclosure of use
+    1. As a motivator to disclosure of use
+
+# Step 3: Go through your primary data item by item, and cut and paste quotes from the primary data sources under relevant headings (axial coding).
+
+#### 3.1 Review all primary data, placing extracts under theme headings in notes
+At this stage you should have two Word documents open. In one document will be the primary data (such as interview transcript), and in the other will be your notes, with the headings, definitions, and examples.
+
+Your job is to simply read through all of the primary source documents and when you come across relevant quotes/excerpts, cut and paste them into your note document. This can take quite a while. 
+
+_**Note:** If you are taking notes from paper sources, like archival documents, then  type the key information from the documents into your notes document._
+
+This is the main boring repetitive work of qualitative data analysis. But you need to keep your brain switched on, because you need to be constantly thinking about the material you are reading and deciding:
+
+* What is this I am reading? What is it a case of?
+* What argument or theory does this evidence support?
+* Which code/theme does this apply to (if any)?
+* Do I need new codes/themes to capture this evidence?
+
+A couple of tips:
+
+* Remember the same quote/passage might need to be cut and paste under multiple headings. 
+* You will need to keep track of where the quotes came from. The easiest way to do this is to put a little reference at the end of each quote, e.g. [Interview 15], or [Vik #08, male, 29]
+
+#### 3.2 Record an new ideas as memos (analytic memos)
+As you are coding, you may come up with new ideas, reflections, or insights. These should be recorded as analytic memos in your notes. You can either place these at the top or the bottom of your notes (above or below your set of headings). Try to write them as full sentences, so your ideas are clear, and the notes can be understood when you come back to them. 
+
+_As mentioned, while there are specialized computer packages for this coding stage - Dedoose, NVivo, and ATLAS.ti - in all honesty you can get work done with about 80-90% of the efficiency by just using two Word documents open next to each other._
+
+# Step 4: Write up each theme as summary, analysis, and illustrative quotes.
+
+#### 4.1. Confirm your argument still stands, and if not, change it.
+After you have finished reading and 'axial coding' of all your documents, look over your notes, and your analytical memos, and ask "Does my argument still hold? And are my themes still the best way to capture and organise my evidence?"
+
+If the answer is yes, then move onto the next step.
+
+If the answer is no, or "I'm not sure", then this is a good time to rethink your analysis, your argument, and your categories. 
+
+If you need to change your categories, or arguments, then do. If this is a minor change, and you are sure repeating the 'axial coding' would not change the data you have extracted, then you can move to the next step. 
+
+If you have completely changed your argument, then you may need to go back and repeat steps 2 (developing a codebook) and 3 (axial coding) above.
+
+#### 4.2 Go through the material under each heading and reduce the material under each heading to about 100-300 words of summary, analysis, and exemplary quotes.
+
+This next step transforms your huge mass of text into manageable paragraphs and quotes.
+
+Your job in this section is **NOT** to just to paste together the best quotes. 
+
+Your job is to present your evidence (the quotes, or summaries of the quotes) in the context of your argument (and also in the context of arguments you are trying to disprove).
+
+This series of headings becomes your **Results**.
+
+In the Examples 1.3 and 1.4, you can read examples of how other writers have written up their results sections of a qualitative paper. Example 1.3 shows how one theme - Practice Style - is written up. Example 1.4 shows how a table can be a used to summarize qualitative results.
+
+**Example 1.3:  Presentation of Results, substance use during pregnancy.**
+
+<img width='600' src='/img/htad_lesson_01_example_1-3.png'/>
+
+**Example 1.4: Summary of qualitative findings, substance use during pregnancy.**
+
+<img width='600' src='/img/htad_lesson_01_example_1-4.png'/>
+
+

@@ -1,0 +1,191 @@
+---
+title: "SOC224: Qualitative Analysis 1: Theory"
+
+lastmod: 2019-05-10T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Qual Analysis 1: Theory"
+menu:
+  docs:
+    parent: SOC224 Qualitative Analysis
+    weight: 10
+---
+
+# Concepts
+<b style="padding-left: 2em">Qualitative data<br></b>
+<b style="padding-left: 2em">Basic Tools<br></b>
+<b style="padding-left: 4em">Thematic analysis<br></b>
+<b style="padding-left: 6em">Open coding<br></b>
+<b style="padding-left: 6em">Axial coding<br></b>
+<b style="padding-left: 6em">Selective coding<br></b>
+<b style="padding-left: 4em">Analytic memo<br></b>
+<b style="padding-left: 4em">Saturation<br></b>
+<b style="padding-left: 4em">Writing up<br></b>
+<b style="padding-left: 2em">Advanced Tools<br></b>
+<b style="padding-left: 4em">Inductive theorising<br></b>
+<b style="padding-left: 4em">Deductive theorising<br></b>
+<b style="padding-left: 4em">Analytic comparison<br></b>
+<b style="padding-left: 4em">Narrative & sequence analysis<br></b>
+
+# Summary
+
+* The main technique we use to analyse words and images is **thematic analysis**. 
+* To do this we review our primary data closely, and classify it using **codes**, which is a fancy word for names or tags on highlighted sections of text (or images). When we create the codes as we go, this is called **open coding**. When we use a well organised **codebook**, with definitions and examples, this is called **axial coding**. When we just pull out the most important quotes for use in our final text, this is **selective coding**. 
+* **Analytic memos** are notes written by the researcher, for themselves, about the coding process and the patterns they see emerging. 
+* **Saturation** - or more accurately, **theoretical saturation** - occurs when reviewing new documents reveals no new themes (i.e. no new codes). At this point we know we can stop data collection and/or data analysis. 
+* We generally **write up** qualitative analysis by transforming our most important codes or themes into small **sections of our paper** - normally 3 to 10 themes in length, often each a **subheading** - and for each theme we provide a short explanation, and then an illustrative quote (see **selective coding**). 
+* There are a range of more advanced techniques for qualitative analysis, which involve ways of relating your data to your theories (patterns or explanations). **Inductive theorising** involves letting your theory emerge from your data, as you are reviewing it. **Deductive theorising** involves attempting to classify your data into an existing theory, a theory normally found in the existing academic literature. **Analytical comparison** involves comparing cases, with a particular focus on finding the characteristics unique to cases that have a particular outcome. **Narrative or sequence analyses** involve identifying a chain of events or actions or objects that run through a case (or cases). 
+* A range of **software** is available for qualitative analysis, including **NVivo**, **Atlas.ti**, and **Dedoose**, but often **scissors and a highlighter**, or **cutting and pasting into a Word document** are the only tools the qualitative research needs to analyse their data.  
+
+
+# 1. Qualitative data
+**Qualitative data** is words or images which we can't, or don't want to, transform into numbers for mathematical or statistical analysis. Examples of qualitative data include interview transcripts, newspaper articles, paintings, images from the internet, and documents from government or private archives (see Figures 1 and 2 below). 
+
+# 2. Basic tools
+## 2.1 Thematic coding: Finding patterns in your data
+In qualitative analysis, as with quantitative analysis, we (1) closely look at our primary sources; and (2) search for patterns. 
+
+The basic method of searching for patterns in qualitative data is called **thematic analysis** or **thematic coding**. This involves classifying different parts of our data into meaningful categories - categories which we call codes or themes. 
+
+## 2.2 Coding
+### 2.2.1 Open coding: The first read of your data
+Generally we start a **coding** process by engaging in **open coding**, where we develop our own codes inductively, as we first examine the texts or images we are analysing.
+
+Open coding generally involves reading through all your primary source material, highlighting important sections, and attaching a preliminary code to that section.
+
+You are probably very familiar with open coding: We engage in a form of open coding everytime we read a book, and then underline sections and make notes in the margin. If you have borrowed an old, vandalised library book with heavy highlighting, underlining, and notes throughout the book then you have seen other people's attempts at 'open coding'. 
+
+The process of open coding is quite a relaxed and imprecise process - we are often experimenting with ideas, looking for evidence of different theories, and thinking about what type of argument could be made with this data. 
+
+At the end of the open coding process, we generally have a strong preliminary idea about what the data says and what argument we can make in our academic paper.
+
+In the next step, we need to formalise this.
+
+### 2.2.2 Codebook & axial coding: The real analysis 
+The second stage of coding involves recoding our data using a strict set of rules. This process is called **axial coding**.
+
+To do this we first develop a **codebook**. This is a document, where each of our codes has a name, definition, and a series of illustrative examples. 
+
+The codebook provides a more or less objective description of our codes. It means that if someone else coded the same set of data, they would obtain similar results.
+
+### 2.2.4 Selective coding: Picking your illustrative examples  
+At the end of axial coding, our data has been formally coded. 
+
+At this stage, we generally review the results and confirm that the theory or argument we are making is actually correct. 
+
+We then face the issue of how to present our results to a larger audience. 
+
+Some qualitative analysis - particularly those that are based on analysis of media - will transform their coding to graphs and tables - showing the relationships between various codes (such as changes in themes, over years). 
+
+However, most qualitative analysis reports it's results as qualitative data, and the main way it does this is through extracting illustrative examples or excerpts. 
+
+The process of reviewing your data - often reviewing your axial coding - andd extracting illustrative examples is called **selective coding**. 
+
+In most qualitative analysis, these illustrative examples/excerpts are presented to the reader under a series of sub-headings or sections, organised according to theme. Often just one example is used to illustrate a single theme. 
+
+## 2.3 Analytic memos: Storing your random ideas
+As we engage in coding, we often notice patterns or have ideas about the subject we are researching. It is important that the researcher systematically stores these ideas. The place qualitative researchers store these ideas is called **analytic memos**.
+
+Analytic memos are simply notes. They can be notes on paper, or a word document, or in a specialised qualitative analysis program (such as NVivo, Atlas.ti, or Dedoose). Sometimes these notes are just one or two sentences long. Other times they are many pages in length. 
+
+In many cases, these memos eventually become the basis for paragraphs or sections of your final paper or report. 
+
+## 2.4 Saturation: Knowing when you can stop
+One of the problems in qualitative analysis is to know when you have collected and analysed enough data.
+
+Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+
+Analysis of a topic is said to have reached **saturation** when the analysis (i.e. coding) of new data sources (e.g. new interview transcripts, or new newspaper arrticles) reveals no new themes (i.e. no new codes need to be created to capture the data).
+
+At saturation, the themes that arise in new data should be ones you have already included in your coding scheme (i.e. already in your codebook). 
+
+## 2.5 Writing up: Translating for an audience  
+Once we have done our **axial coding** (the second stage of coding) we are generally ready to start writing up our results for an audience.
+
+### 2.5.1 Three to ten themes (subheadings): Not a rule, but almost always true 
+The main way we present qualitative analysis **in a qualitative way** (i.e. as words,  not numbers) is by present our results as:
+
+* series of themes, 
+* organised under a set of subheadings,
+* with illustrative quotes/excerpt. 
+
+While there are no hard and fast rules, most qualitative analysis with have **three to 10 themes (subheadings)**.
+
+### 2.5.2 Theme structure: Subheading, explanation, quote 
+Each theme tends to have a very simple, formulatic structure. Remember the rule of good writing is to express **coordinate ideas in similar form**. 
+
+In qualitative anlaysis, the standardised form is:
+
+* a subheading,
+* a brief introductory/explanatory text which relates the theme to the argument of the paper, and the quote to the theme, and
+* the quote or excerpt.
+
+### 2.5.3 Tables and figures: When you want to turn words into numbers 
+Sometimes it is appropriate to turn your qualitative analysis and coding categories into numbers and figures. 
+
+It is important when you do this, to remember that it should have a very clear purpose.
+
+Also, when you present such qualitative data, remember the limits of your data. 
+
+Often quantitative analysis - cross tabulations, correlation analysis - of qualitative data is not convincing because  of small sample sizes, or biases in the sample. 
+
+# 3 Advanced tools
+While thematic analysis and coding are the fundamental tools of qualitative analysis, there are more advanced and complex ways to approach think about your analysis, including: **inductive theorising**, **deductive theorising**, **analytic comparison**, and **sequence or narrative analysis**.
+
+## 3.1 Inductive theorising: Letting theory emerge from data 
+**Inductive theorising** involves developing your theory (your explanation, your pattern, your coding framework) as you review your primary source documents. 
+
+Inductive theories emerge from your primary sources. Inductive theorising often starts without a clear conception of the explanation, and sometimes not even a clear conception of the question. However, through the process of data collection and analysis the questions, theories, explanations, and categories emerge, and are slowly refined. 
+
+Approaches which use this method include **successive approximation**, and **grounded theory**. 
+
+## 3.2 Deductive theorising: Fitting data to an existing theory  
+**Deductive theorising** involves starting with a theory, and then through the review of your primary source documents, finding examples of your theoretical categories (the **illustrative method**), or comparing and contrasting with a theory (e.g. comparing to an **ideal type**). 
+
+Deductive theory comes from somewhere outside of your primary source documents - perhaps from your imagination, or, more commonly, from the existing academic literature. 
+
+## 3.3 Analytic comparison: Logic and truth tables
+**Analytic comparison** is a method where the cases in your data (whether these cases are as small as individual interviewees, or as large as nation states or revolutions) are organised and compared. 
+
+The goal of analytic comparison is generally to explain some outcome (such as homelessness of an individual, or revolution in a nation-state) based on characteristics of the cases. 
+
+Generally we are looking for characteristics which are similar amongst those with the same outcome (**the method of agreement**), and characteristics which differ across those with different outcomes (**the method of difference**). 
+
+One of the ways analytic comparison is implemented in practice is with a **truth table** - which is very similar to a quantitative data table, with rows being cases, and columns being variables. Variables in truth tables are generally binary, and the objective is to find the causal/independent variables which correlate most strongly with the outcome/dependent variable.
+
+## 3.4 Narrative or sequence analysis: Themes as stages in a process  
+Narrative or sequence analysis involves attempting to identify pathways or sequences of events that run through one or more cases. 
+
+The theory behind the sequence could be deductively derived (i.e. developed before/outside of your empirical data), or inductively derived (i.e. developed through identifying new patterns in your data). 
+
+Narrative or sequence analysis can be very important when analysing single cases (such as a unique historical event, or an account of a single person or single community)
+
+# 4. Software
+There is a large number of software packages developed for qualitative analysis, including **NVivo**, **Atlas.ti**, and **Dedoose**. 
+
+In many cases, the best and fastest way to do qualitative analysis is using either **(1) a photocopier, highlighter, and scissors**; or **(2) cutting and pasting and note taking in a Microsoft Word document**. 
+
+However, dedicated software, like NVivo, Atlas.ti, and Dedoose, have advantages for larger scale projects, including consistency of codes, collaboration across a large number of researchers, and easy extraction of excerpts across multiple documents. 
+
+# Additional Resources
+This introduction does not touch on two important concepts: **intercoder reliability** and **Cohen's Kappa**. 
+
+For further information on this, I recommend the following resources:
+
+[Cohen, J. 1960. A coefficient of agreement for nominal scales. Educational and Psychological Measurement 20 (1): 37-46](http://sci-hub.tw/10.1177/001316446002000104)
+
+[Dedoose.com, 2017. 'Interrater Reliability - Calculating Kappa.' 1 Dec 2017](https://www.dedoose.com/resources/articledetail/interrater_reliability_calculating_kappa)
+
+[De Vries, H., Elliott, M. N., Kanouse, D. E., Teleki, S. S. (2008). Using Pooled Kappa to Summarize Interrater Agreement across Many Items. Field Methods, 20(3), 272-282.](https://www.dedoose.com/publications/using%20pooled%20kappa%20to%20summarize%20interrater%20agreement%20across%20many%20items.pdf)
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
