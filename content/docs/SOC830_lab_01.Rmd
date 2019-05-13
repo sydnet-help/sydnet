@@ -36,7 +36,7 @@ Both R and RStudio are available for Windows, MacOS, and Linux. But make sure th
 ### For MacOS
 1. After clicking on **"Download R for (Mac) OS X"**, click on [**"R-3.5.2.pkg"**](https://cran.csiro.au/bin/macosx/R-3.5.2.pkg)(the most current version in February 2019). 
 2. Execute this file, which will guide you to install R. Leave all default settings in the installation option.
-3. This step is **OPTIONAL**! Go to https://www.xquartz.org. Download [**"XQuartz-2.7.11.dmg"**](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.11.dmg)(the most current version in February 2019). Install this dmg file.
+3. Go to https://www.xquartz.org. Download [**"XQuartz-2.7.11.dmg"**](https://dl.bintray.com/xquartz/downloads/XQuartz-2.7.11.dmg)(the most current version in February 2019). Install this dmg file. If you do not install it, you will not be able to use some packages (e.g., summarytools).
 
 ## Installing RStudio
 1. Go to https://www.rstudio.com.
