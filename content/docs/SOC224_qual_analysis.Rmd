@@ -17,6 +17,7 @@ menu:
     parent: SOC224 Qualitative Analysis
     weight: 10
 ---
+<script async src="//genius.codes"></script>
 
 # Concepts
 <b style="padding-left: 2em">Qualitative data<br></b>
