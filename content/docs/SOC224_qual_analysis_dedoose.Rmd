@@ -18,8 +18,6 @@ menu:
       weight: 40
 
 ---
-<script async src="//genius.codes"></script>
-
 # Introduction
 While many qualitative researchers use nothing more that a word processor, there are not a large number of advanced software tools that can assist with complex qualitative analysis.
 

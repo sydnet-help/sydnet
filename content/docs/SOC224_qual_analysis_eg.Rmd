@@ -17,7 +17,7 @@ menu:
     parent: SOC224 Qualitative Analysis
     weight: 20
 ---
-<script async src="//genius.codes"></script>
+
 # Summary
 We review an article which analyses newspaper coverage of eCigarettes. In reviewing this article, we illustrate thematic analysis of qualitative data.
 
