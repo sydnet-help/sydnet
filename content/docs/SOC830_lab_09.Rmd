@@ -1,0 +1,170 @@
+---
+title: "SOC830 Lab 9: Crosstab & Chi-sqaure Test"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 9: Crosstab & Chi-sqaure Test"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 50
+---
+This ninth lab introduces how to produce a cross-tabulation and how to conduct a Chi-square test of Independence.
+
+We will use three packages for this lab. Load them using the following code:
+  
+```{r eval=TRUE, echo=FALSE, include=FALSE}
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+```
+
+```{r eval=FALSE, echo=TRUE}
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+```
+
+This lab uses the 2012 AuSSa dataset. You can download the file of this dataset in the course website(iLearn). Download the data file and put it in your working directory. Then, run the following code: 
+
+```{r, echo=FALSE}
+aus2012 <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2012.rds"))
+```
+```{r eval=FALSE, echo=TRUE}
+aus2012 <-readRDS("aussa2012.rds")
+```
+
+The dataset is loaded as _aus2012_.
+
+# A Simple Example
+A frequency table is a typical way to describe just one categorical variable. When you want to describe two categorical variables simultaneously, especially their relationship, we need a special type of table called cross-tabulation (or crosstab for short). In a crosstab, the categories of one variable determine the rows of the table, and the categories of the other variable determine the columns. The cells of the table contain the frequency that a particular combination of categories occurred.
+
+Suppose that we are investigating whether there is an association between gender (*sex*) and attitudes toward single parenthood. (*singlpar*). *singlpar* measures the extent to which respondents agree or disagree with the statement that one parent can raise the children as well as two parents together. We assume that gender may influence attitudes. Therefore, we think of gender as independent and attitudes toward single parenthood as dependent variable.
+
+To generate a crosstab and to conduct a Chi-square test, we use ‘`sjt.xtab()`’ from the ‘sjPlot’ package. Use ‘`sjt.xtab(data name$name of dependent, data name$name of independent, show.col.prc =TRUE)`’. ‘`show.col.prc=TRUE`’ adds column percentages to the crosstab. Thus, the following code creates the crosstab of gender (*sex*) and attitudes toward single parenthood (*singlpar*).
+
+```{r, echo=TRUE}
+sjt.xtab(aus2012$singlpar, aus2012$sex, show.col.prc = TRUE)
+```
+
+The output shows the crosstab and its associated Chi-square statistics. Independent variable (sex) is put in the first row, and dependent variable (singlpar) in the first column. The crosstab shows column percentages. Thus, you can easily compare the attitude between men and women. For instance, women (44%) are more likely to agree with the statement than men (25.4%). 
+Below the table, Chi-square statistic and p-value are displayed. Chi-square statistic is 162.659, degree of freedom is 4, and p-value is 0.000. Since p-value is less than .05, gender is significantly associated with attitudes toward single parenthood at alpha = .05.
+
+# More Complex Examples
+When you try to examine bivariate association using a crosstab, it would be a very daunting task if your categorical variable has too many categories or you are using a continuous variable. In this case, you need to recode such variables so that the variables have reduced numbers (normally less than five) of categories. Nonetheless, the reduced categories should still be theoretically meaningful. 
+In this lab, we examine how education, age, and class—which are independent variables— are associated with attitudes toward single parenthood. When you look at these independent variables, you will easily notice that they have so many categories. Education (*degree*) is a categorical variable with seven categories, but we do not need many such categories to examine the association. Age (*age*) and class (*tobpot*) are continuous variables, and therefore, categorising these two variables is a must for creating crosstabs.
+
+## Recoding Variables
+First, let’s recode *age* into a variable of three categories, which are “40 or less = 1”, “41 to 60 =2” and “61 or more = 3”. The following codes perform this task.
+
+```{r, echo=TRUE}
+aus2012 <- rec(aus2012, age, rec = "min:40=1; 41:60=2; 61:max=3", append = TRUE)
+aus2012$age_r <- set_label(aus2012$age_r, label = "Age Category")
+aus2012$age_r <- set_labels(aus2012$age_r, 
+                            labels = c("40 or less" = 1, "41 to 60" = 2, "61 or more" = 3))
+```
+
+Second, let’s make a new education variable which simplifies the categories of degree. “Did not complete High School to Year 10 (1)”, “Completed High School to Year 10 (2)” and “Completed High School to Year 12 (3)” are collapsed into **“High School or less (1)”**. “Trade qualification or apprenticeship (4)” and “Certificate or Diploma (5)” are collapsed into **“Vocational Education & Training (2)”**. “Bachelor Degree (6) and “Postgraduate Degree or Postgraduate Diploma(7)” are collapsed into **“University or more (3)”**. The following codes perform this task.
+
+```{r, echo=TRUE}
+aus2012 <- rec(aus2012, degree, rec = "1:3=1; 4:5=2; 6:7=3", append = TRUE)
+aus2012$degree_r <- set_label(aus2012$degree_r, label = "Education")
+aus2012$degree_r <- set_labels(aus2012$degree_r, 
+                               labels = c("High school or less" = 1, 
+                                          "Vocational Education & Training" = 2, 
+                                          "University or more" = 3))
+```
+
+Lastly, a 10-scale social position variable, *topbot*, is recoded into a variable of class consisting of lower, middle, and upper class. Values from 1 to 5 are collapsed into “lower class (1)”, 6 to 8 into “middle class (2)”, and 9 to 10 into “upper class (3)”. The following codes perform this task.
+
+```{r, echo=TRUE}
+aus2012 <- rec(aus2012, topbot, rec = "1:5=1; 6:8=2; 9:10=3", append = TRUE)
+aus2012$topbot_r <- set_label(aus2012$topbot_r, label = "class")
+aus2012$topbot_r <- set_labels(aus2012$topbot_r, 
+                               labels = c("lower" = 1, "middle" = 2, "upper" = 3))
+```
+
+## Crosstab and Chi-sqaure Test
+Now we are ready to examine the bivariate association. The following codes generate crosstabs of attitudes toward single parenthood (*singlpar*) and age (*age_r*). 
+
+```{r, echo=TRUE}
+sjt.xtab(aus2012$singlpar, aus2012$age_r, show.col.prc = TRUE)
+```
+
+In the crosstab, you can easily notice that younger people are more likely to be in favour of single parenthood than older people. Chi-square is 71.04, and p-value is approximately 0.000, which is much less than .05. Thus, we conclude that age and attitudes toward single parenthood are dependent at alpha = .05. 
+
+The following codes generate crosstabs of attitudes toward single parenthood (*singlpar*) and education (*degree_r*).
+
+```{r, echo=TRUE}
+sjt.xtab(aus2012$singlpar, aus2012$degree_r, show.col.prc = TRUE)
+```
+
+The crosstab does not show a clear pattern of association between the two variables. Chi-square is 6.602, and p-value is 0.580, which is greater than .05. Thus, we conclude that education and attitudes toward single parenthood are independent at alpha = .05. 
+
+The following codes generate crosstabs of attitudes toward single parenthood (*singlpar*) and class (*topbot_r*).
+
+```{r, echo=TRUE}
+sjt.xtab(aus2012$singlpar, aus2012$topbot_r, show.col.prc = TRUE)
+```
+
+Again, the crosstab does not show a clear pattern of association between the two variables. Chi-square is 13.879, and p-value is 0.085, which is greater than .05. Thus, we conclude that class and attitudes toward single parenthood are independent at alpha = .05. 
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+################################################################################
+# Lab 9: Crosstab and Chi-square Test
+# 20/05/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+
+# Import the 2012 AuSSA dataset
+aus2012 <- readRDS("aussa2012.rds")
+
+# A Simple Example
+sjt.xtab(aus2012$singlpar, aus2012$sex, show.col.prc = TRUE)
+
+# More Complex Examples
+# Recode independent variables
+## Age
+aus2012 <- rec(aus2012, age, rec = "min:40=1; 41:60=2; 61:max=3", append = TRUE)
+aus2012$age_r <- set_label(aus2012$age_r, label = "Age Category")
+aus2012$age_r <- set_labels(aus2012$age_r, 
+                            labels = c("40 or less" = 1, "41 to 60" = 2, "61 or more" = 3))
+
+## Education
+aus2012 <- rec(aus2012, degree, rec = "1:3=1; 4:5=2; 6:7=3", append = TRUE)
+aus2012$degree_r <- set_label(aus2012$degree_r, label = "Education")
+aus2012$degree_r <- set_labels(aus2012$degree_r, 
+                               labels = c("High school or less" = 1, 
+                                          "Vocational Education & Training" = 2, 
+                                          "University or more" = 3))
+
+## Social Class
+aus2012 <- rec(aus2012, topbot, rec = "1:5=1; 6:8=2; 9:10=3", append = TRUE)
+aus2012$topbot_r <- set_label(aus2012$topbot_r, label = "class")
+aus2012$topbot_r <- set_labels(aus2012$topbot_r, 
+                               labels = c("lower" = 1, "middle" = 2, "upper" = 3))
+
+# Crosstab & Chi-square test
+sjt.xtab(aus2012$singlpar, aus2012$age_r, show.col.prc = TRUE)
+sjt.xtab(aus2012$singlpar, aus2012$degree_r, show.col.prc = TRUE)
+sjt.xtab(aus2012$singlpar, aus2012$topbot_r, show.col.prc = TRUE)
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
