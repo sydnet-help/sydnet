@@ -308,14 +308,18 @@ enableGitInfo = false
   name = "About"
   weight = 10
 
-[[menu.docs]]
-  name = "How to Analyse Data"
-  weight = 55
-
-
 # [[menu.docs]]
-#  name = "SOC224"
-#  weight = 65
+#  name = "How to Analyse Data"
+#  weight = 55
+
+
+[[menu.docs]]
+ name = "SOC224 Qualitative Analysis"
+ weight = 65
+
+[[menu.docs]]
+ name = "SOC224 Quantitative Analysis"
+ weight = 65
 
 [[menu.docs]]
   name = "SOC830(SOCI702)"

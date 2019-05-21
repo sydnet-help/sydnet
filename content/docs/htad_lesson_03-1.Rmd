@@ -11,17 +11,22 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Lab 3: Descriptive Statistics"
+linktitle: "Quant Analysis 3: Look for errors"
 menu:
    docs:
-      parent: How to Analyse Data
+      parent: SOC224 Quantitative Analysis
       weight: 45
 
 ---
+<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Summary
 
 The first thing you generally want to do with a quantitative data is check you haven't made any major mistakes in entering to transforming the data. 
+ 
+We do this by checking our descriptive statistics, and then looking at the histograms for each variable.
+
+# Step 1: Descriptive Statistics
 
 While there are a large number of checks you could run, a good place to start is simply to generate the descriptive statistics.
 
@@ -33,13 +38,21 @@ By descriptive statistics, we generally mean the following statistics:
 * the maximum
 * the number of missing (or non-missing) cases
 
-# Step 1: Descriptive Statistics
-
-<style> img { padding:1px; border:1px solid #021a40; } </style>
+1. In SPSS go to Analyze > Descriptive Statistics > Descriptives...
 
 ```{r, echo=FALSE, out.width=400, fig.align='center'}
 knitr::include_graphics("/img/htad_lab_03_image_menu_descriptives.png")
 ```
+
+2. In the dialogue box that opens:
+
+a. Select all the variables in the box marked A in the diagram below. You can do this by clicking in the box, and then pressing "Control + A" (Windows) or "Apple + A" (Mac).
+b. Click the button with an arrow (marked 1 in the diagram below).
+c. Click the button "Options..."
+d. In the dialogue which opens ("Descriptives:Options") select mean, Std deviation, Min, Max, SE mean. 
+e. Click "Continue"
+f. Click "OK"
+
 
 ```{r, echo=FALSE, out.width=600, fig.align='center'}
 knitr::include_graphics("/img/htad_lab_03_image_dialogue_descriptives.png")

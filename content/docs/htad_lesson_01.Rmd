@@ -11,10 +11,10 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Lab 1: Installing SPSS"
+linktitle: "Quant Analysis 1: Installing SPSS"
 menu:
    docs:
-      parent: How to Analyse Data
+      parent: SOC224 Quantitative Analysis
       weight: 20
 
 ---
