@@ -314,6 +314,7 @@ enableGitInfo = false
 
 
 [[menu.docs]]
+<<<<<<< HEAD
  name = "SOC224 Qualitative Analysis"
  weight = 65
 
@@ -321,6 +322,11 @@ enableGitInfo = false
  name = "SOC224 Quantitative Analysis"
  weight = 65
 
+=======
+  name = "SOC224 Qualitative Analysis"
+  weight = 60
+  
+>>>>>>> 50f7d115b6916569d7b76eee0217f7565326e766
 [[menu.docs]]
   name = "SOC830(SOCI702)"
   weight = 90
