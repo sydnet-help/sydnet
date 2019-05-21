@@ -18,7 +18,7 @@ menu:
     weight: 10
 ---
 
-# Concepts
+# Concepts 
 <b style="padding-left: 2em">Qualitative data<br></b>
 <b style="padding-left: 2em">Basic Tools<br></b>
 <b style="padding-left: 4em">Thematic analysis<br></b>
