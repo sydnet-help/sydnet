@@ -1,5 +1,5 @@
 ---
-title: "Lesson 2: Downloading your data and making a codebook"
+title: "Lab 2: Downloading your data and making a codebook"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,144 +11,150 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Lesson 2: Downloading your data and making a codebook"
+linktitle: "Lab 2: Downloading your data and making a codebook"
 menu:
    docs:
       parent: How to Analyse Data
-      weight: 40
+      weight: 30
 
 ---
+<style> img { padding:1px; border:1px solid #021a40; } </style>
 
-Summary: Before you analyse a quantitative dataset you need to (Step 1) download the data (generally from Qualtrics), (Step 2) make a codebook and then (Step 3) import your data into SPSS.
+# Summary
+Before you analyse a quantitative dataset you need to 
 
-## STEP 1 - How to download your data from Qualtrics 
+* Step 1: download the data (generally from Qualtrics), 
+* Step 2: make a codebook,  
+* Step 3: clean up your data, and then
+* Step 4: import your data into SPSS.
 
-1) Go to https://smusg.asia.qualtrics.com/ControlPanel/
+# Step 1 - How to download your data from Qualtrics 
 
-2) Type in your User ID and password
+1) Go to https://mqedu.qualtrics.com/
 
-3) Click the Login button
+2) Type in your User ID and Password
 
-<img width='720' src='/img/htad_lesson_02_image_01.png'/>
+3) Click the Sign In button
 
-4) After logging in, scroll down 
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_01.png")
+```
+
+4) After Signing In, scroll down 
 
 5) Click on the name of the survey you want to work on
 
-<img alt = '' width='720' src='/img/htad_lesson_02_image_02.png'/>
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_02.png")
+```
 
-6)  Click the “Reporting” tab
+6)  Click the "Data & Analysis"" tab
 
-<img alt = '' width='700' src='/img/htad_lesson_02_image_03.png'/>
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_03.png")
+```
 
-7)  Click the “Download Data” icon
+7)  Click the "Export & Import" icon, and then select "Export Data"
  
-<img alt = 'my new screenshot' width='700' src='/img/htad_lesson_02_image_04.png'/>
+ ```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_04.png")
+```
 
+8) A dialogue box will open and you will need to make some choices. 
 
-8)  We want to download 2 versions of the data
+My recommendation is to choose:
 
-a.  Coded values where data is seen as 0,1,2,3 for analysis in SPSS after clean up
+* "Use numeric values" 
+* Download as CSV file
+* UNSELECT "Compress data as .zip file"
+* SELECT "Recode seen but unanswered questions as -99" 
 
-b.  Choice text so we know what the 0 or 1 in the coded values version means. E.g. 0=Male; 1=Female
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_05.png")
+```
 
-9)  Leave file format as CSV
+9) Click the Download button
 
-10) Go to Data representation and select coded values
+10) Save dataset on your computer with some relevant name such as "Survey Data.csv"
 
-11) Click the “ Download CSV Data” button
+# Step 2 - Creating a codebook
 
-12) Save dataset as DS#1
+A codebook tells you what the numbers in your dataset actually mean. 
 
-13) Go to Data representation and select choice text
+For example, if you have a "1" in the Gender variable, does it mean Male? Female? Other? or something else? 
+In professional studies, elaborate codebooks are created. 
 
-14) Click the “ Download CSV Data” button
+However, for your data, you just need something to double check the meaning of the numbers in your dataset. 
+So I'm going to teach you a simple method to create a basic codebook.
 
-15) Save dataset as DS#2
+1) On Qualtrics, go to the "Survey" tab, and then select the "Tools" button, and then "Import/Export" and "Export Survey to Word"
 
-<img width='720' src='/img/htad_lesson_02_image_05.png'/>
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_06.png")
+```
 
+2) A dialogue box will open up.
 
-## STEP 2 - Creating a codebook
-A codebook enables other people to understand your data. They will know the descriptive statistics and how each variable is coded.
-There are examples of codebooks that you can use as models in the Dropbox under the folder:
+I recommend using the default options, except:
 
-• /Week 11 and 12 – Datasets/
+* SELECT "Show Survey Flow"
 
-<img width='720' src='/img/htad_lesson_02_image_06.png'/>
-
-The sections of a codebook:
-
-1)  Introduction
-
-This is a description of the data set, how and when it is collected and what the purposes of collecting the data were. It also lists who are the people who collected the dataset and how to cite the dataset properly. You can see an example of an introduction in Example 2.1
-
-#### Example 2.1: A Codebook Introduction
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_07.png")
+```
  
-<img width='720' src='/img/htad_lesson_02_image_07.png'/>
+3)  Click 'Export' and save our file with a sensible name like "Survey Codebook.docx"
 
-2)  Overview of the dataset
+If you open this Word document, you will see how next to each choice for a survey there is a number. For example, in the image below, you can see that "Under 18" is coded as "1".
 
-This tells you the file format of the dataset, the file name and the structure of the data: how many rows and columns.
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_08.png")
+```
 
-#### Example 2.2: Overview of a dataset
+# Step 3 - Cleaning your data
 
-**Dataset: ‘Singapore Sex Dataset’.**
-File format: Excel 2010 file: .xlsx
-File name: 2012, Harrigan, Dataset 5a, Attribute data as excel file.xlsx
-Data structure: 
- * 1112 x 32 matrix + column headings
- * 1112 rows (participants)
- * 35 cols (variables)
+1)  Before you import your data into SPSS, you are probably going to want to clean it up.
 
-3)  Descriptive statistics
+The first step is to open it in Excel. 
 
-This tells you variable name, variable number, minimum, maximum, mean, standard deviation of each variable.
+You are looking for open ended questions which respondants are likely to have put data that SPSS can't analyse. 
 
-#### Example 2.3: Descriptive statistics
+You can see in the image below, the question asks "What is your base hourly wage?" and it provided a text box for people to type in. 
 
-<img width='720' src='/img/htad_lesson_02_image_08.png'/>
+However, the data people have left is messy. Some put dollar signes, most didn't. Some put ranges. Some put "Not sure"
 
-4)  Long descriptions of attribute variables
+You will need to clean this up. The way you want to do this is by having some clear rules, and writing them down in your codebook. 
 
-This section lists each variable in detail. It states the type of variable and the coding of the variable. THIS IS THE MOST IMPORTANT PART OF A CODEBOOK.
+For this, I would suggest the following rules;
 
-#### Example 2.4: Long descriptions of attribute values
+* remove all dollar signs
+* replace ranges with the mean of the two numbers given (e.g. if they say 5-10, then change to 7.5)
+* replace "Not sure" and similar with missing -99
 
-<img width='720' src='/img/htad_lesson_02_image_09.png'/>
+```{r, echo=FALSE, out.width=200, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_09.png")
+```
 
-5)  Sources
+2) After you have cleaned up your data, save it as an excel file (.xlsx). This is needed for importing into SPSS. 
 
-This section lists where the data from the codebook is taken from (if any).
+# Step 4 - Importing into SPSS
 
-6)  References
+1) To get your datafile into iLab, you will need to put your excel file on a USB drive. 
 
-This section lists the references (if any).
+2)  Go into iLab, and then open SPSS (see Lab 1).
 
-Once done with your codebook, you generally save your datasets like this: 
+3)  Close the first dialogue box that opens
 
-1)  [Your Dataset].xlsx (Coded data)
+4)  Go to File > Open > Data 
 
-2)  [Your Dataset].docx (Codebook)
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_10.png")
+```
 
-Note:
-
-• That we have saved the ‘coded values’ not the ‘choice text’ version of the dataset. We used the ‘choice text’ version to make the codebook, but now that we have the codebook, the ‘choice text’ version is redundant.
-
-• That we have saved the data as Excel files. This is needed to import into SPSS.
-
-## STEP 3 – Importing into SPSS
-
-1)  Open SPSS (if you don’t have this installed, go to IITS to get it installed).
-
-2)  Close the first dialogue box that opens
-
-3)  Go to File > Open > Data 
-
-<img width='720' src='/img/htad_lesson_02_image_10.png'/>
- 
-4)  In the dialogue box that opens, change “Files of type” to “Excel”.
+4)  In the dialogue box that opens, change Files of type to Excel.
 
 5)  Navigate to select your dataset.
- 
-<img width='720' src='/img/htad_lesson_02_image_11.png'/>
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_02_image_11.png")
+```

@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Getting a quick feel for your data (Correlation)"
+title: "Lab 3: Eyeballing data for errors (Descriptive Statistics)"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,17 +11,46 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Lab 3: Correlation"
+linktitle: "Lab 3: Descriptive Statistics"
 menu:
    docs:
       parent: How to Analyse Data
-      weight: 50
+      weight: 45
 
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#step-1-descriptive-statistics">Step 1: Descriptive Statistics</a></li>
+<li><a href="#step-2-histograms">Step 2: Histograms</a></li>
+</ul>
+</div>
 
-<p>Summary: The first thing you generally want to do with a quantitative data set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.</p>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>The first thing you generally want to do with a quantitative data is check you haven’t made any major mistakes in entering to transforming the data.</p>
+<p>While there are a large number of checks you could run, a good place to start is simply to generate the descriptive statistics.</p>
+<p>By descriptive statistics, we generally mean the following statistics:</p>
+<ul>
+<li>the mean (average)</li>
+<li>the standard deviation (a measure of variation)</li>
+<li>the minimum</li>
+<li>the maximum</li>
+<li>the number of missing (or non-missing) cases</li>
+</ul>
+</div>
+<div id="step-1-descriptive-statistics" class="section level1">
+<h1>Step 1: Descriptive Statistics</h1>
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<p><img src="/img/htad_lab_03_image_menu_descriptives.png" width="400" style="display: block; margin: auto;" /></p>
+<p><img src="/img/htad_lab_03_image_dialogue_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+<p><img src="/img/htad_lab_03_image_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-2-histograms" class="section level1">
+<h1>Step 2: Histograms</h1>
+<p>set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.</p>
 <ol style="list-style-type: decimal">
 <li>Go to Analyze &gt; Correlate &gt; Bivariate</li>
 </ol>
@@ -55,3 +84,4 @@ menu:
 <li>On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.</li>
 </ol>
 <p><img width='720' src='/img/htad_lesson_03_image_08.png'/></p>
+</div>

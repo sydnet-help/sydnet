@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Getting a quick feel for your data (Correlation)"
+title: "Lab 3: Eyeballing data for errors (Descriptive Statistics)"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,15 +11,49 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Lab 3: Correlation"
+linktitle: "Lab 3: Descriptive Statistics"
 menu:
    docs:
       parent: How to Analyse Data
-      weight: 50
+      weight: 45
 
 ---
 
-Summary: The first thing you generally want to do with a quantitative data set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.
+# Summary
+
+The first thing you generally want to do with a quantitative data is check you haven't made any major mistakes in entering to transforming the data. 
+
+While there are a large number of checks you could run, a good place to start is simply to generate the descriptive statistics.
+
+By descriptive statistics, we generally mean the following statistics:
+
+* the mean (average)
+* the standard deviation (a measure of variation)
+* the minimum
+* the maximum
+* the number of missing (or non-missing) cases
+
+# Step 1: Descriptive Statistics
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_menu_descriptives.png")
+```
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_dialogue_descriptives.png")
+```
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives.png")
+```
+
+# Step 2: Histograms
+
+
+
+set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.
 
 1)  Go to Analyze > Correlate > Bivariate
 
