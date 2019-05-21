@@ -29,6 +29,7 @@ Here you can access the following pages:
 
 * **About**: Under this you will find information about the website, how to contact the creators and how to give feedback
 * **How to Analyse Data**: A guide to analysing both qualitative and quantitative data sets focused on "practical applications of tools"
+* **SOC224**: A Macquarie University undergraduate unit called Methods of Social Research
 * **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
 * **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 
