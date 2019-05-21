@@ -14,8 +14,8 @@ output:
 linktitle: "Quant Analysis: An Introduction"
 menu:
    docs:
-      parent: SOC224 Quantitative Analysis
-      weight: 10
+      parent: SOC224 Quant Analysis
+      weight: 10 
 
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>

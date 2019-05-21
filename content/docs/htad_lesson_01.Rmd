@@ -14,8 +14,8 @@ output:
 linktitle: "Quant Analysis 1: Installing SPSS"
 menu:
    docs:
-      parent: SOC224 Quantitative Analysis
-      weight: 20
+      parent: SOC224 Quant Analysis
+      weight: 20 
 
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
