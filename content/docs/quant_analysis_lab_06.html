@@ -1,0 +1,103 @@
+---
+title: "Lab 6: Constructing and testing an index (Cronbach Alpha)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 6: Indexes"
+menu:
+   docs:
+      parent: SOC224 Quant Analysis
+      weight: 55
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#step-1-getting-all-variables-into-the-same-scale-normalization.">Step 1: Getting all variables into the same scale (normalization).</a></li>
+<li><a href="#step-2-checking-that-the-variables-move-together-reliably-checking-the-cronbach-alpha">Step 2: Checking that the variables move together reliably (Checking the Cronbach Alpha)</a></li>
+<li><a href="#step-3-create-the-index">Step 3: Create the index</a></li>
+</ul>
+</div>
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>If you are analysing a survey, chances are you have many different questions which test for the same underlying theoretical concept.</p>
+<p>When you have this situation, often the best thing to do is to construct an index.</p>
+<p>There are generally three stages to constructing an index:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Normalization</strong> getting all variables onto the same scale (generally done with normalization);</li>
+<li><strong>Checking internal consistency</strong> checking that scales are all moving together in a reliable fashion (generally done by measuring the Cronbach Alpha and making sure it is &gt; 0.6);</li>
+<li><strong>Summing the variables</strong> adding together all the variables into a new variable: the index.</li>
+</ol>
+<p><strong>Note</strong> that you can skip step 1 if your variables are all measured on the same scale (e.g. they are five answers to five point Likert scale).</p>
+</div>
+<div id="step-1-getting-all-variables-into-the-same-scale-normalization." class="section level1">
+<h1>Step 1: Getting all variables into the same scale (normalization).</h1>
+<p>If our variables aren’t measured on the same scale, then the easiest thing to do is to normalize the variables.</p>
+<ol style="list-style-type: decimal">
+<li>Get the descriptive statistics for your variables: Analyse&gt;Descriptive Statistics&gt;Descriptives</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_01a.png" width="300" style="display: block; margin: auto;" /></p>
+<p><img src="/img/htad_lesson_05_image_01b.png" width="500" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Write down the mean and standard deviation for each variable.</p></li>
+<li><p>Go to Transform&gt;Compute Variable</p></li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_02.png" width="300" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>In the dialogue box that comes up, type in a new target variable (in this case v16_normalized), and the normalizing equation:</li>
+</ol>
+<p><span class="math display">\[A^{normalised}_i = (A_i - A_{Mean})/A_{St Dev}\]</span></p>
+<p>Press OK</p>
+<p><img src="/img/htad_lesson_05_image_03.png" width="600" style="display: block; margin: auto;" /></p>
+<p>A new variable will have been created. Take a look and make sure it looks like it has a mean of 0.</p>
+<p><img src="/img/htad_lesson_05_image_04.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>Repeat this process of normalisation with your other variables.</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_04b.png" width="400" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-2-checking-that-the-variables-move-together-reliably-checking-the-cronbach-alpha" class="section level1">
+<h1>Step 2: Checking that the variables move together reliably (Checking the Cronbach Alpha)</h1>
+<ol style="list-style-type: decimal">
+<li>Analyze &gt; Scale &gt; Reliability Analysis</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_05.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Move the new normalized variables to the right side. Then click OK.</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_06.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Read the Cronbach’s Alpha from the output screen.</li>
+</ol>
+<p>How to read this output? The normal cut off for most indexes is 0.6, though it is always better if it is higher than this.</p>
+<p>You can see in our case, the reliability is a bit too low. We probably want to NOT construction an index, but instead treat these as two separate variables.</p>
+<p><img src="/img/htad_lesson_05_image_07.png" width="200" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>If you are interested, at this stage you can check to see how much the normalization improved the Cronbach’s Alpha by running the same test on your original variables (in our case v16 and v17)</li>
+</ol>
+<p>You can see that the Cronbach’s Alpha for our original variables was only 0.368</p>
+<p><img src="/img/htad_lesson_05_image_08.png" width="200" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-3-create-the-index" class="section level1">
+<h1>Step 3: Create the index</h1>
+<ol style="list-style-type: decimal">
+<li>You now create the index by going back to Compute Variable:</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_09.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Create a new variable called ‘index###’ by summing the normalized variables.</li>
+</ol>
+<p><img src="/img/htad_lesson_05_image_10.png" width="400" style="display: block; margin: auto;" /></p>
+</div>

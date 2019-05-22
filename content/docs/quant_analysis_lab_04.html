@@ -1,0 +1,114 @@
+---
+title: "Lab 4: Getting a quick feel for your data (Correlation)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 4: Correlation"
+menu:
+   docs:
+      parent: SOC224 Quant Analysis
+      weight: 55
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#reading">Reading</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#theory">Theory</a></li>
+<li><a href="#pearsons-correlation">Pearsons Correlation</a></li>
+</ul>
+</div>
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<div id="reading" class="section level1">
+<h1>Reading</h1>
+<p>‘Chapter 7: Correlation’ in <a href="https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1446249182">Andy Field, 2017. Discovering Statistics Using IBM SPSS Statistics. Sage.</a></p>
+</div>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>One of the most useful forms of analysis to do with your dataset first is a bi-variate correlation.</p>
+<p>This allows us to see which of our independent varibles are strongly correlated with our dependent (outcome) variable.</p>
+<p>The correct correlation to use is almost always Pearson’s correlation.</p>
+</div>
+<div id="theory" class="section level1">
+<h1>Theory</h1>
+<p>We’re often interested in a simple expression of the relationship between one variable and another.</p>
+<p>We can broadly think about three different ways two variables can be related:</p>
+<ul>
+<li>they can be positively correlated (the more you eat, the fuller you feel) - the first two scatterplots in Figure 1.</li>
+<li>they can be negatively correlated (the more you eat, the less food is on your plate) - the last two scatter plots in Figure 1</li>
+<li>there can be no correlation (the number of sunspots, and how much you eat) - the middle scatterplot in Figure 1</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="/img/quant_analysis_lab_04_image_01b.png" alt="Five different scatter plots. Author: Denis Boigelot. Source: [Wikimedia](https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg)" width="600" />
+<p class="caption">
+Figure 1: Five different scatter plots. Author: Denis Boigelot. Source: <a href="https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg">Wikimedia</a>
+</p>
+</div>
+<p>Correlation coefficients, such as the Pearson correlation coefficient, allow us to put an exact number on the size of the correlation between two variables.</p>
+<p>The formal equation for pearson’s correlation coefficient (also called ‘r’) is</p>
+<p><span class="math display">\[r = \frac{\sum_{i=1}^n (x_i - \bar x)(y_i - \bar y)}{(N-1)s_x s_y}\]</span></p>
+<p><span class="math display">\[ Where:  \]</span> <span class="math display">\[ \bar x = \text{mean of x} \]</span> <span class="math display">\[ \bar y = \text{mean of y} \]</span> <span class="math display">\[ \bar N = \text{number of observations} \]</span> <span class="math display">\[ s_x = \text{standard deviation of x} \]</span> <span class="math display">\[ s_y = \text{standard deviation of y} \]</span></p>
+<p>While this equation may be scary, the general interpretation of correlation coefficients not difficult:</p>
+<ul>
+<li>correlation coefficients vary from -1 to 1</li>
+<li>positive values (i.e. greater than zero, up to 1) represent a positive correlation</li>
+<li>negative values (i.e. less than zero, down to -1) represent a negative correlation</li>
+<li>values close to zero mean that there is no significant relationship between the two variables (the two variables are independent of each other)</li>
+<li>larger values (in absolute terms - closer to 1 or -1) reflect a stronger relationship</li>
+<li>A rule of thumb is that a Pearson’s correlation of 0.1-0.2 represents a weak relationship, 0.3-0.4 a moderate one and 0.5+ a strong relationship (all of these are absolute values).</li>
+</ul>
+<p>Figure 2, below, shows visualisations of different correlation coefficients.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="/img/quant_analysis_lab_04_image_01a.png" alt="Visual illustration of different correlation coefficients. Author: Denis Boigelot. Source: [Wikimedia](https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg)" width="600" />
+<p class="caption">
+Figure 2: Visual illustration of different correlation coefficients. Author: Denis Boigelot. Source: <a href="https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg">Wikimedia</a>
+</p>
+</div>
+</div>
+<div id="pearsons-correlation" class="section level1">
+<h1>Pearsons Correlation</h1>
+<ol style="list-style-type: decimal">
+<li>Go to Analyze &gt; Correlate &gt; Bivariate</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_01.png" width="300" style="display: block; margin: auto;" /></p>
+<p>The left window contains all the variables in your dataset NOT in the correlation. The right window contains all the variables in the correlation.</p>
+<p><img src="/img/quant_analysis_lab_04_image_02.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>For this analysis, you want everything in the analysis. So click on one of the variables in the left window and then press ‘Control + A’. This will ‘select all’.</p></li>
+<li><p>Then click the arrow in the middle of the screen. This will move all the variables to the right.</p></li>
+<li><p>The default options are fine, so then just click “OK”</p></li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_03.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="5" style="list-style-type: decimal">
+<li>You should see a huge, almost unreadable, table like the one below. This version can be useful for identifying correlations between your independent variables.</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_04.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Double click anywhere on the table, and ‘Pivot Table’ should appear</li>
+<li>If the ‘Pivot Trays’ are not showing go to Pivot&gt;Pivot Trays</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_05.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li>The Pivot Trays should appear as below.</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_06.png" width="500" style="display: block; margin: auto;" /></p>
+<ol start="9" style="list-style-type: decimal">
+<li>Click and hold the vertically written word ‘Variables’, and drag it to the top white box on the ‘LAYER’</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_07.png" width="500" style="display: block; margin: auto;" /></p>
+<ol start="10" style="list-style-type: decimal">
+<li>On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_04_image_08.png" width="200" style="display: block; margin: auto;" /></p>
+</div>

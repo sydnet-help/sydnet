@@ -50,8 +50,7 @@ menu:
 </ol>
 <p><img src="/img/htad_lab_03_image_menu_descriptives.png" width="400" style="display: block; margin: auto;" /></p>
 <ol start="2" style="list-style-type: decimal">
-<li>In the dialogue box that opens:</li>
-</ol>
+<li><p>In the dialogue box that opens:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Select all the variables in the box marked A in the diagram below. You can do this by clicking in the box, and then pressing “Control + A” (Windows) or “Apple + A” (Mac).</li>
 <li>Click the button with an arrow (marked 1 in the diagram below).</li>
@@ -59,44 +58,49 @@ menu:
 <li>In the dialogue which opens (“Descriptives:Options”) select mean, Std deviation, Min, Max, SE mean.</li>
 <li>Click “Continue”</li>
 <li>Click “OK”</li>
+</ol></li>
 </ol>
 <p><img src="/img/htad_lab_03_image_dialogue_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>An output window will open with the descriptive statistics table in it (see image below).</li>
+</ol>
+<p>This is how you read the table:</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>N Statistic:</strong> This is the number of valid cases for this variable. Non-valid cases are mostly missing cases, such as people who didn’t answer that question.<br> <strong>What to look for?</strong> You want the number of valid cases to be a sensible number. Often there can be a problem where a zero is coded as missing. This is what seems to have happened for the variable is <em>int_post</em>, which has 1857 valid cases. This variable (<a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">look at the codebook</a>) measures whether people have posted audio, video, or image files online. It has three values: NA = Missing; 0 = Unchecked; 1 = Checked. However, if we look the Minimum and Maximum values for this variable, the min and max are the same - one (1). This suggests there is no variation, and that all Unchecked values were coded as Missing.</li>
+<li><strong>Minimum Statistic &amp; Maximum Statistic:</strong> This is the lowest value and highest of this variable. <br> <strong>What to look for?</strong> You want to check that these make sense. If you have someone who is 140 years old, there is probably a problem. If the youngest age is -999 then you also have a problem.</li>
+<li><strong>Mean Statistic:</strong> This is the mean of across all people in the dataset. You just want to ask if it is sensible.</li>
+<li><strong>Std Deviation Statistic</strong> and <strong>Std Error of Mean:</strong> These are two measures of variability. We will discuss in more detail later.</li>
+</ol>
 <p><img src="/img/htad_lab_03_image_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
 </div>
 <div id="step-2-histograms" class="section level1">
 <h1>Step 2: Histograms</h1>
-<p>set is to run a bi-variate correlation, almost always a Pearson’s correlation. The correlations you are particularly interested in are the correlations between the dependent variable(s) and the main independent variables.</p>
+<p>Another way to look for major mistakes in your dataset is to look at simple histograms of each variable.</p>
+<p>A histogram is a graph of the frequency of different values of a variable.</p>
+<p>Histograms group values into a small number of bins to make it easier to see a pattern.</p>
 <ol style="list-style-type: decimal">
-<li>Go to Analyze &gt; Correlate &gt; Bivariate</li>
+<li>To create histograms go to Analyze &gt; Descriptive Statistics &gt; Frequencies…</li>
 </ol>
-<p><img width='720' src='/img/htad_lesson_03_image_01.png'/></p>
-<p>The left window contains all the variables in your dataset NOT in the correlation. The right window contains all the variables in the correlation.</p>
-<p><img width='720' src='/img/htad_lesson_03_image_02.png'/></p>
+<p><img src="/img/quant_analysis_lab_03_image_menu_frequencies.png" width="400" style="display: block; margin: auto;" /></p>
 <ol start="2" style="list-style-type: decimal">
-<li><p>For this analysis, you want everything in the analysis. So click on one of the variables in the left window and then press “Control + A”. This will ‘select all’.</p></li>
-<li><p>Then click the arrow in the middle of the screen. This will move all the variables to the right.</p></li>
-<li><p>The default options are fine, so then just click ‘OK’</p></li>
+<li>In the dialogue box that opens:
+<ol style="list-style-type: lower-alpha">
+<li>Select all variables (Ctrl+A) in the left box, and click the arrow button to move them to the right.</li>
+<li>Click “Statistics”, and UNSELECT all the options, and click “Continue”.</li>
+</ol></li>
 </ol>
-<p><img width='720' src='/img/htad_lesson_03_image_03.png'/></p>
-<ol start="5" style="list-style-type: decimal">
-<li>You should see a huge, almost unreadable, table like the one below. This version can be useful for identifying correlations between your independent variables.</li>
+<p><img src="/img/quant_analysis_lab_03_image_dialogue_frequencies1.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Click “Charts” and select “Histograms” and then “Continue”</li>
+<li>Click “OK”</li>
 </ol>
-<p><img width='720' src='/img/htad_lesson_03_image_04.png'/></p>
-<ol start="6" style="list-style-type: decimal">
-<li>Double click anywhere on the table, and “Pivot Table” should appear</li>
-<li>If the “Pivot Trays” are not showing go to Pivot&gt;Pivot Trays</li>
+<p><img src="/img/quant_analysis_lab_03_image_dialogue_frequencies2.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>An output window will open, and in it you will see histograms for each of your variables.</li>
 </ol>
-<p><img width='720' src='/img/htad_lesson_03_image_05.png'/></p>
-<ol start="8" style="list-style-type: decimal">
-<li>The Pivot Trays should appear as below.</li>
-</ol>
-<p><img width='720' src='/img/htad_lesson_03_image_06.png'/></p>
-<ol start="9" style="list-style-type: decimal">
-<li>Click and hold the vertically written word “Variables”, and drag it to the top white box on the “LAYER”</li>
-</ol>
-<p><img width='720' src='/img/htad_lesson_03_image_07.png'/></p>
-<ol start="10" style="list-style-type: decimal">
-<li>On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.</li>
-</ol>
-<p><img width='720' src='/img/htad_lesson_03_image_08.png'/></p>
+<p>The y-axis (Frequency) is the number of cases (persons) who have a particular value of the varaible.</p>
+<p>For example, you can see that there are nearly 190 person who have an age of approximately 57-58.</p>
+<p><strong>What to look for?</strong> As with descriptive statistics, you are mainly just looking for things that don’t make sense, such as a large number of cases at some outlying value. What makes sense depends on the variable and the sample. For example, you can see below that <strong>age</strong> and <strong>political knowledge</strong> and <strong>likelihood vote</strong> have very different distributions, but all three of them make sense and seem reasonable.</p>
+<p><img src="/img/quant_analysis_lab_03_image_results_frequencies_age.png" width="500" style="display: block; margin: auto;" /></p>
+<p><img src="/img/quant_analysis_lab_03_image_results_frequencies_pol_know.png" width="500" style="display: block; margin: auto;" /></p>
 </div>

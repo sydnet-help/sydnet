@@ -1,0 +1,133 @@
+---
+title: "Lab 4: Getting a quick feel for your data (Correlation)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 4: Correlation"
+menu:
+   docs:
+      parent: SOC224 Quant Analysis
+      weight: 55
+
+---
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+
+# Reading
+'Chapter 7: Correlation' in [Andy Field, 2017. Discovering Statistics Using IBM SPSS Statistics. Sage.](https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1446249182)
+
+# Introduction
+One of the most useful forms of analysis to do with your dataset first is a bi-variate correlation.
+
+This allows us to see which of our independent varibles are strongly correlated with our dependent (outcome) variable. 
+
+The correct correlation to use is almost always Pearson's correlation. 
+
+# Theory
+
+We're often interested in a simple expression of the relationship between one variable and another. 
+
+We can broadly think about three different ways two variables can be related:
+
+* they can be positively correlated (the more you eat, the fuller you feel) - the first two scatterplots in Figure 1.
+* they can be negatively correlated (the more you eat, the less food is on your plate) - the last two scatter plots in Figure 1 
+* there can be no correlation (the number of sunspots, and how much you eat) - the middle scatterplot in Figure 1
+
+```{r, echo=FALSE, out.width=600, fig.cap="Five different scatter plots. Author: Denis Boigelot. Source: [Wikimedia](https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg)", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_01b.png")
+```
+
+Correlation coefficients, such as the Pearson correlation coefficient, allow us to put an exact number on the size of the correlation between two variables. 
+
+The formal equation for pearson's correlation coefficient (also called 'r') is
+
+$$r = \frac{\sum_{i=1}^n (x_i - \bar x)(y_i - \bar y)}{(N-1)s_x s_y}$$
+
+$$ Where:  $$
+$$ \bar x = \text{mean of x} $$
+$$ \bar y = \text{mean of y} $$
+$$ \bar N = \text{number of observations} $$
+$$ s_x = \text{standard deviation of x} $$
+$$ s_y = \text{standard deviation of y} $$
+
+While this equation may be scary, the general interpretation of correlation coefficients not difficult:
+
+* correlation coefficients vary from -1 to 1
+* positive values (i.e. greater than zero, up to 1) represent a positive correlation
+* negative values (i.e. less than zero, down to -1) represent a negative correlation
+* values close to zero mean that there is no significant relationship between the two variables (the two variables are independent of each other)
+* larger values (in absolute terms - closer to 1 or -1) reflect a stronger relationship
+* A rule of thumb is that a Pearson's correlation of 0.1-0.2 represents a weak relationship, 0.3-0.4 a moderate one and 0.5+ a strong relationship (all of these are absolute values).
+
+Figure 2, below, shows visualisations of different correlation coefficients.
+
+```{r, echo=FALSE, out.width=600, fig.cap="Visual illustration of different correlation coefficients. Author: Denis Boigelot. Source: [Wikimedia](https://commons.wikimedia.org/wiki/File:Correlation_examples2.svg)", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_01a.png")
+```
+
+
+
+
+# Pearsons Correlation
+
+1)  Go to Analyze > Correlate > Bivariate
+
+```{r, echo=FALSE, out.width=300, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_01.png")
+```
+
+The left window contains all the variables in your dataset NOT in the correlation. The right window contains all the variables in the correlation.
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_02.png")
+```
+
+2)  For this analysis, you want everything in the analysis. So click on one of the variables in the left window and then press 'Control + A'. This will 'select all'.
+
+3)  Then click the arrow in the middle of the screen. This will move all the variables to the right.
+
+4)  The default options are fine, so then just click "OK"
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_03.png")
+```
+
+5)  You should see a huge, almost unreadable, table like the one below. This version can be useful for identifying correlations between your independent variables.
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_04.png")
+```
+
+6)  Double click anywhere on the table, and 'Pivot Table' should appear
+7)  If the 'Pivot Trays' are not showing go to Pivot>Pivot Trays
+
+```{r, echo=FALSE, out.width=600, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_05.png")
+```
+
+8)  The Pivot Trays should appear as below. 
+
+```{r, echo=FALSE, out.width=500, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_06.png")
+```
+
+9)  Click and hold the vertically written word 'Variables', and drag it to the top white box on the 'LAYER'
+
+```{r, echo=FALSE, out.width=500, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_07.png")
+```
+
+10) On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.
+
+```{r, echo=FALSE, out.width=200, fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_04_image_08.png")
+```
+
+
