@@ -69,7 +69,7 @@ Our goal is to replicate some of the analysis from this paper:
 <b style="padding-left: 2em">participation in Australia, _Journal of Youth Studies_, 19:9, 1220-1236, <br></b>
 <b style="padding-left: 2em">DOI: 10.1080/13676261.2016.1154936<br></b>
 
-**Dataset:** You can download a shortened dataset I've created by [clicking here.](/data/elect_2013.xlsx)<br>
+**Dataset:** You can download a shortened dataset I've created by [clicking here.](/data/elect_2013.sav)<br>
 **Codebook:** You can go to the codebook for this shortened dataset by [clicking here.](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html)
 
 The full original data can be found by following the links below to:
