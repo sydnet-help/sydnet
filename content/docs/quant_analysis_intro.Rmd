@@ -1,5 +1,5 @@
 ---
-title: "How to Analyse Data: Introduction"
+title: "Quantitative Analysis: An Introduction"
 
 lastmod: 2018-12-30T00:00:00
 
