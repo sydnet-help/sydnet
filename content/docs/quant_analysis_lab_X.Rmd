@@ -1,7 +1,7 @@
 ---
-title: "Lab X: Practice Datasets"
+title: "Practice Datasets"
 
-lastmod: 2018-12-30T00:00:00
+lastmod: 2019-05-24T00:00:00
 
 draft: false
 type: docs
@@ -9,9 +9,9 @@ maths: true
 
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 
-linktitle: "Quant Analysis X: Practice Datasets"
+linktitle: "Practice Datasets"
 menu:
    docs:
       parent: SOC224 SPSS Intro
@@ -20,17 +20,24 @@ menu:
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
 
-# Practice Datasets
+**Australian Electoral Study 2013 - Reduced**<br>
+[Dataset - Excel](/data/elect_2013.xlsx)<br>
+[Dataset - SPSS Data file](/data/elect_2013.sav)<br>
+[Codebook](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html)
 
-[Dataset 1 Pornography](/docs/Codebook 1 Pornography .docx)<br>
-[Codebook 1 Pornography](/docs/Dataset 1 Pornography.xlsx)
+**Pornography Dataset**<br>
+[Dataset](/data/Dataset 1 Pornography.xlsx)<br>
+[Codebook](/data/Codebook 1 Pornography .docx)
 
-[Dataset 3 Singaporean Sex](/docs/Dataset 3 Singaporean Sex .xlsx)<br>
-[Codebook 3 Singapore Sex](/docs/Codebook 3 Singapore Sex.docx)
+**Singapore Sex Dataset**<br>
+[Dataset](/data/Dataset 3 Singaporean Sex .xlsx)<br>
+[Codebook](/data/Codebook 3 Singapore Sex.docx)
 
-[Dataset 4 Cheating](/docs/Dataset 4 Cheating.xlsx)<br>
-[Codebook 4 Cheating](/docs/Codebook 4 Cheating.docx)
+**Cheating Dataset**<br>
+[Dataset](/data/Dataset 4 Cheating.xlsx)<br>
+[Codebook](/data/Codebook 4 Cheating.docx)
 
-[Dataset 5 Territorial Change](/docs/Dataset 5 Territorial_change.xls)<br>
-[Codebook 5 Territorial Change](/docs/Codebook 5 Territorial_change.docx)
+**Territorial Change Dataset**<br>
+[Dataset](/docs/Dataset 5 Territorial_change.xls)<br>
+[Codebook](/docs/Codebook 5 Territorial_change.docx)
 
