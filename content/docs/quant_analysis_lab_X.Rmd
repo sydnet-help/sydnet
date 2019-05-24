@@ -38,6 +38,6 @@ menu:
 [Codebook](/data/Codebook 4 Cheating.docx)
 
 **Territorial Change Dataset**<br>
-[Dataset](/docs/Dataset 5 Territorial_change.xls)<br>
-[Codebook](/docs/Codebook 5 Territorial_change.docx)
+[Dataset](/data/Dataset 5 Territorial_change.xls)<br>
+[Codebook](/data/Codebook 5 Territorial_change.docx)
 
