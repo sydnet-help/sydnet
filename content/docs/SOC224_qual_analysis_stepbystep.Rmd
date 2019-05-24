@@ -14,7 +14,7 @@ output:
 linktitle: "Qual Analysis 3: Step-by-step (Word)"
 menu:
    docs:
-      parent: SOC224 Qualitative Analysis
+      parent: SOC224 Qual Analysis
       weight: 30
 
 ---

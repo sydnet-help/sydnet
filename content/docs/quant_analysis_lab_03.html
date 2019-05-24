@@ -1,0 +1,106 @@
+---
+title: "Lab 3: Eyeballing data for errors (Descriptive Statistics)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 3: Look for errors"
+menu:
+   docs:
+      parent: SOC224 SPSS Intro
+      weight: 45
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#step-1-descriptive-statistics">Step 1: Descriptive Statistics</a></li>
+<li><a href="#step-2-histograms">Step 2: Histograms</a></li>
+</ul>
+</div>
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>The first thing you generally want to do with a quantitative data is check you haven’t made any major mistakes in entering to transforming the data.</p>
+<p>We do this by checking our descriptive statistics, and then looking at the histograms for each variable.</p>
+</div>
+<div id="step-1-descriptive-statistics" class="section level1">
+<h1>Step 1: Descriptive Statistics</h1>
+<p>While there are a large number of checks you could run, a good place to start is simply to generate the descriptive statistics.</p>
+<p>By descriptive statistics, we generally mean the following statistics:</p>
+<ul>
+<li>the mean (average)</li>
+<li>the standard deviation (a measure of variation)</li>
+<li>the minimum</li>
+<li>the maximum</li>
+<li>the number of missing (or non-missing) cases</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>In SPSS go to Analyze &gt; Descriptive Statistics &gt; Descriptives…</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_menu_descriptives.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>In the dialogue box that opens:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Select all the variables in the box marked A in the diagram below. You can do this by clicking in the box, and then pressing “Control + A” (Windows) or “Apple + A” (Mac).</li>
+<li>Click the button with an arrow (marked 1 in the diagram below).</li>
+<li>Click the button “Options…”</li>
+<li>In the dialogue which opens (“Descriptives:Options”) select mean, Std deviation, Min, Max, SE mean.</li>
+<li>Click “Continue”</li>
+<li>Click “OK”</li>
+</ol></li>
+</ol>
+<p><img src="/img/htad_lab_03_image_dialogue_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>An output window will open with the descriptive statistics table in it (see image below).</li>
+</ol>
+<p>This is how you read the table:</p>
+<ol style="list-style-type: lower-alpha">
+<li><strong>N Statistic:</strong> This is the number of valid cases for this variable. Non-valid cases are mostly missing cases, such as people who didn’t answer that question.<br> <strong>What to look for?</strong> You want the number of valid cases to be a sensible number. Often there can be a problem where a zero is coded as missing. This is what seems to have happened for the variable is <em>int_post</em>, which has 1857 valid cases. This variable (<a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">look at the codebook</a>) measures whether people have posted audio, video, or image files online. It has three values: NA = Missing; 0 = Unchecked; 1 = Checked. However, if we look the Minimum and Maximum values for this variable, the min and max are the same - one (1). This suggests there is no variation, and that all Unchecked values were coded as Missing.</li>
+<li><strong>Minimum Statistic &amp; Maximum Statistic:</strong> This is the lowest value and highest of this variable. <br> <strong>What to look for?</strong> You want to check that these make sense. If you have someone who is 140 years old, there is probably a problem. If the youngest age is -999 then you also have a problem.</li>
+<li><strong>Mean Statistic:</strong> This is the mean of across all people in the dataset. You just want to ask if it is sensible.</li>
+<li><strong>Std Deviation Statistic</strong> and <strong>Std Error of Mean:</strong> These are two measures of variability. We will discuss in more detail later.</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-2-histograms" class="section level1">
+<h1>Step 2: Histograms</h1>
+<p>Another way to look for major mistakes in your dataset is to look at simple histograms of each variable.</p>
+<p>A histogram is a graph of the frequency of different values of a variable.</p>
+<p>Histograms group values into a small number of bins to make it easier to see a pattern.</p>
+<ol style="list-style-type: decimal">
+<li>To create histograms go to Analyze &gt; Descriptive Statistics &gt; Frequencies…</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_03_image_menu_frequencies.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>In the dialogue box that opens:
+<ol style="list-style-type: lower-alpha">
+<li>Select all variables (Ctrl+A) in the left box, and click the arrow button to move them to the right.</li>
+<li>Click “Statistics”, and UNSELECT all the options, and click “Continue”.</li>
+</ol></li>
+</ol>
+<p><img src="/img/quant_analysis_lab_03_image_dialogue_frequencies1.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Click “Charts” and select “Histograms” and then “Continue”</li>
+<li>Click “OK”</li>
+</ol>
+<p><img src="/img/quant_analysis_lab_03_image_dialogue_frequencies2.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>An output window will open, and in it you will see histograms for each of your variables.</li>
+</ol>
+<p>The y-axis (Frequency) is the number of cases (persons) who have a particular value of the varaible.</p>
+<p>For example, you can see that there are nearly 190 person who have an age of approximately 57-58.</p>
+<p><strong>What to look for?</strong> As with descriptive statistics, you are mainly just looking for things that don’t make sense, such as a large number of cases at some outlying value. What makes sense depends on the variable and the sample. For example, you can see below that <strong>age</strong> and <strong>political knowledge</strong> and <strong>likelihood vote</strong> have very different distributions, but all three of them make sense and seem reasonable.</p>
+<p><img src="/img/quant_analysis_lab_03_image_results_frequencies_age.png" width="500" style="display: block; margin: auto;" /></p>
+<p><img src="/img/quant_analysis_lab_03_image_results_frequencies_pol_know.png" width="500" style="display: block; margin: auto;" /></p>
+</div>

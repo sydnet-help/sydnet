@@ -1,0 +1,140 @@
+---
+title: "Lab 2: Download + import your data + make a codebook"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 2: Import your data"
+menu:
+   docs:
+      parent: SOC224 SPSS Intro
+      weight: 30
+
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#step-1---how-to-download-your-data-from-qualtrics">Step 1 - How to download your data from Qualtrics</a></li>
+<li><a href="#step-2---creating-a-codebook">Step 2 - Creating a codebook</a></li>
+<li><a href="#step-3---cleaning-your-data">Step 3 - Cleaning your data</a></li>
+<li><a href="#step-4---importing-into-spss">Step 4 - Importing into SPSS</a></li>
+</ul>
+</div>
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>Before you analyse a quantitative dataset you need to</p>
+<ul>
+<li>Step 1: download the data (generally from Qualtrics),</li>
+<li>Step 2: make a codebook,<br />
+</li>
+<li>Step 3: clean up your data, and then</li>
+<li>Step 4: import your data into SPSS.</li>
+</ul>
+</div>
+<div id="step-1---how-to-download-your-data-from-qualtrics" class="section level1">
+<h1>Step 1 - How to download your data from Qualtrics</h1>
+<ol style="list-style-type: decimal">
+<li><p>Go to <a href="https://mqedu.qualtrics.com/" class="uri">https://mqedu.qualtrics.com/</a></p></li>
+<li><p>Type in your User ID and Password</p></li>
+<li><p>Click the Sign In button</p></li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_01.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>After Signing In, scroll down</p></li>
+<li><p>Click on the name of the survey you want to work on</p></li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_02.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="6" style="list-style-type: decimal">
+<li>Click the “Data &amp; Analysis”&quot; tab</li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_03.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="7" style="list-style-type: decimal">
+<li>Click the “Export &amp; Import” icon, and then select “Export Data”</li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_04.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="8" style="list-style-type: decimal">
+<li>A dialogue box will open and you will need to make some choices.</li>
+</ol>
+<p>My recommendation is to choose:</p>
+<ul>
+<li>“Use numeric values”</li>
+<li>Download as CSV file</li>
+<li>UNSELECT “Compress data as .zip file”</li>
+<li>SELECT “Recode seen but unanswered questions as -99”</li>
+</ul>
+<p><img src="/img/htad_lesson_02_image_05.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="9" style="list-style-type: decimal">
+<li><p>Click the Download button</p></li>
+<li><p>Save dataset on your computer with some relevant name such as “Survey Data.csv”</p></li>
+</ol>
+</div>
+<div id="step-2---creating-a-codebook" class="section level1">
+<h1>Step 2 - Creating a codebook</h1>
+<p>A codebook tells you what the numbers in your dataset actually mean.</p>
+<p>For example, if you have a “1” in the Gender variable, does it mean Male? Female? Other? or something else? In professional studies, elaborate codebooks are created.</p>
+<p>However, for your data, you just need something to double check the meaning of the numbers in your dataset. So I’m going to teach you a simple method to create a basic codebook.</p>
+<ol style="list-style-type: decimal">
+<li>On Qualtrics, go to the “Survey” tab, and then select the “Tools” button, and then “Import/Export” and “Export Survey to Word”</li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_06.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>A dialogue box will open up.</li>
+</ol>
+<p>I recommend using the default options, except:</p>
+<ul>
+<li>SELECT “Show Survey Flow”</li>
+</ul>
+<p><img src="/img/htad_lesson_02_image_07.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Click ‘Export’ and save our file with a sensible name like “Survey Codebook.docx”</li>
+</ol>
+<p>If you open this Word document, you will see how next to each choice for a survey there is a number. For example, in the image below, you can see that “Under 18” is coded as “1”.</p>
+<p><img src="/img/htad_lesson_02_image_08.png" width="600" style="display: block; margin: auto;" /></p>
+</div>
+<div id="step-3---cleaning-your-data" class="section level1">
+<h1>Step 3 - Cleaning your data</h1>
+<ol style="list-style-type: decimal">
+<li>Before you import your data into SPSS, you are probably going to want to clean it up.</li>
+</ol>
+<p>The first step is to open it in Excel.</p>
+<p>You are looking for open ended questions which respondants are likely to have put data that SPSS can’t analyse.</p>
+<p>You can see in the image below, the question asks “What is your base hourly wage?” and it provided a text box for people to type in.</p>
+<p>However, the data people have left is messy. Some put dollar signes, most didn’t. Some put ranges. Some put “Not sure”</p>
+<p>You will need to clean this up. The way you want to do this is by having some clear rules, and writing them down in your codebook.</p>
+<p>For this, I would suggest the following rules;</p>
+<ul>
+<li>remove all dollar signs</li>
+<li>replace ranges with the mean of the two numbers given (e.g. if they say 5-10, then change to 7.5)</li>
+<li>replace “Not sure” and similar with missing -99</li>
+</ul>
+<p><img src="/img/htad_lesson_02_image_09.png" width="200" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>After you have cleaned up your data, save it as an excel file (.xlsx). This is needed for importing into SPSS.</li>
+</ol>
+</div>
+<div id="step-4---importing-into-spss" class="section level1">
+<h1>Step 4 - Importing into SPSS</h1>
+<ol style="list-style-type: decimal">
+<li><p>To get your datafile into iLab, you will need to put your excel file on a USB drive.</p></li>
+<li><p>Go into iLab, and then open SPSS (see Lab 1).</p></li>
+<li><p>Close the first dialogue box that opens</p></li>
+<li><p>Go to File &gt; Open &gt; Data</p></li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_10.png" width="600" style="display: block; margin: auto;" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li><p>In the dialogue box that opens, change Files of type to Excel.</p></li>
+<li><p>Navigate to select your dataset.</p></li>
+</ol>
+<p><img src="/img/htad_lesson_02_image_11.png" width="600" style="display: block; margin: auto;" /></p>
+</div>

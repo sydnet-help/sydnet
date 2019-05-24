@@ -1,0 +1,124 @@
+---
+title: "Lab 6: Constructing and testing an index (Cronbach Alpha)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Quant Analysis 6: Indexes"
+menu:
+   docs:
+      parent: SOC224 SPSS Intro
+      weight: 55
+
+---
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+
+# Summary
+If you are analysing a survey, chances are you have many different questions which test for the same underlying theoretical concept. 
+
+When you have this situation, often the best thing to do is to construct an index. 
+
+There are generally three stages to constructing an index: 
+
+1. **Normalization** getting all variables onto the same scale (generally done with normalization); 
+2. **Checking internal consistency** checking that scales are all moving together in a reliable fashion (generally done by measuring the Cronbach Alpha and making sure it is > 0.6);
+3. **Summing the variables** adding together all the variables into a new variable: the index.
+
+**Note** that you can skip step 1 if your variables are all measured on the same scale (e.g. they are five answers to five point Likert scale).
+
+# Step 1: Getting all variables into the same scale (normalization).
+
+If our variables aren't measured on the same scale, then the easiest thing to do is to normalize the variables. 
+
+1)  Get the descriptive statistics for your variables: Analyse>Descriptive Statistics>Descriptives
+
+```{r, echo=FALSE, out.width=300, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_01a.png")
+```
+
+```{r, echo=FALSE, out.width=500, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_01b.png")
+```
+
+2)  Write down the mean and standard deviation for each variable. 
+
+3)  Go to Transform>Compute Variable
+
+```{r, echo=FALSE, out.width=300, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_02.png")
+```
+
+4)  In the dialogue box that comes up, type in a new target variable (in this case v16_normalized), and the normalizing equation: 
+
+$$A^{normalised}_i = (A_i - A_{Mean})/A_{St Dev}$$
+
+Press OK
+
+```{r, echo=FALSE, out.width=600, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_03.png")
+```
+
+A new variable will have been created. Take a look and make sure it looks like it has a mean of 0.
+
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_04.png")
+```
+ 
+5.  Repeat this process of normalisation with your other variables.
+
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_04b.png")
+```
+
+# Step 2: Checking that the variables move together reliably (Checking the Cronbach Alpha)
+
+1)  Analyze > Scale > Reliability Analysis
+
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_05.png")
+```
+
+2)  Move the new normalized variables to the right side. Then click OK.
+
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_06.png")
+```
+
+3)  Read the Cronbach's Alpha from the output screen.
+
+How to read this output? The normal cut off for most indexes is 0.6, though it is always better if it is higher than this.
+
+You can see in our case, the reliability is a bit too low. We probably want to NOT construction an index, but instead treat these as two separate variables.
+
+```{r, echo=FALSE, out.width=200, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_07.png")
+```
+
+4)  If you are interested, at this stage you can check to see how much the normalization improved the Cronbach's Alpha by running the same test on your original variables (in our case v16 and v17)
+
+You can see that the Cronbach's Alpha for our original variables was only 0.368
+
+```{r, echo=FALSE, out.width=200, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_08.png")
+```
+
+# Step 3: Create the index
+
+1)  You now create the index by going back to Compute Variable:
+
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_09.png")
+```
+
+2)  Create a new variable called 'index###' by summing the normalized variables.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="", fig.align='center'}
+knitr::include_graphics("/img/htad_lesson_05_image_10.png")
+```

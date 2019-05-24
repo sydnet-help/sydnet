@@ -1,0 +1,23 @@
+---
+title: "Advice (Optional)"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Advice (Optional)"
+menu:
+   docs:
+      parent: SOC224 Cheatsheet
+      weight: 20
+
+---
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+
+# TBA

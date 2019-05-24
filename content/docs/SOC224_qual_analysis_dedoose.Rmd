@@ -14,7 +14,7 @@ output:
 linktitle: "Qual Analysis 4: Dedoose"
 menu:
    docs:
-      parent: SOC224 Qualitative Analysis
+      parent: SOC224 Qual Analysis
       weight: 40
 
 ---
