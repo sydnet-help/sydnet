@@ -14,7 +14,7 @@ output:
 linktitle: "Quant Analysis 7: Linear Regression"
 menu:
    docs:
-      parent: SOC224 Quant Analysis
+      parent: SOC224 SPSS Intro
       weight: 75
 
 ---
