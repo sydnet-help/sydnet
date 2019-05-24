@@ -204,10 +204,11 @@ mydata <- var_rename(mydata, age_r = "age_gr", polorient_r = "polorient_3",
 # Computing variables
 Another way to make a new variable is to compute variables. It is useful especially when the relationship between old and new variables can be expressed in mathematical equations.
 
-For example, let us make a variable of birth year. The relationship between birth year and age is $birth year = 2019 - Age$. Using this equation, we can create a variable of birth year by '`data name <- add_variables(data name, new variable name = Equation)`'. The following code will also assign the variable label.
+For example, let us make a variable of birth year. The relationship between birth year and age is $birth year = 2019 - Age$. Using this equation, we can create a variable of birth year by '`data name <- data name %>% mutate(new variable name = Equation)`'. The following code will also assign the variable label.
 
 ```{r, echo=TRUE}
-mydata <- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata <- mydata %>%
+  mutate(b_year = 2019 - mydata$age)
 mydata$b_year <- set_label(mydata$b_year, label = "Year of Birth")
 mydata$b_year
 ```
@@ -316,7 +317,8 @@ mydata <- var_rename(mydata, age_r = "age_gr", polorient_r = "polorient_3",
                      class_r = "class_3")
 
 # Compute variables
-mydata <- add_variables(mydata, b_year = 2019 - mydata$age)
+mydata <- mydata %>%
+  mutate(b_year = 2019 - mydata$age)
 mydata$b_year <- set_label(mydata$b_year, label = "Year of Birth")
 mydata$b_year
 
