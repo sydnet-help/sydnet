@@ -34,7 +34,5 @@ menu:
 
 [Final Report (PDF)](\docs\TCM Final Report - cut down.pdf)
 
-## Death Penalty in Singapore
 
-[Final Report (PDF)](\docs\Capital Punishment - Cut Down.pdf)
 
