@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 8: Logistic Regression"
+linktitle: "SPSS 8: Logistic Regression"
 menu:
    docs:
       parent: SOC224 SPSS Intro

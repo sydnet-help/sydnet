@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 4: Correlation"
+linktitle: "SPSS 4: Correlation"
 menu:
    docs:
       parent: SOC224 SPSS Intro
