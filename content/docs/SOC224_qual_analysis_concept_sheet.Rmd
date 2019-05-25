@@ -1,8 +1,6 @@
 ---
 title: "SOC224: Qualitative Analysis 5: Concept Sheet"
 
-lastmod: _`r format(Sys.time(), '%d %B, %Y')`_
-
 draft: false
 type: docs
 maths: true
