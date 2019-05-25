@@ -135,9 +135,6 @@ Thus, my suggestion is that you do the follow:
         a. A short explanatory paragraph
         a. One or two illustrative quotes
     
-    
-
-
 # 4. Do a quantitative (statistical) analysis and write that up
 
 
@@ -152,22 +149,6 @@ Thus, my suggestion is that you do the follow:
 
 # 7. Submit
 
-
-
-
-
-* OK so you are freaked out. The final project is due soon. What should you do to get this project done eaily and quickly? 
-
-Qual and Quant
-An argument
-
-Simple, quick qualitative analysis
-
-
-Simple, quick quant analysis
-
-
-Running a simple clear argument through your paper
 
 
 <center>
