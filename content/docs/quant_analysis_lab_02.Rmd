@@ -25,8 +25,7 @@ Before you analyse a quantitative dataset you need to
 
 * Step 1: download the data (generally from Qualtrics), 
 * Step 2: make a codebook,  
-* Step 3: clean up your data, and then
-* Step 4: import your data into SPSS.
+* Step 3: import your data into SPSS.
 
 # Step 1 - How to download your data from Qualtrics 
 
@@ -64,10 +63,8 @@ knitr::include_graphics("/img/htad_lesson_02_image_04.png")
 
 My recommendation is to choose:
 
-* "Use numeric values" 
-* Download as CSV file
+* Download as SPSS file
 * UNSELECT "Compress data as .zip file"
-* SELECT "Recode seen but unanswered questions as -99" 
 
 ```{r, echo=FALSE, out.width=400, fig.align='center'}
 knitr::include_graphics("/img/htad_lesson_02_image_05.png")
@@ -75,7 +72,7 @@ knitr::include_graphics("/img/htad_lesson_02_image_05.png")
 
 9) Click the Download button
 
-10) Save dataset on your computer with some relevant name such as "Survey Data.csv"
+10) Save dataset on your computer with some relevant name such as "Survey Data.sav"
 
 # Step 2 - Creating a codebook
 
@@ -111,35 +108,9 @@ If you open this Word document, you will see how next to each choice for a surve
 knitr::include_graphics("/img/htad_lesson_02_image_08.png")
 ```
 
-# Step 3 - Cleaning your data
+# Step 3 - Importing into SPSS
 
-1)  Before you import your data into SPSS, you are probably going to want to clean it up.
-
-The first step is to open it in Excel. 
-
-You are looking for open ended questions which respondants are likely to have put data that SPSS can't analyse. 
-
-You can see in the image below, the question asks "What is your base hourly wage?" and it provided a text box for people to type in. 
-
-However, the data people have left is messy. Some put dollar signes, most didn't. Some put ranges. Some put "Not sure"
-
-You will need to clean this up. The way you want to do this is by having some clear rules, and writing them down in your codebook. 
-
-For this, I would suggest the following rules;
-
-* remove all dollar signs
-* replace ranges with the mean of the two numbers given (e.g. if they say 5-10, then change to 7.5)
-* replace "Not sure" and similar with missing -99
-
-```{r, echo=FALSE, out.width=200, fig.align='center'}
-knitr::include_graphics("/img/htad_lesson_02_image_09.png")
-```
-
-2) After you have cleaned up your data, save it as an excel file (.xlsx). This is needed for importing into SPSS. 
-
-# Step 4 - Importing into SPSS
-
-1) To get your datafile into iLab, you will need to put your excel file on a USB drive. 
+1) To get your datafile into iLab the easiest thing to do is to either (1) download from Qualtrics (but you can only do this the first time), or (2) email to yourself (by logging into your email inside iLab) or (3) using a USB drive. 
 
 2)  Go into iLab, and then open SPSS (see Lab 1).
 
@@ -151,9 +122,7 @@ knitr::include_graphics("/img/htad_lesson_02_image_09.png")
 knitr::include_graphics("/img/htad_lesson_02_image_10.png")
 ```
 
-4)  In the dialogue box that opens, change Files of type to Excel.
-
-5)  Navigate to select your dataset.
+4)  In the dialogue box that opens navigate and select your dataset.
 
 ```{r, echo=FALSE, out.width=600, fig.align='center'}
 knitr::include_graphics("/img/htad_lesson_02_image_11.png")
