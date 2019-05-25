@@ -18,7 +18,7 @@ menu:
       weight: 10
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
+
 
 # Introduction
 
@@ -100,4 +100,9 @@ Please use the example of final reports, provided on iLearn, as an example of ho
 8.	Appendices (as necessary)
     a.	Your survey downloaded as a codebook
     b.	Scan/screenshot of the first page of every reference in your reference list (to prevent plagiarism of references)
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
 

@@ -1,7 +1,7 @@
 ---
 title: "Quantitative Analysis: An Introduction"
 
-lastmod: 2018-12-30T00:00:00
+lastmod: 2018-05-25T00:00:00
 
 draft: false
 type: docs
@@ -18,7 +18,6 @@ menu:
       weight: 10 
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Concepts 
 <b style="padding-left: 2em">Quantitative data<br></b>
@@ -110,4 +109,9 @@ We generally use linear regressions when we have (1) a dependent variable that i
 ## Lab 8: Logistic Regression
 
 We generally use logistic regressions when we have (1) a dependent variable that is binary (i.e. it has only two values, 0 and 1), and (2) we want to test the impact of (and/or control for) multiple independent variables. The process of running a regression in SPSS is basically the same as for linear regressions, with options for forced entry, hierarchical, and stepwise methods. When you read your results from a regression, you read the same two columns as in a linear regression (B and sig.). Significance (sig.) is read the same as for a linear regression. Because of the binary nature of the dependent variable in a logistic regression, the B is not so straightforward to interpret. B is basically a number which represents the impact of the independent variable on the probably of the dependent variable being 1. For this course, we are only going to interpret the significance, and direction (positive or negative) of B. So for significant (< 0.05) B coefficients we say that independent variables with positive B (greater than 0) increase the likelihood of the dependent variable being 1 (and the reverse for negative B values). We can also view the various different R-square values for the model, which is approximately the same meaning as that for a linear regression.
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
 

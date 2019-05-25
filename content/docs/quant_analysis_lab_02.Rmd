@@ -1,7 +1,7 @@
 ---
 title: "Lab 2: Download + import your data + make a codebook"
 
-lastmod: 2018-12-30T00:00:00
+lastmod: 2018-05-25T00:00:00
 
 draft: false
 type: docs
@@ -18,7 +18,7 @@ menu:
       weight: 30
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
+
 
 # Summary
 Before you analyse a quantitative dataset you need to 
@@ -158,3 +158,8 @@ knitr::include_graphics("/img/htad_lesson_02_image_10.png")
 ```{r, echo=FALSE, out.width=600, fig.align='center'}
 knitr::include_graphics("/img/htad_lesson_02_image_11.png")
 ```
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
