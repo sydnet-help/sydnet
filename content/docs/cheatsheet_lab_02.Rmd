@@ -137,6 +137,29 @@ Thus, my suggestion is that you do the follow:
     
 # 4. Do a quantitative (statistical) analysis and write that up
 
+For most papers there are at least two types of analysis you want to do:
+
+i. a descriptive statistics table (a univariate table)
+ii. a correlation matrix (a bivariate statistics table)
+
+In addition, you might also want to do:
+
+i. a regression table - if you want to look at the corelation between your independent variable and a dependent variable, after controlling for other variables
+ii. construct and test an index (if you have multiple variables than measure the same underlying concept)
+iii. make a figure or diagram, to show your findings as an illustration. 
+
+No matter what you do, remember the rule is to KEEP IT SIMPLE. And in the case of tables, that means keeping it to about three, with an absolute maximum of five. 
+
+## 4.1 Descriptive statistics table
+
+Virtually all academic papers have a descriptive statistics table. This simply shows the mean, standard deviation, min, and max for each of your variables. Why do you make this? So that the reader can get a sense of the range and characteristics of our variables. 
+
+Instructions for generating descriptive statistics are here:
+
+* [How to generate descriptive statistics with SPSS](https://methods101.com/docs/quant_analysis_lab_03/#step-1-descriptive-statistics)
+
+
+
 
 
 # 5. Integrate it all together as one report
