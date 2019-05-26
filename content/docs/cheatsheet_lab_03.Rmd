@@ -12,7 +12,7 @@ output:
 linktitle: "Examples of Reports"
 menu:
    docs:
-      parent: SOC224 Cheatsheet
+      parent: SOC224 Final Report
       weight: 30
 
 ---

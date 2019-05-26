@@ -1,0 +1,30 @@
+---
+title: "Introduction to Statistics"
+
+lastmod: 2018-12-30T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: false
+
+linktitle: "Statistics Intro"
+menu:
+   docs:
+      parent: SOC224 Statistics Intro
+      weight: 20
+
+---
+
+This is a very simple and short introduction to quantitative analysis and statistics.
+
+[Powerpoint slides of "An Introduction to Quantitative Analysis" (PDF)](/docs/intro to statistics v01.pdf)
+
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>

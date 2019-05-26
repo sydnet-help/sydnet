@@ -315,14 +315,19 @@ enableGitInfo = true
 
 [[menu.docs]]
  name = "SOC224 Qual Analysis"
- weight = 65
+ weight = 20
+
+[[menu.docs]]
+ name = "SOC224 Statistics Intro"
+ weight = 30
+
 
 [[menu.docs]]
  name = "SOC224 SPSS Intro"
  weight = 65
 
 [[menu.docs]]
- name = "SOC224 Cheatsheet"
+ name = "SOC224 Final Report"
  weight = 85
 
 
