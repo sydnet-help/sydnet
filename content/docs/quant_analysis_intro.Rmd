@@ -32,7 +32,7 @@ menu:
 <b style="padding-left: 4em">Weak, moderate, strong correlation<br></b>
 <b style="padding-left: 2em">T-test<br></b>
 <b style="padding-left: 2em">Index<br></b>
-<b style="padding-left: 4em">Normalise<br></b>
+<b style="padding-left: 4em">Normalise (also called standardising)<br></b>
 <b style="padding-left: 4em">Cronbatch's Alpha<br></b>
 <b style="padding-left: 2em">Linear regression<br></b>
 <b style="padding-left: 4em">Patterns of entering variables<br></b>

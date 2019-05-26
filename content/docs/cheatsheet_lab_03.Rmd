@@ -1,7 +1,5 @@
 ---
-title: "Example"
-
-lastmod: 2018-12-30T00:00:00
+title: "Examples of Final Reports"
 
 draft: false
 type: docs
@@ -9,16 +7,15 @@ maths: true
 
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 
-linktitle: "Example"
+linktitle: "Examples of Reports"
 menu:
    docs:
       parent: SOC224 Cheatsheet
       weight: 30
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Examples of Final Reports
 
