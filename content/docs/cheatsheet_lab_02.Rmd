@@ -158,8 +158,21 @@ Instructions for generating descriptive statistics are here:
 
 * [How to generate descriptive statistics with SPSS](https://methods101.com/docs/quant_analysis_lab_03/#step-1-descriptive-statistics)
 
+## 4.2 a correlation matrix 
 
+There are two types of tables containing correlations that you might want to produce.
 
+The simplest is a table where you have the correlation between all the independent variables and your single dependent variable. 
+
+The second type is a correlation matrix, which shows the correlation of all variables with all other variables. 
+
+Instructions on generating correlation matricies can be found here:
+
+* [How to generate correlation matricies with SPSS](/docs/quant_analysis_lab_04/#a-tail-of-two-tables)
+
+## 4.3 a regression table
+## 4.4 construct and test an index
+## 4.5 make a figure or diagram
 
 
 # 5. Integrate it all together as one report

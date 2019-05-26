@@ -72,8 +72,29 @@ Figure 2, below, shows visualisations of different correlation coefficients.
 knitr::include_graphics("/img/quant_analysis_lab_04_image_01a.png")
 ```
 
+# A Tail of Two Tables
+
+There are two main types of correlation tables you might want to produce:
+
+1. **a table** which shows the correlation of all the **independent** variables with the **dependent** variable/s. 
+2. **a matrix** which shows the correlation of all variables with all other varibles
 
 
+Figures 3 and 4 below show examples of these. 
+
+```{r, echo=FALSE, out.width=300, fig.cap="A table with the correlation between the two independent variables and the main independent variables.", fig.align='center'}
+knitr::include_graphics("/img/htad_lab_04_image_correlation_table.png")
+```
+
+
+Figures 3 and 4 below show examples of these. 
+
+```{r, echo=FALSE, out.width=500, fig.cap="A matrix with the correlation between the main variables.", fig.align='center'}
+knitr::include_graphics("/img/htad_lab_04_image_correlation_layout_excel.png")
+```
+
+
+Figures 3 and 4 below show examples of these. 
 
 # Pearsons Correlation
 
@@ -130,4 +151,44 @@ knitr::include_graphics("/img/quant_analysis_lab_04_image_07.png")
 knitr::include_graphics("/img/quant_analysis_lab_04_image_08.png")
 ```
 
+
+## Making Publishable Tables
+
+If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. <br><br> Instead, what you should do is:
+
+  i. right click on the table you want to copy, and select 'copy'
+
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives_copy.png")
+```
+    
+    
+  ii. open Excel, and then paste as text (this will strip out formating). Option could be called "Keep Text Only (T)" or "Match destination formating (M)".
+    
+```{r, echo=FALSE, out.width=300, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives_copy_to_excel.png")
+```
+    
+    
+  iii. In Excel, delete the rows for N (number of cases), and the significance (it is already indicated in the stars /* and /*/* )
+  iv. Orient the column headings vertically (select cells, then right click>Format cells...>Alignment>Orientation)
+  iv. Create three vertical lines in the table: (1) at the top of the table, (2) at the bottom of the table, and (3) under the column headings.
+  v. Align the columns with numbers in them to the centre (keep the first column, with the variable names, left-aligned)
+  vi. AutoFit the column widths by selecting all the columns and then double clicking boundary between any two column headings. 
+  
+  ```{r, echo=FALSE, out.width=300, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_04_image_autosize_excel.png")
+```
+
+  vii. Turn off gridlines (View>Gridlines)
+  viii. Take a screenshot of the table and paste into your report.
+
+```{r, echo=FALSE, out.width=500, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_04_image_correlation_layout_excel.png")
+```
+
+
+```{r, echo=FALSE, out.width=300, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_04_image_correlation_table.png")
+```
 

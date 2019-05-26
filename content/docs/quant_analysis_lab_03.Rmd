@@ -11,14 +11,13 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 3: Descriptive"
+linktitle: "SPSS 3: Descriptive Stats"
 menu:
    docs:
       parent: SOC224 SPSS Intro
       weight: 45
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Summary
 
@@ -72,9 +71,9 @@ a. **Std Deviation Statistic** This is a measures of variability. We will discus
 knitr::include_graphics("/img/htad_lab_03_image_descriptives.png")
 ```
 
-4. If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. 
+## Making Publishable Tables
 
-Instead, what you should do is:
+If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. <br><br> Instead, what you should do is:
 
   i. right click on the table you want to copy, and select 'copy'
 

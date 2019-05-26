@@ -4,6 +4,21 @@
  *  https://github.com/gcushen/hugo-academic
  **************************************************/
 
+/****************************************
+* Nick changes 26/5/2019
+*****************************************/
+
+.caption {
+  display: block;
+/*  margin-top: 0.75em;
+  line-height: 1.25; */
+  font-size: 0.7rem;
+  margin-bottom: 1.65rem;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-weight: bold; 
+}
+
+
 /*************************************************
  *  Core
  **************************************************/
@@ -162,6 +177,7 @@ figcaption {
   font-size: 1rem;
   margin-bottom: 1.65rem;
   font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-weight: bold; 
 }
 
 figcaption.numbered:before {
@@ -760,6 +776,9 @@ ul.share li:hover i {
 /*************************************************
  *  Page content style
  **************************************************/
+.figure {
+  display:block;
+}
 
 article {
   animation: intro 0.3s both;
@@ -944,6 +963,8 @@ article .article-metadata {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 0;
+  display: block; 
+
 }
 
 .article-style td img,
