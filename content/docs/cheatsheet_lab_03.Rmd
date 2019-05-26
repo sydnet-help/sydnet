@@ -34,7 +34,5 @@ menu:
 
 
 
-<center>
-Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
-</center>
+
 
