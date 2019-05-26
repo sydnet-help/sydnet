@@ -5,7 +5,7 @@ name = "Default"
 google_fonts = "Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono"
 
 # Font families
-heading_font = "Montserrat"
+heading_font = "Open Sans"
 body_font = "Open Sans"
 nav_font = "Open Sans"
 mono_font = "Open Sans"
