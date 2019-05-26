@@ -20,11 +20,6 @@ menu:
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
 
-**Australian Electoral Study 2013 - Reduced**<br>
-[Dataset - Excel](/data/elect_2013.xlsx)<br>
-[Dataset - SPSS Data file](/data/elect_2013.sav)<br>
-[Codebook](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html)
-
 **Pornography Dataset**<br>
 [Dataset](/data/Dataset 1 Pornography.xlsx)<br>
 [Codebook](/data/Codebook 1 Pornography .docx)
@@ -41,3 +36,17 @@ menu:
 [Dataset](/data/Dataset 5 Territorial_change.xls)<br>
 [Codebook](/data/Codebook 5 Territorial_change.docx)
 
+**Australian Electoral Study 2013 - Reduced**<br>
+[Dataset - Excel](/data/elect_2013.xlsx)<br>
+[Dataset - SPSS Data file](/data/elect_2013.sav)<br>
+[Codebook](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html)
+
+The full original data can be found by following the links below to:
+
+* [the Australian Electorial Study.](https://australianelectionstudy.org/voter-studies/)
+* [the 2013 dataset and codebook at the Australian Data Archive.](https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/WDBBAS)
+
+This is an article based on analysis of the AES 2013 data:
+<b style="padding-left: 2em">Ian McAllister (2016) Internet use, political knowledge and youth electoral<br></b> 
+<b style="padding-left: 2em">participation in Australia, _Journal of Youth Studies_, 19:9, 1220-1236, <br></b>
+<b style="padding-left: 2em">DOI: 10.1080/13676261.2016.1154936<br></b>
