@@ -71,7 +71,7 @@ Figure 2, below, shows visualisations of different correlation coefficients.
 knitr::include_graphics("/img/quant_analysis_lab_04_image_01a.png")
 ```
 
-# A Tail of Two Tables
+# Two Tables
 
 There are two main types of correlation tables you might want to produce:
 
