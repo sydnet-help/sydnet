@@ -1665,6 +1665,8 @@ nav#navbar-main li.nav-item {
 .navbar-brand img {
   max-height: 90px;
   margin-right: 60px;
+  padding:0px; 
+  border:0px 
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -1736,6 +1738,8 @@ nav#navbar-main li.nav-item {
 
   .navbar-brand img {
     max-height: 70px;
+    padding:0px; 
+    border:0px 
   }
 
   .navbar-toggler {
