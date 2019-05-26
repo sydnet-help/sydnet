@@ -1,0 +1,109 @@
+---
+title: "Useful online resources for SPSS"
+
+lastmod: 2018-05-25T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "SPSS: Online Help"
+menu:
+   docs:
+      parent: SOC224 SPSS Intro
+      weight: 15 
+
+---
+
+# 1. Online Resources
+While Google is often your best friend when trying to do statistical analysis, sometimes it also helps to have dedicated places to go to, that you know you can trust.
+
+Below are three websites which we recommend as places to find information about how to use SPSS.
+
+## Official IBM SPSS Resources
+[IBM SPSS Statistics Base Manual](ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/24.0/en/client/Manuals/IBM_SPSS_Statistics_Base.pdf) A large PDF manual with how to do just about anything in SPSS.<br>
+[IBM SPSS list of all manuals](https://www-01.ibm.com/support/docview.wss?uid=swg27047033#en) A page with all the various IBM SPSS offical manuals.
+
+## SPSS-Tutorials.com
+[SPSS Tutorials - Home Page](https://www.spss-tutorials.com/)<br>
+[SPSS Tutorials - Beginner Tutorials](https://www.spss-tutorials.com/basics/)<br>
+[SPSS Tutorials - Data Analysis Tutorials](https://www.spss-tutorials.com/spss-data-analysis/)<br>
+[Pearson Correlations - Quick Introduction](https://www.spss-tutorials.com/pearson-correlation-coefficient/)
+
+## University of Wisconcin - Social Science Computing Cooperative
+[SPSS Basics](https://www.ssc.wisc.edu/sscc/pubs/stat.htm#SPSS)
+
+# 2. Dr Hangyoung Lee's SPSS Workshops (SSCI202)
+
+* [Workshop 1: Introduction to SPSS](/docs/workshop1.docx)
+    1. How to access SPSS (**iLab**)
+    2. Navigating SPSS user interface (**data and variable views**)
+    3. How to **enter data** manually 
+    4.	  How to **save** and **open data files** 
+    5.	 How to **create a new variable** by **recoding an existing variable** 
+
+* [Workshop 2: Visualising Data ](/docs/workshop2.docx)
+    1.	Producing a **pie chart**
+    2.	Producing a **bar chart**
+    3.	Producing a **grouped bar chart**
+    4.	Producing a **stacked bar chart**
+    5.	Producing a **histogram**
+    6.	How to **save SPSS graphs** as a format of graphic files
+
+* [Workshop 3: Exploring the 2012 AuSSA Data](/docs/workshop3.docx)
+    1.	Explore the **2012 AuSSA data**
+    2.	Learn about **missing values**
+    3.	How to construct a new variable by using the **Recode** and **Compute command**
+    4.	How to compute **descriptive statistics**.
+
+* [Workshop 4: Creating an Index of Attitudes toward Working Women](/docs/workshop4_edit.docx)
+    1.	**Recoding Variables** into Dichotomous Variables
+    2.	**Creating an Index** using the Compute Command
+
+* [Workshop 5: Exploring Crime Rates in New South Wales (Part 1)](/docs/workshop5.docx)
+    1.	Explore the **Dataset for Crime Rates by Local Government Areas** in New South Wales.
+    2.	How to **move variables**
+    3.	How to **sort cases**
+    4.	How to **generate z-scores** of a variable
+
+* [Workshop 6: Exploring Crime Rates in New South Wales (Part 2)](/docs/workshop6_edit.docx)
+    1.	How to **select cases** that meet a user-defined condition. 
+    2.	How to **categorise continuous variables**
+    3.	How to **combine two existing variables** to create a new variable.
+
+* [Workshop 7: Exploring the 2009 AuSSA Data](/docs/workshop7_edit.docx)
+    1. Exploring the **2009 AuSSA Data**
+
+* [Workshop 8: Confidence Intervals and Hypothesis Testing](/docs/workshop8.docx)
+    1.	Create a **Confidence Interval**
+    1.	Confidence Intervals for **Continuous Variables**
+    1.	Confidence Intervals by a **Group**
+    1.	Confidence Intervals for a **Proportion**
+    1.	**Visualising** Confidence Intervals
+    2.	**Hypothesis Testing**
+    2.	**One-Sample t-Test**
+    2.	**Two-Sample t-Test**
+    2.	**t-Test of Proportion Differences**
+
+* [Workshop 9: Bivariate Association](/docs/workshop9.docx)
+    1.	**Crosstabs** and **Chi-Square** 
+    2.	**Recoding Variables**  
+
+* [Workshop 10: Correlation](/docs/workshop10.docx)
+    1.	**Bivariate Correlations** 
+    2.	**Scatterplots** 
+
+* [Workshop 11: Regression Analysis](/docs/workshop11.docx)
+    1.	**Simple linear regression** 
+    2.	**Multiple Linear Regression** 
+    3.	**Dummy Variables**
+
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
+

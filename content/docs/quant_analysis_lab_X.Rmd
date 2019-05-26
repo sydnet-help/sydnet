@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: false
 
-linktitle: "Practice Datasets"
+linktitle: "SPSS: Practice Datasets"
 menu:
    docs:
       parent: SOC224 SPSS Intro

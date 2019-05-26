@@ -170,10 +170,12 @@ Instructions on generating correlation matricies can be found here:
 
 * [How to generate correlation matricies with SPSS](/docs/quant_analysis_lab_04/#a-tail-of-two-tables)
 
-## 4.3 a regression table
-## 4.4 construct and test an index
-## 4.5 make a figure or diagram
+## 4.3 make a figure or diagram
 
+
+
+## 4.4 a regression table
+## 4.5 construct and test an index
 
 # 5. Integrate it all together as one report
 

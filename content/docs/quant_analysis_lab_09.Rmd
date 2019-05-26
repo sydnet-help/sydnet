@@ -1,0 +1,382 @@
+---
+title: "SPSS Lab 9: Visualisation"
+
+lastmod: 2018-05-25T00:00:00
+
+draft: false
+type: docs
+maths: true	
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "SPSS 9: Visualisation"
+menu:
+   docs:
+      parent: SOC224 SPSS Intro
+      weight: 100 
+
+---
+
+**This tutorial by Dr Hangyoung Lee, adapted to this website by Nicholas Harrigan.**
+
+# Introduction
+In this tutorial we cover techniques for drawing a number of useful graphics. 
+
+Visualising variables provide an important "first look" at your data. 
+
+The dataset used in this tutorial can be [downloaded from here.](/data/Workshop1-HYLee.sav) 
+
+# 1.	Producing a Pie Chart
+A pie chart is a circular graph with slices that represent the proportion of the total contained within each category. 
+
+We can use pie charts to visualise nominal as well as ordinal variables. 
+
+To produce a pie chart, go to Analyze > Descriptive Statistics > Frequencies.
+
+```{r, echo=FALSE, out.width=300, fig.cap="Analyze > Descriptive Statistics > Frequencies", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_1.png")
+```
+
+
+In the popped-up box, select a variable for which you want to produce a pie chart and then click the arrow. In this example, I will produce a pie chart of gender.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Select a variable for which you want to produce a pie chart", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_2.png")
+```
+ 
+
+Now, you will see the selected variable in the pane of Variable(s). Click Charts.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Click Charts", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_3.png")
+```
+  
+  
+In the popped-up box, select "Pie charts" as Chart Type and "Frequencies" as Chart Values. Then click Continue. 
+
+```{r, echo=FALSE, out.width=250, fig.cap="Select Pie charts as Chart Type and Frequencies as Chart Values", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_4.png")
+```
+  
+
+You will be back to the previous Frequencies box. Click OK.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Click OK", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_5.png")
+```
+ 
+
+In the output window, you will see the frequency table and pie chart of gender.
+
+```{r, echo=FALSE, out.width=500, fig.cap="Pie chart of gender", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_6.png")
+```
+  
+
+However, this pie chart does not provide information on the number (frequency) of males and females. Let's add this information to the chart. At any place in the pie chart, right-click and then choose Edit Content > In Separate Window.
+
+```{r, echo=FALSE, out.width=400, fig.cap="At any place in the pie chart, right-click and then choose Edit Content > In Separate Window.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_7.png")
+```
+ 
+ 
+In the popped-up window, click the icon of Data Label Mode (see **Figure 7**). Then, move your mouse cursor to a place where you want to put the number. And click. You need to click on both green (female) and blue (male) areas. Then, you will see the frequency of male and female category.
+
+```{r, echo=FALSE, out.width=350, fig.cap="See the frequency of male and female category", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_8.png")
+```
+ 
+ 
+In **Figure 8**, the size of numbers is too small. Let's edit the font size for better readability. Click the icon of Data Label Mode again to turn off the data label mode and to go back to edit mode. You will see a popped-up window called properties. Close that.  
+ 
+```{r, echo=FALSE, out.width=350, fig.cap="Click the icon of Data Label Mode again to turn off the data label mode and to go back to edit mode. You will see a popped-up window called properties. Close that.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_9.png")
+```
+ 
+
+Then, click any of the numbers (frequencies) on the pie chart. You will see the toolbar of font type and font size activated (see **Figure 10**). There you can change the size of font as well as the type. Let's choose 12 as font size. Then close the Chart Editor by clicking X.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Click any of the numbers (frequencies) on the pie chart.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_10.png")
+```
+ 
+
+Note) In **Figure 4**, if you select "Percentages" as Chart Values (see **Figure 11**), the pie chart will show the percentage of each category of gender (see **Figure 12**).
+
+```{r, echo=FALSE, out.width=250, fig.cap="Select Percentages", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_11.png")
+```
+
+
+```{r, echo=FALSE, out.width=400, fig.cap="Notice how chart now shows percentage of each gender in your sample.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_12.png")
+```
+
+# 2.	Producing a Bar Chart
+A bar chart (also called bar graph) is a graphical display of data using bars of different heights. We can use bar charts to visualise nominal as well as ordinal variables.
+
+## 2.1 Bar charts with y-axis as frequency
+
+The Frequencies command will produce a bar chart as well. Go to Analyze > Descriptive Statistics > Frequencies.
+
+```{r, echo=FALSE, out.width=300, fig.cap="Analyze > Descriptive Statistics > Frequencies", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_13.png")
+```
+
+In the popped-up box, select a variable for which you want to produce a bar graph and then click the arrow. In this example, I will produce a bar graph of gender.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Select a variable for which you want to produce a bar graph and then click the arrow.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_14.png")
+```
+
+ 
+Now, you will see the selected variable in the pane of Variable(s). Click Charts.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Click Charts.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_15.png")
+```
+ 
+
+In the popped-up box, select "Bar charts" as Chart Type and "Frequencies" as Chart Values. Then click Continue. 
+
+
+```{r, echo=FALSE, out.width=250, fig.cap="select Bar charts as Chart Type and Frequencies as Chart Values.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_16.png")
+```
+ 
+
+You will be back to the previous Frequencies box. Click OK.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Click OK.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_17.png")
+```
+
+
+In the output window, you will see the frequency table and bar chart of gender.
+
+```{r, echo=FALSE, out.width=500, fig.cap="Bar chart of gender", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_18.png")
+```
+
+The bar chart consists of a Y-axis, representing the frequency, and an X-axis, representing each category of gender. 
+
+## 2.2 Bar charts with y-axis as percentage
+
+Sometimes it is useful to compare the percentages of each category in a bar chart instead of frequencies. Let's make A bar chart with a Y-axis representing the percentage. Follow the same steps from **Figure 1** to **Figure 3**. Then, select "Percentages" as Chart Values. Then, click Continue.
+
+```{r, echo=FALSE, out.width=250, fig.cap="Then, select Percentages as Chart Values. Then, click Continue.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_19.png")
+```
+
+In the box of Frequencies, click OK (see **Figure 15**). You will see the bar chart with a Y-axis representing the frequency of each gender category.
+
+```{r, echo=FALSE, out.width=500, fig.cap="You will see the bar chart with a Y-axis representing the frequency of each gender category.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_20.png")
+```
+
+# 3.	Producing a grouped bar chart
+Suppose you want to compare the frequency of a variable by subgroups. For example, you may be interested in knowing how the distribution of political orientation differs by gender. 
+
+Bar charts can be used for this more complex comparison of data by grouping or stacking bar charts. Let's examine grouped bar chart first. 
+
+A grouped bar graph produces bars for every combination of categories (gender X political orientation) and then group those bars by subgroups (gender), typically uing colored bars to represent a particular grouping.  
+
+To produce this grouped bar chart, go to Graphs>Legacy Dialogs > Bar. 
+
+```{r, echo=FALSE, out.width=300, fig.cap="Graphs>Legacy Dialogs>Bar", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_21.png")
+```
+ 
+
+In the popped-up window, choose "Clustered" as a type of bar charts and "Summaries for groups of cases" in Data in Chart Are. Then, click Define.
+
+```{r, echo=FALSE, out.width=250, fig.cap="Choose Clustered as a type of bar charts.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_22.png")
+```
+ 
+In the popped-up window, 
+
+1) choose a variable for which a bar is produced (in our example, it is political orientation) in the pane of variables, and then click the arrow in Category Axis; 
+2) choose a group variable by which bars are compared (in our example, it is gender), and then click the arrow in Define Clusters by; 
+3) choose "% of cases" in Bars Represent (comparing the percentages makes more sense because the number of males and females is different) and then the bars will represent the percentages (If you choose "N of cases", the bar will represent the frequency); 
+4) click OK.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Choose a variable, and a grouping variable.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_23.png")
+```
+
+
+In the output window, you will see **Figure 24**.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Grouped bar chart", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_24.png")
+```
+
+
+You can add the percentages to this chart by following the same steps as you did for the pie chart.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Grouped bar chart with percentages.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_25.png")
+```
+
+
+# 4.	Producing a stacked bar chart
+A stacked bar chart provides an alternative way to compare the frequency of a variable by subgroups. In a stacked bar chart, parts of the data are stacked: each bar displays a total amount, broken down into sub-amounts.
+We will again compare the distribution of political orientation by gender. 
+To produce it, Go to Graphs > Chart Builder. 
+
+```{r, echo=FALSE, out.width=300, fig.cap="Graphs > Chart Builder.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_26.png")
+```
+ 
+
+In the popped-up window, tick the box of Don't show this dialogue again and click OK.
+ 
+
+```{r, echo=FALSE, out.width=600, fig.cap="Tick the box of Don't show this dialogue again.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_27.png")
+```
+
+
+In the window of Chart Builder, click the icon of stacked bar chart. Drag and drop it to the upper white pane (see **Figure 28**).
+
+```{r, echo=FALSE, out.width=400, fig.cap="Drag and drop the icon of stacked bar chart.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_28.png")
+```
+ 
+Then, drag and drop gender to X-axis and political orientation to Stack: set color. After that, click Element Properties 
+
+```{r, echo=FALSE, out.width=400, fig.cap="Drag and drop gender to X-axis and political orientation to Stack: set color.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_29.png")
+```
+ 
+Next, in the window of Element Properties, let's edit properties of Bar1 by selecting "Percentage(?)" in Statistic. Then, click Apply.
+
+```{r, echo=FALSE, out.width=300, fig.cap="Select percentage in statistic", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_30.png")
+```
+ 
+You will see Set Parameters activated (see **Figure 31**). Let's open that box and select "Total for Each X-Axis Category" as Denominator for Computing Percentage. This is to calculate percentages within subgroups by choosing the total counts of subgroup as denominator (instead of the total counts of your sample, or grand total). This way, each group has 100% as total percentage so meaningful comparison can be made. Click Continue. Then click Apply at the bottom.
+
+```{r, echo=FALSE, out.width=300, fig.cap="Choosing the correct denominator for computing percentage.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_31.png")
+```
+ 
+Lastly, click OK to finish the Chart Builder.
+
+```{r, echo=FALSE, out.width=500, fig.cap="Click OK to finish with Chart Builder", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_32.png")
+```
+ 
+In the output window, you should see a stacked bar chart of political orientation by gender while both males and females have 100% as their total percentages. 
+
+```{r, echo=FALSE, out.width=400, fig.cap="Stacked bar chart of political orientation by gender", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_33.png")
+```
+ 
+
+# 5.	Producing a histogram
+So far, we create graphs for categorical variables (nominal and ordinal). Can we visualise continuous variables? Yes, the histogram displays well a graphic representation of the distribution of a single continuous variable. It is a kind of bar chart that can be used with continuous variables. The difference is that in a histogram, the bars touch with each other. The widths of the bars represent the widths of the intervals, and the height of each bar represents the frequency of each interval. 
+We will produce a histogram of age. To create it, go to Graphs > Legacy Dialogs > Histogram.
+
+```{r, echo=FALSE, out.width=300, fig.cap="Graphs > Legacy Dialogs > Histogram.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_34.png")
+```
+ 
+
+In the popped-up box, choose a variable you want to plot (in our case, it is age) and then move it to a pane labelled Variable by clicking the arrow next to Variable. Then, click OK.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Choose the variable you want to plot.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_35.png")
+```
+
+
+You will see the histogram of age in the output window (see **Figure 36**).
+
+
+```{r, echo=FALSE, out.width=400, fig.cap="histogram of age", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_36.png")
+```
+
+# 6. Scatterplots 
+
+Scatterplots are an effective way to examine bivariate association in a graph format. 
+
+To create a scatterplot, go to Graphs > Legacy Dialogs > Scatter/Dot (see **Figure 37**). When you have only two variables, select the Simple Scatter (see **Figure 38**). 
+      
+```{r, echo=FALSE, out.width=400, fig.cap="Graphs > Legacy Dialogs > Scatter/Dot", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_41.png")
+```
+
+
+```{r, echo=FALSE, out.width=400, fig.cap="Chose Simple Scatter", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_42.png")
+```
+ 
+
+In a new popped-up window, 1) move your dependent variable (robbery) into Y Axis, 2) independent variable (unemploy) into X Axis, and 3) click OK. 
+
+      
+```{r, echo=FALSE, out.width=400, fig.cap="Put your dependent variable in the y axis, and independent variable in the x axis", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_43.png")
+```
+ 
+
+Figure 40 is the scatterplot of robbery rate by unemployment rate. Do you see a pattern? 
+ 
+      
+```{r, echo=FALSE, out.width=400, fig.cap="Scatterplot of robbery rate by unemployment rate.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_44.png")
+```
+ 
+
+You can create scatterplots for several different variables so that we can determine whether there are any relationships among those multiple variables. To do so, you should select Matrix Scatter (see **Figure 41**) and put all the variables of interests into Matrix Variables (see **Figure 42**). It will return a output seen as **Figure 43**.        
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Select Matrix Scatter", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_45.png")
+```
+
+```{r, echo=FALSE, out.width=400, fig.cap="Put variables of interest into Matrix Variable", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_46.png")
+```
+
+```{r, echo=FALSE, out.width=400, fig.cap="A Matrix Scatterplot", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_47.png")
+```
+
+
+
+# 7.	How to save SPSS graphs as a format of graphic files
+Saving SPSS graphs as a format of graphic files (such as png or jpeg) is a convenient way to keep your graphic outcomes. And then you can import our graphic files into Word, PowerPoint, or iLearn. 
+First, choose the chart you want to save in the output window. Then, right-click on the chart and select "Export". 
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Right-click on the chart and select Export", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_37.png")
+```
+
+In the popped-up window, choose "Selected" in Object to Export, "None (Graphics only)" as Document Type, "PNG file (*.png)" as Graphics Type. Of course, you can choose any other graphic formats. Then, click Browse and you specify the folder where the graphic file will be saved.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Export Output dialogue box.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_38.png")
+```
+ 
+In the popped-up window, click a small reverse triangle in the pane of Look in. Then, choose Desktop (it is your desktop (wallpaper)). Type the file name and click Save.
+ 
+```{r, echo=FALSE, out.width=400, fig.cap="Choose Desktop. Type file name and click Save.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_39.png")
+```
+
+You will be back to the previous window. Then click OK at the bottom.
+
+```{r, echo=FALSE, out.width=400, fig.cap="Then click OK at the bottom.", fig.align='center'}
+knitr::include_graphics("/img/quant_analysis_lab_09_image_40.png")
+```
+ 
+You will see the saved file on your desktop. 
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
+
