@@ -14,7 +14,7 @@
   line-height: 1.25; */
   font-size: 0.7rem;
   margin-bottom: 1.65rem;
-  font-family: '{{ .Get "heading_font" }}', open-sans;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
   font-weight: bold; 
 }
 
@@ -30,7 +30,7 @@
  **************************************************/
 
 html {
-  font-family: '{{ .Get "body_font" }}', sans-serif;
+  font-family: '{{ .Get "body_font" }}', open-sans;
   font-size: {{ .Get "font_size_small" }}px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
