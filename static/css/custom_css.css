@@ -18,6 +18,12 @@
   font-weight: bold; 
 }
 
+.img { 
+  padding:1px; 
+  border:1px 
+  solid #021a40; 
+} 
+
 
 /*************************************************
  *  Core
@@ -157,12 +163,18 @@ video {
   height: auto;
   max-width: 100%;
   display: block;
+  padding:1px; 
+  border:1px 
+  solid #021a40;
 }
 
 video {
   width: 100%;
   height: auto;
   max-height: 400px;
+  padding:1px; 
+  border:1px 
+  solid #021a40;
 }
 
 .img-responsive {
