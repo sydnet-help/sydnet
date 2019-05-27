@@ -5,6 +5,13 @@
  **************************************************/
 
 /****************************************
+* Young changes 28/5/2019
+*****************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+/****************************************
 * Nick changes 26/5/2019
 *****************************************/
 
@@ -14,15 +21,15 @@
   line-height: 1.25; */
   font-size: 0.7rem;
   margin-bottom: 1.65rem;
-  font-family: '{{ .Get "heading_font" }}', sans-serif;
-  font-weight: bold; 
+  font-family: '{{ .Get "heading_font" }}', 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
-.img { 
-  padding:1px; 
-  border:1px 
-  solid #021a40; 
-} 
+.img {
+  padding:1px;
+  border:1px
+  solid #021a40;
+}
 
 
 /*************************************************
@@ -30,7 +37,7 @@
  **************************************************/
 
 html {
-  font-family: '{{ .Get "body_font" }}', sans-serif;
+  font-family: '{{ .Get "body_font" }}', 'Open Sans', sans-serif;
   font-size: {{ .Get "font_size_small" }}px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -92,7 +99,7 @@ ul, ol, dl {
 
 /* Navigation bar text */
 .navbar-light {
-  font-family: '{{ .Get "nav_font" }}', sans-serif;
+  font-family: '{{ .Get "nav_font" }}', 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.25;
   text-rendering: optimizeLegibility;
@@ -100,7 +107,7 @@ ul, ol, dl {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-family: '{{ .Get "heading_font" }}', 'Titillium Web', sans-serif;
   font-weight: 400;
   margin-top: 1rem;
   margin-bottom: .5rem;
@@ -111,39 +118,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   margin-top: 1rem;
-  color: #76232F; 
-  font-size: 1.25rem; 
+  color: #76232F;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 h2 {
   margin-top: 1.5rem;
-  color: #595959; 
-  font-size: 1rem; 
+  color: #595959;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 h3 {
-	color: #A6192E; 
-	font-size: 0.9rem; 
-	font-weight: bold; 
+	color: #A6192E;
+	font-size: 0.9rem;
+	font-weight: bold;
 	font-style: italic;
 }
 h4 {
-	color: #76232F; 
-	font-size: 0.75rem; 
-	font-weight: bold; 
+	color: #76232F;
+	font-size: 0.75rem;
+	font-weight: bold;
 	font-style: italic;
 }
 h5 {
-	color: #595959; 
-	font-size: 0.7rem; 
-	font-weight: bold; 
+	color: #595959;
+	font-size: 0.7rem;
+	font-weight: bold;
 	font-style: italic;
 }
 h6{
-	color: #595959; 
-	font-size: 0.7rem; 
-	font-weight: bold; 
+	color: #595959;
+	font-size: 0.7rem;
+	font-weight: bold;
 }
 
 a,
@@ -163,8 +170,8 @@ video {
   height: auto;
   max-width: 100%;
   display: block;
-  padding:1px; 
-  border:1px 
+  padding:1px;
+  border:1px
   solid #021a40;
 }
 
@@ -172,8 +179,8 @@ video {
   width: 100%;
   height: auto;
   max-height: 400px;
-  padding:1px; 
-  border:1px 
+  padding:1px;
+  border:1px
   solid #021a40;
 }
 
@@ -188,8 +195,8 @@ figcaption {
   line-height: 1.25;
   font-size: 1rem;
   margin-bottom: 1.65rem;
-  font-family: '{{ .Get "heading_font" }}', sans-serif;
-  font-weight: bold; 
+  font-family: '{{ .Get "heading_font" }}', 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 figcaption.numbered:before {
@@ -975,7 +982,7 @@ article .article-metadata {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 0;
-  display: block; 
+  display: block;
 
 }
 
@@ -1633,7 +1640,7 @@ nav#navbar-main li.nav-item {
   transition: 0.2s ease;
   color: {{ .Get "menu_text" }};
   font-weight: 600;
- 
+
 }
 
 .navbar-light .navbar-nav>.nav-item>.nav-link:focus {
@@ -1665,8 +1672,8 @@ nav#navbar-main li.nav-item {
 .navbar-brand img {
   max-height: 90px;
   margin-right: 60px;
-  padding:0px; 
-  border:0px 
+  padding:0px;
+  border:0px
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -1738,8 +1745,8 @@ nav#navbar-main li.nav-item {
 
   .navbar-brand img {
     max-height: 70px;
-    padding:0px; 
-    border:0px 
+    padding:0px;
+    border:0px
   }
 
   .navbar-toggler {
@@ -1984,7 +1991,7 @@ div.alert a {
 
 
 
-/* Docs sidebar li>a. 
+/* Docs sidebar li>a.
 
 .docs-sidebar .nav>li>a {
   display: block;
@@ -2015,8 +2022,8 @@ div.alert a {
 /* Hides scrollbar for Chrome and IE (probably works in Safari and possibly other browsers but not Firefox)*/
 
 
-/*::-webkit-scrollbar { 
-    display: none; 
+/*::-webkit-scrollbar {
+    display: none;
 }*/
 
 
@@ -2076,17 +2083,17 @@ div.alert a {
 	margin-bottom: 0px;
 	padding-inline-start: 15px;
 	font-weight: bold;
-}  
+}
 
 
 /* Style the sidenav links and the dropdown button */
 .docs-sidebar a, .dropdown-btn {
-  padding: 2px 0px 2px 20px; 
+  padding: 2px 0px 2px 20px;
   text-decoration: none;
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 1);	
+  color: rgba(0, 0, 0, 1);
   display: block;
-  background: rgba(214, 210, 196, 0.8); 
+  background: rgba(214, 210, 196, 0.8);
   width: 100%;
   overflow: auto;
   text-align: left;
@@ -2127,7 +2134,7 @@ div.alert a {
 
 
 /*this styles the text in the dropdown container*/
-.docs-sidebar a, .dropdown-btn .dropdown-container { 
+.docs-sidebar a, .dropdown-btn .dropdown-container {
 	padding-top: 0px;
 	padding-right: 10px;
 	font-size: 0.65rem;
@@ -2147,7 +2154,7 @@ div.alert a {
 /*} */
 
 /* Optional: Style the caret down icon (this is currently removed from the sidebar but can be reinserted by putting <i class="fa fa-caret-down"></i> within
-the button class in the sidebar HTML file) */ 
+the button class in the sidebar HTML file) */
 .fa-caret-down {
   float: right;
   padding-top: 3px;
