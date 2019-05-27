@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Resources to Study Society"
 
 lastmod: 2019-02-22T00:00:00
 
@@ -9,7 +9,8 @@ type: "docs"  # Do not modify.
 # Add menu entry to sidebar.
 ---
 
-Methods101.com provides easy to follow lessons on social research methods.
+## Methods101.com
+[Methods101.com](Methods101.com) provides easy to follow lessons on social research methods.
 
 The site focuses on teaching you how to analyse quantitative data with the statistical packages R and SPSS. 
 
