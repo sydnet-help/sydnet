@@ -1,0 +1,184 @@
+---
+title: "SOC830 Lab 10: Correlations & Simple Regression"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 10: Correlations & Simple Regression"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 55
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#creating-a-dataset-of-complete-cases">Creating a Dataset of Complete Cases</a></li>
+<li><a href="#changing-the-scale-of-variables">Changing the Scale of Variables</a></li>
+<li><a href="#computing-and-visualising-correlation-coefficients">Computing and Visualising Correlation Coefficients</a></li>
+<li><a href="#producing-a-correlation-matrix">Producing a Correlation Matrix</a></li>
+<li><a href="#simple-regression-analysis">Simple Regression Analysis</a></li>
+</ul>
+</div>
+
+<p>This tenth lab introduces 1) how to produce a matrix of bivariate correlations, 2) how to create scatterplots, and 3) how to conduct a simple regression model.</p>
+<p>We will use four packages for this lab. Load them using the following code:</p>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(sjlabelled)
+library(sjmisc)
+library(sjPlot)</code></pre>
+<pre><code>## Install package &quot;strengejacke&quot; from GitHub (`devtools::install_github(&quot;strengejacke/strengejacke&quot;)`) to load all sj-packages at once!</code></pre>
+<p>Also, run the following code. Otherwise, you will see scientific notations (e.g., 2e-16) instead of numbers in the R output.</p>
+<pre class="r"><code>options(digits=5, scipen=15)</code></pre>
+<p>This lab uses a new dataset, the Crime Rates Datasets of NSW Local Government Areas (NSW Crime). Download the data file in the course website(iLearn) and put it in your working directory. Then, run the following code:</p>
+<pre class="r"><code>crime &lt;- readRDS(&quot;nsw-lga-crime.RDS&quot;)</code></pre>
+<p>The dataset is loaded as <em>crime</em>.</p>
+<div id="creating-a-dataset-of-complete-cases" class="section level1">
+<h1>Creating a Dataset of Complete Cases</h1>
+<p>In most cases, your dataset contains cases with many missing values. Missing values can reduce the statistical power of analyses and produce biased estimates, which could lead to invalid conclusions. There are several ways to handle missing values, but this lab introduces only the listwise deletion (also known as complete-case analysis) which is the most frequently used method in handling missing data.
+Listwise deletion removes any case in a dataset if the case has a missing value on any variable in the analysis. Suppose that we are investigating the relationships across six variables: sexual offence rates (<em>sexoff</em>), the median age of residents (<em>medage</em>), unemployment rates (<em>unemploy</em>), median house prices (<em>housmedprice</em>), regions of LGAs(<em>region2</em>), and urban or rural LGAs (<em>urban</em>). The first step of this analysis is to create a dataset which includes only LGAs that have no missing values on these six variables so that we can investigate all the relationships based on the same set of LGAs.
+First, we create a new dataset (<em>crime2</em>) which has the six variables of our choice as well as identification numbers (<em>code</em>) and LGA names (<em>name</em>). Note that code and name have no missing values and thus does not affect the listwise deletion process. ‘<code>select()</code>’ is used for choosing variables that will be included in a new dataset. If you are not familiar with this function, go to <a href="https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-specific-variables">Creating a dataset of specific variables</a>.</p>
+<pre class="r"><code>crime2 &lt;- crime %&gt;%
+  select(code, name, medage, unemploy, housmedprice, sexoff, region2, urban)</code></pre>
+<p>Second, we make a new variable (<em>mark</em>), which will show whether cases have missing values on any of the six variables. We tentatively assign 0 to all the cases. ‘<code>mutate()</code>’ is used for creating a new variable. If you are not familiar with this function, go to <a href="https://methods101.com/docs/soc830_lab_04/#computing-variables">Computing variables</a>.</p>
+<pre class="r"><code>crime2 &lt;- crime2 %&gt;%
+  mutate(mark = 0)</code></pre>
+<p>Third, we replace 0 with 1 only when cases do not have missing values on all the six variables. Thus, 1 indicates cases with no missing values, and 0 indicates those with missing values. ‘<code>replace(variable, condition, value)</code>’ will change the value of <code>variable</code> into <code>value</code> when <code>condition</code> is met. ‘<code>complete.cases(data)</code>’ identifies cases with no missing values in <code>data</code>. Taken together, the code assigns 1 to cases only when they have no missing values.</p>
+<pre class="r"><code>crime2 &lt;- crime2 %&gt;%
+  mutate(mark = replace(mark, complete.cases(crime2), 1))</code></pre>
+<p>Finally, we keep only cases with no missing values. ‘filter()’ is used for selecting complete cases. If you are not familiar with this function, go to <a href="https://methods101.com/docs/soc830_lab_06/#creating-a-dataset-of-a-sub-group">Creating a dataset of a sub-group</a>.</p>
+<pre class="r"><code>crime2 &lt;- crime2 %&gt;%
+  filter(mark == 1)</code></pre>
+<p>We will use this newly created dataset in the remaining analyses.</p>
+</div>
+<div id="changing-the-scale-of-variables" class="section level1">
+<h1>Changing the Scale of Variables</h1>
+<p><em>housmedprice</em> has a huge range (47500 – 2800000), which makes it a little bit complicated to interpret regression outputs. Therefore, reducing the range would be helpful. An easy way to achieve this goal is to divide the value by numbers. In this example, we divide it by 10,000. The following code performs this task and assigns a new variable label.</p>
+<pre class="r"><code>crime2 &lt;- crime2 %&gt;%
+  mutate(housmedprice = housmedprice/10000)
+crime2$housmedprice &lt;- set_label(crime2$housmedprice, label = &quot;Median sale price of house ($10,000)&quot;)</code></pre>
+</div>
+<div id="computing-and-visualising-correlation-coefficients" class="section level1">
+<h1>Computing and Visualising Correlation Coefficients</h1>
+<p>Let’s examine the relationship between two continuous variables, median house prices (<em>housmedprice</em>) and sexual offence rates (<em>sexoff</em>). To compute correlation coefficients of two continuous variables, use ‘<code>cor(data$variable1, data$variable2, method = “pearson”, use = “complete.obs”)</code>’. This shows a Pearson correlation coefficient based on complete cases (which has no missing values on two variables of your choice). The following codes compute the correlation coefficient of <em>housmedprice</em> and <em>sexoff</em>.</p>
+<pre class="r"><code>cor(crime2$sexoff, crime2$housmedprice, method = &quot;pearson&quot;, use = &quot;complete.obs&quot;) </code></pre>
+<pre><code>## [1] -0.52149</code></pre>
+<p>The output shows that the correlation coefficient is -0.52149.</p>
+<p>We visualise the relationship using ‘<code>plot_scatter(data, independent, dependent)</code>’. We assume that median house prices influence sexual offence rates. Thus, <em>housmedprice</em> is an independent, and <em>sexoff</em> is a dependent variable. Thus, the following codes show a scatterplot of <em>housmedprice</em> and <em>sexoff</em>.</p>
+<pre class="r"><code>plot_scatter(crime2, housmedprice, sexoff, colors = &quot;#8B1A1A88&quot;, dot.size = 3, fit.line = &quot;lm&quot;)</code></pre>
+<p><img src="/docs/SOC830_lab_10_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Note that ‘<code>colors</code>’ assign the colour of dots (I assigned a transparent colour in the above code so that we can easily notice overlapped dots), ‘<code>dot.size</code>’ set the size of them, and ‘<code>fit.line = “lm”</code>’ adds a linear fitted line to the scatterplot.</p>
+</div>
+<div id="producing-a-correlation-matrix" class="section level1">
+<h1>Producing a Correlation Matrix</h1>
+<p>‘<code>cor()</code>’ allows us to compute a correlation coefficient between only two variables. But what if we want to calculate correlation coefficients across many variables of our choice simultaneously? The correlation matrix could be an easy solution. It is a way of presenting multiple correlation coefficients in a single table. Variables are arrayed across the left (in the first column) and across the bottom (in the last row). Correlation coefficients for each relationship appear in the corresponding cell of the table.</p>
+<p>To produce a correlation matrix, we need to create a new dataset (<em>corr.crime</em>) consisting of variables across which correlation coefficients are computed. In the following example, we calculated them across four variables: <em>medage</em>, <em>unemploy</em>, <em>housmedprice</em>, <em>sexoff</em>. Therefore, we select these variables from the complete-case dataset we made (<em>crime2</em>).</p>
+<pre class="r"><code>corr.crime &lt;- crime2 %&gt;%
+  select(medage, unemploy, housmedprice, sexoff)</code></pre>
+<p>Let’s check which variables are included in <em>corr.crime</em>.</p>
+<pre class="r"><code>names(corr.crime) </code></pre>
+<pre><code>## [1] &quot;medage&quot;       &quot;unemploy&quot;     &quot;housmedprice&quot; &quot;sexoff&quot;</code></pre>
+<p>The output confirms that the variables we selected are included. It also shows the order of variables: <em>medage</em> is in the leftmost column, and <em>sexoff</em> is in the rightmost column. Next, we will change this order so that we can read correlation coefficients easily. <em>sexoff</em> (4th) should come first, then <em>unemploy</em> (2nd), then <em>housmedprice</em> (3rd), and finally <em>medage</em> (1st). The following code performs this task. ‘<code>c(4, 2, 3, 1)</code>’ tells R this new order.</p>
+<pre class="r"><code>corr.crime &lt;- corr.crime[,c(4,2,3,1)] </code></pre>
+<p>Now, let’s make a correlation matrix using ‘<code>sjp.corr(data)</code>’.</p>
+<pre class="r"><code>sjp.corr(corr.crime)</code></pre>
+<pre><code>## Computing correlation using pearson-method with listwise-deletion...</code></pre>
+<p><img src="/docs/SOC830_lab_10_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>The output shows all the coefficients across the four variables of our choice. Also, colours tell the coefficient indirectly. Red colours indicate negative, and blue colours suggest positive correlations. The darker a colour is, the stronger the relationship is.</p>
+</div>
+<div id="simple-regression-analysis" class="section level1">
+<h1>Simple Regression Analysis</h1>
+<p>Regression analysis is a more advanced way to examine the relationship between two variables. Let’s examine the relationship between median house prices (<em>housmedprice</em>) and sexual offence rates (<em>sexoff</em>) again using a regression model. ‘<code>lm(dependent ~ independent, data = data name)</code>’ is used for computing regression coefficients. Also, you need to assign a model name using ‘<code>model name &lt;-</code>’. In the following code, we assign a model name as <em>model.1</em>.</p>
+<pre class="r"><code>model.1 &lt;- lm(sexoff ~ housmedprice, data = crime2)</code></pre>
+<p>After running this code, you do not see any R output. To see regression outputs, run ‘<code>summary(model name)</code>’. It will show the output.</p>
+<pre class="r"><code>summary(model.1)</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = sexoff ~ housmedprice, data = crime2)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -184.6  -61.3  -17.5   55.5  348.4 
+## 
+## Coefficients:
+##              Estimate Std. Error t value             Pr(&gt;|t|)    
+## (Intercept)   267.818     12.446   21.52 &lt; 0.0000000000000002 ***
+## housmedprice   -0.919      0.154   -5.99          0.000000037 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 87.6 on 96 degrees of freedom
+## Multiple R-squared:  0.272,  Adjusted R-squared:  0.264 
+## F-statistic: 35.9 on 1 and 96 DF,  p-value: 0.0000000367</code></pre>
+<p>In the output, the intercept is 267.818, which means that sexual offence rates will be 267.8 if the median sale price of houses is <span>$</span>0. The coefficient of housmedprice is -0.919, which means that for each additional <span>$</span>10,000 in the median sale price of houses, sexual offence rates will decrease by 0.919. This negative effect of housmedprice is statistically significant at <span>α</span> = .05 because the p-value (0.000000037) is much less than .05. Thus, the regression equation of this model is sexoff = -.919 × housmedprice + 267.8. The coefficient of determination (Multiple R-squared) is 0.272, which means that 27.2% of the total variance in sexual offence rates is explained by the median house price.</p>
+<p>The R codes you have written so far look like:</p>
+<pre class="r"><code>################################################################################
+# Lab 10: Correlations &amp; Simple Regression
+# 27/05/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+
+# Load packages
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+
+# Avoid scientific notation
+options(digits=5, scipen=15) 
+
+# Load datasets
+crime &lt;- readRDS(&quot;nsw-lga-crime.RDS&quot;)
+
+# Creating a Dataset of Complete Cases
+crime2 &lt;- crime %&gt;%
+  select(code, name, medage, unemploy, housmedprice, sexoff, region2, urban)
+
+crime2 &lt;- crime2 %&gt;%
+  mutate(mark = 0)
+
+crime2 &lt;- crime2 %&gt;%
+  mutate(mark = replace(mark, complete.cases(crime2), 1))
+
+crime2 &lt;- crime2 %&gt;%
+  filter(mark == 1)
+
+# Changing the Scale of Variables
+crime2 &lt;- crime2 %&gt;%
+  mutate(housmedprice = housmedprice/10000)
+crime2$housmedprice &lt;- set_label(crime2$housmedprice, label = &quot;Median sale price of house ($10,000)&quot;)
+
+# Computing and Visualising Correlation Coefficients
+cor(crime2$sexoff, crime2$housmedprice, method = &quot;pearson&quot;, use = &quot;complete.obs&quot;) 
+plot_scatter(crime2, housmedprice, sexoff, colors = &quot;#8B1A1A88&quot;, dot.size = 3, fit.line = &quot;lm&quot;)
+
+# Producing a Correlation Matrix
+corr.crime &lt;- crime2 %&gt;%
+  select(medage, unemploy, housmedprice, sexoff)
+names(corr.crime) 
+corr.crime &lt;- corr.crime[,c(4,2,3,1)] 
+sjp.corr(corr.crime)
+
+# Simple Regression Analysis
+model.1 &lt;- lm(sexoff ~ housmedprice, data = crime2)
+summary(model.1)</code></pre>
+<center>
+Last updated on <em>27 May, 2019</em> by <em>Dr Hang Young Lee</em><a href="mailto:hangyoung.lee@mq.edu.au">(hangyoung.lee@mq.edu.au)</a>
+</center>
+</div>
