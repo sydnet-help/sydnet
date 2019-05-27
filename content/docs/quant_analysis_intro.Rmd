@@ -106,8 +106,3 @@ A guide to generating a wide range of charts in SPSS.
 
 Links to a range of practice datasets.
 
-
-
-
-Last updated by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
-

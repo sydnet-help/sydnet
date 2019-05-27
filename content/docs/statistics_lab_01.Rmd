@@ -19,7 +19,26 @@ menu:
 
 ---
 
-This is a very simple and short introduction to quantitative analysis and statistics.
+# Concepts 
+
+<b style="padding-left: 2em">Descriptive statistics<br></b>
+<b style="padding-left: 2em">Inferential statistics<br></b>
+<b style="padding-left: 4em">Population<br></b>
+<b style="padding-left: 4em">Sample<br></b>
+<b style="padding-left: 4em">Statistical significance<br></b>
+<b style="padding-left: 4em">P-value<br></b>
+<b style="padding-left: 2em">Correlation Coefficient<br></b>
+<b style="padding-left: 4em">Pearson's correlation<br></b>
+
+**Non-examinable:** <br>
+<b style="padding-left: 2em">T-test<br></b>
+<b style="padding-left: 2em">Linear regression<br></b>
+<b style="padding-left: 4em">Coefficient<br></b>
+<b style="padding-left: 4em">R Square<br></b>
+
+# Lecture Slides
+
+This is a very simple and short introductory lecture to quantitative analysis and statistics.
 
 [Powerpoint slides of "An Introduction to Quantitative Analysis" (PDF)](/docs/intro to statistics v01.pdf)
 
