@@ -36,6 +36,11 @@ menu:
 <b style="padding-left: 4em">Coefficient<br></b>
 <b style="padding-left: 4em">R Square<br></b>
 
+# Video Lecture
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=QRsWhdX2kaQ" frameborder="0" allowfullscreen></iframe>
+
+
 # Lecture Slides
 
 This is a very simple and short introductory lecture to quantitative analysis and statistics.

@@ -36,9 +36,13 @@ menu:
 <b style="padding-left: 4em">Coefficient<br></b>
 <b style="padding-left: 4em">R Square<br></b>
 
-# Lecture Slides
+# Definitions
 
-This is a very simple and short introductory lecture to quantitative analysis and statistics.
+**Descriptive statistics:** Statistics which summarise a sample, but which do not attempt to draw conclusions (inferences) about a larger population. For example, the mean, the median, and the standard deviation of a variable in a sample are all descriptive statistics.
 
-[Powerpoint slides of "An Introduction to Quantitative Analysis" (PDF)](/docs/intro to statistics v01.pdf)
+**Inferential statistics:** 
+
+
+
+
 
