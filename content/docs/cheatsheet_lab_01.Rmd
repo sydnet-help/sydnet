@@ -14,15 +14,20 @@ output:
 linktitle: "Instructions (Required)"
 menu:
    docs:
-      parent: SOC224 Cheatsheet
+      parent: SOC224 Final Report
       weight: 10
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
+
+# Video Introduction
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dbg-E0uM5vc" frameborder="0" allowfullscreen></iframe>
+
+
 
 # Introduction
 
-On Monday and Tuesday and Thursday (Thursday is for externals, OUA, and Friday class only) of Week 13 each group will book a one-hour slot to present and discuss their research final reports with Nick. You can book this here:  [bit.ly/week13_marking_consult](http://www.bit.ly/week13_marking_consult). This presentation and the written final report will be graded on the spot, and feedback given at the same time.
+On Monday and Tuesday and Thursday of Week 13 **OR Week 14 (for those who want to submit later)** each group will book a one-hour slot to present and discuss their research final reports with Nick. You can book this here:  [bit.ly/week13_marking_consult](http://www.bit.ly/week13_marking_consult). This presentation and the written final report will be graded on the spot, and feedback given at the same time.
 
 The format will be (1) a 12-minute presentation by your group, with all group members presenting for equal periods of time. This will be followed by (2) questions and discussion, (3) Nick taking time to review your written document, and end with (4) feedback and grading. 
 
@@ -31,6 +36,8 @@ All internal groups will present in their normal class (Wed or Friday) of Week 1
 External groups can nominate to present to the internal class, either via video conference, or pre-recorded video. 
 
 On Wednesday/Friday, when internal groups will present to the whole class, there will be 12 minutes for presentation and ~8 minutes for comments and questions from the class. All students will provide written feedback and grades on each other's presentations via an online Google form. 
+
+If internal groups choose to submit in Week 14, then they won't be expected to present in class in Week 13.
 
 # Presentation
 
@@ -97,7 +104,9 @@ Please use the example of final reports, provided on iLearn, as an example of ho
     b.	Do they agree with your proposed explanation?  Do they agree with the existing literature?
     c.	What are the implication for generalised knowledge, and also for wider society.
 7.	Reference list (for anything you cite).
-8.	Appendices (as necessary)
+8.	Appendices
     a.	Your survey downloaded as a codebook
     b.	Scan/screenshot of the first page of every reference in your reference list (to prevent plagiarism of references)
+
+
 

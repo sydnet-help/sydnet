@@ -1,0 +1,66 @@
+---
+title: "SOC224: Qualitative Analysis 5: Concept Sheet"
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: false
+
+linktitle: "Qual Analysis 5: Concepts"
+menu:
+  docs:
+    parent: SOC224 Qual Analysis
+    weight: 60
+---
+
+# Concepts 
+<b style="padding-left: 2em">Qualitative data<br></b>
+<b style="padding-left: 2em">Basic Tools<br></b>
+<b style="padding-left: 4em">Thematic analysis<br></b>
+<b style="padding-left: 6em">Open coding<br></b>
+<b style="padding-left: 6em">Axial coding<br></b>
+<b style="padding-left: 6em">Selective coding<br></b>
+<b style="padding-left: 4em">Codebook<br></b>
+<b style="padding-left: 4em">Analytic memo<br></b>
+<b style="padding-left: 4em">Saturation<br></b>
+<b style="padding-left: 4em">Writing up<br></b>
+<b style="padding-left: 2em">Advanced Tools<br></b>
+<b style="padding-left: 4em">Inductive theorising<br></b>
+<b style="padding-left: 4em">Deductive theorising<br></b>
+<b style="padding-left: 4em">Analytic comparison<br></b>
+<b style="padding-left: 4em">Narrative & sequence analysis<br></b>
+
+# Definitions
+
+**Qualitative data**: Data in the form of words or images, as opposed to data which is in the form of numbers. Examples of qualitative data include: answers to open ended survey questions, interview transcripts, fieldnotes, recordings of an entire series of a TV show, a set of newspaper articles, archival documents from a government department. 
+
+**Thematic analysis:** the main technique for analysing qualitative data. Involves the identification of recuring patterns (themes) in the data. More formalised and structured forms of thematic analysis involve the use of codes to categorise parts of the data, and the recording of official memos where ideas are stored during the process of reading and analysing the data. 
+
+**Open coding:** The first stage of thematic analysis, where the researcher reads over all their existing data, and highlights and codes parts they find interesting. For example, a researcher might print out all their transcripts onto A4 paper, and then sit down for a day or two with a pen, and underline interesting parts, and make notes in the margins with any ideas they have.
+
+**Axial coding:** The main part of the coding process, where a formal **codebook** is used and all primary data is systematically reviewed and coded according to the rules of the codebook. 
+
+**Codebook:** A formal record of the codes used during **axial coding**. Generally each code will have  a name, a definition, and then several examples which illustrate types of excerpts the code should be applied to.
+
+**Selective coding:** The third and final type of coding. Selective coding is the reviewing of your extracts to find one or two illustrative examples for each major theme. For example, you might come up with an example of four reasons students give for cheating in exams, and one of them is "Cheating isn't so bad." You might then review your primary source documents and find a quote that says "It's not like I killed someone. I improved my mark by a few points. So what?" This quote is an illustrative quote, and the process of choosing it is selective coding.
+
+**Analytic memo** or just **memo:** A formal record of ideas, insights, and thoughts which the researcher has as the are reading and coding the primary data. These memos can be anything from a sentence to a small essay. In formal software, they are often linked to either an excerpt, a particular document, or to a code. The idea of memos is that they allow your reflections and thinking to be formally written down, and eventually these memos will build up to be an important part of your final analysis.
+
+**Saturation:** Theoretical saturation occurs when reviewing new documents reveals no new themes (i.e. no new codes). At this point we know we can stop data collection and/or data analysis. For example, if after coding up the 20th interview I find that no new themes emerge when I code up the 21st, 22nd, and 23rd interviews, then I can say that saturation occured at the 20th interview. The point of saturation is that it tells us when you was stop doing further data collection and analysis. In reality, often the point at which you reach saturation is quite vague and unclear.
+
+**Writing up:** Writing up refer to the stage of research where you write your results as a report or an article or a chapter, or similar. When writing up a qualitative study, you tend to simplify your analysis, and focus on a few important aspects of it. Normally we chose just three to 10 themes, and for each them we write up a separate section. Each section normally has a subheading, a short explanation, and one or two illustrative quotes (see **selective coding**). 
+
+**Inductive theorising** involves developing your theory (your explanation, your pattern, your coding framework) as you review your primary source documents. Inductive theorising often starts without a clear conception of the explanation, and sometimes not even a clear conception of the question. However, through the process of data collection and analysis the questions, theories, explanations, and categories emerge, and are slowly refined. Approaches which use this method include **successive approximation**, and **grounded theory**.
+
+**Deductive theorising** involves starting with a theory, and then through the review of your primary source documents, finding examples of your theoretical categories (the **illustrative method**), or comparing and contrasting with a theory (e.g. comparing to an **ideal type**). Deductive theory comes from somewhere outside of your primary source documents - perhaps from your imagination, or, more commonly, from the existing academic literature.
+
+**Analytic comparison** is a method where the cases in your data (whether these cases are as small as individual interviewees, or as large as nation states or revolutions) are organised and compared. The goal of analytic comparison is generally to explain some outcome (such as homelessness of an individual, or revolution in a nation-state) based on characteristics of the cases. Generally we are looking for characteristics which are similar amongst those with the same outcome (**the method of agreement**), and characteristics which differ across those with different outcomes (**the method of difference**).
+
+**Narrative & sequence analysis** involves attempting to identify pathways or sequences of events that run through one or more cases. The theory behind the sequence could be deductively derived (i.e. developed before/outside of your empirical data), or inductively derived (i.e. developed through identifying new patterns in your data).
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>

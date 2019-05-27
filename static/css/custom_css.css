@@ -4,6 +4,27 @@
  *  https://github.com/gcushen/hugo-academic
  **************************************************/
 
+/****************************************
+* Nick changes 26/5/2019
+*****************************************/
+
+.caption {
+  display: block;
+/*  margin-top: 0.75em;
+  line-height: 1.25; */
+  font-size: 0.7rem;
+  margin-bottom: 1.65rem;
+  font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-weight: bold; 
+}
+
+.img { 
+  padding:1px; 
+  border:1px 
+  solid #021a40; 
+} 
+
+
 /*************************************************
  *  Core
  **************************************************/
@@ -142,12 +163,18 @@ video {
   height: auto;
   max-width: 100%;
   display: block;
+  padding:1px; 
+  border:1px 
+  solid #021a40;
 }
 
 video {
   width: 100%;
   height: auto;
   max-height: 400px;
+  padding:1px; 
+  border:1px 
+  solid #021a40;
 }
 
 .img-responsive {
@@ -162,6 +189,7 @@ figcaption {
   font-size: 1rem;
   margin-bottom: 1.65rem;
   font-family: '{{ .Get "heading_font" }}', sans-serif;
+  font-weight: bold; 
 }
 
 figcaption.numbered:before {
@@ -760,6 +788,9 @@ ul.share li:hover i {
 /*************************************************
  *  Page content style
  **************************************************/
+.figure {
+  display:block;
+}
 
 article {
   animation: intro 0.3s both;
@@ -944,6 +975,8 @@ article .article-metadata {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding: 0;
+  display: block; 
+
 }
 
 .article-style td img,
@@ -1632,6 +1665,8 @@ nav#navbar-main li.nav-item {
 .navbar-brand img {
   max-height: 90px;
   margin-right: 60px;
+  padding:0px; 
+  border:0px 
 }
 
 .navbar-light .navbar-toggler .icon-bar {
@@ -1703,6 +1738,8 @@ nav#navbar-main li.nav-item {
 
   .navbar-brand img {
     max-height: 70px;
+    padding:0px; 
+    border:0px 
   }
 
   .navbar-toggler {

@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 4: Correlation"
+linktitle: "SPSS 4: Correlation"
 menu:
    docs:
       parent: SOC224 SPSS Intro
@@ -25,11 +25,13 @@ menu:
 <li><a href="#reading">Reading</a></li>
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#theory">Theory</a></li>
-<li><a href="#pearsons-correlation">Pearsons Correlation</a></li>
+<li><a href="#two-tables">Two Tables</a></li>
+<li><a href="#pearsons-correlation">Pearsons Correlation</a><ul>
+<li><a href="#making-publishable-tables">Making Publishable Tables</a></li>
+</ul></li>
 </ul>
 </div>
 
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 <div id="reading" class="section level1">
 <h1>Reading</h1>
 <p>‘Chapter 7: Correlation’ in <a href="https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1446249182">Andy Field, 2017. Discovering Statistics Using IBM SPSS Statistics. Sage.</a></p>
@@ -76,6 +78,29 @@ Figure 2: Visual illustration of different correlation coefficients. Author: Den
 </p>
 </div>
 </div>
+<div id="two-tables" class="section level1">
+<h1>Two Tables</h1>
+<p>There are two main types of correlation tables you might want to produce:</p>
+<ol style="list-style-type: decimal">
+<li><strong>a table</strong> which shows the correlation of all the <strong>independent</strong> variables with the <strong>dependent</strong> variable/s.</li>
+<li><strong>a matrix</strong> which shows the correlation of all variables with all other varibles</li>
+</ol>
+<p>Figures 3 and 4 below show examples of these.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="/img/htad_lab_04_image_correlation_table.png" alt="A table with the correlation between the two independent variables and the main independent variables." width="300" />
+<p class="caption">
+Figure 3: A table with the correlation between the two independent variables and the main independent variables.
+</p>
+</div>
+<p>Figures 3 and 4 below show examples of these.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="/img/htad_lab_04_image_correlation_layout_excel.png" alt="A matrix with the correlation between the main variables." width="500" />
+<p class="caption">
+Figure 4: A matrix with the correlation between the main variables.
+</p>
+</div>
+<p>Figures 3 and 4 below show examples of these.</p>
+</div>
 <div id="pearsons-correlation" class="section level1">
 <h1>Pearsons Correlation</h1>
 <ol style="list-style-type: decimal">
@@ -111,4 +136,30 @@ Figure 2: Visual illustration of different correlation coefficients. Author: Den
 <li>On the Pivot Table, you will see a drop down box. Click on this and select your dependent variable. You will now have a list of the bivariate correlations of all your independent variables with your dependent variable.</li>
 </ol>
 <p><img src="/img/quant_analysis_lab_04_image_08.png" width="200" style="display: block; margin: auto;" /></p>
+<div id="making-publishable-tables" class="section level2">
+<h2>Making Publishable Tables</h2>
+<p>If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. <br><br> Instead, what you should do is:</p>
+<ol style="list-style-type: lower-roman">
+<li>right click on the table you want to copy, and select ‘copy’</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives_copy.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>open Excel, and then paste as text (this will strip out formating). Option could be called “Keep Text Only (T)” or “Match destination formating (M)”.</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives_copy_to_excel.png" width="300" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: lower-roman">
+<li>In Excel, delete the rows for N (number of cases), and the significance (it is already indicated in the stars /* and /<em>/</em> )</li>
+<li>Orient the column headings vertically (select cells, then right click&gt;Format cells…&gt;Alignment&gt;Orientation)</li>
+<li>Create three vertical lines in the table: (1) at the top of the table, (2) at the bottom of the table, and (3) under the column headings.</li>
+<li>Align the columns with numbers in them to the centre (keep the first column, with the variable names, left-aligned)</li>
+<li>AutoFit the column widths by selecting all the columns and then double clicking boundary between any two column headings.</li>
+</ol>
+<p><img src="/img/htad_lab_04_image_autosize_excel.png" width="300" style="display: block; margin: auto;" /></p>
+<ol start="7" style="list-style-type: lower-roman">
+<li>Turn off gridlines (View&gt;Gridlines)</li>
+<li>Take a screenshot of the table and paste into your report.</li>
+</ol>
+<p><img src="/img/htad_lab_04_image_correlation_layout_excel.png" width="500" style="display: block; margin: auto;" /></p>
+<p><img src="/img/htad_lab_04_image_correlation_table.png" width="300" style="display: block; margin: auto;" /></p>
+</div>
 </div>

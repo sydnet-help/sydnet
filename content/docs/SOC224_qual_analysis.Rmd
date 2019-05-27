@@ -18,6 +18,10 @@ menu:
     weight: 10
 ---
 
+# Video Lecture
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oU6GuTl9f2s" frameborder="0" allowfullscreen></iframe>
+
 # Concepts 
 <b style="padding-left: 2em">Qualitative data<br></b>
 <b style="padding-left: 2em">Basic Tools<br></b>
@@ -25,6 +29,7 @@ menu:
 <b style="padding-left: 6em">Open coding<br></b>
 <b style="padding-left: 6em">Axial coding<br></b>
 <b style="padding-left: 6em">Selective coding<br></b>
+<b style="padding-left: 4em">Codebook<br></b>
 <b style="padding-left: 4em">Analytic memo<br></b>
 <b style="padding-left: 4em">Saturation<br></b>
 <b style="padding-left: 4em">Writing up<br></b>

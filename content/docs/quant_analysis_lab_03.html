@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Eyeballing data for errors (Descriptive Statistics)"
+title: "Lab 3: Descriptive Statistics: Summarising your data and checking for errors"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 3: Look for errors"
+linktitle: "SPSS 3: Descriptive Stats"
 menu:
    docs:
       parent: SOC224 SPSS Intro
@@ -23,12 +23,13 @@ menu:
 <div id="TOC">
 <ul>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#step-1-descriptive-statistics">Step 1: Descriptive Statistics</a></li>
+<li><a href="#step-1-descriptive-statistics">Step 1: Descriptive Statistics</a><ul>
+<li><a href="#making-publishable-tables">Making Publishable Tables</a></li>
+</ul></li>
 <li><a href="#step-2-histograms">Step 2: Histograms</a></li>
 </ul>
 </div>
 
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 <div id="summary" class="section level1">
 <h1>Summary</h1>
 <p>The first thing you generally want to do with a quantitative data is check you haven’t made any major mistakes in entering to transforming the data.</p>
@@ -55,7 +56,7 @@ menu:
 <li>Select all the variables in the box marked A in the diagram below. You can do this by clicking in the box, and then pressing “Control + A” (Windows) or “Apple + A” (Mac).</li>
 <li>Click the button with an arrow (marked 1 in the diagram below).</li>
 <li>Click the button “Options…”</li>
-<li>In the dialogue which opens (“Descriptives:Options”) select mean, Std deviation, Min, Max, SE mean.</li>
+<li>In the dialogue which opens (“Descriptives:Options”) select mean, Std deviation, Min, Max (these should be selected by default).</li>
 <li>Click “Continue”</li>
 <li>Click “OK”</li>
 </ol></li>
@@ -69,9 +70,29 @@ menu:
 <li><strong>N Statistic:</strong> This is the number of valid cases for this variable. Non-valid cases are mostly missing cases, such as people who didn’t answer that question.<br> <strong>What to look for?</strong> You want the number of valid cases to be a sensible number. Often there can be a problem where a zero is coded as missing. This is what seems to have happened for the variable is <em>int_post</em>, which has 1857 valid cases. This variable (<a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">look at the codebook</a>) measures whether people have posted audio, video, or image files online. It has three values: NA = Missing; 0 = Unchecked; 1 = Checked. However, if we look the Minimum and Maximum values for this variable, the min and max are the same - one (1). This suggests there is no variation, and that all Unchecked values were coded as Missing.</li>
 <li><strong>Minimum Statistic &amp; Maximum Statistic:</strong> This is the lowest value and highest of this variable. <br> <strong>What to look for?</strong> You want to check that these make sense. If you have someone who is 140 years old, there is probably a problem. If the youngest age is -999 then you also have a problem.</li>
 <li><strong>Mean Statistic:</strong> This is the mean of across all people in the dataset. You just want to ask if it is sensible.</li>
-<li><strong>Std Deviation Statistic</strong> and <strong>Std Error of Mean:</strong> These are two measures of variability. We will discuss in more detail later.</li>
+<li><strong>Std Deviation Statistic</strong> This is a measures of variability. We will discuss in more detail later.</li>
 </ol>
 <p><img src="/img/htad_lab_03_image_descriptives.png" width="600" style="display: block; margin: auto;" /></p>
+<div id="making-publishable-tables" class="section level2">
+<h2>Making Publishable Tables</h2>
+<p>If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. <br><br> Instead, what you should do is:</p>
+<ol style="list-style-type: lower-roman">
+<li>right click on the table you want to copy, and select ‘copy’</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives_copy.png" width="400" style="display: block; margin: auto;" /></p>
+<ol start="2" style="list-style-type: lower-roman">
+<li>open Excel, and then paste as text (this will strip out formating)</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives_copy_to_excel.png" width="300" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: lower-roman">
+<li>In Excel, reduce all the decimal points to two decimal points, unless it is a number like 0.00001, which needs more decimal points</li>
+<li>put a vertical line at the top of the table, at the bottom of the table, and under the headings.</li>
+<li>Align the columns with numbers in them to the centre</li>
+<li>Turn off gridline (View&gt;Gridlines)</li>
+<li>Take a screenshot of the table.</li>
+</ol>
+<p><img src="/img/htad_lab_03_image_descriptives_layout_excel.png" width="500" style="display: block; margin: auto;" /></p>
+</div>
 </div>
 <div id="step-2-histograms" class="section level1">
 <h1>Step 2: Histograms</h1>

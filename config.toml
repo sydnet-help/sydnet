@@ -9,11 +9,11 @@
 baseurl = "https://methods101.com"
 
 # Title of your site
-title = ""
+title = "Methods101.com | Resources to study society"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
-copyright = "&copy; 2018"
+copyright = "&copy; 2019"
 
 theme = "hugo-academic"
 
@@ -35,7 +35,7 @@ hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 
 # Get last modified date for content from Git?
-enableGitInfo = false
+enableGitInfo = true
 
 [outputs]
   home = [ "HTML", "CSS", "RSS", "JSON" ]
@@ -133,7 +133,7 @@ enableGitInfo = false
 
   # Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-  date_format = "Jan 2, 2006"
+  date_format = "Monday, 02 January 2006"
   #   Examples: "3:04 pm" or "15:04"
   time_format = "3:04 PM"
 
@@ -218,7 +218,7 @@ enableGitInfo = false
   [params.publications]
     # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
     #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-    date_format = "January, 2006"
+    date_format = "Monday, 02 January 2006"
 
   # Configuration of project pages.
   [params.projects]
@@ -315,14 +315,19 @@ enableGitInfo = false
 
 [[menu.docs]]
  name = "SOC224 Qual Analysis"
- weight = 65
+ weight = 20
+
+[[menu.docs]]
+ name = "SOC224 Statistics Intro"
+ weight = 30
+
 
 [[menu.docs]]
  name = "SOC224 SPSS Intro"
  weight = 65
 
 [[menu.docs]]
- name = "SOC224 Cheatsheet"
+ name = "SOC224 Final Report"
  weight = 85
 
 

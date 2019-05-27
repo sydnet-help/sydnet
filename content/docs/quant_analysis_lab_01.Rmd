@@ -1,7 +1,7 @@
 ---
 title: "Lab 1: Installing SPSS"
 
-lastmod: 2018-12-30T00:00:00
+lastmod: 2018-05-25T00:00:00
 
 draft: false
 type: docs
@@ -11,14 +11,13 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 1: Installing SPSS"
+linktitle: "SPSS 1: Installing SPSS"
 menu:
    docs:
       parent: SOC224 SPSS Intro
       weight: 20 
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Introduction
 For these labs we will use the statistical package SPSS. 
@@ -87,4 +86,8 @@ knitr::include_graphics("/img/htad_lesson_01_figure_9.png")
 ```
 
 9. If you encounter technical difficulties, you may get a OneHelp ticket from the IT https://wiki.mq.edu.au/display/iLab/Help or bring your computer to the IT help desk located on the ground floor at 17 Wally's Walk (C5C), Room 244.
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
 

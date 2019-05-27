@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 7: Linear Regression"
+linktitle: "SPSS 7: Linear Regression"
 menu:
    docs:
       parent: SOC224 SPSS Intro

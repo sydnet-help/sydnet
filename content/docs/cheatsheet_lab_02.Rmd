@@ -1,5 +1,5 @@
 ---
-title: "Advice (Optional)"
+title: "Advice on finishing your final project with as little stress as possible (Optional)"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -14,10 +14,222 @@ output:
 linktitle: "Advice (Optional)"
 menu:
    docs:
-      parent: SOC224 Cheatsheet
+      parent: SOC224 Final Report
       weight: 20
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
-# TBA
+# Introduction
+So you need to get your final project finished, and it all feels a bit overwhelming. 
+
+This guide is a quick step by step guide to getting across the finish line. 
+
+# What is assumed
+This guide assumes you have:
+
+* finished data collection - and you have at least some half-respectible sample (maybe 70 responses?) 
+* you did the research proposal, so you have a literature review, and a methods section of your report already written. 
+
+# What you need to do to get finished
+To get this project completed, these are the things you will need to do:
+
+1. Confirm your exact research question + important variables
+2. Download your data from qualtrics
+3. Do a qualitative (thematic) analysis and write that up
+4. Do a quantitative (statistical) analysis and write that up
+5. Integrate it all together as one report
+6. Make powerpoint slides
+7. Submit
+
+# 1. Confirm your exact research question + important variables
+During the design phase of this research project, almost everyone will have tried to make your research question, and your survey, as complicated as possible. 
+
+This is human nature. We can see all the many different aspects of a problem. We don't want to leave out something important. 
+
+Hopefully at this stage you are exhaused, overwhelmed by your other assignments due in Week 13, and are ready to compromise.
+
+## 1.1 Most good papers make one single argument, that can be expressed in a sentence.
+The reality of academic research is that you basically get to make one argument per paper, and it needs to be a simple argument.
+
+So the first step is for you to write down your exact research question, as a single sentence.
+
+Go ahead and do that now. 
+
+When you write it down, keep it in front of you at all times while you do the rest of this project. This should be the one thing you keep coming back to to keep you focused and centred
+
+For example, maybe you write down "What causes workplace rights violations in the construction industry?"
+
+## 1.2 Identify important variables
+
+The second step is to identify your important variables. 
+
+### Conceptual
+Let's start at the conceptual (ideas) level. Ask yourself:
+
+* What is your dependent variable (outcome variable)?
+* What are your main independent variables (predictor or causal variable)?
+* What control variables (age, gender, etc) do you need to include?
+
+At this stage you really want between three and ten conceptual level variables. If you have more than this, you are going to really make life difficult for yourself.
+
+You might say that your important variables are:
+
+* experience of workplace rights violations (dependent variable)
+* pay
+* hours of work
+* job
+* age
+* gender
+* nationality
+
+### Operational
+OK, so which questions in your survey capture each of these variables. Again, try to keep it simple. Perhaps you one question per variable. In other cases, you might have a number of items. Either way, just write down what you have. 
+
+# 2. Download your data from qualtrics
+
+To do analysis you will need to download your data from qualtrics. 
+
+Luckily, there is clear instructions about how to do this on this website. Just follow this link:
+
+[Instructions on how to download your qualtrics data](/docs/quant_analysis_lab_02/)
+
+# 3. Do a qualitative (thematic) analysis and write that up
+
+I would suggest you allocate two people in your group to be in charge of qualitative analysis.
+
+## 3.1 Deciding on the question, and the data you will analyse
+You have your overall research question, but you will need to pick some part of that question for the qualitative analysis to try to answer. 
+
+What this is will vary by (1) the nature of your question and (2) what data you actually have (cause you can't analyse data you don't have!)
+
+Let's imagine your main question was "What causes workplace rights violations in the construction industry?"
+
+And lets imagine you only had one open ended question which said "If you ticked any of the above [a list of workplace rights violations] Please explain what happened to you."
+
+Given that you only have one open ended question, you will just have to go ahead and analyse this. 
+
+So what will your question be? It probably could be:
+* What are the major violations workers face?
+* What do workers' descriptions of their workplace rights violations reveal about the nature of these violations?
+
+The first is a lot simpler. It could be useful as a way of providing detailed illustration of problems the survey might find.
+
+## 3.2 Conduct the analysis
+The guide on this website provides a very straight forward step by step guide to doing qualitative analysis here:
+[Step-by-step guide to thematic analysis in Microsoft Word](/docs/soc224_qual_analysis_stepbystep/)
+
+However, I think you can probably do the analysis a little more simply and crudely, given your time constraints. 
+
+Thus, my suggestion is that you do the follow:
+
+1. The two persons delegated with responsibility for qualitative analysis organise to meet in person or via skype (or similar).
+2. Before the meeting, both persons read through the qualitative answers to the questions you will be doing analysis of. 
+3. When you meet, you debate and discuss which thematic categories and what argument best answers the your question, and capture the detail in your data
+4. Once you have come up with your argument and thematic categories, you then take a random sample of 20-50 answers, and read them together and debate and discussion which category they would be coded under, and if they are consistent with your argument and coding category.
+5. If re-reading the quotes raises issues and problems with your argument and categories, then revise your argument and categories, and then repeat step 4. If it raises no problems, then go to step 6.
+6. Go through your data and find one or two illustrative quotes for each of your thematic categories. 
+7. In a Google Doc, write up the qualitative analysis section of your report. Keep it simple and suscinct. I would suggest the parts be
+    i. Introductory paragraph which outlines the argument, and forshadows (i.e. lists) the themes
+    i. For each theme, then include:
+        a. A subheading
+        a. A short explanatory paragraph
+        a. One or two illustrative quotes
+    
+# 4. Do a quantitative (statistical) analysis and write that up
+
+For most papers there are at least two types of analysis you want to do:
+
+i. a descriptive statistics table (a univariate table)
+ii. a correlation matrix (a bivariate statistics table)
+
+In addition, you might also want to do:
+
+i. a regression table - if you want to look at the corelation between your independent variable and a dependent variable, after controlling for other variables
+ii. construct and test an index (if you have multiple variables than measure the same underlying concept)
+iii. make a figure or diagram, to show your findings as an illustration. 
+
+No matter what you do, remember the rule is to KEEP IT SIMPLE. And in the case of tables, that means keeping it to about three, with an absolute maximum of five. 
+
+## 4.1 Descriptive statistics table
+
+Virtually all academic papers have a descriptive statistics table. This simply shows the mean, standard deviation, min, and max for each of your variables. Why do you make this? So that the reader can get a sense of the range and characteristics of our variables. 
+
+Instructions for generating descriptive statistics are here:
+
+* [How to generate descriptive statistics with SPSS](https://methods101.com/docs/quant_analysis_lab_03/#step-1-descriptive-statistics)
+
+## 4.2 a correlation matrix 
+
+There are two types of tables containing correlations that you might want to produce.
+
+The simplest is a table where you have the correlation between all the independent variables and your single dependent variable. 
+
+The second type is a correlation matrix, which shows the correlation of all variables with all other variables. 
+
+Instructions on generating correlation matricies can be found here:
+
+* [How to generate correlation matricies with SPSS](/docs/quant_analysis_lab_04/#a-tail-of-two-tables)
+
+## 4.3 make a figure or diagram or chart
+
+Often a good way of illustrating your main finding is with a chart. 
+
+The instructions for generating different types of charts in SPSS can be found here:
+
+* [SPSS Lab 9: Visualisation](/docs/quant_analysis_lab_09/)
+
+## 4.4 a regression table
+
+If you want to model an outcome, and have multiple predictors, then you will need to use a regression model.
+
+The main type of regression model is a linear regression. 
+
+The instructions for running a regression model are here:
+
+* [SPSS Lab 7: Linear Regression](/docs/quant_analysis_lab_07/)
+
+## 4.5 construct and test an index
+
+If you have multiple measures of the same concept - such as a set of likert questions that all measure mental health - then you will need to construct an index (also called scale). 
+
+The instructions for constructing an index are here:
+
+* [SPSS Lab 6: Indexes](/docs/quant_analysis_lab_06/)
+
+
+# 5. Integrate it all together as one report
+
+Once you have done all your analysis, your job is to integrate it all into one report. 
+
+The secret to doing this well and with less pain is to:
+
+* Really keep it simple: have one overarching argument that can be expressed in a sentence
+* Make the entire rest of the paper focused on making that one argument
+* Cut everything else
+* Make sure you run the exact same words through the entire document, especially for your key concepts. If you are talking about "Mental Health", then sick to that term. Don't occassionally use other words like "emotional distress" or "serious mental illness" or "depression and anxiety".
+* Every paragraph gets to make only one point.
+* Every paragraph starts with a topic sentence which says the topic of the paragraph.
+* Less is almost always more: keep your literature review, methods, results, and discussion all short and suscinct. They still need to do their job, but try to do it with less words.
+* Remember you should be aiming for just three tables and figures, with a maximum of five (unless there is a really good reason). 
+* One of your tables should be descriptive statistics. 
+* One of your tables should be a correlation matrix or table.
+
+# 6. Make powerpoint slides + prepare your presentation
+
+Remember that just like your report, your powerpoint slides are making an argument.
+
+Be prepared to present formally: it is easier for the audience to follow and listen to, and it is good practice for you for the real world. 
+
+Your slides don't have to be beautiful, but they should be clear and coherent.
+
+# 7. Submit
+
+You will be submitting your final project in the marking consultation. 
+
+Please bring a paper copy of the report and the powerpoint slides.
+
+You should submit your final projects on iLearn after the marking consultation.
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>

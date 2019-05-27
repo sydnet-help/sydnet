@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Eyeballing data for errors (Descriptive Statistics)"
+title: "Lab 3: Descriptive Statistics: Summarising your data and checking for errors"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,14 +11,13 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Quant Analysis 3: Look for errors"
+linktitle: "SPSS 3: Descriptive Stats"
 menu:
    docs:
       parent: SOC224 SPSS Intro
       weight: 45
 
 ---
-<style> img { padding:1px; border:1px solid #021a40; } </style>
 
 # Summary
 
@@ -49,7 +48,7 @@ knitr::include_graphics("/img/htad_lab_03_image_menu_descriptives.png")
     a. Select all the variables in the box marked A in the diagram below. You can do this by clicking in the box, and then pressing "Control + A" (Windows) or "Apple + A" (Mac).
     a. Click the button with an arrow (marked 1 in the diagram below).
     a. Click the button "Options..."
-    a. In the dialogue which opens ("Descriptives:Options") select mean, Std deviation, Min, Max, SE mean. 
+    a. In the dialogue which opens ("Descriptives:Options") select mean, Std deviation, Min, Max (these should be selected by default). 
     a. Click "Continue"
     a. Click "OK"
 
@@ -66,11 +65,40 @@ a. **N Statistic:** This is the number of valid cases for this variable. Non-val
 a. **Minimum Statistic  & Maximum Statistic:** This is the lowest value and highest of this variable. <br>
 **What to look for?** You want to check that these make sense. If you have someone who is 140 years old, there is probably a problem. If the youngest age is -999 then you also have a problem. 
 a. **Mean Statistic:** This is the mean of across all people in the dataset. You just want to ask if it is sensible.
-a. **Std Deviation Statistic** and **Std Error of Mean:** These are two measures of variability. We will discuss in more detail later. 
+a. **Std Deviation Statistic** This is a measures of variability. We will discuss in more detail later. 
 
 ```{r, echo=FALSE, out.width=600, fig.align='center'}
 knitr::include_graphics("/img/htad_lab_03_image_descriptives.png")
 ```
+
+## Making Publishable Tables
+
+If you are writing a report and you need to put these descriptive statistics into a report, then DO NOT just make a screenshot of the SPSS output. <br><br> Instead, what you should do is:
+
+  i. right click on the table you want to copy, and select 'copy'
+
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives_copy.png")
+```
+    
+    
+  ii. open Excel, and then paste as text (this will strip out formating)
+    
+```{r, echo=FALSE, out.width=300, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives_copy_to_excel.png")
+```
+    
+    
+  iii. In Excel, reduce all the decimal points to two decimal points, unless it is a number like 0.00001, which needs more decimal points
+  iv. put a vertical line at the top of the table, at the bottom of the table, and under the headings.
+  v. Align the columns with numbers in them to the centre
+  vi. Turn off gridline (View>Gridlines)
+  vii. Take a screenshot of the table.
+
+```{r, echo=FALSE, out.width=500, fig.align='center'}
+knitr::include_graphics("/img/htad_lab_03_image_descriptives_layout_excel.png")
+```
+
 
 # Step 2: Histograms
 

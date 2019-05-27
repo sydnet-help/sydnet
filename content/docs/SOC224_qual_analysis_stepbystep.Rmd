@@ -1,5 +1,5 @@
 ---
-title: "SOC224: Qualitative Analysis 3: Step-by-step (Word)"
+title: "SOC224: Qualitative Analysis 3: Step-by-step in Microsoft Word"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Qual Analysis 3: Step-by-step (Word)"
+linktitle: "Qual Analysis 3: In Word"
 menu:
    docs:
       parent: SOC224 Qual Analysis

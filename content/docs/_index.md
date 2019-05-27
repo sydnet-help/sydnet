@@ -1,5 +1,5 @@
 ---
-title: "Overview"
+title: "Resources to Study Society"
 
 lastmod: 2019-02-22T00:00:00
 
@@ -9,7 +9,8 @@ type: "docs"  # Do not modify.
 # Add menu entry to sidebar.
 ---
 
-Methods101.com provides easy to follow lessons on social research methods.
+## Methods101.com
+[Methods101.com](Methods101.com) provides easy to follow lessons on social research methods.
 
 The site focuses on teaching you how to analyse quantitative data with the statistical packages R and SPSS. 
 
@@ -29,8 +30,9 @@ Here you can access the following pages:
 
 * **About**: Under this you will find information about the website, how to contact the creators and how to give feedback
 * **SOC224 Qual Analysis**: A practical guide to qualitative analysis, written for Macquarie University undergraduate unit SOC224:Methods of Social Research
+* **SOC224 Statistics Intro:** A very brief introduction to quantitative analysis.
 * **SOC224 SPSS Intro**: A practical guide to quantitative analysis in SPSS, written for SOC224
-* **SOC224 Cheatsheet**: Instructions + Advice for doing the final assignment for SOC224
+* **SOC224 Final Report**: Instructions + Advice for doing the final assignment for SOC224
 * **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
 * **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 

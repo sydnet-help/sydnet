@@ -1,7 +1,7 @@
 ---
-title: "Lab X: Practice Datasets"
+title: "Practice Datasets"
 
-lastmod: 2018-12-30T00:00:00
+lastmod: 2019-05-24T00:00:00
 
 draft: false
 type: docs
@@ -9,9 +9,9 @@ maths: true
 
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
 
-linktitle: "Quant Analysis X: Practice Datasets"
+linktitle: "SPSS: Practice Datasets"
 menu:
    docs:
       parent: SOC224 SPSS Intro
@@ -20,17 +20,33 @@ menu:
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
 
-# Practice Datasets
+**Pornography Dataset**<br>
+[Dataset](/data/Dataset 1 Pornography.xlsx)<br>
+[Codebook](/data/Codebook 1 Pornography .docx)
 
-[Dataset 1 Pornography](/docs/Codebook 1 Pornography .docx)<br>
-[Codebook 1 Pornography](/docs/Dataset 1 Pornography.xlsx)
+**Singapore Sex Dataset**<br>
+[Dataset](/data/Dataset 3 Singaporean Sex .xlsx)<br>
+[Codebook](/data/Codebook 3 Singapore Sex.docx)
 
-[Dataset 3 Singaporean Sex](/docs/Dataset 3 Singaporean Sex .xlsx)<br>
-[Codebook 3 Singapore Sex](/docs/Codebook 3 Singapore Sex.docx)
+**Cheating Dataset**<br>
+[Dataset](/data/Dataset 4 Cheating.xlsx)<br>
+[Codebook](/data/Codebook 4 Cheating.docx)
 
-[Dataset 4 Cheating](/docs/Dataset 4 Cheating.xlsx)<br>
-[Codebook 4 Cheating](/docs/Codebook 4 Cheating.docx)
+**Territorial Change Dataset**<br>
+[Dataset](/data/Dataset 5 Territorial_change.xls)<br>
+[Codebook](/data/Codebook 5 Territorial_change.docx)
 
-[Dataset 5 Territorial Change](/docs/Dataset 5 Territorial_change.xls)<br>
-[Codebook 5 Territorial Change](/docs/Codebook 5 Territorial_change.docx)
+**Australian Electoral Study 2013 - Reduced**<br>
+[Dataset - Excel](/data/elect_2013.xlsx)<br>
+[Dataset - SPSS Data file](/data/elect_2013.sav)<br>
+[Codebook](https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html)
 
+The full original data can be found by following the links below to:
+
+* [the Australian Electorial Study.](https://australianelectionstudy.org/voter-studies/)
+* [the 2013 dataset and codebook at the Australian Data Archive.](https://dataverse.ada.edu.au/dataset.xhtml?persistentId=doi:10.4225/87/WDBBAS)
+
+This is an article based on analysis of the AES 2013 data:<br>
+<b style="padding-left: 2em">Ian McAllister (2016) Internet use, political knowledge and youth electoral<br></b> 
+<b style="padding-left: 2em">participation in Australia, _Journal of Youth Studies_, 19:9, 1220-1236, <br></b>
+<b style="padding-left: 2em">DOI: 10.1080/13676261.2016.1154936<br></b>
