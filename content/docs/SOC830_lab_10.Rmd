@@ -22,7 +22,7 @@ This tenth lab introduces 1) how to produce a matrix of bivariate correlations, 
 
 We will use four packages for this lab. Load them using the following code:
 
-```{r, echo=TRUE, warning=FALSE}
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(sjlabelled)
 library(sjmisc)
@@ -148,7 +148,7 @@ After running this code, you do not see any R output. To see regression outputs,
 summary(model.1)
 ```
 
-In the output, the intercept is 267.818, which means that sexual offence rates will be 267.8 if the median sale price of houses is <span>&#36;</span>0. The coefficient of housmedprice is -0.919, which means that for each additional <span>&#36;</span>10,000 in the median sale price of houses, sexual offence rates will decrease by 0.919. This negative effect of housmedprice is statistically significant at <span>&#945;</span> = .05 because the p-value (0.000000037) is much less than .05. Thus, the regression equation of this model is sexoff = -.919 × housmedprice + 267.8. The coefficient of determination (Multiple R-squared) is 0.272, which means that 27.2% of the total variance in sexual offence rates is explained by the median house price.
+In the output, the intercept is 267.818, which means that sexual offence rates will be 267.8 if the median sale price of houses is <span>&#36;</span>0. The coefficient of housmedprice is -0.919, which means that for each additional <span>&#36;</span>10,000 in the median sale price of houses, sexual offence rates will decrease by 0.919. This negative effect of housmedprice is statistically significant at <span>&#945;</span> = .05 because the p-value (0.000000037) is much less than .05. Thus, the regression equation of this model is $sexoff = -.919 × housmedprice + 267.8$. The coefficient of determination (Multiple R-squared) is 0.272, which means that 27.2% of the total variance in sexual offence rates is explained by the median house price.
 
 The R codes you have written so far look like:
 
