@@ -3,7 +3,7 @@ title: "Concept Sheet"
 
 lastmod: 2018-12-30T00:00:00
 
-draft: true
+draft: false
 type: docs
 maths: true	
 
@@ -29,5 +29,23 @@ menu:
 <div id="definitions" class="section level1">
 <h1>Definitions</h1>
 <p><strong>Descriptive statistics:</strong> Statistics which summarise a sample, but which do not attempt to draw conclusions (inferences) about a larger population. For example, the mean, the median, and the standard deviation of a variable in a sample are all descriptive statistics.</p>
-<p><strong>Inferential statistics:</strong></p>
+<p><strong>Inferential statistics:</strong> Statistics which aims to draw conclusions about a population from the analysis of a sample from that population. This statistics asks “What do we know about the true population parameter given the information in the sample?” Inferential statistics tends to include a reported p-value or significance tests, or confidence intervals. These tell us the chance that the population parameter is zero (i.e. that nothing is happening).</p>
+<p><strong>Population:</strong> A large, unseen group which you draw inferences about. A sample is drawn from a population.</p>
+<p><strong>Sample:</strong> A set of cases (individuals) generally assumed to be drawn as a true random sample from the population. A sample is used to draw inferences about the population. For example:A sample of 1,000 voters surveyed by phone can be used to draw inferences about the population of Australian voters.</p>
+<p><strong>Population parameter:</strong> A true value or characteristics of a population, for example, the mean age of Australian voters, or the proportion of voters who would give their two party prefer vote to the Liberal Party. The population parameter is the number you are trying to estimate with inferential statistics.</p>
+<p><strong>Sample statistic:</strong> A value or characteristics measured on your sample. The sample statistics is an estimate of the true population parameter. For example, the mean age of your sample of 1,000 voters, or the proportion of your sample that would give their two party preferred vote to the Liberal Party.</p>
+<p><strong>Null hypothesis:</strong> This is - roughly speaking - the hypothesis that “nothing is happening”. Most of the time the null hypothesis is that the population parameter is zero.</p>
+<p><strong>P-value/statistical significance:</strong> Roughly speaking - the chance that our population parameter is zero. This is expressed as a number between 0 and 1. The critical value is p &lt; 0.05, which means a less that 5% chance that our population parameter is zero (or whatever our null hypothesis is).</p>
+<p><strong>Confidence interval:</strong> This is the range within which we expect (normally with 95% confidence) the population parameter to lie.</p>
+<p><strong>Correlation coefficient:</strong> A number between 1 and -1 that indicates the strength of the relationship between two variables, with 1 indicating that they completely covary in a positive direction, -1 indicating that they completely covary in an opposite direction, and 0 indicating that they are statistically independent.</p>
+<p><strong>Pearson’s correlation coefficient:</strong> The most commonly used correlation coefficient. It is a standardised measure of how much two variables co-vary. The formal equation for pearson’s correlation coefficient (also called ‘r’) is:</p>
+<p><span class="math inline">\(\begin{aligned} r = &amp;\frac{\sum_{i=1}^n (x_i - \bar x)(y_i - \bar y)}{(N-1)s_x s_y} \\ \\ \text{Where:} \\ \bar x = &amp;\text{ mean of x} \\ \bar y = &amp;\text{ mean of y} \\ \bar N = &amp;\text{ number of observations} \\ s_x = &amp;\text{ standard deviation of x} \\ s_y = &amp;\text{ standard deviation of y} \\ \end{aligned}\)</span></p>
+<p><strong>T-test:</strong> A test used to compare the mean values of a dependent variable in two groups.</p>
+<p><strong>Independent sample t-test:</strong> Used when you are comparing the same variable on two different groups of individuals (or cases). For example, comparing the scores on a test of two different classes.</p>
+<p><strong>Paired sample t-test:</strong> Used when you are comparing two variables on the same set of individuals (or cases). For example, when you are comparing the quiz results of the same class in Week 1 and Week 2.</p>
+<p><strong>Linear regression:</strong> A model for predicting the value of one variable from the value of other variables. The model uses the equation of a straight line (y = bx + c). y is the outcome variable, x is the predictor variable, and b is the slope of the relationship between x and y.</p>
+<p><span class="math inline">\(\begin{aligned} y = &amp;b_1 x_1 + b_2 x_2 + b_3 x_3 + ... + b_0 + e \\ \\ \text{Where:} \\ y=&amp;\text{ dependent variable (outcome variables)} \\ x_1 , x_2 , \text{ ... }x_n = &amp;\text{ independent variables (predictor variables)} \\ b_1 , b_2 , \text{ ... }b_n = &amp;\text{ slope of relationship between }y\text{ and }x_1 , x_2 , \text{ ... }x_n \\ b_0 = &amp;\text{ intercept (i.e. value of }y \text{ when all }x=0 \text{)} \\ \end{aligned}\)</span></p>
+<p><strong>R-squared</strong> or <span class="math inline">\(R^2\)</span>: In a regression model, this is the proportion of change in the dependent variable (the outcome) accounted for by the independent variables in the model.</p>
+<p><strong>regression coefficient (b):</strong> the change in the dependent variable associated with a one unit increase in the independent variable.</p>
+<p><strong>standardised beta values:</strong> regression coefficients but for a model where the independent and dependent varables are all standardised (centred on zero, standard deviation of 1). The standardized beta regression coefficients are interpreted as “the number of standard deviation increase in the dependent variable associated with a one standard deviation increase in the independent variable.”</p>
 </div>
