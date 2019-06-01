@@ -81,7 +81,7 @@ Please use the example of final reports, provided on iLearn, as an example of ho
         i.	Study 1 (quantitative):
             1.	How did you measure your main variables?
             2.	What analysis did you do (correlation? Regression? Cronbach Alpha)? 
-        i.	Study 2 (quantitative)
+        i.	Study 2 (qualitative)
             1.	What question/s did you ask to get your data? 
             2.	How did you analyse the data (describe your thematic analysis)
 5.	Results
