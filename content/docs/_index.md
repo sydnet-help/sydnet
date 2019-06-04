@@ -34,4 +34,6 @@ Here you can access the following pages:
 * **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
 * **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 
+## Search this Website
+
 You can search this site with [Google here](https://www.google.com/search?q=site%3Amethods101.com). Just leave the text "site:methods101.com" in the Google search box, and type your search terms. e.g. site:methods101.com regression 
