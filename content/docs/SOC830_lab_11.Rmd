@@ -1,0 +1,316 @@
+---
+title: "SOC830 Lab 11: Multiple Regression"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Lab 11: Multiple Regression"
+menu:
+  docs:
+    parent: SOC830(SOCI702)
+    weight: 60
+---
+The final lab introduces 1) how to conduct a multiple regression model, 2).how to use dummy variables in the regression model, and 3) how to create regression tables using R. We use four packages in this lab. Load them using the following code:
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+```
+
+Also, run the following code. Otherwise, you will see scientific notations (e.g., 2e-16) instead of numbers in the R output.
+
+```{r, echo=TRUE}
+options(digits=5, scipen=15)
+```
+
+This lab uses the 2009 AuSSa dataset. Download the data file in the course website(iLearn) and put it in your working directory. Then, run the following code:
+
+```{r, echo=FALSE}
+aus2009 <- readRDS(url("https://github.com/hylee87/surveyclass/raw/master/data/aussa2009.rds"))
+```
+
+```{r eval=FALSE, echo=TRUE}
+aus2009 <-readRDS("aussa2009.rds")
+```
+
+Using the 2009 AuSSa dataset, this lab investigates gender income gaps in Australia. For this investigation, we will use six variables: gender (*sex*), education (*educyrs*), employment status (*wrkst*), supervisor status (*wrksup*), working hours per week (*wrkhrs*) and annual income (*rinc*). We also add a variable of identification numbers (*id*) to this dataset. We create a new dataset consisting of only complete cases which have no missing values on the six variables of our choice. The following code performs this task. If you cannot understand the code, review [Creating a Dataset of Complete Cases]( https://methods101.com/docs/soc830_lab_10/#creating-a-dataset-of-complete-cases).
+
+```{r, echo=TRUE, warning=FALSE}
+income <- aus2009 %>%
+  select(id, sex, educyrs, wrkst, wrksup, wrkhrs, rinc)
+
+income <- income %>%
+  mutate(mark = 0)
+
+income <- income %>%
+  mutate(mark = replace(mark, complete.cases(income), 1))
+
+income <- income %>%
+  filter(mark == 1)
+```
+
+# Multiple Regression Analysis
+Running regression models is quite simple. We use ‘`lm()`’ again but add more independent variables. Thus, ‘`model name <- lm(dependent ~ independent 1 + independent 2 + independent 3 + …, data = data name)`’ conducts multiple regression analysis. The following code estimates a regression model in which education (*educyrs*) and working hours per week (*wrkhrs*) explain the annual income(*rinc*).
+
+```{r, echo=TRUE, warning=FALSE}
+model <- lm(rinc ~ educyrs + wrkhrs, data = income)
+summary(model)
+```
+
+In the output, the intercept is -12,938.1, which means that the annual income will be - <span>&#36;</span>12,938.1 if people have 0 years of schooling and do not work. The coefficient of *educyrs* is 2,668, which means that for each additional one-year increase in years of schooling, annual income will increase by <span>&#36;</span>2,668 <u>while controlling for the effect of working hours per week</u>. This positive effect of education is statistically significant at <span>&#945;</span> = .05 because the p-value (<0.0000000000000002) is much less than .05. The coefficient of *wrkhrs* is 737.8, which means that for each additional one-hour increase in working hours per week, annual income will increase by <span>&#36;</span>737.8 <u>while controlling for the effect of education</u>. This positive effect of working hours is statistically significant at <span>&#945;</span> = .05 because the p-value (<0.0000000000000002) is much less than .05. Thus, the regression equation of this model is $rinc = 2,688 × educyrs + 737.8 × wrkhrs – 12,938.1$. The coefficient of determination (Multiple R-squared) is 0.235, which means that 23.5% of the total variance in annual incomes is explained by the two independent variables.
+
+# Dummy Variable Analysis
+## Creating a Dummy Variable.
+A dummy variable is a binary variable used in regression analysis that represents subgroups (or categories) of the sample in your study. And it is used to estimate the effect of nominal variables. Let’s make a dummy variable of gender. The following code shows two categories of gender (*sex*): male and female. 
+
+```{r, echo=TRUE, warning=FALSE}
+frq(income$sex)
+```
+
+Since we want to investigate how much less women earn compared to men, males should be the reference category which takes 0. Consequently, females should take 1. Thus, let’s recode *sex* in such a way. In a nutshell, **<u>the reference category must take 0 values in dummy variables</u>**.
+
+```{r, echo=TRUE, warning=FALSE}
+income <- rec(income, sex, rec = "1=0;2=1", append = TRUE)
+```
+
+Then, we rename a newly recoded variable as *female* and set a variable and value label.
+
+```{r, echo=TRUE, warning=FALSE}
+income <- var_rename(income, sex_r = female)
+income$female <- set_label(income$female, label = "Gender")
+income$female <- set_labels(income$female, labels = c("Male" = 0, "Female" = 1))
+```
+
+The most important step is to <u>change this dummy variable as a factor</u>. Otherwise, R will not treat it as a dummy variable in regression analysis.
+
+```{r, echo=TRUE, warning=FALSE}
+income$female <- to_factor(income$female)
+```
+
+In some cases, you may want to use women instead of men as your reference category. In this case, you can easily change a reference category by using the ‘`ref_lvl(variable, lvl = value for the reference category)`’ function. Make sure that the variable used for ‘`ref_lvl()`’ should be a variable that is converted to a factor. The following code makes a new variable (*male*) in which 0 is female, and 1 is male. 
+
+```{r, echo=TRUE, warning=FALSE}
+income$male <- ref_lvl(income$female, lvl = 1)
+```
+
+The following code makes a dummy variable of employment status (*wrkst*). wrkst has ten categories, which is too many to analyse them. When you look at the frequency table of wrkst, value 4 to 10 can be collapsed into one employment status, ‘not in labour force”. We will use this category as a reference category. 
+
+```{r, echo=TRUE, warning=FALSE}
+frq(aus2009$wrkst)
+income <- rec(income, wrkst, rec = "1=1; 2=2; 4:10=0", append = TRUE)
+income$wrkst_r <- set_label(income$wrkst_r, label = "Current employment status")
+income$wrkst_r <- set_labels(income$wrkst_r, labels = c("Not in labour force" = 0,
+                                                        "Full-time" = 1,
+                                                        "Part-time" = 2))
+income$wrkst_r <- to_factor(income$wrkst_r)
+```
+
+The following code makes a dummy variable of supervisor status (*wrksup*). Supervisees are treated as a reference category.
+
+```{r, echo=TRUE, warning=FALSE}
+frq(income$wrksup)
+income <- rec(income, wrksup, rec = "1=1; 2=0", append = TRUE)
+income$wrksup_r <- set_label(income$wrksup_r, label = "Supervisor jobs")
+income$wrksup_r <- set_labels(income$wrksup_r, labels = c("Suvervisee" = 0,
+                                                          "Supervisor" = 1))
+income$wrksup_r <- to_factor(income$wrksup_r)
+```
+
+## Assigning Variable Labels
+We also assign variable labels to all the other variables of the income dataset.
+
+```{r, echo=TRUE, warning=FALSE}
+income$educyrs <- set_label(income$educyrs, label = "Education")
+income$wrkhrs <- set_label(income$wrkhrs, label = "Hours worked per week")
+income$rinc <- set_label(income$rinc, label = "Annual income")
+```
+
+# Dummy Variable Regression Analysis
+First, we estimate the annual income only by gender, which shows gender difference in the annual income.
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.1 <- lm(rinc ~ female, data = income)
+summary(model.4.1)
+```
+
+In the output, ‘female1’ indicates ‘being a female (when the value of female is 1). Thus, the coefficient of ‘female1’ means that women earn <span>&#36;</span>19,204 less than men. And this female disadvantage is statistically significant (the p-value is less than .001).
+
+For the comparison, let’s use *male* instead of *female* in regression analysis. Note that 'female' is the reference category in the *male* variable.
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.1.1 <- lm(rinc ~ male, data = income)
+summary(model.4.1.1)
+```
+
+In the output, look at the coefficient of ‘male1’. It is 19,204. Note that it is a **POSITIVE** number. It means that men earn <span>&#36;</span>19,204 **MORE** than women. This example shows well that regression coefficients change when different categories are set as a reference category and that the interpretation of coefficients for dummy variables should be made in relation to assigned reference categories.
+
+The second model estimates female disadvantage in the annual income while controlling for education.
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.2 <- lm(rinc ~ female + educyrs, data = income)
+summary(model.4.2)
+```
+
+After controlling education, the coefficient of *female* drops to -19,715, which means that women earn <span>&#36;</span>19,715 less than men who have the same level of education.
+
+The third model estimates female disadvantage in the annual income while controlling for education and working hours per week.
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.3 <- lm(rinc ~ female + educyrs + wrkhrs, data = income)
+summary(model.4.3)
+```
+
+After controlling education and working hours per week, the coefficient of *female* reduced to -14,496, which means that women earn <span>&#36;</span>14,496 less than men <u>if they have the same level of education and work as much as men do</u>. This reduction implies that women work less than men, which in turn decreases their annual income. 
+
+The fourth model adds another dummy variable, employment status (*wrkst_r*).
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.4 <- lm(rinc ~ female + educyrs + wrkhrs + wrkst_r, data = income)
+summary(model.4.4)
+```
+
+The output shows two coefficients of employment status (*wrkst_r*). In *wrkst_r*, 1 means “Full-time employment”, and 2 means “Part-time employment”. Thus, the coefficient of ‘wrkst_r1’ is for “Full-time employment and that of ‘wrkst_r2’ is for “Part-time employment”. The interpretation is that full-time workers earn <span>&#36;</span>35,211 more, and part-time workers earn <span>&#36;</span>22,627 more than those who are not in the labour force (the reference category) <u>while controlling for gender, education and working hours per week</u>. After controlling employment status as well as education and working hours per week, women earn <span>&#36;</span>12,781 less than men. The gender gap is reduced a lot compared to that in the second model, which implies that employment status accounts substantially for female disadvantage in the annual income. Women are less likely to have stable jobs than men, which decrease their annual income.
+
+The fifth model adds a dummy variable of supervisor status, *wrksup_r*. 
+
+```{r, echo=TRUE, warning=FALSE}
+model.4.5 <- lm(rinc ~ female + educyrs + wrkhrs + wrkst_r + wrksup_r, data = income)
+summary(model.4.5)
+```
+
+The coefficient of 'wrksup_r1' (which means those who supervise others at work) is 7,992. This means that supervisors earn <span>&#36;</span>7,992 more than supervisees <u>while controlling for gender, education, working hours per week and employment status</u>. The coefficient of ‘female1’ is a little bit changed, implying that supervisor status does not contribute much to female disadvantage in the annual income. The regression equation of this model is $rinc =-12,462 × female + 2,367 × educyrs + 238 × wrkhrs + 35,738 × wrkst_r1 + 22,764 × wrkst_r2 +7,992 × wrksup_r1 – 17,601$. R-square (Multiple R-squared) is 0.35, which means that 35% of the total variance in the annual income is explained by the five variables (gender, education, working hours, employment status, and supervisor status).
+
+# Creating a Regression Table
+We have so far analysed female disadvantage in the annual income using several regression models. How can we present all these regression models in a just single table? Using the ‘`tab_model()`’ function would be the easiest way. The following code combines the five regression models we have estimated so far and creates a single regression table.
+
+```{r, echo=TRUE, warning=FALSE}
+tab_model(model.4.1, model.4.2, model.4.3, model.4.4, model.4.5, digits = 3,
+          pred.labels = c("Intercept", "Female (ref. = Male)", 
+                          "Education", "Hours worked per week", 
+                          "Full-time (ref. = Not in labour force)", 
+                          "Part-time (ref. = Not in labour force)", 
+                          "Supervisor (ref. = Supervisee)"),
+          dv.labels = c("Model 1", "Model 2", "Model 3", "Model 4", "Model 5"),
+          title = "Gender Effects on Annual Income",
+          show.se = TRUE, show.ci = FALSE, collapse.se = TRUE, p.style = "asterisk")
+```
+
+In the code, you must list the name of regression models that will be included in a regression table. ‘`digits = value`’ specifies the decimal places for numbers in the table. ‘`pred.labels  = c()`’ sets the labels of independent variables displayed in the first column of the table. ‘`dv.labels = c()`’ sets the labels of models displayed in the first row of the table. ‘`title = “”`' sets the title of the table. ‘`show.se = TRUE`’ displays the standard errors of coefficients, ‘`show.ci = FALSE`’ does not show the confidence intervals of coefficients, and ‘`collapse.se = TRUE`' shows standard errors along with coefficients in the same column. ‘`p.style = “asterisk”`' displays the p-value in the format of stars.
+
+The R codes you have written so far look like:
+
+```{r eval=FALSE, echo=TRUE}
+################################################################################
+# Lab 11: Multiple Regression
+# 3/06/2019
+# SOC830, SOCI702, SOCX830
+################################################################################
+# Load packages
+library(dplyr)
+library(sjlabelled)
+library(sjmisc)
+library(sjPlot)
+
+# Avoid scientific notation
+options(digits=5, scipen=15) 
+
+# Load dataset
+aus2009 <- readRDS("aussa2009.RDS")
+
+# Create a dataset of complete cases
+income <- aus2009 %>%
+  select(id, sex, educyrs, wrkst, wrksup, wrkhrs, rinc)
+
+income <- income %>%
+  mutate(mark = 0)
+
+income <- income %>%
+  mutate(mark = replace(mark, complete.cases(income), 1))
+
+income <- income %>%
+  filter(mark == 1)
+
+# Multiple regression
+model <- lm(rinc ~ educyrs + wrkhrs, data = income)
+summary(model)
+
+# Make dummy variables
+## Gender
+frq(income$sex)
+
+income <- rec(income, sex, rec = "1=0;2=1", append = TRUE)
+
+income <- var_rename(income, sex_r = female) # rename `sex_r` as `female`
+income$female <- set_label(income$female, label = "Gender")
+income$female <- set_labels(income$female, labels = c("Male" = 0, "Female" = 1))
+
+income$female <- to_factor(income$female) # convert into a factor for dummy
+
+income$male <- ref_lvl(income$female, lvl = 1) # set females as a reference
+
+## Current employment status
+frq(aus2009$wrkst)
+income <- rec(income, wrkst, rec = "1=1; 2=2; 4:10=0", append = TRUE)
+income$wrkst_r <- set_label(income$wrkst_r, label = "Current employment status")
+income$wrkst_r <- set_labels(income$wrkst_r, labels = c("Not in labour force" = 0,
+                                                        "Full-time" = 1,
+                                                        "Part-time" = 2))
+income$wrkst_r <- to_factor(income$wrkst_r)
+
+## Supervisor
+frq(income$wrksup)
+income <- rec(income, wrksup, rec = "1=1; 2=0", append = TRUE)
+income$wrksup_r <- set_label(income$wrksup_r, label = "Supervisor jobs")
+income$wrksup_r <- set_labels(income$wrksup_r, labels = c("Suvervisee" = 0,
+                                                          "Supervisor" = 1))
+income$wrksup_r <- to_factor(income$wrksup_r)
+
+## Assign Variable Name
+income$educyrs <- set_label(income$educyrs, label = "Education")
+income$wrkhrs <- set_label(income$wrkhrs, label = "Hours worked per week")
+income$rinc <- set_label(income$rinc, label = "Annual income")
+
+# Dummy variable regression analysis
+model.4.1 <- lm(rinc ~ female, data = income) # male as the reference
+summary(model.4.1)
+
+model.4.1.1 <- lm(rinc ~ male, data = income) # female as the reference
+summary(model.4.1.1)
+
+model.4.2 <- lm(rinc ~ female + educyrs, data = income)
+summary(model.4.2)
+
+model.4.3 <- lm(rinc ~ female + educyrs + wrkhrs, data = income)
+summary(model.4.3)
+
+model.4.4 <- lm(rinc ~ female + educyrs + wrkhrs + wrkst_r, data = income)
+summary(model.4.4)
+
+model.4.5 <- lm(rinc ~ female + educyrs + wrkhrs + wrkst_r + wrksup_r, data = income)
+summary(model.4.5)
+
+# Make a regression table
+tab_model(model.4.1, model.4.2, model.4.3, model.4.4, model.4.5, digits = 3,
+          pred.labels = c("Intercept", "Female (ref. = Male)", 
+          	"Education", "Hours worked per week", 
+          	"Full-time (ref. = Not in labour force)", 
+          	"Part-time (ref. = Not in labour force)", 
+          	"Supervisor (ref. = Supervisee)"),
+          dv.labels = c("Model 1", "Model 2", "Model 3", "Model 4", "Model 5"),
+          title = "Gender Effects on Annual Income",
+          show.se = TRUE, show.ci = FALSE, collapse.se = TRUE, p.style = "asterisk")
+```
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Hang Young Lee_[(hangyoung.lee@mq.edu.au)](mailto:hangyoung.lee@mq.edu.au)
+</center>
+
