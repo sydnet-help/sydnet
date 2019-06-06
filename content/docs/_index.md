@@ -32,7 +32,6 @@ Here you can access the following pages:
 * **SOC224 SPSS Intro**: A practical guide to quantitative analysis in SPSS, written for SOC224
 * **SOC224 Final Report**: Instructions + Advice for doing the final assignment for SOC224
 * **SOC830(SOCI702)**: A Macquarie University postgraduate unit called Doing Social Survey Research
-* **SOCI832**: A Macquarie University postgraduate unit called Advanced Quantitative Methods
 
 ## Search this Website
 
