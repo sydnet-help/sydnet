@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 2.1: Univariate analysis"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true	
 
@@ -86,10 +86,8 @@ menu:
 </ol>
 <pre class="r"><code>setwd(&quot;C:/G/2018, SOCI832/Datasets/AES 2013/&quot;)</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li><p>Put the file “elect_2013.csv” into that folder. This file can be found here:
-<a href="https://mqsociology.github.io/learn-r/soci832/elect_2013.csv" class="uri">https://mqsociology.github.io/learn-r/soci832/elect_2013.csv</a></p></li>
-<li><p>Keep the codebook openned in a browser so you can refer to it when you need it. The codebook is here:
-<a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html" class="uri">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p></li>
+<li><p>Put the file “elect_2013.csv” into that folder. This file can be found here: <a href="https://mqsociology.github.io/learn-r/soci832/elect_2013.csv" class="uri">https://mqsociology.github.io/learn-r/soci832/elect_2013.csv</a></p></li>
+<li><p>Keep the codebook openned in a browser so you can refer to it when you need it. The codebook is here: <a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p></li>
 <li><p>Import the data</p></li>
 </ol>
 <pre class="r"><code>library(readr)
@@ -136,7 +134,7 @@ elect_2013 &lt;- read_csv(&quot;elect_2013.csv&quot;) # loads dataset</code></pr
 <p>NOTE: when we provide the ‘probs’ argument, we need specify the set of numbers inside the function ‘c()’.</p>
 <p>‘c()’ is a function in R which joins together a set of numbers and makes them into a vector.</p>
 <p>Vectors are particular data type, but in essence they are set of numbers, like row or column.</p>
-<p>The thing to note is just that some functions and some arguments in R will need numbers passed to them is special ways. Some will need them passed in ‘c()’, others will need them passed in double inverted commas "", and some other formats. The main thing at this stage is to know to look out for this, as they are the sort of typo that will cause bugs in your code, and frustrate you for hours as you try to work out why your code isn’t working.</p>
+<p>The thing to note is just that some functions and some arguments in R will need numbers passed to them is special ways. Some will need them passed in ‘c()’, others will need them passed in double inverted commas “”, and some other formats. The main thing at this stage is to know to look out for this, as they are the sort of typo that will cause bugs in your code, and frustrate you for hours as you try to work out why your code isn’t working.</p>
 </div>
 <div id="variance-and-standard-deviation" class="section level2">
 <h2>1.2 Variance and standard deviation</h2>
@@ -156,10 +154,7 @@ elect_2013 &lt;- read_csv(&quot;elect_2013.csv&quot;) # loads dataset</code></pr
 <p>Because the survey aims to be representative of the Australian population but has the problem that the people who did the survey are systematically different from the Australian population? How? We don’t know exactly, but generally there tends to be overrepresentation of educated and older persons in surveys.</p>
 <p>Regardless, McAllister and the people who collected this data have calculated a number that represents how much we should weight each person in this survey. People who from over-represented demographics will have a value for the variable ‘weight’ below 1, e.g. 0.6 While those who are from under-represented demographics will have higher weights (up to 6).</p>
 <p>We are lucky that many of the statistical functions in R have a way to incorporate weighting into their calculations.</p>
-<p>For mean, there is a special command ‘weighted.mean’. Note that we use three arguments:
-* the variable we are calculating the mean on
-* the weighting variable
-* the command to remove cases with missing values.</p>
+<p>For mean, there is a special command ‘weighted.mean’. Note that we use three arguments: * the variable we are calculating the mean on * the weighting variable * the command to remove cases with missing values.</p>
 <pre class="r"><code>weighted.mean(elect_2013$likelihood_vote, 
               w = elect_2013$weight, na.rm =  TRUE)</code></pre>
 <pre><code>## [1] 4.201089</code></pre>
@@ -269,8 +264,7 @@ Figure 7: Probability density histogram of age
 <p>There is lots more you can do with ‘barplot()’. A simple extension is to give the graph colour.</p>
 <pre class="r"><code>barplot(table(x)/cases, col=&quot;Red&quot;)</code></pre>
 <p><img src="/docs/soci832_lesson_02-1_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
-<p>There are also lots of more powerful and beautiful graphs that can be made in R. Later in semester Young will teach you some of these techniques. If you want to teach yourself one place to start for graphing univariate statistics with the package ggplot2 is here:
-<a href="http://www.sthda.com/english/articles/32-r-graphics-essentials/133-plot-one-variable-frequency-graph-density-distribution-and-more/#density-plots" class="uri">http://www.sthda.com/english/articles/32-r-graphics-essentials/133-plot-one-variable-frequency-graph-density-distribution-and-more/#density-plots</a></p>
+<p>There are also lots of more powerful and beautiful graphs that can be made in R. Later in semester Young will teach you some of these techniques. If you want to teach yourself one place to start for graphing univariate statistics with the package ggplot2 is here: <a href="http://www.sthda.com/english/articles/32-r-graphics-essentials/133-plot-one-variable-frequency-graph-density-distribution-and-more/#density-plots" class="uri">http://www.sthda.com/english/articles/32-r-graphics-essentials/133-plot-one-variable-frequency-graph-density-distribution-and-more/#density-plots</a></p>
 </div>
 </div>
 </div>
@@ -279,10 +273,8 @@ Figure 7: Probability density histogram of age
 <p>summarytools is a powerful package that allows users to quickly and easily generate tables that can be cut and pasted directly into papers, presentations, and/or codebooks.</p>
 <div id="resources" class="section level3">
 <h3>RESOURCES</h3>
-<p>Excellent introduction by the author:
-<a href="https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html" class="uri">https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html</a></p>
-<p>The full manual:
-<a href="https://cran.r-project.org/web/packages/summarytools/summarytools.pdf" class="uri">https://cran.r-project.org/web/packages/summarytools/summarytools.pdf</a></p>
+<p>Excellent introduction by the author: <a href="https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html" class="uri">https://cran.r-project.org/web/packages/summarytools/vignettes/Introduction.html</a></p>
+<p>The full manual: <a href="https://cran.r-project.org/web/packages/summarytools/summarytools.pdf" class="uri">https://cran.r-project.org/web/packages/summarytools/summarytools.pdf</a></p>
 </div>
 <div id="why-use-it" class="section level3">
 <h3>WHY USE IT?</h3>
@@ -300,12 +292,12 @@ Figure 7: Probability density histogram of age
 </ul>
 <pre class="r"><code>install.packages(&quot;summarytools&quot;, 
                  repos = &#39;http://cran.rstudio.com&#39;) </code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;summarytools&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpkbNFPo\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpI5WaeF\downloaded_packages</code></pre>
 <pre class="r"><code># install the package (once, and then # it out)
         library(summarytools) # load the library</code></pre>
 </div>
@@ -471,7 +463,7 @@ Figure 7: Probability density histogram of age
     </tr>
   </tbody>
 </table>
-<p><p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p></p>
+<p><p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p></p>
 </div>
 <p>Notice how it has a much more attractive layout.</p>
 </div>
@@ -607,7 +599,7 @@ Figure 7: Probability density histogram of age
     </tr>
   </tbody>
 </table>
-<p><p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p></p>
+<p><p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p></p>
 </div>
 <p>We can omit the totals</p>
 <pre class="r"><code>print(freq(elect_2013$pol_knowledge, 
@@ -634,7 +626,7 @@ Figure 7: Probability density histogram of age
 <div class="container st-container"><table class="table table-striped table-bordered st-table st-table-striped st-table-bordered st-freq-table-nomiss ">
   <thead>
     <tr>
-      <th align="center" class="st-protect-top-border">elect_2013$pol_knowledge</th>
+      <th align="center" class="st-protect-top-border">pol_knowledge</th>
       <th align="center" class="st-protect-top-border">Freq</th>
       <th align="center" class="st-protect-top-border">%</th>
       <th align="center" class="st-protect-top-border">% Cum.</th>
@@ -720,7 +712,7 @@ Figure 7: Probability density histogram of age
        file = &quot;pol_know_freq.html&quot;, footnote = NA)</code></pre>
 <pre><code>## &#39;omit.headings&#39; argument has been replaced by &#39;headings&#39;; setting headings = FALSE</code></pre>
 <pre><code>## Switching method to &#39;browser&#39;</code></pre>
-<pre><code>## Output file written: C:\Users\julie\methods101\content\docs\pol_know_freq.html</code></pre>
+<pre><code>## Output file written: C:\Users\nickh\methods101\content\docs\pol_know_freq.html</code></pre>
 <p>and if you go to your default folder (set at the beginning of this session), then you will find the file ‘pol_know_freq.html’. If you double click on it then it will open in a browser.</p>
 </div>
 </div>
@@ -750,7 +742,7 @@ Figure 7: Probability density histogram of age
     </tr>
     <tr>
       <td>
-        <strong>Std.Dev.</strong></td>
+        <strong>Std.Dev</strong></td>
       <td><span>2.94</span></td>
     </tr>
     <tr>
@@ -815,12 +807,12 @@ Figure 7: Probability density histogram of age
     </tr>
     <tr>
       <td>
-        <strong>% Valid</strong></td>
+        <strong>Pct.Valid</strong></td>
       <td><span>100.00</span></td>
     </tr>
   </tbody>
 </table>
-<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p>
+<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p>
 </div>
 <p>However, when reporting variables, we often like them to be presented as the rows, not columns. To change this we used the argument ‘transpose’</p>
 <pre class="r"><code>print(descr(elect_2013$pol_knowledge, transpose = TRUE),
@@ -835,7 +827,7 @@ Figure 7: Probability density histogram of age
     <tr>
       <th></th>
       <th align="center" class="st-protect-top-border">Mean</th>
-      <th align="center" class="st-protect-top-border">Std.Dev.</th>
+      <th align="center" class="st-protect-top-border">Std.Dev</th>
       <th align="center" class="st-protect-top-border">Min</th>
       <th align="center" class="st-protect-top-border">Q1</th>
       <th align="center" class="st-protect-top-border">Median</th>
@@ -848,7 +840,7 @@ Figure 7: Probability density histogram of age
       <th align="center" class="st-protect-top-border">SE.Skewness</th>
       <th align="center" class="st-protect-top-border">Kurtosis</th>
       <th align="center" class="st-protect-top-border">N.Valid</th>
-      <th align="center" class="st-protect-top-border">% Valid</th>
+      <th align="center" class="st-protect-top-border">Pct.Valid</th>
     </tr>
   </thead>
   <tbody>
@@ -873,7 +865,7 @@ Figure 7: Probability density histogram of age
     </tr>
   </tbody>
 </table>
-<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p>
+<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p>
 </div>
 <p>Generally we don’t want all these statistics, so we can limit the statistics reported with the argument ‘stats’.</p>
 <p>Note: I’ve also removed the headings and footnote.</p>
@@ -889,7 +881,7 @@ Figure 7: Probability density histogram of age
     <tr>
       <th></th>
       <th align="center" class="st-protect-top-border">Mean</th>
-      <th align="center" class="st-protect-top-border">Std.Dev.</th>
+      <th align="center" class="st-protect-top-border">Std.Dev</th>
       <th align="center" class="st-protect-top-border">Min</th>
       <th align="center" class="st-protect-top-border">Max</th>
     </tr>
@@ -920,7 +912,7 @@ Figure 7: Probability density histogram of age
     <tr>
       <th></th>
       <th align="center" class="st-protect-top-border">Mean</th>
-      <th align="center" class="st-protect-top-border">Std.Dev.</th>
+      <th align="center" class="st-protect-top-border">Std.Dev</th>
       <th align="center" class="st-protect-top-border">Min</th>
       <th align="center" class="st-protect-top-border">Max</th>
     </tr>
@@ -950,7 +942,7 @@ Figure 7: Probability density histogram of age
     <tr>
       <th></th>
       <th align="center" class="st-protect-top-border">Mean</th>
-      <th align="center" class="st-protect-top-border">Std.Dev.</th>
+      <th align="center" class="st-protect-top-border">Std.Dev</th>
       <th align="center" class="st-protect-top-border">Min</th>
       <th align="center" class="st-protect-top-border">Max</th>
     </tr>
@@ -1074,7 +1066,7 @@ min < med < max:
 0 < 5 < 10
 IQR (CV) : 5 (0.6)</td>
       <td align="left" style="vertical-align:middle">11 distinct values</td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA6Cr1KBgAAAI5JREFUaN7t1s0JgDAMQOGuoBvYbmD3302wEQy0PSTx5/DeJSD6EUHRlMhSbm2LK8FKPQMDAwMDAwMDAwMD+w5b5Sc/Bmsn7lZM7eLFyv3yf2ByfzGYHHwe6z4hGsuqGdZdUGOTce0Sg9XeAAMbYPpFcGJ6QTAwMDAwMLC3Mfmwx2AywMDAwMDGWA4pkaUDCdHQuzc6OnsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDMtMDZUMTM6MTY6NTgrMTE6MDA2U96rAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAzLTA2VDEzOjE2OjU4KzExOjAwRw5mFwAAAABJRU5ErkJggg=="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAI5JREFUaN7t1s0JgDAMQOGuoBvYbmD3302wEQy0PSTx5/DeJSD6EUHRlMhSbm2LK8FKPQMDAwMDAwMDAwMD+w5b5Sc/Bmsn7lZM7eLFyv3yf2ByfzGYHHwe6z4hGsuqGdZdUGOTce0Sg9XeAAMbYPpFcGJ6QTAwMDAwMLC3Mfmwx2AywMDAwMDGWA4pkaUDCdHQuzc6OnsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDZUMTE6NTg6NTArMTA6MDBNxoxpAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwPJs01QAAAABJRU5ErkJggg=="></td>
       <td align="center">3955
 (100%)</td>
       <td align="center">0
@@ -1082,7 +1074,7 @@ IQR (CV) : 5 (0.6)</td>
     </tr>
   </tbody>
 </table>
-<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p>
+<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p>
 </div>
 <p>The next command gives a summary of the entire dataset. For display purposes, I’ve just shown the first five variables:</p>
 <pre class="r"><code>print(dfSummary(elect_2013), 
@@ -1115,7 +1107,7 @@ min < med < max:
 0 < 5 < 10
 IQR (CV) : 5 (0.6)</td>
       <td align="left" style="vertical-align:middle">11 distinct values</td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA7fbp6kAAAAI5JREFUaN7t1s0JgDAMQOGuoBvYbmD3302wEQy0PSTx5/DeJSD6EUHRlMhSbm2LK8FKPQMDAwMDAwMDAwMD+w5b5Sc/Bmsn7lZM7eLFyv3yf2ByfzGYHHwe6z4hGsuqGdZdUGOTce0Sg9XeAAMbYPpFcGJ6QTAwMDAwMLC3Mfmwx2AywMDAwMDGWA4pkaUDCdHQuzc6OnsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDMtMDZUMTM6MTY6NTkrMTE6MDCQJNUfAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAzLTA2VDEzOjE2OjU5KzExOjAw4XltowAAAABJRU5ErkJggg=="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAJgAAABuBAMAAAApJ8cWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqby8vL///8shn5hAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAI5JREFUaN7t1s0JgDAMQOGuoBvYbmD3302wEQy0PSTx5/DeJSD6EUHRlMhSbm2LK8FKPQMDAwMDAwMDAwMD+w5b5Sc/Bmsn7lZM7eLFyv3yf2ByfzGYHHwe6z4hGsuqGdZdUGOTce0Sg9XeAAMbYPpFcGJ6QTAwMDAwMLC3Mfmwx2AywMDAwMDGWA4pkaUDCdHQuzc6OnsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDZUMTE6NTg6NTArMTA6MDBNxoxpAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwPJs01QAAAABJRU5ErkJggg=="></td>
       <td align="center">3955
 (100%)</td>
       <td align="center">0
@@ -1130,7 +1122,7 @@ min < med < max:
 1 < 5 < 5
 IQR (CV) : 1 (0.2)</td>
       <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">126</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">3.2%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">269</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">236</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">6.0%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">4</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">721</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">18.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">5</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2574</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">65.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAG8AAACABAMAAAD3+SoEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA7fbp6kAAAAIJJREFUWMPt1cENgCAQRFFK0A506UD6700heiDxwCyJGP3/7Du4hyGEf2Rms9R0wpg2IBAIVKF7czQ1FFpudcCYjoBAIPAh6B4rgYyG5R89MF9VeuiAQCCwA7rHSjGDoVUJsDxzVy3nBQKBwA7oHquGT98CTW25u2pLQCAQ2LE5X28HpgZXfLRpNrAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDMtMDZUMTM6MTY6NTkrMTE6MDCQJNUfAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAzLTA2VDEzOjE2OjU5KzExOjAw4XltowAAAABJRU5ErkJggg=="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAG8AAACABAMAAAD3+SoEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAIJJREFUWMPt1cENgCAQRFFK0A506UD6700heiDxwCyJGP3/7Du4hyGEf2Rms9R0wpg2IBAIVKF7czQ1FFpudcCYjoBAIPAh6B4rgYyG5R89MF9VeuiAQCCwA7rHSjGDoVUJsDxzVy3nBQKBwA7oHquGT98CTW25u2pLQCAQ2LE5X28HpgZXfLRpNrAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDZUMTE6NTg6NTArMTA6MDBNxoxpAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwPJs01QAAAABJRU5ErkJggg=="></td>
       <td align="center">3926
 (99.27%)</td>
       <td align="center">29
@@ -1145,7 +1137,7 @@ min < med < max:
 1 < 1 < 3
 IQR (CV) : 1 (0.6)</td>
       <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">2827</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">74.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">105</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">2.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">866</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">22.8%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHwAAABQBAMAAAApXgzAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA7fbp6kAAAAFVJREFUWMPt1rENACAIBVFXcARhA91/Nxs7KiExBu76135orXbi7HBdriYcDoc/5cGt684ycJER4brgcDg8Pw9Opcsm4ebyjitu3gM4HA7/kQe3rmob4XjSScL4ECwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDMtMDZUMTM6MTY6NTkrMTE6MDCQJNUfAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAzLTA2VDEzOjE2OjU5KzExOjAw4XltowAAAABJRU5ErkJggg=="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAHwAAABQBAMAAAApXgzAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAFVJREFUWMPt1rENACAIBVFXcARhA91/Nxs7KiExBu76135orXbi7HBdriYcDoc/5cGt684ycJER4brgcDg8Pw9Opcsm4ebyjitu3gM4HA7/kQe3rmob4XjSScL4ECwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDZUMTE6NTg6NTArMTA6MDBNxoxpAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwPJs01QAAAABJRU5ErkJggg=="></td>
       <td align="center">3798
 (96.03%)</td>
       <td align="center">157
@@ -1160,7 +1152,7 @@ min < med < max:
 1 < 2 < 3
 IQR (CV) : 2 (0.5)</td>
       <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1805</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">48.0%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">446</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">11.9%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1506</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">40.1%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFUAAABQBAMAAACaFiTaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA7fbp6kAAAAFZJREFUSMft1LsJACAMRVFH0A38jOD+u9mIlZqkECLcW5/GwDOE/6qK8rSty2Gx2LO17C0pio7sekCR7boZFot9bi3bTIo82ftvWvY324bFYiVr2dtPDYuZeXol1Wn+AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAzLTA2VDEzOjE2OjU5KzExOjAwkCTVHwAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMy0wNlQxMzoxNjo1OSsxMTowMOF5baMAAAAASUVORK5CYII="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAFUAAABQBAMAAACaFiTaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAFZJREFUSMft1LsJACAMRVFH0A38jOD+u9mIlZqkECLcW5/GwDOE/6qK8rSty2Gx2LO17C0pio7sekCR7boZFot9bi3bTIo82ftvWvY324bFYiVr2dtPDYuZeXol1Wn+AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwTcaMaQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wNi0wNlQxMTo1ODo1MCsxMDowMDybNNUAAAAASUVORK5CYII="></td>
       <td align="center">3757
 (94.99%)</td>
       <td align="center">198
@@ -1175,7 +1167,7 @@ min < med < max:
 1 < 2 < 3
 IQR (CV) : 2 (0.4)</td>
       <td align="left" style="padding:0;vertical-align:middle"><table style="border-collapse:collapse;border:none;margin:0"><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">1</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1155</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">30.6%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">2</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1334</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">35.4%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr><tr style="background-color:transparent"><td style="padding:0 0 0 7px;margin:0;border:0" align="right">3</td><td style="padding:0 2px;border:0;" align="left">:</td><td style="padding:0 4px 0 6px;margin:0;border:0" align="right">1284</td><td style="padding:0;border:0" align="left">(</td><td style="padding:0 2px;margin:0;border:0" align="right">34.0%</td><td style="padding:0 4px 0 0;border:0" align="left">)</td></tr></table></td>
-      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEIAAABQBAMAAABfZL5LAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wMHABA7fbp6kAAAAExJREFUSMdjYBg8QAk7UBQUFISqUDbGCkZVjKqgowrC6VQQN6CrCiXcAL9vgcBoVMWoikGjgnBKHvx5TpCQb41GVYyqoJcKwul0MAAAwqNMJ4IfvvAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDMtMDZUMTM6MTY6NTkrMTE6MDCQJNUfAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAzLTA2VDEzOjE2OjU5KzExOjAw4XltowAAAABJRU5ErkJggg=="></td>
+      <td align="left" style="vertical-align:middle;padding:0;background-color:transparent"><img style="border:none;background-color:transparent;padding:0" src="data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAEIAAABQBAMAAABfZL5LAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAD1BMVEX////9/v2mpqb39/f///+DdZCQAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAAB3RJTUUH4wYGFToyAbyHkgAAAExJREFUSMdjYBg8QAk7UBQUFISqUDbGCkZVjKqgowrC6VQQN6CrCiXcAL9vgcBoVMWoikGjgnBKHvx5TpCQb41GVYyqoJcKwul0MAAAwqNMJ4IfvvAAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDYtMDZUMTE6NTg6NTArMTA6MDBNxoxpAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTA2LTA2VDExOjU4OjUwKzEwOjAwPJs01QAAAABJRU5ErkJggg=="></td>
       <td align="center">3773
 (95.4%)</td>
       <td align="center">182
@@ -1183,8 +1175,8 @@ IQR (CV) : 2 (0.4)</td>
     </tr>
   </tbody>
 </table>
-<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.2 (<a href='https://www.r-project.org/'>R</a> version 3.5.2)<br/>2019-03-06</p>
+<p>Generated by <a href='https://github.com/dcomtois/summarytools'>summarytools</a> 0.9.3 (<a href='https://www.r-project.org/'>R</a> version 3.5.3)<br/>2019-06-06</p>
 </div>
-<p><strong>This is the end of the Univariate statistics R code/ R-script file. The class continues in the code "Week 2, Part 2, Bivariate statistics.R’</strong></p>
+<p>**This is the end of the Univariate statistics R code/ R-script file. The class continues in the code “Week 2, Part 2, Bivariate statistics.R’**</p>
 </div>
 </div>

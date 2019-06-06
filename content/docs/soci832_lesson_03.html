@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 3: Regression in R"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 
@@ -81,12 +81,12 @@ menu:
 <pre class="r"><code>    setwd(&quot;C:/G/2018, SOCI832/Datasets/AES 2013/&quot;)</code></pre>
 <pre class="r"><code>    install.packages(&quot;readr&quot;, 
                  repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;readr&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpaukZdO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
 <pre class="r"><code>    library(readr)
     elect_2013 &lt;- read.csv(&quot;elect_2013.csv&quot;)</code></pre>
 </div>
@@ -175,7 +175,7 @@ menu:
 ## Multiple R-squared:  0.08884,    Adjusted R-squared:  0.0874 
 ## F-statistic: 61.56 on 6 and 3788 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p>Notice that for the first model there is no effect of highest_qualification on political_knowledge. However in the second, quite a few of the dummy variables - levels 2, 3, 4, 5, and 6 - all have a positive effect on political_knowledge. Why do you think this is?</p>
-<p>The answer is contained in the code book, which can be found here: <a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html" class="uri">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
+<p>The answer is contained in the code book, which can be found here: <a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
 <p>You will notice that categories are not in a meaningful order: for example, 1 = no qualifications; 2 = postgrad degree; and 5 = diploma. This is why in the first model there was no signficant effect of the variable.</p>
 <p>This example also shows the importance of dummy variables and dummying out categorical variables. Using the same data, we were able to go from a model with no explanatory power (R-squared = 0) to a decent model (R-squared = 0.09).</p>
 </div>
@@ -184,12 +184,12 @@ menu:
 <p>Another option is the package ‘fastDummies’. The advantage of this package is that it creates the dummy variables in your dataset, which gives you the freedom to do what you want and need to the variables - such as using them in correlations or descriptive statistics or transforming them. It also gives you the freedom to include some dummy variables in your model and not include others.</p>
 <pre class="r"><code>install.packages(&quot;fastDummies&quot;, 
                  repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;fastDummies&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpaukZdO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
 <pre class="r"><code>library(fastDummies)</code></pre>
 <p>The command can be seen here. In this we are dummying out the highest_qual variable.</p>
 <pre class="r"><code>elect_2013_dummies &lt;- dummy_cols(elect_2013, 
@@ -362,7 +362,7 @@ summary(model_1)</code></pre>
 <h2>2.1 Outliers</h2>
 <div id="theory-2" class="section level3">
 <h3>Theory</h3>
-<p>One basic ASSUMPTION of all models is that there are very few ‘outliers’. An outlier is a case (a unit of analysis - e.g. survey respondent) whose value on the outcome variable (dependent variable) is poorly explained by the explanatory variables (independent variables).</p>
+<p>One basic ASSUMPTION of all models is that there are very few ‘outliers’. An outlier is a case (a unit of analysis - e.g. survey respondent) whose value on the outcome variable (dependent variable) is poorly explained by the explanatory variables (independent variables).</p>
 <p>The reason outliers are a problem is that they show that the model is a bad explanation of the data. Basically it’s a bad model.</p>
 <p>How do we TEST if we have outliers? We look to see if there is a large amount of unexplained dependent variable for any particular case. Remember that for a linear regression model the explained part of the dependent variable is the value of the dependent variable as predicted by all the independent variables.</p>
 <p>For example, say estimate a model of likelihood of voting (from 1 to 5) as predicted by political knowledge (measured from 0 to 10 on quiz).</p>
@@ -484,10 +484,7 @@ diagnostics$student.res &lt;- rstudent(model_1)</code></pre>
 <p>Leverage is also calculated on all cases. There are different rules of thumb about what level of leverage is problematic. More than two or three times the average leverage is generally thought of as a problem. The average leverage, however, varies with the number of preditors in a model, and the number of observations in a dataset, so we need to calculate the maximum leverage for each model.</p>
 <p>The forumula is:</p>
 <p><span class="math display">\[\text{MAXIMUM LEVERAGE}=\frac{3(k+1)}{n}\]</span></p>
-<p><span class="math display">\[\text{where:}\]</span>
-<span class="math display">\[k=\text{coefficients in model}\]</span>
-<span class="math display">\[n=\text{observations}\]</span>
-```</p>
+<p><span class="math display">\[\text{where:}\]</span> <span class="math display">\[k=\text{coefficients in model}\]</span> <span class="math display">\[n=\text{observations}\]</span> ```</p>
 </div>
 <div id="r-script-2" class="section level3">
 <h3>R Script</h3>
@@ -525,12 +522,12 @@ diagnostics$covariance.ratios &lt;- covratio(model_1)</code></pre>
 <p>To measure Variance Inflation Factor (VIF) we need to install and load the “car” package</p>
 <pre class="r"><code>install.packages(&quot;car&quot;, 
                  repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;car&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpaukZdO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
 <pre class="r"><code>library(car)</code></pre>
 <pre><code>## Loading required package: carData</code></pre>
 <p>The VIF for each variable in a model is given by this command:</p>
@@ -660,7 +657,7 @@ summary(model_centred)</code></pre>
 <p>The general advice for evaluating this plot is that the values should be evenly distributed across the different values of the fitted values.</p>
 <p>Heteroscedasticity normally manifests as a ‘funnel’ shape of the residuals, with small variance in residuals for low fitted values, and large residuals for high fitted values.</p>
 <p>In practice, the plots which one sees are often hard to evaluate - especially for someone who is not an expert and experienced regression modeller and statistician.</p>
-<p>In general I would recommend running this test and then referring to the textbook (Field et al. 2012: section 7.9.5), and websites such as this: <a href="http://www.contrib.andrew.cmu.edu/~achoulde/94842/homework/regression_diagnostics.html" class="uri">http://www.contrib.andrew.cmu.edu/~achoulde/94842/homework/regression_diagnostics.html</a></p>
+<p>In general I would recommend running this test and then referring to the textbook (Field et al. 2012: section 7.9.5), and websites such as this: <a href="http://www.contrib.andrew.cmu.edu/~achoulde/94842/homework/regression_diagnostics.html" class="uri">http://www.contrib.andrew.cmu.edu/~achoulde/94842/homework/regression_diagnostics.html</a></p>
 </div>
 </div>
 <div id="independent-of-errors" class="section level2">
@@ -676,7 +673,7 @@ summary(model_centred)</code></pre>
 <p>This is the command for running the D-W Test. Remember that the D-W Statistic should be between 1 and 3, and the p-value of the test should be greater than 0.05 &gt;</p>
 <pre class="r"><code>    durbinWatsonTest(model_1) </code></pre>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
-##    1     0.006103426      1.987623   0.732
+##    1     0.006103426      1.987623   0.682
 ##  Alternative hypothesis: rho != 0</code></pre>
 </div>
 </div>
@@ -717,7 +714,7 @@ hist(diag2$standardized.res)</code></pre>
 <p>There are lots of different techniques and tricks that can be used to address these problems. I will try to list some of the most common here:</p>
 <ol style="list-style-type: decimal">
 <li>Add more or different independent variables</li>
-<li>Transform your dependent variable (e.g. taking the cubed root of your dependent variable can often transform it to be more normally distributed)</li>
+<li>Transform your dependent variable (e.g. taking the cubed root of your dependent variable can often transform it to be more normally distributed)</li>
 <li>Bootstrap your standard errors: This is a technique for estimating the standard errors through simulations - rather than calculation - and allows standard errors to be estimated for very ‘non-conventional’ or ‘extreme’ distributions.</li>
 <li>Use a different type of regression model: It turns out that some models - such as logit - are more robust and make fewer assumptions. And other models - such as poission models - assume different distributions that might be more appropriate for your data.</li>
 </ol>
@@ -740,9 +737,7 @@ hist(diag2$standardized.res)</code></pre>
 <p>Where the equation for linear regression is:</p>
 <p><span class="math display">\[y=\beta x+c\]</span></p>
 <p>The equation for a similar logit is:</p>
-<p><span class="math display">\[\text{Probability}(y=1) = \frac{1}{(1+e^{-(\beta x+c)})}\]</span>
-<span class="math display">\[\text{Where:}\]</span>
-<span class="math display">\[e=\text{base of natural log (approx 3)}\]</span></p>
+<p><span class="math display">\[\text{Probability}(y=1) = \frac{1}{(1+e^{-(\beta x+c)})}\]</span> <span class="math display">\[\text{Where:}\]</span> <span class="math display">\[e=\text{base of natural log (approx 3)}\]</span></p>
 <p>If that equation looks confusing to you DON’T WORRY, because it is!!!</p>
 <p>And the good news is that you don’t really need to understand anything about it except that it allows us to estimate how much independent variable change the probablity that our outcome (y) will equal one.</p>
 <p>While this equation looks scary, we are luck that at the heart of the logistic regression model is a very intuitive idea that when talking about binary outcomes - like death or pregnancy - we talk about changes in the ‘odds’ that an event will happen.<br />
@@ -755,20 +750,20 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <p>We are going to use a couple of new packages - the package ‘oddsratio’ makes it easy for us to calculate and display odds ratios for our models; - the package ‘rcompanion’ makes it easy for us to calculate r-squared for our models.</p>
 <pre class="r"><code>install.packages(&quot;oddsratio&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;oddsratio&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpaukZdO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;rcompanion&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/julie/Documents/R/win-library/3.5&#39;
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;rcompanion&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\julie\AppData\Local\Temp\RtmpaukZdO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
 <pre class="r"><code>library(oddsratio)
 library(rcompanion)</code></pre>
 <p>We are going to model likelihood of responding that they would definitely vote if voting was voluntary. Remember that this is a 5 on the 5 point likert scale for the varible likelihood_vote. And remember that most people gave this answer, which lead to the variable being difficult to model because the residuals were skewed.</p>

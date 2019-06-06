@@ -3,7 +3,7 @@ title: "SOCI832 Introduction test"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: false
+draft: true
 toc: false
 type: docs
 maths: true
