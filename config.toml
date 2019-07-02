@@ -321,7 +321,6 @@ enableGitInfo = true
  name = "SOC224 Statistics Intro"
  weight = 30
 
-
 [[menu.docs]]
  name = "SOC224 SPSS Intro"
  weight = 65
@@ -330,14 +329,33 @@ enableGitInfo = true
  name = "SOC224 Final Report"
  weight = 85
 
-
 [[menu.docs]]
   name = "SOC830(SOCI702)"
   weight = 90
 
-# [[menu.docs]]
-#  name = "SOCI832"
-#  weight = 100
+[[menu.docs]]
+name = "SOCI832.1 Intro"
+weight = 100
+
+[[menu.docs]]
+name = "SOCI832.2 Bivariate"
+weight = 110
+
+[[menu.docs]]
+name = "SOCI832.3 Dimensions"
+weight = 120
+
+[[menu.docs]]
+name = "SOCI832.4 Regression"
+weight = 130
+
+[[menu.docs]]
+name = "SOCI832.5 Paths"
+weight = 140
+
+[[menu.docs]]
+name = "SOCI832.6 Presentation"
+weight = 160
 
 # Search.
 [params.search]
