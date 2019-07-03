@@ -11,7 +11,7 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "4.1 Regression: Other"
+linktitle: "4.4 Regression: Other"
 menu:
   docs:
     parent: SOCI832
