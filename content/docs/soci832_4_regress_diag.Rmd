@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 4.2 Regression diagnostics"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: true
+draft: false
 type: docs
 maths: true
 

@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 4.2 Regression diagnostics"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: true
+draft: false
 type: docs
 maths: true
 
@@ -87,7 +87,7 @@ menu:
 <pre><code>## package &#39;readr&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>    library(readr)
     elect_2013 &lt;- read.csv(&quot;elect_2013.csv&quot;)</code></pre>
 </div>
@@ -190,7 +190,7 @@ menu:
 <pre><code>## package &#39;fastDummies&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>library(fastDummies)</code></pre>
 <p>The command can be seen here. In this we are dummying out the highest_qual variable.</p>
 <pre class="r"><code>elect_2013_dummies &lt;- dummy_cols(elect_2013, 
@@ -528,7 +528,7 @@ diagnostics$covariance.ratios &lt;- covratio(model_1)</code></pre>
 <pre><code>## package &#39;car&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>library(car)</code></pre>
 <pre><code>## Loading required package: carData</code></pre>
 <p>The VIF for each variable in a model is given by this command:</p>
@@ -674,7 +674,7 @@ summary(model_centred)</code></pre>
 <p>This is the command for running the D-W Test. Remember that the D-W Statistic should be between 1 and 3, and the p-value of the test should be greater than 0.05 &gt;</p>
 <pre class="r"><code>    durbinWatsonTest(model_1) </code></pre>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
-##    1     0.006103426      1.987623   0.708
+##    1     0.006103426      1.987623   0.764
 ##  Alternative hypothesis: rho != 0</code></pre>
 </div>
 </div>
@@ -756,7 +756,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;oddsratio&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;rcompanion&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
@@ -764,7 +764,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;rcompanion&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;zoo&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
@@ -772,7 +772,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;zoo&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpqUcAbr\downloaded_packages</code></pre>
 <pre class="r"><code>library(oddsratio)
 library(rcompanion)</code></pre>
 <p>We are going to model likelihood of responding that they would definitely vote if voting was voluntary. Remember that this is a 5 on the 5 point likert scale for the varible likelihood_vote. And remember that most people gave this answer, which lead to the variable being difficult to model because the residuals were skewed.</p>

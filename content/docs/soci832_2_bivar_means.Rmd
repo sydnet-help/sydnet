@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 2.1 An introduction to comparing means"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: true
+draft: false
 type: docs
 maths: true
 
