@@ -1,5 +1,5 @@
 ---
-title: "Lab 6: Constructing and testing an index (Cronbach Alpha)"
+title: "SOC224 3.6 Lab 6: Constructing and testing an index (Cronbach Alpha)"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,14 +11,28 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 6: Indexes"
+linktitle: "3.6 SPSS 6: Indexes"
 menu:
    docs:
-      parent: SOC224 SPSS Intro
-      weight: 55
+      parent: SOC224
+      weight: 360
 
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
+
+<style> img { padding:1px; border:1px solid #021a40; } </style>
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
+}
+</style>
+
+<table>  <tr>  <td>
+
 
 # Summary
 If you are analysing a survey, chances are you have many different questions which test for the same underlying theoretical concept. 
@@ -32,6 +46,8 @@ There are generally three stages to constructing an index:
 3. **Summing the variables** adding together all the variables into a new variable: the index.
 
 **Note** that you can skip step 1 if your variables are all measured on the same scale (e.g. they are five answers to five point Likert scale).
+
+</td>  </tr>  </table>
 
 # Step 1: Getting all variables into the same scale (normalization).
 

@@ -1,5 +1,5 @@
 ---
-title: "Lab 2: Download + import your data + make a codebook"
+title: "SIOC224 3.2 Lab 2: Download + import your data + make a codebook"
 
 lastmod: 2018-05-25T00:00:00
 
@@ -11,21 +11,32 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 2: Import your data"
+linktitle: "3.2 SPSS 2: Import your data"
 menu:
    docs:
-      parent: SOC224 SPSS Intro
-      weight: 30
+      parent: SOC224
+      weight: 320
 
 ---
 
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
+}
+</style>
 
+<table>  <tr>  <td>
 # Summary
 Before you analyse a quantitative dataset you need to 
 
 * Step 1: download the data (generally from Qualtrics), 
 * Step 2: make a codebook,  
 * Step 3: import your data into SPSS.
+</td>  </tr>  </table>
 
 # Step 1 - How to download your data from Qualtrics 
 

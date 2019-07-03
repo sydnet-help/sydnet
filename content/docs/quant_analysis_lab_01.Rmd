@@ -1,5 +1,5 @@
 ---
-title: "Lab 1: Installing SPSS"
+title: "SOC224 3.1 Lab 1: Installing SPSS"
 
 lastmod: 2018-05-25T00:00:00
 
@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 1: Installing SPSS"
+linktitle: "3.1 SPSS 1: Installing SPSS"
 menu:
    docs:
-      parent: SOC224 SPSS Intro
-      weight: 20 
+      parent: SOC224
+      weight: 310 
 
 ---
 

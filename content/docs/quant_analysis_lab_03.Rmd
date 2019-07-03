@@ -1,5 +1,5 @@
 ---
-title: "Lab 3: Descriptive Statistics: Summarising your data and checking for errors"
+title: "SOC224 3.3 Lab 3: Descriptive Statistics: Summarising your data and checking for errors"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,19 +11,31 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 3: Descriptive Stats"
+linktitle: "3.3 SPSS 3: Descriptive Stats"
 menu:
    docs:
-      parent: SOC224 SPSS Intro
-      weight: 45
+      parent: SOC224
+      weight: 330
 
 ---
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
+}
+</style>
 
+<table>  <tr>  <td>
 # Summary
 
 The first thing you generally want to do with a quantitative data is check you haven't made any major mistakes in entering to transforming the data. 
  
 We do this by checking our descriptive statistics, and then looking at the histograms for each variable.
+
+</td>  </tr>  </table>
 
 # Step 1: Descriptive Statistics
 

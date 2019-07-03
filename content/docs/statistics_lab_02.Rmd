@@ -1,5 +1,5 @@
 ---
-title: "Concept Sheet"
+title: "2.2 Concept Sheet"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,14 +11,25 @@ output:
   blogdown::html_page:
     toc: false
 
-linktitle: "Statistics Concepts"
+linktitle: "2.2 Statistics: Concepts"
 menu:
    docs:
-      parent: SOC224 Statistics Intro
-      weight: 30
+      parent: SOC224
+      weight: 130
 
 ---
 
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
+}
+</style>
+
+<table>  <tr>  <td>
 # Concepts 
 
 <b style="padding-left: 2em">Descriptive statistics<br></b>
@@ -29,12 +40,14 @@ menu:
 <b style="padding-left: 4em">P-value<br></b>
 <b style="padding-left: 2em">Correlation Coefficient<br></b>
 <b style="padding-left: 4em">Pearson's correlation<br></b>
-
-**Non-examinable:** <br>
 <b style="padding-left: 2em">T-test<br></b>
 <b style="padding-left: 2em">Linear regression<br></b>
 <b style="padding-left: 4em">Coefficient<br></b>
 <b style="padding-left: 4em">R Square<br></b>
+
+</td>  </tr>  </table>
+
+<table>  <tr>  <td>
 
 # Definitions
 
@@ -95,3 +108,5 @@ b_0 = &\text{ intercept (i.e. value of }y \text{ when all }x=0 \text{)} \\
 
 **standardised beta values:** regression coefficients but for a model where the independent and dependent varables are all standardised (centred on zero, standard deviation of 1). The standardized beta regression coefficients are interpreted as "the number of standard deviation increase in the dependent variable associated with a one standard deviation increase in the independent variable."
 
+
+</td>  </tr>  </table>

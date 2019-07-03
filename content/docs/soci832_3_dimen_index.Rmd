@@ -18,8 +18,33 @@ menu:
     weight: 320
 ---
 
-# Heading 1
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+}
+</style>
 
-## Heading 2
+<table>  <tr>  <td>
+# Reading
 
-### Heading 3
+[Field, A., Miles, J., and Field, Z. (2012). *Discovering statistics using R*. Sage publications.](http://a.co/2jVI7VH)
+
+* Chapter X: XXXXXXXXXXXXX
+</td>  </tr>  </table>
+
+<table>   <tr>  <td>
+# Concepts 
+
+<b style="padding-left: 2em">Level 1<br></b>
+<b style="padding-left: 4em">Level 2<br></b>
+<b style="padding-left: 6em">Level 3<br></b>
+</td>   </tr>  </table>
+
+<table>   <tr>  <td>
+# Summary
+
+This is a 300 word summary of clase
+</td>   </tr>  </table>

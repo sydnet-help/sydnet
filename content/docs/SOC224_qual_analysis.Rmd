@@ -1,5 +1,5 @@
 ---
-title: "SOC224: Qualitative Analysis 1: Theory"
+title: "SOC224 1.1 Qualitative Analysis: Theory"
 
 lastmod: 2019-05-10T00:00:00.000Z
 
@@ -11,10 +11,10 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Qual Analysis 1: Theory"
+linktitle: "1.1 Qual Analysis: Theory"
 menu:
   docs:
-    parent: SOC224 Qual Analysis
+    parent: SOC224
     weight: 10
 ---
 

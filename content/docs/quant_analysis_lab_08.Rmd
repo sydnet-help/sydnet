@@ -1,5 +1,5 @@
 ---
-title: "Lab 8: Logistic Regression"
+title: "3.8 Lab 8: Logistic Regression"
 
 lastmod: 2018-12-30T00:00:00
 
@@ -11,17 +11,33 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "SPSS 8: Logistic Regression"
+linktitle: "3.8 SPSS 8: Logistic Regression"
 menu:
    docs:
-      parent: SOC224 SPSS Intro
-      weight: 75
+      parent: SOC224
+      weight: 380
 
 ---
 <style> img { padding:1px; border:1px solid #021a40; } </style>
 
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
+}
+</style>
+
+<table>  <tr>  <td>
+
 # Reading
 'Chapter 19: Logistic Regression' in [Andy Field, 2017. Discovering Statistics Using IBM SPSS Statistics. Sage.](https://www.amazon.com/Discovering-Statistics-Using-IBM-SPSS/dp/1446249182)
+
+</td>  </tr>  </table>
+
+<table>  <tr>  <td>
 
 # Summary
 We generally use logistic regressions when we have 
@@ -42,6 +58,8 @@ B is basically a number which represents the impact of the independent variable 
 For this course, we are only going to interpret the significance, and direction (positive or negative) of B. We won't interpret the magnitude. So for significant (< 0.05) B coefficients we say that independent variables with positive B (greater than 0) increase the likelihood of the dependent variable being 1 (and the reverse for negative B values). 
 
 We can also view the various different R-square values for the model, which is approximately the same meaning as that for a linear regression.
+
+</td>  </tr>  </table>
 
 # Running a logistic regression
 
