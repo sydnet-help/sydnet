@@ -1,0 +1,19 @@
+---
+title: "Lesson 5.2 An introduction to mediating variables"
+
+lastmod: 2019-01-07T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "5.2 Path analysis: Mediators"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 520
+---

@@ -1,0 +1,25 @@
+---
+title: "SOCI832 Lesson 2.2 An introduction to correlation"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "2.3 Bivariate: Correlation"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 220
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3

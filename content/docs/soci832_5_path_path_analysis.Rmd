@@ -1,0 +1,25 @@
+---
+title: "Lesson 5.3 An introduction to path analysis"
+
+lastmod: 2019-01-07T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "5.3 Path analysis: Path analysis"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 530
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3

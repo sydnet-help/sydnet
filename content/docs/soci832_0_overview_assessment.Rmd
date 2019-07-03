@@ -1,0 +1,19 @@
+---
+title: "SOCI832 Overview of assessment"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Overview: Assessment"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 20
+---

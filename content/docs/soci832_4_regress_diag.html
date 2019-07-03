@@ -1,5 +1,5 @@
 ---
-title: "SOCI832 Lesson 3: Regression in R"
+title: "SOCI832 Lesson 4.2 Regression diagnostics"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
@@ -11,11 +11,12 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "4. Regression: Linear (2)"
+linktitle: "4.2 Regression: Diagnostics"
 menu:
   docs:
     parent: SOCI832
-    weight: 80
+    weight: 420
+    
 ---
 
 
@@ -86,7 +87,7 @@ menu:
 <pre><code>## package &#39;readr&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>    library(readr)
     elect_2013 &lt;- read.csv(&quot;elect_2013.csv&quot;)</code></pre>
 </div>
@@ -189,7 +190,7 @@ menu:
 <pre><code>## package &#39;fastDummies&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>library(fastDummies)</code></pre>
 <p>The command can be seen here. In this we are dummying out the highest_qual variable.</p>
 <pre class="r"><code>elect_2013_dummies &lt;- dummy_cols(elect_2013, 
@@ -527,7 +528,7 @@ diagnostics$covariance.ratios &lt;- covratio(model_1)</code></pre>
 <pre><code>## package &#39;car&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>library(car)</code></pre>
 <pre><code>## Loading required package: carData</code></pre>
 <p>The VIF for each variable in a model is given by this command:</p>
@@ -649,7 +650,7 @@ summary(model_centred)</code></pre>
 <h3>R Script</h3>
 <p>The simplest way to test for homoscedasticity is to use a built in function in R, where you simply call the command ‘plot()’ and place the regression model data in the function.</p>
 <pre class="r"><code>plot(model_1)</code></pre>
-<p><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-30-1.png" width="672" /><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-30-2.png" width="672" /><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-30-3.png" width="672" /><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-30-4.png" width="672" /></p>
+<p><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-30-1.png" width="672" /><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-30-2.png" width="672" /><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-30-3.png" width="672" /><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-30-4.png" width="672" /></p>
 <p>Note that when you run this command, R will say to you in the console window:</p>
 <pre><code>&quot;Hit &lt;Return&gt; to see next plot: &quot;</code></pre>
 <p>When you hit <Return> you will see the first plot in the bottom right ‘Plot’ window.</p>
@@ -673,7 +674,7 @@ summary(model_centred)</code></pre>
 <p>This is the command for running the D-W Test. Remember that the D-W Statistic should be between 1 and 3, and the p-value of the test should be greater than 0.05 &gt;</p>
 <pre class="r"><code>    durbinWatsonTest(model_1) </code></pre>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
-##    1     0.006103426      1.987623   0.704
+##    1     0.006103426      1.987623   0.708
 ##  Alternative hypothesis: rho != 0</code></pre>
 </div>
 </div>
@@ -694,7 +695,7 @@ summary(model_centred)</code></pre>
 <h3>R Script</h3>
 <p>What do we visually inspect the standardised residuals? The command is simply:</p>
 <pre class="r"><code>hist(diagnostics$standardized.res)</code></pre>
-<p><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>In this case the residuals look normally distributed</p>
 <p>However, we can come up with an example that violates this assumption of normality. Run the following code and inspect the standardised residuals.</p>
 <pre class="r"><code>model_2 &lt;- lm(elect_2013$likelihood_vote 
@@ -702,7 +703,7 @@ summary(model_centred)</code></pre>
 diag2 &lt;- model_2$model
 diag2$standardized.res &lt;- rstandard(model_2) 
 hist(diag2$standardized.res)</code></pre>
-<p><img src="/docs/soci832_lesson_03_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="/docs/soci832_4_regress_diag_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 <p>The visual inspection of the histogram shows a serious problem with skewness. One reason this happens because the dependent variable - likelihood_vote - is so skewed. Regardless, the point here is that there are models which fail this test.</p>
 </div>
 </div>
@@ -755,7 +756,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;oddsratio&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;rcompanion&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
@@ -763,7 +764,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;rcompanion&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;zoo&quot;, 
              repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
@@ -771,7 +772,7 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <pre><code>## package &#39;zoo&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpYvmdkl\downloaded_packages</code></pre>
 <pre class="r"><code>library(oddsratio)
 library(rcompanion)</code></pre>
 <p>We are going to model likelihood of responding that they would definitely vote if voting was voluntary. Remember that this is a 5 on the 5 point likert scale for the varible likelihood_vote. And remember that most people gave this answer, which lead to the variable being difficult to model because the residuals were skewed.</p>

@@ -1,7 +1,7 @@
 ---
-title: "SOCI832 Lesson 2.3: Regression in R"
+title: "SOCI832 Lesson 4.1 An introduction to linear regression"
 
-lastmod: 2019-01-07T00:00:00.000Z
+lastmod: 2018-12-28T00:00:00.000Z
 
 draft: true
 type: docs
@@ -11,13 +11,13 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "4. Regression: Linear"
+linktitle: "4.1 Regression: Linear"
 menu:
   docs:
     parent: SOCI832
-    weight: 70
----
+    weight: 410
 
+---
 Last updated: 7 Jan 2019
 
 *_Author_: Nicholas Harrigan*

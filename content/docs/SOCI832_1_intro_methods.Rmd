@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "1. Intro: Research Methods"
+linktitle: "1.1 Intro: Research Methods"
 menu:
   docs:
     parent: SOCI832
-    weight: 10
+    weight: 110
 ---
 <style>
 table, th, td, tr, tbody {

@@ -1,0 +1,25 @@
+---
+title: "SOCI832 Lesson 2.3 An introduction to chi-square tests"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "2.3 Bivariate: Chi-square"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 230
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3

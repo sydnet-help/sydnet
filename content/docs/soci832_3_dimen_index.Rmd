@@ -1,0 +1,25 @@
+---
+title: "SOCI832 Lesson 3.2 An introduction to creating and testing indexes"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "3.2 Dimension: Indexes"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 320
+---
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3

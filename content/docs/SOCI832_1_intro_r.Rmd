@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "1. Intro: R Install"
+linktitle: "1.3 Intro: R Install"
 menu:
   docs:
     parent: SOCI832
-    weight: 30
+    weight: 130
 ---
 
 <style>
