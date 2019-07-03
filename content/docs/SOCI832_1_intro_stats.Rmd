@@ -1,0 +1,191 @@
+---
+title: "SOCI832: Introduction 1: Introduction to Statistics"
+
+lastmod: 2019-05-10T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Intro: Statistics"
+menu:
+  docs:
+    parent: SOCI832.1 Intro
+    weight: 20
+---
+
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+}
+</style>
+
+<table>  <tr>  <td>
+
+# Reading
+
+[Field, A., Miles, J., and Field, Z. (2012). *Discovering statistics using R*. Sage publications.](http://a.co/2jVI7VH)
+
+* Chapter 2: Everything you ever wanted to know about statistics (well, sort of)
+
+</td>  </tr>  </table>
+
+
+# Concepts 
+
+<b style="padding-left: 2em">Descriptive statistics<br></b>
+<b style="padding-left: 4em">Mean/Median/Mode (Central tendency)<br></b>
+<b style="padding-left: 4em">Standard deviation (Variation/dispersion)<br></b>
+<b style="padding-left: 4em">Minimum<br></b>
+<b style="padding-left: 4em">Maximum<br></b>
+<b style="padding-left: 4em">N (number of non-missing cases)<br></b>
+<b style="padding-left: 2em">Inferential statistics<br></b>
+<b style="padding-left: 4em">Population<br></b>
+<b style="padding-left: 6em">Population parameter<br></b>
+<b style="padding-left: 4em">Sample<br></b>
+<b style="padding-left: 6em">Sample statistic<br></b>
+<b style="padding-left: 4em">Hypothesis testing<br></b>
+<b style="padding-left: 6em">Null hypothesis<br></b>
+<b style="padding-left: 6em">Standard error<br></b>
+<b style="padding-left: 6em">Confidence interval<br></b>
+<b style="padding-left: 6em">p-value<br></b>
+<b style="padding-left: 6em">Effect size<br></b>
+<b style="padding-left: 4em">Bivariate inferential statistics<br></b>
+<b style="padding-left: 6em">Correlation, comparison of means<br></b>
+<b style="padding-left: 4em">Multivariate inferential statistics<br></b>
+<b style="padding-left: 6em">Linear and logistic regression<br></b>
+<b style="padding-left: 4em">Dimension reduction and finding categories<br></b>
+<b style="padding-left: 6em">Factor analysis, Cluster analysis<br></b>
+
+
+<table>   <tr>  <td>
+
+# Summary
+
+## Social theory
+
+There are two main branches of social science: **applied social science** and **basic social science**. **Applied social science** is generally done in government departments, corporate marketing or research departments, and non-government organisations, with the aim of helping institutions and individuals make **better decisions**. **Basic social science** is genderally done in universities, and published in scholarly journals and books. Its goal is the development of **generalised knowledge** - which means knowledge which provides explanations across more than just the situation, example, or cases being studied. 
+
+One of the main ways that **basic social science** develops, discusses, and formalises **generalised knowledge** is through the development and testing of various social **theories**. These **theories** are complex abstractions. Theories differ in the fundamental conceptual categories they use (e.g. "the individual", "classes", "genders", "nations") and the relationships between these categories (e.g. conflict, cooperation, interdependence, exploitation). 
+
+When social scientists use the word **theory** they generally mean one of two very different types of abstractions. At the highest level of abstraction, social scientists use **theories** to mean **frameworks**, such as Marxism, functionalism, or rational choice theory. These **frameworks** are much like religious or political beliefs - they are different ways of thinking about the world, which people are often strongly attached to, and which help them make sense of the world, **BUT** they are generally hard to convincingly test and definitively prove right or wrong (or likely or unlikely).
+
+At a more mundaine and practical level, social scientists use **theories** to mean **explanations**. Explanations provide an account of how or why some outcome occurs. Explanations are generally complex - with many interconnected parts. Explanations are almost always in a contestation with other explanations for the same outcome. For example, in the following research question, we can see two competing explanatory frameworks (individual effort and social class): "Is individual effort or social class more important in determining life outcomes?" What distingishes explanations from frameworks is that (1) explanations tend to focus on an **outcome** - they are are trying to explain an outcome; and (2) explanations are generally able to be **tested** (though generally only indirectly, and partially tested - since explanations are complex, with many interconnected and unseen parts).
+
+## Hypotheses testing
+
+asdf
+asdf
+asdf
+
+## Measurement
+
+asdf
+asdf
+asdf
+
+</td>   </tr>  </table>
+
+# 1. Social Theory: Ways of explaining the world
+**Qualitative data** is words or images which we can't, or don't want to, transform into numbers for mathematical or statistical analysis. Examples of qualitative data include interview transcripts, newspaper articles, paintings, images from the internet, and documents from government or private archives (see Figures 1 and 2 below). 
+
+## 1.1 Frameworks: More like religious or political beliefs
+
+## 1.2 Explanations: Competing causes for the same outcome
+
+## 1.3 Hypotheses: A statement that can be tested.
+
+# 2. Hypothesis testing: How do you know it is true?
+## 2.1 Units of analysis: The 'things' studied
+In qualitative analysis, as with quantitative analysis, we (1) closely look at our primary sources; and (2) search for patterns. 
+
+The basic method of searching for patterns in qualitative data is called **thematic analysis** or **thematic coding**. This involves classifying different parts of our data into meaningful categories - categories which we call codes or themes. 
+
+## 2.2 Variables: Characteristics of the 'things'.
+### 2.2.1 Dependent variable: The outcome. The effect. The bloody nose.
+Generally we start a **coding** process by engaging in **open coding**, where we develop our own codes inductively, as we first examine the texts or images we are analysing.
+
+
+### 2.2.2 Independent variable: The cause. The predictor. The punch. 
+The second stage of coding involves recoding our data using a strict set of rules. This process is called **axial coding**.
+
+
+### 2.2.3 Control variables: Measuring other explanations. Is she a haemophiliac?   
+At the end of axial coding, our data has been formally coded. 
+
+At this stage, we generally review the results and confirm that the theory or argument we are making is actually correct. 
+
+# 3. Measurement
+As we engage in coding, we often notice patterns or have ideas about the subject we are researching. It is important that the researcher systematically stores these ideas. The place qualitative researchers store these ideas is called **analytic memos**.
+
+## 3.1 Conceptualisation: A clear idea in your head. A definition.
+Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+
+
+### 3.1.1 Definition: The concept in one sentence.
+Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+
+
+### 3.1.2 Essential and Non-essential characteristics: The parts - building blocks - of a definition.
+Once we have done our **axial coding** (the second stage of coding) we are generally ready to start writing up our results for an audience.
+
+### 3.1.3 Examples and non-examples: Proof you know what you are talking about.
+The main way we present qualitative analysis **in a qualitative way** (i.e. as words,  not numbers) is by present our results as:
+
+## 3.2 Operationalisation: Measuring your idea in the real world 
+Each theme tends to have a very simple, formulatic structure. Remember the rule of good writing is to express **coordinate ideas in similar form**. 
+
+### 3.2.1 Levels of measurement: Turning concepts into numbers! 
+Sometimes it is appropriate to turn your qualitative analysis and coding categories into numbers and figures. 
+
+#### Categorical/Nominal
+
+#### Binary
+
+#### Ordinal
+
+#### Interval
+
+#### Ratio
+
+### 3.2.2 Ways of measuring
+
+#### Physical objects
+
+#### Texts
+
+#### Observation
+
+#### Surveys
+
+#### Experiments
+
+### 3.2.3 Improving our measurement
+
+#### Scales
+
+#### Indexes
+
+### 3.2.4 How good is our measure? 
+
+#### Reliability
+
+#### Validity
+
+
+# Additional Resources
+
+[Reference](link)
+
+[Reference](link)
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>

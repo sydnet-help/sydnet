@@ -1,0 +1,257 @@
+---
+title: "SOCI832: Introduction 1: Research Methods"
+
+lastmod: 2019-05-10T00:00:00.000Z
+
+draft: false
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "Intro: Research Methods"
+menu:
+  docs:
+    parent: SOCI832.1 Intro
+    weight: 10
+---
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+}
+</style>
+
+<table>  <tr>  <td>
+
+# Reading
+
+[Field, A., Miles, J., and Field, Z. (2012). *Discovering statistics using R*. Sage publications.](http://a.co/2jVI7VH)
+
+* Chapter 1: Why is my evil lecturer forcing me to learn statistics?
+
+</td>  </tr>  </table>
+
+<table>  <tr>  <td>
+
+# Concepts 
+<b style="padding-left: 2em">Theory<br></b>
+<b style="padding-left: 4em">Frameworks<br></b>
+<b style="padding-left: 4em">Explanations<br></b>
+<b style="padding-left: 2em">Hypothesis testing<br></b>
+<b style="padding-left: 4em">Units of analysis<br></b>
+<b style="padding-left: 4em">Variables<br></b>
+<b style="padding-left: 6em">Dependent variable (Outcome)<br></b>
+<b style="padding-left: 6em">Independent variable/s (Predictor/s)<br></b>
+<b style="padding-left: 6em">Control variables<br></b>
+<b style="padding-left: 2em">Measurement<br></b>
+<b style="padding-left: 4em">Conceptualisation<br></b>
+<b style="padding-left: 6em">Definitions<br></b>
+<b style="padding-left: 6em">Essential & Non-essential characteristics<br></b>
+<b style="padding-left: 6em">Examples & Non-examples<br></b>
+<b style="padding-left: 4em">Operationalisation<br></b>
+<b style="padding-left: 6em">Levels of measurement<br></b>
+<b style="padding-left: 8em">Binary, Ordinal, Interval, Ratio, Categorical/Nominal<br></b>
+<b style="padding-left: 6em">Ways of measuring<br></b>
+<b style="padding-left: 8em">Surveys, experiments, observation, physical objects, texts, etc.<br></b>
+<b style="padding-left: 6em">Improving our measurement<br></b>
+<b style="padding-left: 8em">Scales and indexes<br></b>
+<b style="padding-left: 6em">How good is our measure?<br></b>
+<b style="padding-left: 8em">Reliability and validity<br></b>
+
+</td>  </tr>  </table>
+
+<table>   <tr>  <td>
+
+# Summary
+
+The main purpose of academic research is to create **generalised knowledge**: knowledge which provides explanations across more than just the situation, example, or cases being studied. Social scientists develop, discuss, and formalise **generalised knowledge** through the development and testing of various **social theories**. These **theories** are complex abstractions. When social scientists use the word **theory** they generally mean either (1) **frameworks** - such as Marxism, functionalism, or rational choice theory - which like religious or political beliefs, are important abstract conceptions of the world, but ultimately are difficult to test. The other meaning of theory is (2) **explanations**. Explanations provide an account of how or why some outcome occurs. Explanations are distinguished from frameworks by, firstly, focusing on an **outcome**; and, secondly, containing **testable predictions** about the observable world.  
+
+The progress of academic knowledge - generalised knowledge - tends to develop through the contestation of competing explanations (theories). Competing explanations are evaluated by testing **hypotheses** - statements about what we should find in the observable world - where the  explanations make different predictions. 
+
+For statistical analysis we represent the observable world as a data table with rows and columns. The table is comprised of multiple entities  - such as people - and their characteristics - such as their age, gender, or political beliefs. We call the entities being studied **units of analysis**, and these **units of analysis** are the **rows** of the table of data. The characteristics measured on these entities (units of analysis) are called **variables** (since they vary across units of analysis). In statistical the characteristics (variables) are the **columns** of the table of data. 
+
+We distinguish between three main types of variables (i.e. characteristics of our units of analysis) by naming variables according to whether they are 'causes', 'effects', or 'other explanations'. A **dependent variable** is an outcome we are interested in, and generally the 'effect' in some cause-effect statement or theory. An **independent variable** is a predictors or 'cause' in some cause-effect statement or theory. **Control variables** are any 'other factors' which might influence our outcome. Often control variables are competing explanations. 
+
+To collect data we need to be able to measure the social world. Measurement is said to involve two steps **conceptualisation** (developing ideas, concepts), and **operationalisation** (developing measurement instruments). 
+
+The conceptualisation of a variable is normally captured in a written **definition**. **Definitions** are comprised of two main components - **essential characteristics** and **non-essential characteristics**. **Essential characteristics**, as the name implies, are necessary, while **non-essential characteristics**, are those characteristics often associated with the concept, but not necessary. A useful way to illustrate and highlight the importance of essential characteristics to a definition is to identify **examples** of the concept with all the essential characteristics, and also **non-examples**, which are missing just one essential characteristic. 
+
+Operationalisation involves developing an instrument for measuring your **concept** (**conceptual variable**). Social scientists use a wide variety of **instruments** to measure the real world - survey questions, direct observation, experiments, or counting of words in text. In statistical analysis, it is an essential requirement that these measurements be transformed into numbers. We talk about five types of numbers - **levels of measurement** - in quantitative data collection: **categorical/nominal** (unordered categories, e.g. colours, brands of car), **binary** (two unordered categories, e.g. dead/alive, pregnant/not-pregnant, female/not-female), **ordinal** (discrete, ordered categories, e.g. likert scale: strongly agree to strongly disagree), **interval** (ordinal with known distance between categories, e.g. temperature, IQ, GPA, the date), and **ratio** (interval with a true zero, e.g. age, income, years education). 
+
+Measurement can be improved by using multiple instruments or measures for the same conceptual variable. We call a measurement comprised of multiple smaller measurements a **scale** or an **index**. 
+
+We can test the quality of our measurement by assessing **reliability** - does it obtain the same measurement when repeatedly measuring the same 'thing' - and **validity** - does it really measure what we think it is measuring. Reliability can be measured with correlations between test and retest on the same subjects, or subjects assessed to have similar values of a variable based on some more strenuous objective assessment (e.g. an examination by a professional). Validity is generally assessed by (1) the judgement of experts; (2) correlation with validated measures; or (3) correlation with expected outcomes. The easiest way for a social scientists to ensure they use reliable and valid measures is to use measures from published studies of other social scientists. 
+
+
+
+
+</td>   </tr>  </table>
+
+
+There are two main branches of social science: **applied social science** and **basic social science**. **Applied social science** is generally done in government departments, corporate marketing or research departments, and non-government organisations, with the aim of helping institutions and individuals make **better decisions**. **Basic social science** is genderally done in universities, and published in scholarly journals and books. Its goal is the development of **generalised knowledge** - which means knowledge which provides explanations across more than just the situation, example, or cases being studied.
+
+
+Theories differ in the fundamental conceptual categories they use (e.g. "the individual", "classes", "genders", "nations") and the relationships between these categories (e.g. conflict, cooperation, interdependence, exploitation).
+
+
+For example, the concept "Unemployed", could have the essential characteristics of "looking for work" and "not obtaining any paid work" (both in the last month), and would have the non-essential characteristics "financially stressed" - since while many unemployed people are "financically stressed", this is not a universal characteristic (people with savings, or those with a working spouse might not be financially stressed). Non-examples of an unemployed person would drop one, but not both, essential characteristics. A homemaker is one non-example (no paid work, but not looking). A person who found a new job is another non-example (looking for work, but did obtain it). 
+
+
+
+
+Formally, a hypothesis is a statement about the expected relationship between two or more variables. Variables 
+
+## Hypotheses testing
+
+When we say that **explanations**, unlike **frameworks**, can be tested, we mean that they can be **indirectly tested**. The problem with **explanations** is that they are still very complex abstractions. Let's take a simple one, like the theory that socio-economic status is an important driver of health. Socio-economic status is  complex. Health is complex. The relationships between them infinitely more complex. We can't just take a photo of the relationships between socio-economic status and health, and then compare that photo to our mental model - our theory - and see if they match. Both the theory and the real world are too complex - too many parts, with too many interactions. 
+
+To deal with this complexity, we turn to the scientific method, and in particular, hypotheses testing. 
+
+When we engage in hypothesis testing we say "Well if my theory was true, what would I expect to happen exactly here." And then we study that one place - the 'here' - and see if our theory correctly predicts what we see at this one place. 
+
+Making a very specific, testable prediction is called generating a hypothesis.
+
+So to continue our example, we might say "If the theory of SES impacting on health is true, then we should expect that lower income people will die younger, on average." 
+
+The hypothesis is the testible statement: "Low income people will die younger, on average."
+
+If the hypothesis is true, it would be consistent with our theory of SES impacting health. It would **not** prove our theory. Theories can't be proven, they can only be shown to be consistent with existing evidence. But if the hypothesis was true it would add to the evidence for our theory.
+
+### Units of analysis
+
+If we look at the hypothesis: "Low income people will die younger, on average." we can see that it is a statement about a group of people. 
+
+In quantiative (meaning 'using numbers') research we call these 'people' **units of analysis**. 
+
+If we were doing a different study, the units of analysis could change. They could be planets, or pets, or nations, or species of trees, or schools. 
+
+The important characteristic of a unit of analysis is that (1) there are many cases of them, (2) they are comparable; and (3) they have similar characteristics measured on all of them (i.e. we have measurements of the same variables across the many cases).
+
+When we do statistical analysis, the most important part of our dataset is simply represented as a table, and in this table, the rows are the units of analysis
+
+| Respondant ID | Gender | Age of death | Owned home | 
+|---|---|---|---|
+| 01 | Male | 55 | No | 
+| 02 | Male | 76 | No | 
+| 03 | Female | 40 | No | 
+| 04 | Female | 66 | No | 
+| 05 | Female | 85 | No | 
+| 06 | Male | 80 | No | 
+| 07 | Male | 81 | Yes | 
+| 08 | Male | 78 | Yes | 
+| 09 | Female | 89 | Yes | 
+| 10 | Female | 92 | Yes | 
+| 11 | Female | 91 | Yes | 
+| 12 | Male | 86 | Yes | 
+
+
+
+asdf
+
+## Measurement
+
+asdf
+asdf
+asdf
+
+# 1. Social Theory: Ways of explaining the world
+**Qualitative data** is words or images which we can't, or don't want to, transform into numbers for mathematical or statistical analysis. Examples of qualitative data include interview transcripts, newspaper articles, paintings, images from the internet, and documents from government or private archives (see Figures 1 and 2 below). 
+
+## 1.1 Frameworks: More like religious or political beliefs
+
+## 1.2 Explanations: Competing causes for the same outcome
+
+## 1.3 Hypotheses: A statement that can be tested.
+
+# 2. Hypothesis testing: How do you know it is true?
+## 2.1 Units of analysis: The 'things' studied
+In qualitative analysis, as with quantitative analysis, we (1) closely look at our primary sources; and (2) search for patterns. 
+
+The basic method of searching for patterns in qualitative data is called **thematic analysis** or **thematic coding**. This involves classifying different parts of our data into meaningful categories - categories which we call codes or themes. 
+
+## 2.2 Variables: Characteristics of the 'things'.
+### 2.2.1 Dependent variable: The outcome. The effect. The bloody nose.
+Generally we start a **coding** process by engaging in **open coding**, where we develop our own codes inductively, as we first examine the texts or images we are analysing.
+
+
+### 2.2.2 Independent variable: The cause. The predictor. The punch. 
+The second stage of coding involves recoding our data using a strict set of rules. This process is called **axial coding**.
+
+
+### 2.2.3 Control variables: Measuring other explanations. Is she a haemophiliac?   
+At the end of axial coding, our data has been formally coded. 
+
+At this stage, we generally review the results and confirm that the theory or argument we are making is actually correct. 
+
+# 3. Measurement
+As we engage in coding, we often notice patterns or have ideas about the subject we are researching. It is important that the researcher systematically stores these ideas. The place qualitative researchers store these ideas is called **analytic memos**.
+
+## 3.1 Conceptualisation: A clear idea in your head. A definition.
+Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+
+
+### 3.1.1 Definition: The concept in one sentence.
+Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+
+
+### 3.1.2 Essential and Non-essential characteristics: The parts - building blocks - of a definition.
+Once we have done our **axial coding** (the second stage of coding) we are generally ready to start writing up our results for an audience.
+
+### 3.1.3 Examples and non-examples: Proof you know what you are talking about.
+The main way we present qualitative analysis **in a qualitative way** (i.e. as words,  not numbers) is by present our results as:
+
+## 3.2 Operationalisation: Measuring your idea in the real world 
+Each theme tends to have a very simple, formulatic structure. Remember the rule of good writing is to express **coordinate ideas in similar form**. 
+
+### 3.2.1 Levels of measurement: Turning concepts into numbers! 
+Sometimes it is appropriate to turn your qualitative analysis and coding categories into numbers and figures. 
+
+#### Categorical/Nominal
+
+#### Binary
+
+#### Ordinal
+
+#### Interval
+
+#### Ratio
+
+### 3.2.2 Ways of measuring
+
+#### Physical objects
+
+#### Texts
+
+#### Observation
+
+#### Surveys
+
+#### Experiments
+
+### 3.2.3 Improving our measurement
+
+#### Scales
+
+#### Indexes
+
+### 3.2.4 How good is our measure? 
+
+#### Reliability
+
+#### Validity
+
+
+# Additional Resources
+
+[Reference](link)
+
+[Reference](link)
+
+<center>
+Last updated on _`r format(Sys.time(), '%d %B, %Y')`_ by _Dr Nicholas Harrigan_ [(nicholas.harrigan@mq.edu.au)](mailto:nicholas.harrigan@mq.edu.au)
+</center>
