@@ -9,7 +9,7 @@ maths: true
 
 output:
   blogdown::html_page:
-    toc: false
+    toc: true
 
 linktitle: "Intro: Research Methods"
 menu:
@@ -26,8 +26,6 @@ table, th, td, tr, tbody {
     font-size: 0.7rem;
 }
 </style>
-
-{{% toc %}}
 
 
 <table>  <tr>  <td>
