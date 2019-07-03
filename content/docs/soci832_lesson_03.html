@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "3. Linear Regression in R"
+linktitle: "4. Regression: Linear (2)"
 menu:
   docs:
     parent: SOCI832
-    weight: 60
+    weight: 80
 ---
 
 
@@ -86,7 +86,7 @@ menu:
 <pre><code>## package &#39;readr&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
 <pre class="r"><code>    library(readr)
     elect_2013 &lt;- read.csv(&quot;elect_2013.csv&quot;)</code></pre>
 </div>
@@ -189,7 +189,7 @@ menu:
 <pre><code>## package &#39;fastDummies&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
 <pre class="r"><code>library(fastDummies)</code></pre>
 <p>The command can be seen here. In this we are dummying out the highest_qual variable.</p>
 <pre class="r"><code>elect_2013_dummies &lt;- dummy_cols(elect_2013, 
@@ -527,7 +527,7 @@ diagnostics$covariance.ratios &lt;- covratio(model_1)</code></pre>
 <pre><code>## package &#39;car&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
 <pre class="r"><code>library(car)</code></pre>
 <pre><code>## Loading required package: carData</code></pre>
 <p>The VIF for each variable in a model is given by this command:</p>
@@ -673,7 +673,7 @@ summary(model_centred)</code></pre>
 <p>This is the command for running the D-W Test. Remember that the D-W Statistic should be between 1 and 3, and the p-value of the test should be greater than 0.05 &gt;</p>
 <pre class="r"><code>    durbinWatsonTest(model_1) </code></pre>
 <pre><code>##  lag Autocorrelation D-W Statistic p-value
-##    1     0.006103426      1.987623   0.682
+##    1     0.006103426      1.987623   0.704
 ##  Alternative hypothesis: rho != 0</code></pre>
 </div>
 </div>
@@ -749,21 +749,29 @@ So when we are interpreting a logistic regression we say that a variable - such 
 <h3>R Script</h3>
 <p>We are going to use a couple of new packages - the package ‘oddsratio’ makes it easy for us to calculate and display odds ratios for our models; - the package ‘rcompanion’ makes it easy for us to calculate r-squared for our models.</p>
 <pre class="r"><code>install.packages(&quot;oddsratio&quot;, 
-             repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
+             repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;oddsratio&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
 <pre class="r"><code>install.packages(&quot;rcompanion&quot;, 
-             repos = &#39;http://cran.rstudio.com&#39;)</code></pre>
+             repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
 <pre><code>## package &#39;rcompanion&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\Rtmp4EtW4Q\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
+<pre class="r"><code>install.packages(&quot;zoo&quot;, 
+             repos = &#39;http://cran.rstudio.com&#39;, dependencies=TRUE)</code></pre>
+<pre><code>## Installing package into &#39;C:/Users/nickh/Documents/R/win-library/3.5&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<pre><code>## package &#39;zoo&#39; successfully unpacked and MD5 sums checked
+## 
+## The downloaded binary packages are in
+##  C:\Users\nickh\AppData\Local\Temp\RtmpUt3R0n\downloaded_packages</code></pre>
 <pre class="r"><code>library(oddsratio)
 library(rcompanion)</code></pre>
 <p>We are going to model likelihood of responding that they would definitely vote if voting was voluntary. Remember that this is a 5 on the 5 point likert scale for the varible likelihood_vote. And remember that most people gave this answer, which lead to the variable being difficult to model because the residuals were skewed.</p>
@@ -800,10 +808,10 @@ summary(model1)</code></pre>
 <p>So this is why we instead estimate the odds ratio, which happens to be the exponential of the coefficient.</p>
 <p>This function - or_glm - calculates this for us:</p>
 <pre class="r"><code>or_glm(data = elect_2013, model = model1)</code></pre>
-<pre><code>##              predictor oddsratio CI_low (2.5 %) CI_high (97.5 %)
-## 1 elect_2013$aust_born     1.195          1.026            1.392
-##            increment
-## 1 Indicator variable</code></pre>
+<pre><code>## # A tibble: 1 x 5
+##   predictor        oddsratio `CI_low (2.5)` `CI_high (97.5)` increment     
+##   &lt;chr&gt;                &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;         
+## 1 elect_2013$aust~      1.20           1.03             1.39 Indicator var~</code></pre>
 <p>The key number is in the output the 1.195 under the heading ‘oddsratio’.</p>
 <p>In future weeks we will discuss exactly how to interpret this, but for the moment you can think of it as saying something like (and this is not true - but rather an analogy) if there were two groups - one of 200 foreign-born australians, and one of 200 Australian-born australians, and amongst the foreign born persons 100 say they will definitely vote, then of the 200 australian-born persons, 120 would say they will definitely vote.</p>
 <p>We can also calcuate some equivalents of R-squared with this command. Note that there are several different measures that can be chosen from:</p>
@@ -873,20 +881,15 @@ summary(model2)</code></pre>
 ## 
 ## Number of Fisher Scoring iterations: 4</code></pre>
 <pre class="r"><code>or_glm(data = elect_2013, model = model2)</code></pre>
-<pre><code>##                     predictor oddsratio CI_low (2.5 %) CI_high (97.5 %)
-## 1    elect_2013$pol_knowledge     1.155          1.117            1.194
-## 2              elect_2013$age     1.011          1.005            1.016
-## 3           elect_2013$female     1.377          1.166            1.629
-## 4 elect_2013$income_quintiles     1.032          0.966            1.102
-## 5     elect_2013$interest_pol     0.303          0.266            0.343
-## 6        elect_2013$aust_born     1.353          1.125            1.626
-##            increment
-## 1 Indicator variable
-## 2 Indicator variable
-## 3 Indicator variable
-## 4 Indicator variable
-## 5 Indicator variable
-## 6 Indicator variable</code></pre>
+<pre><code>## # A tibble: 6 x 5
+##   predictor         oddsratio `CI_low (2.5)` `CI_high (97.5)` increment    
+##   &lt;chr&gt;                 &lt;dbl&gt;          &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;        
+## 1 elect_2013$pol_k~     1.16           1.12             1.19  Indicator va~
+## 2 elect_2013$age        1.01           1.00             1.02  Indicator va~
+## 3 elect_2013$female     1.38           1.17             1.63  Indicator va~
+## 4 elect_2013$incom~     1.03           0.966            1.10  Indicator va~
+## 5 elect_2013$inter~     0.303          0.266            0.343 Indicator va~
+## 6 elect_2013$aust_~     1.35           1.12             1.63  Indicator va~</code></pre>
 <pre class="r"><code>nagelkerke(model2)</code></pre>
 <pre><code>## $Models
 ##                                                                                                                                                                                           

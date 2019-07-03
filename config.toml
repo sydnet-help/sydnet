@@ -334,28 +334,9 @@ enableGitInfo = true
   weight = 90
 
 [[menu.docs]]
-name = "SOCI832.1 Intro"
+name = "SOCI832"
 weight = 100
 
-[[menu.docs]]
-name = "SOCI832.2 Bivariate"
-weight = 110
-
-[[menu.docs]]
-name = "SOCI832.3 Dimensions"
-weight = 120
-
-[[menu.docs]]
-name = "SOCI832.4 Regression"
-weight = 130
-
-[[menu.docs]]
-name = "SOCI832.5 Paths"
-weight = 140
-
-[[menu.docs]]
-name = "SOCI832.6 Presentation"
-weight = 160
 
 # Search.
 [params.search]

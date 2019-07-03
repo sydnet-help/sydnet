@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "2.2 Bivariate analysis"
+linktitle: "2. Bivariate: R"
 menu:
   docs:
     parent: SOCI832
-    weight: 40
+    weight: 60
 ---
 
 Last updated: 27 Dec 2018

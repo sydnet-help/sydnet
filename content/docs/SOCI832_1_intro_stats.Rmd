@@ -11,10 +11,10 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "Intro: Statistics"
+linktitle: "1. Intro: Statistics"
 menu:
   docs:
-    parent: SOCI832.1 Intro
+    parent: SOCI832
     weight: 20
 ---
 
@@ -42,9 +42,9 @@ table, th, td, tr, tbody {
 
 <b style="padding-left: 2em">Descriptive statistics<br></b>
 <b style="padding-left: 4em">Mean/Median/Mode (Central tendency)<br></b>
-<b style="padding-left: 4em">Standard deviation (Variation/dispersion)<br></b>
-<b style="padding-left: 4em">Minimum<br></b>
-<b style="padding-left: 4em">Maximum<br></b>
+<b style="padding-left: 4em">Standard deviation/Interquartile range (Variation/dispersion)<br></b>
+<b style="padding-left: 4em">Minimum/Maximum<br></b>
+<b style="padding-left: 4em">Percentile<br></b>
 <b style="padding-left: 4em">N (number of non-missing cases)<br></b>
 <b style="padding-left: 2em">Inferential statistics<br></b>
 <b style="padding-left: 4em">Population<br></b>
@@ -53,12 +53,14 @@ table, th, td, tr, tbody {
 <b style="padding-left: 6em">Sample statistic<br></b>
 <b style="padding-left: 4em">Hypothesis testing<br></b>
 <b style="padding-left: 6em">Null hypothesis<br></b>
+<b style="padding-left: 6em">Sampling distribution<br></b>
+<b style="padding-left: 6em">Central limit theorm<br></b>
 <b style="padding-left: 6em">Standard error<br></b>
 <b style="padding-left: 6em">Confidence interval<br></b>
 <b style="padding-left: 6em">p-value<br></b>
 <b style="padding-left: 6em">Effect size<br></b>
 <b style="padding-left: 4em">Bivariate inferential statistics<br></b>
-<b style="padding-left: 6em">Correlation, comparison of means<br></b>
+<b style="padding-left: 6em">Correlation, comparison of means, chi-squared<br></b>
 <b style="padding-left: 4em">Multivariate inferential statistics<br></b>
 <b style="padding-left: 6em">Linear and logistic regression<br></b>
 <b style="padding-left: 4em">Dimension reduction and finding categories<br></b>

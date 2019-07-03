@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "2.1 Univariate analysis"
+linktitle: "1. Intro: R Univariate"
 menu:
   docs:
     parent: SOCI832
-    weight: 30
+    weight: 50
 
 ---
  

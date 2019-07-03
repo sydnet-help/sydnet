@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "2.3 Linear Regression"
+linktitle: "4. Regression: Linear"
 menu:
   docs:
     parent: SOCI832
-    weight: 50
+    weight: 70
 ---
 
 Last updated: 7 Jan 2019
