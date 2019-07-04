@@ -1,4 +1,51 @@
 ---
+title: "SOCI832 999.0 Setup Information"
+
+lastmod: 2018-12-28T00:00:00.000Z
+
+draft: true
+type: docs
+maths: true
+
+output:
+  blogdown::html_page:
+    toc: true
+
+linktitle: "999.0 Setup Info"
+menu:
+  docs:
+    parent: SOCI832
+    weight: 999
+---
+
+<style>
+table, th, td, tr, tbody {
+  border-top: 1px solid LightGray;
+    border-left: 0px solid LightGray;  
+    border-right: 0px solid LightGray;  
+    border-bottom: 1px solid LightGray;
+}
+</style>
+
+
+
+<table>   <tr>  <td>
+# My Chosen Design for Each Page
+
+* Reading
+* Concepts (15)
+* Summary (300 words)
+* Main Text (1600 words divided ~ 4 Sections, each with 4 Paragraphs of about 100 words)
+
+</td>   </tr>  </table>
+
+
+<table>  <tr>  <td>
+# Default Text for Setting Up a New Page
+
+````
+
+---
 title: "SOCI832 3.1 An introduction to factor analysis"
 
 lastmod: 2018-12-28T00:00:00.000Z
@@ -18,7 +65,7 @@ menu:
     weight: 310
 ---
 
-<style>
+	<style>
 table, th, td, tr, tbody {
   border-top: 1px solid LightGray;
     border-left: 0px solid LightGray;  
@@ -26,6 +73,34 @@ table, th, td, tr, tbody {
     border-bottom: 1px solid LightGray;
 }
 </style>
+
+<table>  <tr>  <td>
+# Reading
+
+[Field, A., Miles, J., and Field, Z. (2012). *Discovering statistics using R*. Sage publications.](http://a.co/2jVI7VH)
+
+* Chapter X: XXXXXXXXXXXXX
+</td>  </tr>  </table>
+
+<table>   <tr>  <td>
+# Concepts 
+
+<b style="padding-left: 2em">Level 1<br></b>
+<b style="padding-left: 4em">Level 2<br></b>
+<b style="padding-left: 6em">Level 3<br></b>
+</td>   </tr>  </table>
+
+<table>   <tr>  <td>
+# Summary
+
+This is a 300 word summary of clase
+</td>   </tr>  </table>
+
+
+````
+
+</td>   </tr>  </table>
+
 
 <table>  <tr>  <td>
 # File Structure of SOCI832
@@ -134,11 +209,13 @@ table, th, td, tr, tbody {
 *  soci832_6_present_ggplot
 *  6.2 Present: Graphs
 *  Lesson 6.2 An introduction to graphs in ggplot
+
+*  999
+*  soci832_999_setup_info
+*  999.0 Setup Info
+*  SOCI832 999.0 Setup Information
 </td>  </tr>  </table>
 
-<table>   <tr>  <td>
-# Table 2
-</td>   </tr>  </table>
 
 <table>   <tr>  <td>
 # Table 3
