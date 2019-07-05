@@ -141,9 +141,9 @@ $\begin{aligned}
 \\
 \text{Where:} \\
 x_i = &\text{value of x for each individual i} \\
-\sum_{i=1}^n = &\text{sum for all observations from 1 to n} \\
 \bar x = &\text{ mean of x} \\
 N,n = &\text{ number of observations} \\
+\sum_{i=1}^n = &\text{sum for all observations from 1 to n} \\
 \end{aligned}$
 
 While this equation looks scary to many people, I think the best way to break it down - conceptually, and by analogy, not strict mathematically - is to think about this as having just three main parts:
