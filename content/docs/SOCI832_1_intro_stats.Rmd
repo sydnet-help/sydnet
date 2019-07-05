@@ -25,6 +25,7 @@ table, th, td, tr, tbody {
     border-right: 0px solid LightGray;  
     border-bottom: 1px solid LightGray;
     font-size: 0.7rem;
+    background-color:#F6F6F6; 
 }
 </style>
 
@@ -128,7 +129,7 @@ The mean is good for summarising the centre of a set of numbers that are **norma
 The median is good for summarising the centre of a set of numbers that is **skewed** (i.e. there are a large number of small values, or a large number of large values). For example, income is highly skewed - i.e. unequally distributed, with a large number of poor people, and a few people who are very very rich - and the median is a better measure of this. In Australia the mean income is around <span>&#36;</span>80,000/year, while the median closer to <span>&#36;</span>50,000/year. 
 
 **Mode**: The most common number in a set. <br>
-The mode is good for summarising the centre of a set of numbers that are not ordered. For example, if we have a list of 40,000 students and Macquarie Uni, and a variable which is the name of their degree, it doesn't make sense to talk about the mean or median of the 'degree'. However the 'mode' makes sense. In every day language, we would say the most common degree at Macquarie University is an Arts Degree. Another way to say this, is the 'mode' degree is an Arts Degree. 
+The mode is good for summarising the centre of a set of numbers that are **not ordered** (i.e. categorical/nominal). For example, if we have a list of 40,000 students and Macquarie Uni, and a variable which is the name of their degree, it doesn't make sense to talk about the mean or median of the 'degree'. However the 'mode' makes sense. In every day language, we would say the most common degree at Macquarie University is an Arts Degree. Another way to say this, is the 'mode' degree is an Arts Degree. 
 
 </td>   </tr>  </table>
 

@@ -1848,21 +1848,51 @@ table > tbody + tbody {
   border-top: 2px solid #ddd;
 }
 
+/*************************************************/
+/* #### HOVER OR NOT TABLES #### */
+/*************************************************/
+
+/* OPTION 1: WITHOUT TABLE HOVER EFFECT */
 table table {
-  background-color: #fff;
+background-color: #f9f9f9;
 }
 
 /* Table Striped */
 table > tbody > tr:nth-child(odd) > td,
 table > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+ background-color: #e5e5e5;
+}
 }
 
+/* END OPTION 1 */
+
+/*************************************************/
+
+/* OPTION 2: WITH TABLE HOVER EFFECT */
+
+/*table table {
+background-color: #fff; 20190705 - make no hover effect
+}
+*/
+/* Table Striped */
+/*table > tbody > tr:nth-child(odd) > td,
+table > tbody > tr:nth-child(odd) > th {
+background-color: #f9f9f9;
+}
+}
+*/
 /* Table Hover */
-table > tbody > tr:hover > td,
+/*table > tbody > tr:hover > td,
 table > tbody > tr:hover > th {
   background-color: #e5e5e5;
 }
+*/
+/* END OPTION 2 */
+
+/*************************************************/
+/* #### END HOVER OR NOT TABLES #### */
+/*************************************************/
+
 
 /*************************************************
  *  Alerts
