@@ -25,7 +25,6 @@ table, th, td, tr, tbody {
     border-right: 0px solid LightGray;  
     border-bottom: 1px solid LightGray;
     font-size: 0.7rem;
-    background-color:#F6F6F6; 
 }
 </style>
 
@@ -39,7 +38,7 @@ table, th, td, tr, tbody {
 
 </td>  </tr>  </table>
 
-
+<table>  <tr>  <td>
 # Concepts 
 
 <b style="padding-left: 2em">Descriptive statistics<br></b>
@@ -69,35 +68,13 @@ table, th, td, tr, tbody {
 <b style="padding-left: 6em">Factor analysis, Cluster analysis<br></b>
 
 
+</td>  </tr>  </table>
+
 <table>   <tr>  <td>
 
 # Summary
 
-Descriptive statistics
-	Mean/Median/Mode (Central tendency)
-	Standard deviation/Interquartile range (Variation/dispersion)
-	Minimum/Maximum
-	Percentile
-	N (number of non-missing cases)
-Inferential statistics
-	Population
-		Population parameter
-	Sample
-		Sample statistic
-	Hypothesis testing
-		Null hypothesis
-		Sampling distribution
-		Central limit theorm
-		Standard error
-		Confidence interval
-		p-value
-		Effect size
-	Bivariate inferential statistics
-		Correlation, comparison of means, chi-squared
-	Multivariate inferential statistics
-		Linear and logistic regression
-	Dimension reduction and finding categories
-		Factor analysis, Cluster analysis
+[insert summary]
 
 
 </td>   </tr>  </table>
