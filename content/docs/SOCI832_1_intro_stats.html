@@ -152,18 +152,23 @@ table, th, td, tr, tbody {
 <tr>
 <td>
 <p style="font-size: 0.8rem;">
-<strong>Box 2: Standard Deviation as equation and everyday language</strong>
+<strong>Box 2: Standard Deviation: As an equation and in everyday language</strong>
 </p>
-<p><span class="math inline">\(\begin{aligned} \text{Standard Deviation of variable x} = &amp;\sqrt{\frac{\sum_{i=1}^n (x_i - \bar x)^2}{N}}\\ \\ \text{Where:} \\ x_i = &amp;\text{value of x for each individual i} \\ \sum_{i=1}^n = &amp;\text{sum for all observations from 1 to n} \\ \bar x = &amp;\text{ mean of x} \\ N = &amp;\text{ number of observations} \\ \end{aligned}\)</span></p>
+<p><span class="math inline">\(\begin{aligned} \text{Standard Deviation of variable x} = &amp;\sqrt{\frac{\sum_{i=1}^n (x_i - \bar x)^2}{N}}\\ \\ \text{Where:} \\ x_i = &amp;\text{value of x for each individual i} \\ \sum_{i=1}^n = &amp;\text{sum for all observations from 1 to n} \\ \bar x = &amp;\text{ mean of x} \\ N,n = &amp;\text{ number of observations} \\ \end{aligned}\)</span></p>
 <p>While this equation looks scary to many people, I think the best way to break it down - conceptually, and by analogy, not strict mathematically - is to think about this as having just three main parts:</p>
 <ul>
-<li><strong>Variation from mean</strong>: First, it basically asks how much, for each value of a variable (e.g. the age of any particular student in a class) varies from the mean for the whole set (e.g. the average age of the class). This is represented in the equation as: <span class="math display">\[(x_i - \bar x)\]</span></li>
+<li><strong>Variation from mean</strong>: First, it basically asks how much, each value of a variable (e.g. the age of each particular student in a class) varies from the mean for the whole set (e.g. the average age of the class). This is represented in the equation as: <span class="math display">\[(x_i - \bar x)\]</span></li>
 <li><strong>Averaged over all individuals</strong>: Second, it takes the average (mean) of this across all observations in the dataset (e.g. all students in the class). This is represented by the sum of (the funny E) divided by N: <span class="math display">\[\frac{\sum_{i=1}^n \text{variation from mean} }{N}\]</span></li>
 <li><strong>Punishing (counting) big variations more than small ones</strong>: Third, it actually squares the deviation from the mean - which has the effect of ‘punishing’ (i.e. inflating or more heavily weighting) larger deviations from the mean more. It then takes the square root of the whole thing, basically to counter act the effect of the squaring, and make it all measured in the same ‘units’ as the mean.</li>
 </ul>
-<p>BUT, the take away from all this is: the standard deviation is - more or less - the average amount all members of a dataset vary from the mean.</p>
-<p>For example, you have two classes of 100 students each, and the average age of both classes individually is 22, but the standard deviation of one class is zero, and the other is one.</p>
-<p>Based on this standard deviation, you would know that - <strong>roughly</strong> and <strong>on average</strong> - if you picked any, say, 10 students from each class: * the tens students from the class with zero standard deviation would all be aged 22, while * the ten students from class with one year standard deviation, would be comprised of students who - on average - deviate from the mean age by one year (i.e. some students will be 19, 20, 21, 23, 24, etc.).</p>
+<p>BUT, the take away from all this is: <strong>the standard deviation is - more or less - the average amount all values of a variable vary from the mean.</strong></p>
+<p>For example, you have two classes of 100 students each, and the average age (mean) of each class is 22, but the standard deviation of the first class is zero, and standard deviation of the second class is one.</p>
+<p>Based on this standard deviation, you would know that - <strong>roughly</strong> and <strong>on average</strong> - if you picked any, say, six students from each class:</p>
+<ul>
+<li>the six students from the class with zero standard deviation would all be aged 22 (i.e. ages 22, 22, 22, 22, 22, 22), while</li>
+<li>the six students from class with one year standard deviation, would be comprised of students who - on average - deviate from the mean age by one year (e.g. ages 20, 21, 22, 22, 23, 24).</li>
+</ul>
+<p>Notice that both groups have the same <strong>mean</strong> (22), but the second class is much more ‘dispersed’ and ‘varied’: the higher the standard deviation, the more ‘spread out’ the ages in the class are.</p>
 </td>
 </tr>
 </table>
