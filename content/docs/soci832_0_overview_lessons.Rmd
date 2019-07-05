@@ -26,62 +26,62 @@ menu:
 ## Weeks 1 & 2: Introduction to statistics and R
 
 ### 1.1 Introduction to Research Methods
-Reading: Chapter 1
-Main concepts: Theory, hypotheses, variables, measurement
+**Reading:** Chapter 1 <br>
+**Main concepts:** Theory, hypotheses, variables, measurement
 
 ### 1.2 Introduction to Statistics
-Reading: Chapter 2
-Main concepts: Descriptive & inferential statistics, sampling, p-value
+**Reading:** Chapter 2 <br>
+**Main concepts:** Descriptive & inferential statistics, sampling, p-value
 
 ### 1.3 Introduction to R
-Reading: Chapter 3
-Main concepts: Install R & RStudio, open dataset, recode variables
+**Reading:** Chapter 3 <br>
+**Main concepts:** Install R & RStudio, open dataset, recode variables
 
 ### 1.4 Introduction to Univariate analysis
-Reading: Chapters 1 and 2
-Main concepts: central tendency, variation, histogram.
+**Reading:** Chapters 1 and 2 <br>
+**Main concepts:** central tendency, variation, histogram.
 
 ## Weeks 3 & 4: Bivariate analysis
 
 ### 2.1 Comparison of means
-Reading: Chapter 9
-Main concepts: comparison of mean, paired/independent samples
+**Reading:** Chapter 9 <br>
+**Main concepts:** comparison of mean, paired/independent samples
 
 ### 2.2 Correlation
-Reading: Chapter 6
-Main concepts: pearsons r, covariance, scatterplot
+**Reading:** Chapter 6 <br>
+**Main concepts:** pearsons r, covariance, scatterplot
 
 ### 2.3 Chi-square
-Reading: Chapter 18
-Main concepts: cross-tabulation, chi-square, degrees of freedom
+**Reading:** Chapter 18 <br>
+**Main concepts:** cross-tabulation, chi-square, degrees of freedom
 
 ## Weeks 5 & 6: Dimension reduction
 
 ### 3.1 Factor analysis
-Reading: Chapter 17
-Main concepts: factors, factor scores, rotation
+**Reading:** Chapter 17 <br>
+**Main concepts:** factors, factor scores, rotation
 
 ### 3.2 Index creation and testing
-Reading: Chapter 17, section 17.8
-Main concepts: Cronbach alpha, reliability with item deleted
+**Reading:** Chapter 17, section 17.8 <br>
+**Main concepts:** Cronbach alpha, reliability with item deleted
 
 ## Weeks 7 & 8: Regression analysis
 
 ### 4.1 Linear regression
-Reading: Chapter 7
+**Reading:** Chapter 7
 
 ### 4.2 Regression diagnostics
-Reading: Chapter 7, section 7.7 onwards
+**Reading:** Chapter 7, section 7.7 onwards
 
 ### 4.3 Logistic regression
-Reading: Chapter 8
+**Reading:** Chapter 8
 
 ### 4.4 Other types of regression
-Optional reading: Chapters 18 and 19
+Optional **Reading:** Chapters 18 and 19
 
 ## Weeks 9 & 10: Path analysis
 
-Reading: [Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. Journal of personality and social psychology, 51(6), 1173.](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles/Journal%20of%20Personality%20and%20Social%20Psychology%201986%20Baron.pdf)
+**Reading:** [Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. Journal of personality and social psychology, 51(6), 1173.](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles/Journal%20of%20Personality%20and%20Social%20Psychology%201986%20Baron.pdf)
 
 ### 5.1 Moderating variables (interactions)
 ### 5.2 Mediating variables
@@ -89,7 +89,7 @@ Reading: [Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable
 
 ## Weeks 11 & 12: Presenting results & Graphs
 
-Reading: methods101.com
+**Reading:** methods101.com
 
 ### 6.1 Writing a report
 ### 6.2 Graphs with ggplot

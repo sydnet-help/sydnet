@@ -24,6 +24,7 @@ table, th, td, tr, tbody {
     border-left: 0px solid LightGray;  
     border-right: 0px solid LightGray;  
     border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
 }
 </style>
 
@@ -71,115 +72,162 @@ table, th, td, tr, tbody {
 
 # Summary
 
-## Social theory
+Descriptive statistics
+	Mean/Median/Mode (Central tendency)
+	Standard deviation/Interquartile range (Variation/dispersion)
+	Minimum/Maximum
+	Percentile
+	N (number of non-missing cases)
+Inferential statistics
+	Population
+		Population parameter
+	Sample
+		Sample statistic
+	Hypothesis testing
+		Null hypothesis
+		Sampling distribution
+		Central limit theorm
+		Standard error
+		Confidence interval
+		p-value
+		Effect size
+	Bivariate inferential statistics
+		Correlation, comparison of means, chi-squared
+	Multivariate inferential statistics
+		Linear and logistic regression
+	Dimension reduction and finding categories
+		Factor analysis, Cluster analysis
 
-There are two main branches of social science: **applied social science** and **basic social science**. **Applied social science** is generally done in government departments, corporate marketing or research departments, and non-government organisations, with the aim of helping institutions and individuals make **better decisions**. **Basic social science** is genderally done in universities, and published in scholarly journals and books. Its goal is the development of **generalised knowledge** - which means knowledge which provides explanations across more than just the situation, example, or cases being studied. 
-
-One of the main ways that **basic social science** develops, discusses, and formalises **generalised knowledge** is through the development and testing of various social **theories**. These **theories** are complex abstractions. Theories differ in the fundamental conceptual categories they use (e.g. "the individual", "classes", "genders", "nations") and the relationships between these categories (e.g. conflict, cooperation, interdependence, exploitation). 
-
-When social scientists use the word **theory** they generally mean one of two very different types of abstractions. At the highest level of abstraction, social scientists use **theories** to mean **frameworks**, such as Marxism, functionalism, or rational choice theory. These **frameworks** are much like religious or political beliefs - they are different ways of thinking about the world, which people are often strongly attached to, and which help them make sense of the world, **BUT** they are generally hard to convincingly test and definitively prove right or wrong (or likely or unlikely).
-
-At a more mundaine and practical level, social scientists use **theories** to mean **explanations**. Explanations provide an account of how or why some outcome occurs. Explanations are generally complex - with many interconnected parts. Explanations are almost always in a contestation with other explanations for the same outcome. For example, in the following research question, we can see two competing explanatory frameworks (individual effort and social class): "Is individual effort or social class more important in determining life outcomes?" What distingishes explanations from frameworks is that (1) explanations tend to focus on an **outcome** - they are are trying to explain an outcome; and (2) explanations are generally able to be **tested** (though generally only indirectly, and partially tested - since explanations are complex, with many interconnected and unseen parts).
-
-## Hypotheses testing
-
-asdf
-asdf
-asdf
-
-## Measurement
-
-asdf
-asdf
-asdf
 
 </td>   </tr>  </table>
 
-# 1. Social Theory: Ways of explaining the world
-**Qualitative data** is words or images which we can't, or don't want to, transform into numbers for mathematical or statistical analysis. Examples of qualitative data include interview transcripts, newspaper articles, paintings, images from the internet, and documents from government or private archives (see Figures 1 and 2 below). 
+# 1. Descriptive statistics: two numbers that are as good as a million
 
-## 1.1 Frameworks: More like religious or political beliefs
+In this course I assume you are allergic to maths. This brings us all to the same level, and it also makes sure all of us try to build on solid foundations. 
 
-## 1.2 Explanations: Competing causes for the same outcome
+When we use maths for social sciences, we generally use it in one of two ways: to generate **descriptive statistics** - which allow us to summarise a large amount of data in a few numbers - or to generate **inferential statistics** - which allow us to draw conclusions about the wider world based on a tiny sample of that world. 
 
-## 1.3 Hypotheses: A statement that can be tested.
+**Descriptive statistics** allow us to summarise a group we can actually see, touch, and/or count. It helps us turn, for example, the incomes of 23 million Australian's who did the 2016 census into a single number - the median personal weekly personal income of people aged 15 years and over: [$662.](https://quickstats.censusdata.abs.gov.au/census_services/getproduct/census/2016/quickstat/036)
 
-# 2. Hypothesis testing: How do you know it is true?
-## 2.1 Units of analysis: The 'things' studied
-In qualitative analysis, as with quantitative analysis, we (1) closely look at our primary sources; and (2) search for patterns. 
+## 1.1 Mean/Median/Mode: The centre
 
-The basic method of searching for patterns in qualitative data is called **thematic analysis** or **thematic coding**. This involves classifying different parts of our data into meaningful categories - categories which we call codes or themes. 
+One type of descriptive statistics try to summarise the "centre" of a dataset (or more correctly, the centre of the values of a variable). The most common example of this is the **average** - formally called **mean** - of a set of numbers. 
 
-## 2.2 Variables: Characteristics of the 'things'.
-### 2.2.1 Dependent variable: The outcome. The effect. The bloody nose.
-Generally we start a **coding** process by engaging in **open coding**, where we develop our own codes inductively, as we first examine the texts or images we are analysing.
+Other measures of the central tendency are the **median**, and the **mode**. Box 1 provides definitions, uses, and examples. 
+
+All of these measures of the central tendency have a common characteristic: they are trying to find **one number that can represent them all.** It's like running a talent contest to find the 'most ordinary, normal, typical Australian', except in this case you are trying to find the 'most ordinary, normal, typical number in this set'.
+
+<table>   <tr>  <td>
+
+<p style="font-size: 0.8rem;"> **Box 1: Definitions, uses, and examples of mean, median, and mode** </p>
+
+**Mean** (the arithmetic mean): The average. The sum of all cases divided by the number of cases. <br>
+The mean is good for summarising the centre of a set of numbers that are **normally distributed** (we will learn about this later). For example, height is normally distributed, so the mean is a good summary measure for a group of people's heights.
+
+**Median**: The middle point in a set of numbers. If we order a set of numbers from highest to lowest, and find the number in the middle, this is the median. If two numbers are in the middle (there is an even number of cases), then the median is the average to the two numbers. <br>
+The median is good for summarising the centre of a set of numbers that is **skewed** (i.e. there are a large number of small values, or a large number of large values). For example, income is highly skewed - i.e. unequally distributed, with a large number of poor people, and a few people who are very very rich - and the median is a better measure of this. In Australia the mean income is around <span>&#36;</span>80,000/year, while the median closer to <span>&#36;</span>50,000/year. 
+
+**Mode**: The most common number in a set. <br>
+The mode is good for summarising the centre of a set of numbers that are not ordered. For example, if we have a list of 40,000 students and Macquarie Uni, and a variable which is the name of their degree, it doesn't make sense to talk about the mean or median of the 'degree'. However the 'mode' makes sense. In every day language, we would say the most common degree at Macquarie University is an Arts Degree. Another way to say this, is the 'mode' degree is an Arts Degree. 
+
+</td>   </tr>  </table>
+
+## 1.2 Standard deviation/Interquartile range: Giving variation a number
+
+We know from life, however, that the 'most ordinary, normal, typical' single example of anything is a gross simplication. 
+
+All sets have variety, and the second major type of descriptive statistic tries to capture this variety, and do it in just one number. 
+
+### Standard deviation
+The most common measure of variety - or technically 'variability', 'variation', or 'dispersion' - in a set of numbers is probably the **standard deviation**. 
+
+Box 2 provides an explanation of standard deviation - as equation, and also in everyday language. 
+
+Intiutively - not strickly - you can think of **standard deviation** as the average amount - as an absolute value (so negative become positive, and positive stay positive) - that each person's value for a variable 'misses' (deviates) from the mean of the variable. 
+
+If the standard deviation is close to zero, then virtually everyone in the dataset has the same value for the variable. 
+
+If the standard deviation is large, then you expect that - on average - any particular person you pick from the dataset is going to be quite distant from (greater or lesser than) the mean. 
+
+### Normal distribution
+
+### Interquartile range
+While standard deviation is a good measure of variablity for 
+
+<table>   <tr>  <td>
+
+<p style="font-size: 0.8rem;"> **Box 2: Standard Deviation as equation and everyday language** </p>
+
+$\begin{aligned}
+\text{Standard Deviation of variable x} = &\sqrt{\frac{\sum_{i=1}^n (x_i - \bar x)^2}{N}}\\
+\\
+\text{Where:} \\
+x_i = &\text{value of x for each individual i} \\
+\sum_{i=1}^n = &\text{sum for all observations from 1 to n} \\
+\bar x = &\text{ mean of x} \\
+N = &\text{ number of observations} \\
+\end{aligned}$
+
+While this equation looks scary to many people, I think the best way to break it down - conceptually, and by analogy, not strict mathematically - is to think about this as having just three main parts:
+
+* **Variation from mean**: First, it basically asks how much, for each value of a variable (e.g. the age of any particular student in a class) varies from the mean for the whole set (e.g. the average age of the class). This is represented in the equation as: $$(x_i - \bar x)$$
+* **Averaged over all individuals**: Second, it takes the average (mean) of this across all observations in the dataset (e.g. all students in the class). This is represented by the sum of (the funny E) divided by N: $$\frac{\sum_{i=1}^n \text{variation from mean} }{N}$$
+* **Punishing (counting) big variations more than small ones**: Third, it actually squares the deviation from the mean - which has the effect of 'punishing' (i.e. inflating or more heavily weighting) larger deviations from the mean more. It then takes the square root of the whole thing, basically to counter act the effect of the squaring, and make it all measured in the same 'units' as  the mean. 
+
+BUT, the take away from all this is: the standard deviation is - more or less - the average amount all members of a dataset vary from the mean. 
+
+For example, you have two classes of 100 students each, and the average age of both classes individually is 22, but the standard deviation of one class is zero, and the other is one.  
+
+Based on this standard deviation, you would know that - **roughly** and **on average** - if you picked any, say, 10 students from each class:
+* the tens students from the class with zero standard deviation would all be aged 22, while 
+* the ten students from class with one year standard deviation, would be comprised of students who - on average - deviate from the mean age by one year (i.e. some students will be 19, 20, 21, 23, 24, etc.). 
+
+</td>   </tr>  </table>
 
 
-### 2.2.2 Independent variable: The cause. The predictor. The punch. 
-The second stage of coding involves recoding our data using a strict set of rules. This process is called **axial coding**.
+## 1.3 Minimum/Maximum: The bounds of our data
 
+## 1.4 Percentile: For categories
 
-### 2.2.3 Control variables: Measuring other explanations. Is she a haemophiliac?   
-At the end of axial coding, our data has been formally coded. 
+## 1.5 N (number of non-missing cases): Did people actually answer this question?
 
-At this stage, we generally review the results and confirm that the theory or argument we are making is actually correct. 
+# 2. Inferential statistics: Drawing conclusions about the big bad world
 
-# 3. Measurement
-As we engage in coding, we often notice patterns or have ideas about the subject we are researching. It is important that the researcher systematically stores these ideas. The place qualitative researchers store these ideas is called **analytic memos**.
+## 2.1 Population: The big bad world, hidden behind a curtain
 
-## 3.1 Conceptualisation: A clear idea in your head. A definition.
-Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+### 2.1.1 Population parameter: The number we will never know
 
+## 2.2 Sample: The mini world we can really see and touch
 
-### 3.1.1 Definition: The concept in one sentence.
-Many qualitative researchers use the notion of **saturation** to decide when they have enough data. 
+### 2.2.1 Sample statistic: Our approximation of the real world
 
+## 2.3 Hypothesis testing: How do I know if I am wrong?
 
-### 3.1.2 Essential and Non-essential characteristics: The parts - building blocks - of a definition.
-Once we have done our **axial coding** (the second stage of coding) we are generally ready to start writing up our results for an audience.
+### 2.3.1 Null hypothesis: The hypothesis that nothing is happening
 
-### 3.1.3 Examples and non-examples: Proof you know what you are talking about.
-The main way we present qualitative analysis **in a qualitative way** (i.e. as words,  not numbers) is by present our results as:
+### 2.3.2 Sampling distribution: If i could do this survey 1,000 times...
 
-## 3.2 Operationalisation: Measuring your idea in the real world 
-Each theme tends to have a very simple, formulatic structure. Remember the rule of good writing is to express **coordinate ideas in similar form**. 
+### 2.3.3 Central limit theorm: If you roll dice infinite times you always get 3.5 (on average)
 
-### 3.2.1 Levels of measurement: Turning concepts into numbers! 
-Sometimes it is appropriate to turn your qualitative analysis and coding categories into numbers and figures. 
+### 2.3.4 Standard error: If I repeated this survey 1,000 times... the answer would vary this much (holds up hands pretending to have caught a big fish).
 
-#### Categorical/Nominal
+### 2.3.5 Confidence interval: The population parameter is somewhere between here and here
 
-#### Binary
+### 2.3.6 p-value: the chance I'm wrong. The chance nothing is happening
 
-#### Ordinal
+### 2.3.7 Effect size: Does it really matter? How much? 
 
-#### Interval
+## 2.4 Bivariate inferential statistics: When X goes up, does Y go up?
 
-#### Ratio
+### 2.4.1 Correlation, comparison of means, chi-squared
 
-### 3.2.2 Ways of measuring
+## 2.5 Multivariate inferential statistics: "But what about Z?" Modelling many 'causes'.
 
-#### Physical objects
+### 2.5.1 Linear and logistic regression
 
-#### Texts
+## 2.6 Dimension reduction: Finding categories in your data. 
 
-#### Observation
-
-#### Surveys
-
-#### Experiments
-
-### 3.2.3 Improving our measurement
-
-#### Scales
-
-#### Indexes
-
-### 3.2.4 How good is our measure? 
-
-#### Reliability
-
-#### Validity
+### 2.6.1 Factor analysis, Cluster analysis
 
 
 # Additional Resources

@@ -24,6 +24,7 @@ table, th, td, tr, tbody {
     border-left: 0px solid LightGray;  
     border-right: 0px solid LightGray;  
     border-bottom: 1px solid LightGray;
+    font-size: 0.7rem;
 }
 </style>
 
