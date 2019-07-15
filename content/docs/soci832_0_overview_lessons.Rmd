@@ -63,17 +63,20 @@ menu:
 (4) undertaking in-class exercises, and 
 (5) doing so in a way that is respectful of other participants in class.
 
-Example grades and student evidence of meeting marking criteria:
-55% (Pass) - attends 80% of classes, but does so with little participation beyond completing exercises
-65% (Credit) - attends 90% of classes, and participates in discussion occassionally.
-75% (Distinction) - attends 100% of classes, and participates actively and fully
-85% (High Distinction) - attends 100% of classes, and shows deep engagement with teaching material and with other students. Shows serious preparation before class. Completes exercises at a very high standard, perhaps extending analysis beyond those immediately taught.
+Example grades and students' behaviour that meets marking criteria:
+
+* 55% (Pass) - attends 80% of classes, but does so with little participation beyond completing exercises
+* 65% (Credit) - attends 90% of classes, and participates in discussion occassionally.
+* 75% (Distinction) - attends 100% of classes, and participates actively and fully
+* 85% (High Distinction) - attends 100% of classes, and shows deep engagement with teaching material and with other students. Shows serious preparation before class. Completes exercises at a very high standard, perhaps extending analysis beyond those immediately taught.
 
 #### Week 7 Presentation and report (10%)
 
 **Instructions:**
 
-1. **Replicate a published study with public dataset:** Students are to find a published, peer reviewed academic article that uses a publically accessable dataset, and replicate the analysis presented in the paper using R.
+1. **Replicate a published study with public dataset:** Students are to:
+	1. **Find an article:** Find a social science (or closely related discipline) study that has been published as a peer-reviewed academic article, and that uses a publically accessable dataset, and 
+	2. **Replicate in R:** Replicate the analysis presented in the paper using R.
 2. **R code should not already exist:** Article and dataset should NOT already have publicly available R code (this would make the exercise pointless).
 3. **By Week 7:** By Week 7 students should have identified the article, downloaded the dataset, and conducted preliminary analysis (i.e. univariate and bivariate analysis).
 4. **Presentation:** In class in Week 7 students will present for a maximum of 12 minutes, and provide:
@@ -88,11 +91,12 @@ Example grades and student evidence of meeting marking criteria:
 
 **Marking critieria:**
 
-1. **Clear writing style:** Straight-forward, clear, easy to read writing. This means generally using short sentences, having a single coherent and easy to understand argument, and using paragraphs with topic sentences.
-2. **Professional Tables and Figures:** Tables and figures should be presented like they would appear in an academic article, which means, at the least, (1) that tables are not just cut and paste from R output, (2) that tables and figures include only the necessary information, (3) that tables and figures include all appropriate information, and (4) they should be able to be interpreted on their own (without the text), and (5) all tables and figures should be referred to by number in the text. 
-3. **Analysis:** Analysis should be a high quality replication of the analysis in the academic article which it comes from. Analysis may briefly extend on the analysis in the article, if space and time permits. 
-4. **Explanation:** Explanation of the analysis should be simple, clear, and correctly use terminology. It should also point out the substantive significance of the results in a way that another person with a Masters Degree, but not in this area of research, could understand.
-5. **R code:** R code should be as simple and tidy as possible, with brief annotated comments (after # symbols), which explain the purpose of each section of code. The R code should be in a form which the lecturer can run on their computer and replicate the analysis.
+1. **Motivates interest of audience:** Presentation and report should motivate the interest of the audience by identifying both what is **intellectually curious** about the topic, and why it is **substantively important** for the public, policy makers, or other non-academic audiences.
+2. **Clear writing style:** Straight-forward, clear, easy to read writing. This means generally using short sentences, having a single coherent and easy to understand argument, and using paragraphs with topic sentences.
+3. **Professional Tables and Figures:** Tables and figures should be presented like they would appear in an academic article, which means, at the least, (1) that tables are not just cut and paste from R output, (2) that tables and figures include only the necessary information, (3) that tables and figures include all appropriate information, and (4) they should be able to be interpreted on their own (without the text), and (5) all tables and figures should be referred to by number in the text. 
+4. **Analysis:** Analysis should be a high quality replication of the analysis in the academic article which it comes from. Analysis may briefly extend on the analysis in the article, if space and time permits. 
+5. **Explanation:** Explanation of the analysis should be simple, clear, and correctly use terminology. It should also point out the substantive significance of the results in a way that another person with a Masters Degree, but not in this area of research, could understand.
+6. **R code:** R code should be as simple and tidy as possible, with brief annotated comments (after # symbols), which explain the purpose of each section of code. The R code should be in a form which the lecturer can run on their computer and replicate the analysis.
 
 #### Week 8 Midterm exam (5%)
 
@@ -107,7 +111,9 @@ Example grades and student evidence of meeting marking criteria:
 
 **Instructions and marking criteria:**
 
-1. **Same as Week 7 Presentation & Report, but full analysis:** Instructions and marking criteria are the same as for Week 7 Presentation and Report, except that the full analysis should be presented, and should include some form of multivariate analysis (some form of regression, factor analysis, ANOVA, or similar). 
+1. **Same as Week 7 Presentation & Report, but full analysis:** Instructions and marking criteria are the same as for Week 7 Presentation and Report, except that
+	1. **Full analysis:** the full analysis should be presented, and 
+	2. **Multivariate analysis:** should include some form of multivariate analysis (some form of regression, factor analysis, ANOVA, or similar). 
 
 #### Week 14 Final exam (20%)
 
