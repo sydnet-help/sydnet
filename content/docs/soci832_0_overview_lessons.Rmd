@@ -18,19 +18,21 @@ menu:
     weight: 10
 ---
 
-# Welcome
+# welcome
 
-# Structure of semester
+# Structure
+
+## Structure of semester
 
 **Weeks 1-6 & 9-12: Normal class with lecture, demonstration, and exercises** (Participation 25%)
 
-**Week 8: Normal class but starting with 30 minute mid-term (5%) exam.**
+**Week 8: Normal class but starting with 30 minute mid-term exam.** (Midterm 5%)
 
 **Weeks 7 & 13: Student presentations (replication of analysis from an academic paper) + report due in class** (Week 7 Presentation & Report 10%; Week 13 Presentation & Report 40%)
 
 **Week 14: In-class exam (2 hours: Online, bring laptop. Multiple choice, fill in blank, and short answer)** (Exam worth 20%)
 
-# Structure of each class
+## Structure of each class
 
 **4pm - 6pm Mondays:** Drop in consulations (weeks 1 to 14, not including break weeks; room TBC, but probably the same room as class, or a room near by)
 
@@ -53,13 +55,19 @@ menu:
 
 #### Participation in weekly classes (25%)
 
-**Marking criteria:** Participate in class through 
+**Marking criteria:** Participation will be assessed according to whether student participate in class through 
 
 (1) asking questions of the lecturer and other students, 
 (2) demonstrating that you have done readings, 
 (3) listening and responding to comments and questions from the lecturer and other students, 
 (4) undertaking in-class exercises, and 
 (5) doing so in a way that is respectful of other participants in class.
+
+Example grades and student evidence of meeting marking criteria:
+55% (Pass) - attends 80% of classes, but does so with little participation beyond completing exercises
+65% (Credit) - attends 90% of classes, and participates in discussion occassionally.
+75% (Distinction) - attends 100% of classes, and participates actively and fully
+85% (High Distinction) - attends 100% of classes, and shows deep engagement with teaching material and with other students. Shows serious preparation before class. Completes exercises at a very high standard, perhaps extending analysis beyond those immediately taught.
 
 #### Week 7 Presentation and report (10%)
 
