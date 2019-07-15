@@ -2282,7 +2282,7 @@ the button class in the sidebar HTML file) */
 
 /* This is for the Rmarkdown TOC*/
 
-ul ul, ol ul {
+#TOC ul, #TOC ul ul, #TOC ol ul {
   list-style-type:none;
 }
 

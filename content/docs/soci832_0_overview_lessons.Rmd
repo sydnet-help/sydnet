@@ -20,6 +20,59 @@ menu:
 
 # Welcome
 
+# Structure of class
+**4pm - 6pm Mondays:** Drop in consulations (weeks 1 to 14, not including break weeks; room TBC, but probably the same room as class, or a room near by)
+
+**6pm - 9pm Mondays:** Class
+
+* **Part 1: Lecture** (45 - 60 min) - powerpoint slides to be provided at beginning of class 
+* **Part 2: Demonstration in R** (45 - 60 min) - R script to be provided at beginning of class
+* **Part 3: Student exercises** (45 - 60 min) - PDF/Word outline of exercise to be provided at beginning of class
+
+# Structure of assessment
+
+# What you can expect of me
+
+1. Before semester starts:
+	* provide weekly topics, weekly readings, and key concepts to identify in your reading
+1. Outside class
+1. Before class
+1. In class, each week:
+	1. By 6pm Monday (the beginning of class) I will upload to methods101, and iLearn:
+		1. powerpoint slides for that week's lecture
+		1. R-script for that week's demonstration
+		1. a PDF or Word Doc with the student exercises for that week
+	1. Present a 30 to 60 minute lecture on the topic for that week
+	1. Present a 30 to 60 minute demonstration of the concepts for that week, in the form of an analysis in R (we will review an RScript, and look at the output)
+	1. Facilitate a 30 to 60 minute student exercise - where you will be given a dataset and series of tasks to accomplish. You will do this individually, so you all develop the skills and get the practice needed, but I will be present to help with problems and answer questions.
+1. asdfasdf
+
+
+
+# What I can expect of you
+
+* Before the first class:
+
+* Each week, before class:
+
+* Each week, in class:
+
+* Read required readings before class, and note any questions you have
+* Install R and RStudio on your laptop before week 1's class
+* Bring your laptop to class
+* Participate in class through asking questions, demonstrating that you have done readings, listening and appropriately responding to comments and questions from me and other students, undertaking in-class exercises, and doing so in a way that is respectful of other participants in class.
+* By week 4
+* In each of week 7 and week 13 present a replication of an academic paper, based on a publicly available dataset. Assessed work will consist of:
+	* a 15 minute presentation with powerpoint slides
+	* a report which contains a selection of up to five tables and figures (no more than five), and approximately 2-3 pages of text (~600-1000 words) explaining the meaning of these tables and figures. While the exact tables will differ, depending on the paper being replicated, these should normally include:
+		* a univariate statistics table (mean, SD, min, max, n, etc.)
+		* a bivariate statistics table (correlation matrix or similar)
+		* a set of nested regression models
+		* a figure to graphically illustrate the impact of the independent variable/s on the dependent variable.
+	* a copy of the dataset (in R data format, or csv, or spss, or excel or similar data file)
+	* a copy of your annotated (i.e. with comments) R code (script file)
+
+
 
 # Lessons
 
@@ -66,8 +119,8 @@ menu:
 ## Week 8: Regression diagnostics
 **Reading:** Chapter 7, section 7.7 onwards
 
-## Week 9: Logistic regression & Other types of regression
-**Reading:** Chapter 8
+## Week 9: Logistic regression & other types of regression
+**Reading:** Chapter 8 <br>
 Optional **Reading (other types of regression):** Chapters 18 and 19
 
 ## Week 10: Mediation, moderation, and path analysis
