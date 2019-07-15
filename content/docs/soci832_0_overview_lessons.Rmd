@@ -20,7 +20,18 @@ menu:
 
 # Welcome
 
-# Structure of class
+# Structure of semester
+
+**Weeks 1-6 & 9-12: Normal class with lecture, demonstration, and exercises** (Participation 25%)
+
+**Week 8: Normal class but starting with 30 minute mid-term (5%) exam.**
+
+**Weeks 7 & 13: Student presentations (replication of analysis from an academic paper) + report due in class** (Week 7 Presentation & Report 10%; Week 13 Presentation & Report 40%)
+
+**Week 14: In-class exam (2 hours: Online, bring laptop. Multiple choice, fill in blank, and short answer)** (Exam worth 20%)
+
+# Structure of each class
+
 **4pm - 6pm Mondays:** Drop in consulations (weeks 1 to 14, not including break weeks; room TBC, but probably the same room as class, or a room near by)
 
 **6pm - 9pm Mondays:** Class
@@ -30,6 +41,34 @@ menu:
 * **Part 3: Student exercises** (45 - 60 min) - PDF/Word outline of exercise to be provided at beginning of class
 
 # Structure of assessment
+
+* **Participation in weekly classes (25%)**
+* **Week 7 Presentation and report (10%)**
+* **Week 8 Midsemester exam (5%)**
+* **Week 13 Presentation and report (40%)**
+* **Week 14 Final exam (20%)**
+
+# Details of assessment
+
+##**Participation in weekly classes (25%)**
+
+**Marking criteria:** Participate in class through 
+
+(1) asking questions of the lecturer and other students, 
+(2) demonstrating that you have done readings, 
+(3) listening and responding to comments and questions from the lecturer and other students, 
+(4) undertaking in-class exercises, and 
+(5) doing so in a way that is respectful of other participants in class.
+
+##**Week 7 Presentation and report (10%)**
+
+**Instructions: Students are to identify**
+
+**Marking critieria
+
+##**Week 8 Midsemester exam (5%)**
+##**Week 13 Presentation and report (40%)**
+##**Week 14 Final exam (20%)**
 
 # What you can expect of me
 
@@ -47,18 +86,18 @@ menu:
 	1. Facilitate a 30 to 60 minute student exercise - where you will be given a dataset and series of tasks to accomplish. You will do this individually, so you all develop the skills and get the practice needed, but I will be present to help with problems and answer questions.
 1. asdfasdf
 
-
-
 # What I can expect of you
 
 * Before the first class:
+	* Install R and RStudio on your laptop before week 1's class
+	* 
 
 * Each week, before class:
 
 * Each week, in class:
 
 * Read required readings before class, and note any questions you have
-* Install R and RStudio on your laptop before week 1's class
+
 * Bring your laptop to class
 * Participate in class through asking questions, demonstrating that you have done readings, listening and appropriately responding to comments and questions from me and other students, undertaking in-class exercises, and doing so in a way that is respectful of other participants in class.
 * By week 4
@@ -114,9 +153,9 @@ menu:
 ## Week 6: Linear Regression
 **Reading:** Chapter 7
 
-## Week 7: Student Presentations
+## Week 7: Student Presentations + Report Due (10%)
 
-## Week 8: Regression diagnostics
+## Week 8: Midterm (30 mins) + Regression diagnostics
 **Reading:** Chapter 7, section 7.7 onwards
 
 ## Week 9: Logistic regression & other types of regression
@@ -132,3 +171,6 @@ Optional **Reading (other types of regression):** Chapters 18 and 19
 ## Week 12: Graphs with ggplot
 **Reading:** methods101.com
 
+## Week 13: Student Presentations + Report Due (40%)
+
+## Week 14: Final exam (2 hours)
