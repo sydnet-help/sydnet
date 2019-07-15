@@ -40,7 +40,8 @@ menu:
 * **Part 2: Demonstration in R** (45 - 60 min) - R script to be provided at beginning of class
 * **Part 3: Student exercises** (45 - 60 min) - PDF/Word outline of exercise to be provided at beginning of class
 
-# Structure of assessment
+# Assessment
+## Structure of assessment
 
 * **Participation in weekly classes (25%)**
 * **Week 7 Presentation and report (10%)**
@@ -48,9 +49,9 @@ menu:
 * **Week 13 Presentation and report (40%)**
 * **Week 14 Final exam (20%)**
 
-# Details of assessment
+## Details of assessment
 
-##**Participation in weekly classes (25%)**
+#### Participation in weekly classes (25%)
 
 **Marking criteria:** Participate in class through 
 
@@ -60,58 +61,116 @@ menu:
 (4) undertaking in-class exercises, and 
 (5) doing so in a way that is respectful of other participants in class.
 
-##**Week 7 Presentation and report (10%)**
+#### Week 7 Presentation and report (10%)
 
-**Instructions: Students are to identify**
+**Instructions:**
 
-**Marking critieria
+1. **Replicate a published study with public dataset:** Students are to find a published, peer reviewed academic article that uses a publically accessable dataset, and replicate the analysis presented in the paper using R.
+2. **R code should not already exist:** Article and dataset should NOT already have publicly available R code (this would make the exercise pointless).
+3. **By Week 7:** By Week 7 students should have identified the article, downloaded the dataset, and conducted preliminary analysis (i.e. univariate and bivariate analysis).
+4. **Presentation:** In class in Week 7 students will present for a maximum of 12 minutes, and provide:
+	* a brief introduction to the article and the dataset
+	* their preliminary analysis, including tables and figures.
+5. **Report:** In class in Week 7 students will submit their written report (printed out, and also submitted through ilearn), which shall consist of:
+	* A copy of the article to be replicated
+	* A link to the dataset
+	* A copy of their R code (script file) with brief annotations to explain what you have done
+	* A short report of approximately 600-1000 words with no more than five tables and figures, which present a preliminary analysis of the dataset.
+6. **Consulation:** Students are expected to consult with the lecturer (Nick) before class (4pm - 6pm), in class (6pm - 9pm), and outside class (Facebook messenger, WhatsApp) to (1) confirm their choice of article, and (2) discuss any issues and problems they are having with the analysis. 
 
-##**Week 8 Midsemester exam (5%)**
-##**Week 13 Presentation and report (40%)**
-##**Week 14 Final exam (20%)**
+**Marking critieria:**
 
-# What you can expect of me
+1. **Clear writing style:** Straight-forward, clear, easy to read writing. This means generally using short sentences, having a single coherent and easy to understand argument, and using paragraphs with topic sentences.
+2. **Professional Tables and Figures:** Tables and figures should be presented like they would appear in an academic article, which means, at the least, (1) that tables are not just cut and paste from R output, (2) that tables and figures include only the necessary information, (3) that tables and figures include all appropriate information, and (4) they should be able to be interpreted on their own (without the text), and (5) all tables and figures should be referred to by number in the text. 
+3. **Analysis:** Analysis should be a high quality replication of the analysis in the academic article which it comes from. Analysis may briefly extend on the analysis in the article, if space and time permits. 
+4. **Explanation:** Explanation of the analysis should be simple, clear, and correctly use terminology. It should also point out the substantive significance of the results in a way that another person with a Masters Degree, but not in this area of research, could understand.
+5. **R code:** R code should be as simple and tidy as possible, with brief annotated comments (after # symbols), which explain the purpose of each section of code. The R code should be in a form which the lecturer can run on their computer and replicate the analysis.
 
-1. Before semester starts:
-	* provide weekly topics, weekly readings, and key concepts to identify in your reading
-1. Outside class
-1. Before class
-1. In class, each week:
-	1. By 6pm Monday (the beginning of class) I will upload to methods101, and iLearn:
-		1. powerpoint slides for that week's lecture
-		1. R-script for that week's demonstration
-		1. a PDF or Word Doc with the student exercises for that week
-	1. Present a 30 to 60 minute lecture on the topic for that week
-	1. Present a 30 to 60 minute demonstration of the concepts for that week, in the form of an analysis in R (we will review an RScript, and look at the output)
-	1. Facilitate a 30 to 60 minute student exercise - where you will be given a dataset and series of tasks to accomplish. You will do this individually, so you all develop the skills and get the practice needed, but I will be present to help with problems and answer questions.
-1. asdfasdf
+#### Week 8 Midterm exam (5%)
 
-# What I can expect of you
+**Instructions:**
 
-* Before the first class:
-	* Install R and RStudio on your laptop before week 1's class
-	* 
+1. **30 minutes:** This will be a short (30 minute) online exam, with multiple choice, fill-in the blank, and short answer questions. 
+2. **Laptops; Open book:** Exam will be completed on student's laptops and be open book. 
+3. **Concepts from Weeks 1 to 6:** Exam will test material from Week 1 to 6, with a strong focus on the "Concepts" identified at the beginning of each week's class. 
+4. **Example questions:** Example questions will be provided in advance of the class for students to familiarise themselves with the format.
 
-* Each week, before class:
+#### Week 13 Presentation and report (40%)
 
-* Each week, in class:
+**Instructions and marking criteria:**
 
-* Read required readings before class, and note any questions you have
+1. **Same as Week 7 Presentation & Report, but full analysis:** Instructions and marking criteria are the same as for Week 7 Presentation and Report, except that the full analysis should be presented, and should include some form of multivariate analysis (some form of regression, factor analysis, ANOVA, or similar). 
 
-* Bring your laptop to class
-* Participate in class through asking questions, demonstrating that you have done readings, listening and appropriately responding to comments and questions from me and other students, undertaking in-class exercises, and doing so in a way that is respectful of other participants in class.
-* By week 4
-* In each of week 7 and week 13 present a replication of an academic paper, based on a publicly available dataset. Assessed work will consist of:
-	* a 15 minute presentation with powerpoint slides
-	* a report which contains a selection of up to five tables and figures (no more than five), and approximately 2-3 pages of text (~600-1000 words) explaining the meaning of these tables and figures. While the exact tables will differ, depending on the paper being replicated, these should normally include:
-		* a univariate statistics table (mean, SD, min, max, n, etc.)
-		* a bivariate statistics table (correlation matrix or similar)
-		* a set of nested regression models
-		* a figure to graphically illustrate the impact of the independent variable/s on the dependent variable.
-	* a copy of the dataset (in R data format, or csv, or spss, or excel or similar data file)
-	* a copy of your annotated (i.e. with comments) R code (script file)
+#### Week 14 Final exam (20%)
 
+**Instructions:**
 
+1. **Same as Week 8 Midterm Exam, but 2 hours:** Instructions are the same as for Week 8 Midsemseter exam, except that exam is 2 hours, and will test all material from weeks 1 through 12. 
+
+# Expectations
+
+## What you can expect of me
+
+#### Before semester starts
+
+**Topics, readings, concepts:** Before semester starts I will provide weekly topics, weekly readings, and key concepts to identify in your reading
+
+#### Outside class
+
+**Messenger or WhatsApp:** Outside class you should consult with me via Facebook messenger or WhatsApp
+
+#### Before class
+
+**Consulations 4-6pm Monday:** I will hold a consultation in the two hours before class (4pm to 6pm) In Weeks 1 to 14.
+
+#### In class, each week:
+
+**By 6pm Monday** (the beginning of class) I will upload to methods101, and iLearn:
+	1. **Slides:** powerpoint slides for that week's lecture
+	1. **R code:** R-script for that week's demonstration
+	1. **Exercises:** a PDF or Word Doc with the student exercises for that week
+
+**Lecture:** Present a 30 to 60 minute lecture on the topic for that week
+
+**Demonstration:** Present a 30 to 60 minute demonstration of the concepts for that week, in the form of an analysis in R (we will review an RScript, and look at the output)
+
+**Exercise:** Facilitate a 30 to 60 minute student exercise - where you will be given a dataset and series of tasks to accomplish. You will do this individually, so you all develop the skills and get the practice needed, but I will be present to help with problems and answer questions.
+
+## What I can expect of you
+
+#### Before the first class:
+
+**Install R and RStudio** on your laptop before week 1's class
+
+#### Each week, before class:
+
+**Read required readings** before class, and note any questions you have
+
+#### Each week, in class:
+
+**Laptop:** Bring your laptop to class. Make sure it is charged, or you have the charging cable.
+
+**Participate:** Participate in class through asking questions, demonstrating that you have done readings, listening and appropriately responding to comments and questions from me and other students, undertaking in-class exercises, and doing so in a way that is respectful of other participants in class.
+
+#### By week 4
+
+**Find an article, a dataset, and confirm with Nick:** By class in Week 4, I expect you will have indentified an article you whose analysis you wish to replicate, and have shown this article to Nick and got his approval.
+
+#### Week 7
+
+**Preliminary Presentation and Report Due**
+
+#### Week 8
+
+**Midterm Exam**
+
+#### Week 13
+
+**Final Presentation and Report Due**
+
+#### Week 14
+
+**Final Exam**
 
 # Lessons
 
@@ -125,28 +184,28 @@ menu:
 
 ## Week 3: Introduction to Statistics & Univariate Analysis
 **Reading:** Chapter 2 <br>
-**Main concepts (statistics):** Descriptive & inferential statistics, sampling, p-value
+**Main concepts (statistics):** Descriptive & inferential statistics, sampling, p-value <br>
 **Main concepts (univariate analysis):** central tendency, variation, histogram.
 
 ## Week 4: Bivariate analysis
-### 4.1 Comparison of means
+#### 4.1 Comparison of means
 **Reading:** Chapter 9 <br>
 **Main concepts:** comparison of mean, paired/independent samples
 
-### 4.2 Correlation
+#### 4.2 Correlation
 **Reading:** Chapter 6 <br>
 **Main concepts:** pearsons r, covariance, scatterplot
 
-### 4.3 Chi-square
+#### 4.3 Chi-square
 **Reading:** Chapter 18 <br>
 **Main concepts:** cross-tabulation, chi-square, degrees of freedom
 
 ## Weeks 5: Dimension reduction
-### 5.1 Index creation and testing
+#### 5.1 Index creation and testing
 **Reading:** Chapter 17, section 17.8 <br>
 **Main concepts:** Cronbach alpha, reliability with item deleted
 
-### 5.2 Factor analysis
+#### 5.2 Factor analysis
 **Reading:** Chapter 17 <br>
 **Main concepts:** factors, factor scores, rotation
 
@@ -155,12 +214,12 @@ menu:
 
 ## Week 7: Student Presentations + Report Due (10%)
 
-## Week 8: Midterm (30 mins) + Regression diagnostics
+## Week 8: Midterm (30 mins - 5%) + Regression diagnostics
 **Reading:** Chapter 7, section 7.7 onwards
 
 ## Week 9: Logistic regression & other types of regression
 **Reading:** Chapter 8 <br>
-Optional **Reading (other types of regression):** Chapters 18 and 19
+**Optional Reading (other types of regression):** Chapters 18 and 19
 
 ## Week 10: Mediation, moderation, and path analysis
 **Reading:** [Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. Journal of personality and social psychology, 51(6), 1173.](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles/Journal%20of%20Personality%20and%20Social%20Psychology%201986%20Baron.pdf)
@@ -173,4 +232,4 @@ Optional **Reading (other types of regression):** Chapters 18 and 19
 
 ## Week 13: Student Presentations + Report Due (40%)
 
-## Week 14: Final exam (2 hours)
+## Week 14: Final exam (2 hours - 20%)
