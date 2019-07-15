@@ -18,7 +18,7 @@ menu:
     weight: 10
 ---
 
-# welcome
+# Welcome
 
 # Structure
 
@@ -26,11 +26,11 @@ menu:
 
 **Weeks 1-6 & 9-12: Normal class with lecture, demonstration, and exercises** (Participation 25%)
 
-**Week 8: Normal class but starting with 30 minute mid-term exam.** (Midterm 5%)
+**Week 8: Normal class but starting with 30 minute mid-term exam.** (Midterm 0% - Practice)
 
-**Weeks 7 & 13: Student presentations (replication of analysis from an academic paper) + report due in class** (Week 7 Presentation & Report 10%; Week 13 Presentation & Report 40%)
+**Weeks 7 & 13: Student presentations (replication of analysis from an academic paper) + report due in class** (Week 7 Presentation & Report 0% - Practice; Week 13 Presentation & Report 50%)
 
-**Week 14: In-class exam (2 hours: Online, bring laptop. Multiple choice, fill in blank, and short answer)** (Exam worth 20%)
+**Week 14: In-class exam (2 hours: Online, bring laptop. Multiple choice, fill in blank, and short answer)** (Exam worth 25%)
 
 ## Structure of each class
 
@@ -38,18 +38,19 @@ menu:
 
 **6pm - 9pm Mondays:** Class
 
-* **Part 1: Lecture** (45 - 60 min) - powerpoint slides to be provided at beginning of class 
-* **Part 2: Demonstration in R** (45 - 60 min) - R script to be provided at beginning of class
-* **Part 3: Student exercises** (45 - 60 min) - PDF/Word outline of exercise to be provided at beginning of class
+* **Part 1: Lecture** (45 - 60 min) - powerpoint slides to be provided at beginning of class.
+* **Part 2: Demonstration in R** (45 - 60 min) - R script to be provided at beginning of class.
+* **Part 3: Student exercises** (45 - 60 min) - PDF/Word outline of exercise to be provided at beginning of class.
+* **Part 4: Example exam questions** (handout, no specific time allocated) - PDF/Word document with example exam questions (multiple choice, fill in blanks, short answer).
 
 # Assessment
 ## Structure of assessment
 
 * **Participation in weekly classes (25%)**
-* **Week 7 Presentation and report (10%)**
-* **Week 8 Midsemester exam (5%)**
-* **Week 13 Presentation and report (40%)**
-* **Week 14 Final exam (20%)**
+* **Week 7 Presentation and report (0% - Practice)**
+* **Week 8 Midsemester exam (0% - Practice)**
+* **Week 13 Presentation and report (50%)**
+* **Week 14 Final exam (25%)**
 
 ## Details of assessment
 
@@ -65,12 +66,12 @@ menu:
 
 Example grades and students' behaviour that meets marking criteria:
 
-* 55% (Pass) - attends 80% of classes, but does so with little participation beyond completing exercises
-* 65% (Credit) - attends 90% of classes, and participates in discussion occassionally.
-* 75% (Distinction) - attends 100% of classes, and participates actively and fully
-* 85% (High Distinction) - attends 100% of classes, and shows deep engagement with teaching material and with other students. Shows serious preparation before class. Completes exercises at a very high standard, perhaps extending analysis beyond those immediately taught.
+* 55% (Pass) - attends 70%-90% of classes, but does so with little participation beyond completing exercises
+* 65% (Credit) - attends 80%-90% of classes, and participates in discussion occassionally.
+* 75% (Distinction) - attends 90%-100% of classes, and participates actively and fully
+* 85% (High Distinction) - attends 90%-100% of classes, and shows deep engagement with teaching material and with other students. Shows serious preparation before class. Completes exercises at a very high standard, perhaps extending analysis beyond those immediately taught.
 
-#### Week 7 Presentation and report (10%)
+#### Week 7 Presentation and report (0% - Practice)
 
 **Instructions:**
 
@@ -87,7 +88,7 @@ Example grades and students' behaviour that meets marking criteria:
 	* A link to the dataset
 	* A copy of their R code (script file) with brief annotations to explain what you have done
 	* A short report of approximately 600-1000 words with no more than five tables and figures, which present a preliminary analysis of the dataset.
-6. **Consulation:** Students are expected to consult with the lecturer (Nick) before class (4pm - 6pm), in class (6pm - 9pm), and outside class (Facebook messenger, WhatsApp) to (1) confirm their choice of article, and (2) discuss any issues and problems they are having with the analysis. 
+6. **Consultation:** Students are expected to consult with the lecturer (Nick) before class (4pm - 6pm), in class (6pm - 9pm), and outside class (Facebook messenger, WhatsApp) to (1) confirm their choice of article, and (2) discuss any issues and problems they are having with the analysis. 
 
 **Marking critieria:**
 
@@ -98,7 +99,7 @@ Example grades and students' behaviour that meets marking criteria:
 5. **Explanation:** Explanation of the analysis should be simple, clear, and correctly use terminology. It should also point out the substantive significance of the results in a way that another person with a Masters Degree, but not in this area of research, could understand.
 6. **R code:** R code should be as simple and tidy as possible, with brief annotated comments (after # symbols), which explain the purpose of each section of code. The R code should be in a form which the lecturer can run on their computer and replicate the analysis.
 
-#### Week 8 Midterm exam (5%)
+#### Week 8 Midterm exam (0% - Practice)
 
 **Instructions:**
 
@@ -107,7 +108,7 @@ Example grades and students' behaviour that meets marking criteria:
 3. **Concepts from Weeks 1 to 6:** Exam will test material from Week 1 to 6, with a strong focus on the "Concepts" identified at the beginning of each week's class. 
 4. **Example questions:** Example questions will be provided in advance of the class for students to familiarise themselves with the format.
 
-#### Week 13 Presentation and report (40%)
+#### Week 13 Presentation and report (50%)
 
 **Instructions and marking criteria:**
 
@@ -115,7 +116,7 @@ Example grades and students' behaviour that meets marking criteria:
 	1. **Full analysis:** the full analysis should be presented, and 
 	2. **Multivariate analysis:** should include some form of multivariate analysis (some form of regression, factor analysis, ANOVA, or similar). 
 
-#### Week 14 Final exam (20%)
+#### Week 14 Final exam (25%)
 
 **Instructions:**
 
@@ -230,9 +231,9 @@ Example grades and students' behaviour that meets marking criteria:
 ## Week 6: Linear Regression
 **Reading:** Chapter 7
 
-## Week 7: Student Presentations + Report Due (10%)
+## Week 7: Student Presentations + Report Due (0% - Practice)
 
-## Week 8: Midterm (30 mins - 5%) + Regression diagnostics
+## Week 8: Midterm (30 mins - 0% - Practice) + Regression diagnostics
 **Reading:** Chapter 7, section 7.7 onwards
 
 ## Week 9: Logistic regression & other types of regression
@@ -248,6 +249,6 @@ Example grades and students' behaviour that meets marking criteria:
 ## Week 12: Graphs with ggplot
 **Reading:** methods101.com
 
-## Week 13: Student Presentations + Report Due (40%)
+## Week 13: Student Presentations + Report Due (50%)
 
-## Week 14: Final exam (2 hours - 20%)
+## Week 14: Final exam (2 hours - 25%)
