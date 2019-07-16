@@ -219,7 +219,7 @@ Example grades and students' behaviour that meets marking criteria:
 **Reading:** Chapter 18 <br>
 **Main concepts:** cross-tabulation, chi-square, degrees of freedom
 
-## Weeks 5: Dimension reduction
+## Week 5: Dimension reduction
 #### 5.1 Index creation and testing
 **Reading:** Chapter 17, section 17.8 <br>
 **Main concepts:** Cronbach alpha, reliability with item deleted
