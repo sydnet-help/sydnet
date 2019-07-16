@@ -3,7 +3,7 @@ title: "Lesson 6.1 Presenting statistical analysis in reports"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 

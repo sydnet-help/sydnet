@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 4.1 An introduction to linear regression"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 
@@ -70,7 +70,9 @@ table, th, td, tr, tbody {
 </div>
 <div id="concepts" class="section level1">
 <h1>Concepts</h1>
-<b style="padding-left: 2em">Level 1<br></b> <b style="padding-left: 4em">Level 2<br></b> <b style="padding-left: 6em">Level 3<br></b>
+<b style="padding-left: 2em">Level 1<br></b>
+<b style="padding-left: 4em">Level 2<br></b>
+<b style="padding-left: 6em">Level 3<br></b>
 </td>
 </tr>
 </table>
@@ -97,7 +99,7 @@ This is a 300 word summary of clase
 </div>
 <div id="keep-the-codebook-openned-in-a-browser-so-you-can-refer-to-it-when-you-need-it.-the-codebook-is-here" class="section level3">
 <h3>3) Keep the codebook openned in a browser so you can refer to it when you need it. The codebook is here:</h3>
-<p><a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
+<p><a href="https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html" class="uri">https://mqsociology.github.io/learn-r/soci832/codebook%20aes%202013.html</a></p>
 </div>
 <div id="import-the-data" class="section level3">
 <h3>4) Import the data</h3>
@@ -128,7 +130,10 @@ This is a 300 word summary of clase
 <p>Well we might think that there are two important variables (1) the number of hours the person has been in the bar; and (2) the number of drinks the person has had at the bar.</p>
 <p>To express this as a line we could say that, on average:</p>
 <pre><code>    Rest room visits = B1*hours_at_bar + B2*drinks + C</code></pre>
-<p>And we have three ‘coefficients’ which we need to try to estimate. These are * B1 - which is the slope of the relations between hours_at_bar and rest_room_visits. * B2 - the slope of the relationship between drinks and vists * C - the constant or y-intercept, which is the number of rest_room_visits (on average) for someone with zero for the other two variables - i.e. who just arrive at the bar (hours_at_bar = 0) and has not had a drink yet (drinks = 0).</p>
+<p>And we have three ‘coefficients’ which we need to try to estimate. These are
+* B1 - which is the slope of the relations between hours_at_bar and rest_room_visits.
+* B2 - the slope of the relationship between drinks and vists
+* C - the constant or y-intercept, which is the number of rest_room_visits (on average) for someone with zero for the other two variables - i.e. who just arrive at the bar (hours_at_bar = 0) and has not had a drink yet (drinks = 0).</p>
 <p>Now if we want to try to work out what B1, B2, and C are we would first need to get a whole lot of data. Well we are lucky, because we have collected data from 100 people on a Saturday night at a local Irish Pub.</p>
 <p>The data looks like this, with four columns</p>
 <table>
@@ -359,7 +364,7 @@ summary(model1)</code></pre>
 <pre><code>## package &#39;lm.beta&#39; successfully unpacked and MD5 sums checked
 ## 
 ## The downloaded binary packages are in
-##  C:\Users\nickh\AppData\Local\Temp\RtmpYT9IxO\downloaded_packages</code></pre>
+##  C:\Users\nickh\AppData\Local\Temp\Rtmpi8zEgj\downloaded_packages</code></pre>
 <pre class="r"><code>    library(lm.beta)</code></pre>
 <p>and then the command is simple: we just run lm.beta() before we run summary (and after we have run lm())</p>
 <pre class="r"><code>    model2b &lt;- lm.beta(model2)

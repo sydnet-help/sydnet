@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 4.1 An introduction to linear regression"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 

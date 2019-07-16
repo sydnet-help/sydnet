@@ -3,7 +3,7 @@ title: "SOCI832: Introduction 1: Research Methods"
 
 lastmod: 2019-05-10T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 

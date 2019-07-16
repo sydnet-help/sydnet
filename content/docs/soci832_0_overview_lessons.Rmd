@@ -3,7 +3,7 @@ title: "SOCI832 Course Overview"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 
@@ -34,7 +34,7 @@ menu:
 
 ## Structure of each class
 
-**4pm - 6pm Mondays:** Drop in consulations (weeks 1 to 14, not including break weeks; room TBC, but probably the same room as class, or a room near by)
+**4pm - 6pm Mondays:** Drop in consultations (weeks 1 to 14, not including break weeks; room TBC, but probably the same room as class, or a room near by)
 
 **6pm - 9pm Mondays:** Class
 
@@ -90,7 +90,7 @@ Example grades and students' behaviour that meets marking criteria:
 	* A short report of approximately 600-1000 words with no more than five tables and figures, which present a preliminary analysis of the dataset.
 6. **Consultation:** Students are expected to consult with the lecturer (Nick) before class (4pm - 6pm), in class (6pm - 9pm), and outside class (Facebook messenger, WhatsApp) to (1) confirm their choice of article, and (2) discuss any issues and problems they are having with the analysis. 
 
-**Marking critieria:**
+**Marking criteria:**
 
 1. **Motivates interest of audience:** Presentation and report should motivate the interest of the audience by identifying both what is **intellectually curious** about the topic, and why it is **substantively important** for the public, policy makers, or other non-academic audiences.
 2. **Clear writing style:** Straight-forward, clear, easy to read writing. This means generally using short sentences, having a single coherent and easy to understand argument, and using paragraphs with topic sentences.

@@ -3,7 +3,7 @@ title: "SOCI832 Lesson 3.2 An introduction to creating and testing indexes"
 
 lastmod: 2018-12-28T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 

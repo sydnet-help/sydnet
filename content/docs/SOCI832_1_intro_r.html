@@ -1,9 +1,9 @@
 ---
-title: "SOCI832: Introduction 1: Introduction to R"
+title: "SOCI832: Lesson 1. Introduction to R"
 
 lastmod: 2019-05-10T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 
@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "1.3 Intro: R Install"
+linktitle: "1. Intro to R"
 menu:
   docs:
     parent: SOCI832
-    weight: 130
+    weight: 100
 ---
 
 
@@ -24,7 +24,9 @@ menu:
 <li><a href="#reading">Reading</a></li>
 <li><a href="#concepts">Concepts</a></li>
 <li><a href="#summary">Summary</a></li>
-<li><a href="#additional-resources">Additional Resources</a></li>
+<li><a href="#additional-resources">Additional Resources</a><ul>
+<li><a href="#modes-classes-and-typeof">Modes, classes, and typeof</a></li>
+</ul></li>
 </ul>
 </div>
 
@@ -55,7 +57,79 @@ table, th, td, tr, tbody {
 </div>
 <div id="concepts" class="section level1">
 <h1>Concepts</h1>
-<p><b style="padding-left: 2em">Descriptive statistics<br></b> <b style="padding-left: 4em">Mean/Median/Mode (Central tendency)<br></b> <b style="padding-left: 4em">Standard deviation (Variation/dispersion)<br></b> <b style="padding-left: 4em">Minimum<br></b> <b style="padding-left: 4em">Maximum<br></b> <b style="padding-left: 4em">N (number of non-missing cases)<br></b> <b style="padding-left: 2em">Inferential statistics<br></b> <b style="padding-left: 4em">Population<br></b> <b style="padding-left: 6em">Population parameter<br></b> <b style="padding-left: 4em">Sample<br></b> <b style="padding-left: 6em">Sample statistic<br></b> <b style="padding-left: 4em">Hypothesis testing<br></b> <b style="padding-left: 6em">Null hypothesis<br></b> <b style="padding-left: 6em">Standard error<br></b> <b style="padding-left: 6em">Confidence interval<br></b> <b style="padding-left: 6em">p-value<br></b> <b style="padding-left: 6em">Effect size<br></b> <b style="padding-left: 4em">Bivariate inferential statistics<br></b> <b style="padding-left: 6em">Correlation, comparison of means<br></b> <b style="padding-left: 4em">Multivariate inferential statistics<br></b> <b style="padding-left: 6em">Linear and logistic regression<br></b> <b style="padding-left: 4em">Dimension reduction and finding categories<br></b> <b style="padding-left: 6em">Factor analysis, Cluster analysis<br></b></p>
+<p><b style="padding-left: 2em">Installation<br></b>
+<b style="padding-left: 4em">Installing R<br></b>
+<b style="padding-left: 6em">For Windows<br></b>
+<b style="padding-left: 6em">For Mac<br></b>
+<b style="padding-left: 4em">Installing RStudio<br></b>
+<b style="padding-left: 2em">Customising RStudio<br></b>
+<b style="padding-left: 4em">R Script Files<br></b>
+<b style="padding-left: 4em">Setting Default Working Directory<br></b>
+<b style="padding-left: 4em">Automatically loading your previous R codes<br></b>
+<b style="padding-left: 4em">Setting automatic line wrap<br></b>
+<b style="padding-left: 4em">Customising the look of RStudio<br></b>
+<b style="padding-left: 4em">Configuring panes<br></b>
+<b style="padding-left: 4em">Turning off scientific notation of large numbers<br></b>
+<b style="padding-left: 2em">Installing, Loading, Updating Packages<br></b>
+<b style="padding-left: 4em">Installing packages<br></b>
+<b style="padding-left: 4em">Loading packages<br></b>
+<b style="padding-left: 4em">Updating packages<br></b>
+<b style="padding-left: 4em">Automating with code<br></b>
+<b style="padding-left: 2em">Importing datasets<br></b>
+<b style="padding-left: 4em">Creating your own CSV file in Excel<br></b>
+<b style="padding-left: 4em">Importing CSC files<br></b>
+<b style="padding-left: 4em">Importing Excel files<br></b>
+<b style="padding-left: 4em">Importing SPSS (and other) files<br></b>
+<b style="padding-left: 4em">Importing from standard datasets in R packages<br></b>
+<b style="padding-left: 6em">data()<br></b>
+<b style="padding-left: 6em"><br></b>
+<b style="padding-left: 6em"><br></b></p>
+<p><b style="padding-left: 4em">Importing from a website<br></b>
+<b style="padding-left: 4em">Common problems when importing data<br></b>
+<b style="padding-left: 6em">Missing Data (NA)<br></b>
+<b style="padding-left: 6em">Installing correct packages<br></b>
+<b style="padding-left: 6em">Is file in your working directory?<br></b>
+<b style="padding-left: 6em">Did you use (or not) double inverted commas correctly?<br></b>
+<b style="padding-left: 2em">R is a calculator<br></b>
+<b style="padding-left: 4em">Addition, subtraction, multiplication, division<br></b>
+<b style="padding-left: 4em">Exponents, Logarithms, Square Roots, Pi<br></b>
+<b style="padding-left: 2em">Variables<br></b>
+<b style="padding-left: 4em">Making variables<br></b>
+<b style="padding-left: 4em">Removing variables<br></b></p>
+<p><b style="padding-left: 2em">Types of data<br></b>
+<b style="padding-left: 4em">str()<br></b>
+<b style="padding-left: 4em">typeof()<br></b>
+<b style="padding-left: 4em">class()<br></b>
+<b style="padding-left: 4em">dput()<br></b>
+<b style="padding-left: 4em"><br></b>
+<b style="padding-left: 4em"><br></b>
+<b style="padding-left: 4em">Numeric<br></b>
+<b style="padding-left: 4em">Characters<br></b>
+<b style="padding-left: 4em">Boolean<br></b>
+<b style="padding-left: 4em">Factors<br></b></p>
+<p><b style="padding-left: 4em">Vectors<br></b>
+<b style="padding-left: 4em">Matricies<br></b>
+<b style="padding-left: 4em">Data frames<br></b>
+<b style="padding-left: 4em">Lists<br></b></p>
+<p><b style="padding-left: 2em"><br></b>
+<b style="padding-left: 4em"><br></b>
+<b style="padding-left: 6em"><br></b></p>
+<p><b style="padding-left: 2em"><br></b>
+<b style="padding-left: 4em"><br></b>
+<b style="padding-left: 6em"><br></b></p>
+<p><b style="padding-left: 2em">Logical operators<br></b>
+<b style="padding-left: 4em">Less Than, Greater Than, Equal<br></b></p>
+<p><b style="padding-left: 2em">Organising your R code and data<br></b>
+<b style="padding-left: 4em">Script files<br></b>
+<b style="padding-left: 4em">Working directories<br></b>
+<b style="padding-left: 4em">Projects<br></b>
+<b style="padding-left: 4em">Saving data<br></b>
+<b style="padding-left: 4em">Commenting your code<br></b>
+<b style="padding-left: 2em">Getting Help<br></b>
+<b style="padding-left: 4em">R Help Files<br></b>
+<b style="padding-left: 4em">Google<br></b>
+<b style="padding-left: 4em">Stack Exchange<br></b>
+<b style="padding-left: 4em">Methods101.com<br></b></p>
 </td>
 </tr>
 </table>
@@ -74,8 +148,18 @@ table, th, td, tr, tbody {
 <div id="additional-resources" class="section level1">
 <h1>Additional Resources</h1>
 <p><a href="link">Reference</a></p>
+<div id="modes-classes-and-typeof" class="section level2">
+<h2>Modes, classes, and typeof</h2>
+<p><a href="http://adv-r.had.co.nz/Data-structures.html">Data Structures in Advanced R, Hadley Wickham</a></p>
+<p><a href="https://stackoverflow.com/questions/35445112/what-is-the-difference-between-mode-and-class-in-r">“What is the difference between mode and class in R?” (2017) <em>stackoverflow</em><br></a></p>
+<p><a href="https://stackoverflow.com/questions/6258004/types-and-classes-of-variables">“Types and classes of variables” (2017) <em>stackoverflow</em></a></p>
+<p><a href="https://stackoverflow.com/questions/8855589/a-comprehensive-survey-of-the-types-of-things-in-r-mode-and-class-and-type">“A comprehensive survey of the types of things in R; ‘mode’ and ‘class’ and ‘typeof’ are insufficient” (2017) <em>stackoverflow</em></a></p>
+<p><a href="https://stackoverflow.com/questions/8855589/a-comprehensive-survey-of-the-types-of-things-in-r-mode-and-class-and-type#comment87680594_40171527">“Because at this point, mode and storage.mode are legacy features left over from S. You should only ever need to care about class() and typeof()” (2018) <em>stackoverflow</em></a></p>
+<p><a href="https://adv-r.hadley.nz/base-types.html">“Base types” in Hadley, <em>Advanced R</em></a></p>
+<p><a href="https://jennybc.github.io/purrr-tutorial/bk00_vectors-and-lists.html">Useful material on heirarchy of coercion of types</a></p>
 <p><a href="link">Reference</a></p>
 <center>
-Last updated on <em>15 July, 2019</em> by <em>Dr Nicholas Harrigan</em> <a href="mailto:nicholas.harrigan@mq.edu.au">(nicholas.harrigan@mq.edu.au)</a>
+Last updated on <em>16 July, 2019</em> by <em>Dr Nicholas Harrigan</em> <a href="mailto:nicholas.harrigan@mq.edu.au">(nicholas.harrigan@mq.edu.au)</a>
 </center>
+</div>
 </div>

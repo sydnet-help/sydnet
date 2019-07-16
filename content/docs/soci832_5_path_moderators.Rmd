@@ -3,7 +3,7 @@ title: "Lesson 5.1 An introduction to moderating variables"
 
 lastmod: 2019-01-07T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 

@@ -3,7 +3,7 @@ title: "SOCI832: Introduction 1: Introduction to Statistics"
 
 lastmod: 2019-05-10T00:00:00.000Z
 
-draft: false
+draft: true
 type: docs
 maths: true
 
@@ -11,11 +11,11 @@ output:
   blogdown::html_page:
     toc: true
 
-linktitle: "1.2 Intro: Statistics"
+linktitle: "3. Intro to Statistics"
 menu:
   docs:
     parent: SOCI832
-    weight: 120
+    weight: 300
 ---
 
 <style>
